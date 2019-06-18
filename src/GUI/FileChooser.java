@@ -8,7 +8,7 @@ import java.io.File;
 
 public class FileChooser extends JFileChooser {
     private File selectedFile;
-    FileChooser(){
+    public FileChooser(){
         super(FileSystemView.getFileSystemView().getHomeDirectory());
         int returnValue = this.showOpenDialog(null);
 
