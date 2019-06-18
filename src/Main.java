@@ -4,6 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("hello");
-        JpotifyGUI jpotifyGUI = new JpotifyGUI();
+        new JpotifyGUI();
     }
 }
