@@ -12,6 +12,11 @@ public class JpotifyGUI extends JFrame {
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
+//        FileChooser fileChooser = new FileChooser();
+        ChoicesArea choicesArea = new ChoicesArea();
+        choicesArea.setVisible(true);
+        this.add(choicesArea, BorderLayout.WEST);
+
 
         MusicPanel musicPanel = new MusicPanel();
         this.add(musicPanel, BorderLayout.NORTH);
