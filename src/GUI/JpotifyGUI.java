@@ -8,7 +8,7 @@ public class JpotifyGUI extends JFrame {
         super();
         this.setTitle("Jpotify");
         this.setVisible(true);
-        this.setSize(200, 200);
+        this.setSize(400, 400);
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
