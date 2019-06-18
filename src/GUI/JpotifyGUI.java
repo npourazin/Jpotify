@@ -25,8 +25,8 @@ public class JpotifyGUI extends JFrame {
 
         JLayer<Component> jLayer = new JLayer<>(musicPanel, new MyLayerUI());
         this.add(jLayer);
-        JLayer<Component> jLayer1 = new JLayer<>(musicSliderBar, new MyLayerUI());
-        this.add(jLayer1);
+//        JLayer<Component> jLayer1 = new JLayer<>(musicSliderBar, new MyLayerUI());
+//        this.add(jLayer1);
 
 
         //refreshes the layout after changes
