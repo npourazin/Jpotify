@@ -24,11 +24,13 @@ public class ClickListenerForAddingSongs implements ActionListener {
             Scanner sc = new Scanner(new FileReader(file));
             PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
             String absolutePath  = file.getAbsolutePath();
+            //it only reads mp3 files
+            //Space for R&D!!
             if(!absolutePath.endsWith(".mp3")) return;
-            int c;
-            while ((c = in.read()) != -1) {
-                objectOutputStream.write(c);
-            }
+//            int c;
+//            while ((c = in.read()) != -1) {
+//                objectOutputStream.write(c);
+//            }
             fr.println(absolutePath);
             fr.flush();
 
