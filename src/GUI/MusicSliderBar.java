@@ -1,4 +1,5 @@
 package GUI;
+
 import Controllers.*;
 
 import javax.imageio.ImageIO;
@@ -10,9 +11,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.TimeUnit;
 
-class MusicSliderBar extends JPanel {
+public class MusicSliderBar extends JPanel {
+    private static Thread jSliderThread;
     private final int MUSIC_LENGTH;
 
+    //    private Thread jSliderThread;
     MusicSliderBar(int musicLength) {
         super();
         this.setBackground(Color.cyan);
@@ -24,6 +27,7 @@ class MusicSliderBar extends JPanel {
         jSlider.setMajorTickSpacing(MUSIC_LENGTH);
         jSlider.setPaintTicks(true);
         jSlider.setPaintLabels(true);
+//        jSlider.setValueIsAdjusting(true);
         jSlider.addChangeListener(new ScrollSliderChanger());
         jSlider.setBackground(Color.cyan);
         this.add(jSlider);
@@ -42,20 +46,29 @@ class MusicSliderBar extends JPanel {
         }
         jButton.setBackground(Color.cyan);
         jButton.setBackground(Color.cyan);
-        new Thread(new Runnable() { public void run() {
-            int currentTime=0;
-
-            while (currentTime < MUSIC_LENGTH) {
-                try {
-                    TimeUnit.SECONDS.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+        //Thread for Sliding
+        jSliderThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int currentTime = 0;
+                while (currentTime < MUSIC_LENGTH) {
+                    try {
+                        TimeUnit.SECONDS.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    jSlider.setValue(currentTime);
+                    currentTime++;
                 }
-                jSlider.setValue(currentTime);
-                currentTime++;
             }
-        } }).start();
+        });
+        jSliderThread.start();
     }
+
+    public static Thread getjSliderThread() {
+        return jSliderThread;
+    }
+
 }
 
 
