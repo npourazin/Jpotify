@@ -19,7 +19,7 @@ public class JpotifyGUI extends JFrame {
 
 
         MusicPanel musicPanel = new MusicPanel();
-        this.add(musicPanel, BorderLayout.NORTH);
+        this.add(musicPanel, BorderLayout.CENTER);
 
 
         //time is to be given here it is given 100 as default
@@ -27,12 +27,11 @@ public class JpotifyGUI extends JFrame {
         musicSliderBar.setVisible(true);
         this.add(musicSliderBar, BorderLayout.SOUTH);
 
-
+//
         JLayer<Component> jLayer = new JLayer<>(musicPanel, new MyLayerUI());
-        this.add(jLayer);
-//        JLayer<Component> jLayer1 = new JLayer<>(musicSliderBar, new MyLayerUI());
-//        this.add(jLayer1);
-
+        this.add(jLayer, BorderLayout.CENTER);
+        JLayer<Component> jLayer1 = new JLayer<>(choicesArea, new MyLayerUI());
+        this.add(jLayer1, BorderLayout.WEST);
 
         //refreshes the layout after changes
         this.validate();
