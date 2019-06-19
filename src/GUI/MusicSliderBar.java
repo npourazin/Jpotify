@@ -8,6 +8,7 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.TimeUnit;
 
 class MusicSliderBar extends JPanel {
     private final int MUSIC_LENGTH;
@@ -40,14 +41,20 @@ class MusicSliderBar extends JPanel {
             ex.printStackTrace();
         }
         jButton.setBackground(Color.cyan);
-        new Thread(new Runnable() {
-            public void run() {
-                int currentTime = 0;
-                while (currentTime < MUSIC_LENGTH) {
-                    jSlider.setValue(currentTime);
+        jButton.setBackground(Color.cyan);
+        new Thread(new Runnable() { public void run() {
+            int currentTime=0;
+
+            while (currentTime < MUSIC_LENGTH) {
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
+                jSlider.setValue(currentTime);
+                currentTime++;
             }
-        }).start();
+        } }).start();
     }
 }
 
