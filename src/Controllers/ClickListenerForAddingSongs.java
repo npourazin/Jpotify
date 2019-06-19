@@ -5,6 +5,8 @@ import GUI.FileChooser;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.util.Formatter;
+import java.util.Scanner;
 
 public class ClickListenerForAddingSongs implements ActionListener {
     private File file;
@@ -19,10 +21,16 @@ public class ClickListenerForAddingSongs implements ActionListener {
         try {
             objectOutputStream  = new ObjectOutputStream(new FileOutputStream("src/AddedSongs.bin"));
             FileInputStream in = new FileInputStream(file.getAbsolutePath());
+            Scanner sc = new Scanner(new FileReader(file));
+            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
+            String absolutePath  = file.getAbsolutePath();
+            if(!absolutePath.endsWith(".mp3")) return;
             int c;
             while ((c = in.read()) != -1) {
                 objectOutputStream.write(c);
             }
+            fr.println(absolutePath);
+            fr.flush();
 
         } catch (IOException e) {
             e.printStackTrace();
