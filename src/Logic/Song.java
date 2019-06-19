@@ -12,6 +12,8 @@ public class Song extends Mp3File {
     private File file;
     String absolutePath;
     private Calendar lastTimeListened;
+    private int pausedOnFrame = 0;
+
 //    private final Calendar timeItWasAdded;
 
 //    Song
@@ -20,8 +22,26 @@ public class Song extends Mp3File {
         super(filename);
     }
 
-    public void playSong(){
-        System.out.println(this.getLayer());
+   public void playSong(){
+        FileInputStream fis = null;
+        try{
+            fis = new FileInputStream("D:\\AUT\\Term2\\JpotifyFinalProject\\songs\\DeanLewis.mp3");
+            Player playMP3 = new Player(fis);
+            playMP3.play();
+            AdvancedPlayer player = new AdvancedPlayer(fis);
+            player.setPlayBackListener(new PlaybackListener() {
+                @Override
+                public void playbackFinished(PlaybackEvent event) {
+                    pausedOnFrame = event.getFrame();
+                }
+            });
+            player.play();
+        }
+        catch(Exception exc){
+            exc.printStackTrace();
+            System.out.println("Failed to play the file.");
+        }
+
     }
 
 }
