@@ -1,22 +1,20 @@
 package Logic;
 
 import java.io.File;
-import java.text.DateFormat;
-import java.text.FieldPosition;
-import java.text.ParsePosition;
-import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.*;
 import java.util.*;
 import java.sql.Time;
 
 
 public class Song {
     private File file;
+    String absolutePath;
     private Calendar lastTimeListened;
     private final Calendar timeItWasAdded;
 
     Song() {
         Calendar cal = Calendar.getInstance();
+//        Tie time = ;
         timeItWasAdded = cal;
         cal.set(Calendar.HOUR_OF_DAY, 0);
         cal.set(Calendar.MINUTE, 0);
@@ -60,7 +58,7 @@ public class Song {
 //        } else {
 //            System.out.println("Hello!");
 //        }
-
+/*
         File dir = new File(".");
         List<File> files = Arrays.asList(dir.listFiles());
 
@@ -75,6 +73,6 @@ public class Song {
         for (File file : files) {
             System.out.println(file.getName() + "\t" + new Date(file.lastModified()));
         }
-    }
+   */ }
 }
 
