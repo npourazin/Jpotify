@@ -28,15 +28,18 @@ public class PauseAndPlayClickButton implements ActionListener {
             }
 //            MusicSliderBar.getjSliderThread().start();
 //            Song.getSongPlayThread().start();
-                try {
-                    sP = new SongPlayer("D:/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
-                } catch (JavaLayerException ex) {
-                    ex.printStackTrace();
-                }
-            if(sP.getPlayerStatus()){
-                sP.playSong();
+            try {
+                sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
+                //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
+                //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
+            } catch (JavaLayerException ex) {
+                ex.printStackTrace();
             }
-            else{
+            //niki:
+            if (sP == null) return;
+            if (sP.getPlayerStatus()) {
+                sP.playSong();
+            } else {
                 sP.resumeSong();
             }
 

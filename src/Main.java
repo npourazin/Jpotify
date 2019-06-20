@@ -44,15 +44,6 @@ public class Main {
         System.out.println(new SimpleDateFormat("YYYY-MM-dd-HH:mm:ss").format(new Date(0)));
 
 
-//        try {
-//            new Song("D:/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3").playSong();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } catch (UnsupportedTagException e) {
-//            e.printStackTrace();
-//        } catch (InvalidDataException e) {
-//            e.printStackTrace();
-//        }
     }
 }
 
