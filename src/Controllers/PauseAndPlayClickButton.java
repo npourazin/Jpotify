@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 
 public class PauseAndPlayClickButton implements ActionListener {
     private SongPlayer sP;
+    private static int ifFirstTimePlaying=0;
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -28,17 +29,20 @@ public class PauseAndPlayClickButton implements ActionListener {
             }
 //            MusicSliderBar.getjSliderThread().start();
 //            Song.getSongPlayThread().start();
-            try {
-                //bayad address file ro az y ja dg biare
-                sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
-                //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
-                //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
-            } catch (JavaLayerException ex) {
-                ex.printStackTrace();
+            if(ifFirstTimePlaying==0) {
+                try {
+                    //bayad address file ro az y ja dg biare
+                    sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
+                    //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
+                    //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
+                } catch (JavaLayerException ex) {
+                    ex.printStackTrace();
+                }
             }
+            else sP.resumeSong();
             //niki:
             if (sP == null) return;
-            if (sP.getPlayerStatus()) {
+            if (sP.ifPlayerNotstarted()) {
                 sP.playSong();
             } else {
                 sP.resumeSong();
@@ -56,6 +60,7 @@ public class PauseAndPlayClickButton implements ActionListener {
                 Image img = ImageIO.read(getClass().getResource("play1.png"));
                 jB.setIcon(new ImageIcon(img));
                 sP.pauseSong();
+                ifFirstTimePlaying=1;
 
             } catch (Exception ex) {
                 ex.printStackTrace();

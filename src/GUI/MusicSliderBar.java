@@ -13,7 +13,12 @@ import java.util.concurrent.TimeUnit;
 
 public class MusicSliderBar extends JPanel {
     private static Thread jSliderThread;
+    private static JSlider jSlider;
     private final int MUSIC_LENGTH;
+    private JButton previousButton;
+    private JButton playButton;
+    private JButton nextButton;
+    private JButton replayButton;
 
     //    private Thread jSliderThread;
     MusicSliderBar(int musicLength) {
@@ -27,7 +32,7 @@ public class MusicSliderBar extends JPanel {
         this.add(topPanel);
 
         //Creating previous button
-        JButton previousButton=new JButton();
+        previousButton=new JButton();
         previousButton.setVisible(true);
         previousButton.setBackground(Color.cyan);
         topPanel.add(previousButton);
@@ -39,7 +44,7 @@ public class MusicSliderBar extends JPanel {
         }
 
         //Creating Play/Pause button
-        JButton playButton = new JButton();
+        playButton = new JButton();
         playButton.setVisible(true);
         playButton.setText(" Play");
         playButton.addActionListener(new PauseAndPlayClickButton());
@@ -53,7 +58,7 @@ public class MusicSliderBar extends JPanel {
         playButton.setBackground(Color.cyan);
 
         //Creating next button
-        JButton nextButton=new JButton();
+        nextButton=new JButton();
         nextButton.setVisible(true);
         nextButton.setBackground(Color.cyan);
         topPanel.add(nextButton);
@@ -64,9 +69,22 @@ public class MusicSliderBar extends JPanel {
             ex.printStackTrace();
         }
 
+        //Creating replay button
+        replayButton=new JButton("Replay");
+        replayButton.setVisible(true);
+        replayButton.setBackground(Color.cyan);
+        topPanel.add(replayButton);
+        replayButton.addActionListener(new ReplayButtonListener() );
+        try {
+            Image img = ImageIO.read(getClass().getResource("replay1.png"));
+            replayButton.setIcon(new ImageIcon(img));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
 
         //Creating jSlider
-        JSlider jSlider = new JSlider(0, MUSIC_LENGTH, 0);
+        jSlider = new JSlider(0, MUSIC_LENGTH, 0);
         jSlider.setVisible(true);
         jSlider.setMinorTickSpacing(MUSIC_LENGTH);
         jSlider.setMajorTickSpacing(MUSIC_LENGTH);
@@ -76,6 +94,14 @@ public class MusicSliderBar extends JPanel {
         jSlider.addChangeListener(new ScrollSliderChanger());
         jSlider.setBackground(Color.cyan);
         this.add(jSlider);
+
+        //Creating image icon
+        //TO DO -->  get song cover image
+//        ImageIcon imageIcon=new ImageIcon("images/songCover.jpg");
+//        JLabel imageLable=new JLabel(imageIcon);
+//        topPanel.add(imageLable);
+
+
 
 
         //Thread for Sliding
@@ -97,6 +123,9 @@ public class MusicSliderBar extends JPanel {
         jSliderThread.start();
 
 
+    }
+    public static JSlider getJSlider(){
+        return jSlider;
     }
 
     public static Thread getjSliderThread() {

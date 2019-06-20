@@ -119,7 +119,7 @@ public class SongPlayer {
     }
 
     //Niki: esmesh cherte!!!!!
-    public boolean getPlayerStatus(){
+    public boolean ifPlayerNotstarted(){
         if(playerStatus==Status.NOTSTARTED)
             return true;
         return false;
