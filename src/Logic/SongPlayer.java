@@ -117,6 +117,8 @@ public class SongPlayer {
             // ignore, we are terminating anyway
         }
     }
+
+    //Niki: esmesh cherte!!!!!
     public boolean getPlayerStatus(){
         if(playerStatus==Status.NOTSTARTED)
             return true;
