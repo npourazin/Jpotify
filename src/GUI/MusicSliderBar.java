@@ -20,19 +20,20 @@ public class MusicSliderBar extends JPanel {
     private JButton nextButton;
     private JButton replayButton;
 
+
     //    private Thread jSliderThread;
     MusicSliderBar(int musicLength) {
         super();
         this.setBackground(Color.cyan);
-        this.setLayout(new GridLayout(2,1));
+        this.setLayout(new GridLayout(2, 1));
         MUSIC_LENGTH = musicLength;
-        JPanel topPanel=new JPanel();
+        JPanel topPanel = new JPanel();
         topPanel.setBackground(Color.cyan);
         topPanel.setLayout(new FlowLayout());
         this.add(topPanel);
 
         //Creating previous button
-        previousButton=new JButton();
+        previousButton = new JButton();
         previousButton.setVisible(true);
         previousButton.setBackground(Color.cyan);
         topPanel.add(previousButton);
@@ -58,7 +59,7 @@ public class MusicSliderBar extends JPanel {
         playButton.setBackground(Color.cyan);
 
         //Creating next button
-        nextButton=new JButton();
+        nextButton = new JButton();
         nextButton.setVisible(true);
         nextButton.setBackground(Color.cyan);
         topPanel.add(nextButton);
@@ -70,11 +71,11 @@ public class MusicSliderBar extends JPanel {
         }
 
         //Creating replay button
-        replayButton=new JButton("Replay");
+        replayButton = new JButton("Replay");
         replayButton.setVisible(true);
         replayButton.setBackground(Color.cyan);
         topPanel.add(replayButton);
-        replayButton.addActionListener(new ReplayButtonListener() );
+        replayButton.addActionListener(new ReplayButtonListener());
         try {
             Image img = ImageIO.read(getClass().getResource("replay1.png"));
             replayButton.setIcon(new ImageIcon(img));
@@ -101,15 +102,12 @@ public class MusicSliderBar extends JPanel {
 //        JLabel imageLable=new JLabel(imageIcon);
 //        topPanel.add(imageLable);
 
-
-
-
         //Thread for Sliding
         jSliderThread = new Thread(new Runnable() {
             @Override
             public void run() {
                 int currentTime = 0;
-                while (currentTime < MUSIC_LENGTH) {
+                while (currentTime <= MUSIC_LENGTH) {
                     try {
                         TimeUnit.SECONDS.sleep(1);
                     } catch (InterruptedException e) {
@@ -120,11 +118,11 @@ public class MusicSliderBar extends JPanel {
                 }
             }
         });
-        jSliderThread.start();
 
 
     }
-    public static JSlider getJSlider(){
+
+    public static JSlider getJSlider() {
         return jSlider;
     }
 

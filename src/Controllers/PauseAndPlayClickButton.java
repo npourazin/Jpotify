@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 public class PauseAndPlayClickButton implements ActionListener {
     private SongPlayer sP;
     private static int ifFirstTimePlaying=0;
+    private Thread sliderThread;
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -27,12 +28,13 @@ public class PauseAndPlayClickButton implements ActionListener {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-//            MusicSliderBar.getjSliderThread().start();
 //            Song.getSongPlayThread().start();
             if(ifFirstTimePlaying==0) {
                 try {
+                    sliderThread=MusicSliderBar.getjSliderThread();
                     //bayad address file ro az y ja dg biare
                     sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
+                    sliderThread.start();
                     //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
                     //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
                 } catch (JavaLayerException ex) {
