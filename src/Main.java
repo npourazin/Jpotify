@@ -14,7 +14,7 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
-//        System.out.println("hello");
+        System.out.println("hello");
 //        try {
 //            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
 //            //false it to empty file
@@ -23,16 +23,18 @@ public class Main {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-        new JpotifyGUI();
+       new Thread(JpotifyGUI::new).start();
 
-        new Thread(() -> {
+        Thread t = new Thread(() -> {
             try {
                 SongData onDesk = new SongData("/home/niki/Desktop/Eir Aoi - INNOCENCE .mp3", new Date(0));
                 new Music(onDesk).playSong();
             } catch (IOException | InvalidDataException | UnsupportedTagException e) {
                 e.printStackTrace();
             }
-        }).start();
+        });
+        t.setPriority(Thread.MAX_PRIORITY);
+        t.start();
 
         System.out.println(new SimpleDateFormat("YYYY-MM-dd-HH:mm:ss").format(new Date(0)));
 
