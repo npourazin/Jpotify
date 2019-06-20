@@ -2,6 +2,9 @@ package Controllers;
 //import GUI.*;
 
 import GUI.MusicSliderBar;
+import Logic.Song;
+import Logic.SongPlayer;
+import javazoom.jl.decoder.JavaLayerException;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -10,6 +13,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PauseAndPlayClickButton implements ActionListener {
+    private SongPlayer sP;
+
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton jB = (JButton) (e.getSource());
@@ -22,7 +27,18 @@ public class PauseAndPlayClickButton implements ActionListener {
                 ex.printStackTrace();
             }
 //            MusicSliderBar.getjSliderThread().start();
-
+//            Song.getSongPlayThread().start();
+                try {
+                    sP = new SongPlayer("D:/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
+                } catch (JavaLayerException ex) {
+                    ex.printStackTrace();
+                }
+            if(sP.getPlayerStatus()){
+                sP.playSong();
+            }
+            else{
+                sP.resumeSong();
+            }
 
         } else {
 //            try {
@@ -35,6 +51,7 @@ public class PauseAndPlayClickButton implements ActionListener {
             try {
                 Image img = ImageIO.read(getClass().getResource("play1.png"));
                 jB.setIcon(new ImageIcon(img));
+                sP.pauseSong();
 
             } catch (Exception ex) {
                 ex.printStackTrace();

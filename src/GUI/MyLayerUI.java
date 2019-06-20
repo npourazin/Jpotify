@@ -26,8 +26,4 @@ public class MyLayerUI extends LayerUI<Component> {
         g2.dispose();
     }
 
-
-    ///
-
-
 }

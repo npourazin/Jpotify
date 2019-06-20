@@ -19,7 +19,52 @@ public class MusicSliderBar extends JPanel {
     MusicSliderBar(int musicLength) {
         super();
         this.setBackground(Color.cyan);
+        this.setLayout(new GridLayout(2,1));
         MUSIC_LENGTH = musicLength;
+        JPanel topPanel=new JPanel();
+        topPanel.setBackground(Color.cyan);
+        topPanel.setLayout(new FlowLayout());
+        this.add(topPanel);
+
+        //Creating previous button
+        JButton previousButton=new JButton();
+        previousButton.setVisible(true);
+        previousButton.setBackground(Color.cyan);
+        topPanel.add(previousButton);
+        try {
+            Image img = ImageIO.read(getClass().getResource("previous1.png"));
+            previousButton.setIcon(new ImageIcon(img));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        //Creating Play/Pause button
+        JButton playButton = new JButton();
+        playButton.setVisible(true);
+        playButton.setText(" Play");
+        playButton.addActionListener(new PauseAndPlayClickButton());
+        topPanel.add(playButton);
+        try {
+            Image img = ImageIO.read(getClass().getResource("play1.png"));
+            playButton.setIcon(new ImageIcon(img));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        playButton.setBackground(Color.cyan);
+
+        //Creating next button
+        JButton nextButton=new JButton();
+        nextButton.setVisible(true);
+        nextButton.setBackground(Color.cyan);
+        topPanel.add(nextButton);
+        try {
+            Image img = ImageIO.read(getClass().getResource("next1.png"));
+            nextButton.setIcon(new ImageIcon(img));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+
         //Creating jSlider
         JSlider jSlider = new JSlider(0, MUSIC_LENGTH, 0);
         jSlider.setVisible(true);
@@ -32,20 +77,7 @@ public class MusicSliderBar extends JPanel {
         jSlider.setBackground(Color.cyan);
         this.add(jSlider);
 
-        //Creating Play/Pause button
-        JButton jButton = new JButton();
-        jButton.setVisible(true);
-        jButton.setText(" Play");
-        jButton.addActionListener(new PauseAndPlayClickButton());
-        this.add(jButton);
-        try {
-            Image img = ImageIO.read(getClass().getResource("play1.png"));
-            jButton.setIcon(new ImageIcon(img));
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        jButton.setBackground(Color.cyan);
-        jButton.setBackground(Color.cyan);
+
         //Thread for Sliding
         jSliderThread = new Thread(new Runnable() {
             @Override
@@ -63,6 +95,8 @@ public class MusicSliderBar extends JPanel {
             }
         });
         jSliderThread.start();
+
+
     }
 
     public static Thread getjSliderThread() {

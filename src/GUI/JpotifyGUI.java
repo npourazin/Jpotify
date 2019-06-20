@@ -8,7 +8,7 @@ public class JpotifyGUI extends JFrame {
         super();
         this.setTitle("Jpotify");
         this.setVisible(true);
-        this.setSize(400, 400);
+        this.setSize(800, 500);
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -25,7 +25,7 @@ public class JpotifyGUI extends JFrame {
         //time is to be given here it is given 100 as default
         MusicSliderBar musicSliderBar = new MusicSliderBar(100);
         musicSliderBar.setVisible(true);
-        this.add(musicSliderBar, BorderLayout.SOUTH);
+        this.add(musicSliderBar,BorderLayout.SOUTH);
 
 //
         JLayer<Component> jLayer = new JLayer<>(musicPanel, new MyLayerUI());
