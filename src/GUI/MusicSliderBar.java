@@ -104,7 +104,7 @@ public class MusicSliderBar extends JPanel {
         //Creating a text field to show time
         showTime = new JTextArea("00:00/00:00");
         bottomPanel.add(showTime, BorderLayout.EAST);
-        showTime.setFont(showTime.getFont().deriveFont(18f)); // will only change size to 12pt
+        showTime.setFont(showTime.getFont().deriveFont(16f)); // will only change size to 16pt
         showTime.setBackground(Color.cyan);
         showTime.setVisible(true);
 
