@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PauseAndPlayClickButton implements ActionListener {
-    private SongPlayer sP;
+    private static SongPlayer sP;
     private static int ifFirstTimePlaying=0;
     private MusicSliderBar.SliderThread sliderThread;
 
@@ -34,7 +34,7 @@ public class PauseAndPlayClickButton implements ActionListener {
                     sliderThread = MusicSliderBar.getjSliderThread();
                     sliderThread.setFlag(1);
                     //bayad address file ro az y ja dg biare
-                    sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
+                    sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
 //                    sliderThread.
                     sliderThread.start();
 
@@ -72,5 +72,8 @@ public class PauseAndPlayClickButton implements ActionListener {
                 ex.printStackTrace();
             }
         }
+    }
+    public static SongPlayer getSongCurrentPlayer(){
+        return sP;
     }
 }

@@ -14,15 +14,17 @@ public class ReplayButtonListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton jB = (JButton) (e.getSource());
-        try {
-            //bayad address file ro az y ja dg biare
-            sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
-            sP.playSong();
-            //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
-            //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
-        } catch (JavaLayerException ex) {
-            ex.printStackTrace();
-        }
+        //bayad address file ro az y ja dg biare
+        sP=PauseAndPlayClickButton.getSongCurrentPlayer();
+        sP.stopSong();
+//        try {
+//            sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
+//        } catch (JavaLayerException ex) {
+//            ex.printStackTrace();
+//        }
+
+        //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
+        //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
 
     }
 }
