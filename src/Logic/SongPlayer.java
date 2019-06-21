@@ -131,6 +131,7 @@ public class SongPlayer {
             return true;
         return false;
     }
+    //TODO: if we wanted to go back in the song there are some ways:1)overwrite the thread and make if not a final field   2)...?
     public void playInMiddle(int start){
         boolean ret = true;
         int offset = start;
