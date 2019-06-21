@@ -7,7 +7,7 @@ public class Player {
 
     public Player(){
         try {
-            sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
+            sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
             //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
             //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
         } catch (JavaLayerException e) {

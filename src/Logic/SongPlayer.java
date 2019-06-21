@@ -1,17 +1,21 @@
 package Logic;
 
 import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.Player;
+import javazoom.jl.player.advanced.AdvancedPlayer;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class SongPlayer {
-    Status playerStatus;
+    private Status playerStatus;
     private String fileName;
+    private int currentFrame;
+
 
     // the player actually doing all the work
-    private Player player;
+    private AdvancedPlayer player;
+    private AdvancedPlayer sparePlayer;
+
     // locking object used to communicate with player thread
     private final Object playerLock = new Object();
 
@@ -22,10 +26,12 @@ public class SongPlayer {
     public SongPlayer(String fileName) throws JavaLayerException {
         playerStatus = Status.NOTSTARTED;
         this.fileName = fileName;
+        currentFrame=0;
         FileInputStream file = null;
         try {
             file = new FileInputStream(this.fileName);
-            player = new Player(file);
+            player = new AdvancedPlayer(file);
+            sparePlayer=new AdvancedPlayer(file);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -86,13 +92,15 @@ public class SongPlayer {
 
     private void playInternal() {
         while (playerStatus != Status.FINISHED) {
-            try {
-                if (!player.play(1)) {
+                try {
+                    if (!player.decodeFrame()) {
+                        break;
+                    }
+                } catch (final JavaLayerException e) {
+                    System.out.println("EX");
                     break;
                 }
-            } catch (final JavaLayerException e) {
-                break;
-            }
+
             // check if paused or terminated
             synchronized (playerLock) {
                 while (playerStatus == Status.PAUSED) {
@@ -123,6 +131,42 @@ public class SongPlayer {
             return true;
         return false;
     }
+    public void playInMiddle(int start){
+        boolean ret = true;
+        int offset = start;
+        while (offset-- > 0 && ret) {
+            try {
+                ret = player.skipFrame();
+            } catch (JavaLayerException e) {
+                e.printStackTrace();
+            }
+        }
+        playSong();
+    }
 
+    public int getCurrentFrame(){
+        return currentFrame;
+    }
+
+    public void setCurrentFrame(int currentFrame){
+        this.currentFrame=currentFrame;
+    }
+    public String getFileName(){
+        return fileName;
+    }
+    //I dont know
+    public int getTotalFrames(){
+        int frames=0;
+        while(true){
+            try {
+                if (!sparePlayer.skipFrame()) break;
+                frames++;
+            } catch (JavaLayerException e) {
+                e.printStackTrace();
+            }
+
+        }
+        return frames;
+    }
 
 }
