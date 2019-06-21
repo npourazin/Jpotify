@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b09100fb-71c7-4129-8737-0490162ecb6e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,46 +33,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/MusicPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForAddingSongs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="35" column="105" selection-start-line="35" selection-start-column="105" selection-end-line="35" selection-end-column="105" />
+            <state relative-caret-position="252">
+              <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2223">
+              <caret line="133" column="28" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4111#4112#0" expanded="true" />
+                <element signature="e#4141#4142#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Logic/SongPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-280">
+              <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/ReplayButtonListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="304">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -87,54 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="113" column="41" lean-forward="true" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4111#4112#0" expanded="true" />
-                <element signature="e#4141#4142#0" expanded="true" />
-                <element signature="e#4188#4189#0" expanded="true" />
-                <element signature="e#4224#4225#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logic/Music.java">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logic/Song.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logic/SongPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="494">
+              <caret line="42" selection-start-line="32" selection-start-column="10" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -145,6 +94,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -154,11 +104,6 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Niki Pourazin &lt;nikipourzin@gmail.com&gt;" />
-      </list>
-    </option>
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -183,16 +128,16 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ReplayButtonListener.java" />
         <option value="$PROJECT_DIR$/src/Logic/SongPlayer.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java" />
         <option value="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" />
-        <option value="$PROJECT_DIR$/src/Logic/Test.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="25" />
-    <option name="width" value="683" />
-    <option name="height" value="694" />
+    <option name="x" value="10" />
+    <option name="y" value="45" />
+    <option name="width" value="1350" />
+    <option name="height" value="660" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -200,41 +145,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Logic" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -248,19 +187,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Simple-Java-Music-Player-master" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Lib/tritonus_share.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Logic" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Controllers" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Logic" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -318,7 +257,8 @@
       <updated>1560836244641</updated>
       <workItem from="1560836248361" duration="20038000" />
       <workItem from="1560917950574" duration="7558000" />
-      <workItem from="1561048678349" duration="1708000" />
+      <workItem from="1561048678349" duration="3455000" />
+      <workItem from="1561097650257" duration="973000" />
     </task>
     <task id="LOCAL-00001" summary="trying to commit">
       <created>1560844221424</created>
@@ -411,29 +351,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561040001332</updated>
     </task>
-    <task id="LOCAL-00014" summary="Graphical changes made.&#10;MusicSliderBar modified. &#10;(a text area as added to show time.)">
-      <created>1561093589131</created>
+    <task id="LOCAL-00014" summary="PauseAndPlayClickButton modified.">
+      <created>1561060395107</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1561093589131</updated>
+      <updated>1561060395107</updated>
     </task>
-    <task id="LOCAL-00015" summary="Graphical changes were made.&#10;TextArea to show time in MusicSliderBar had its text size changed and was set visible with showing 00:00 at first &#10;it can also be invisible at first and set visible when the song begins.">
-      <created>1561094007548</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1561094007548</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61332000" />
+    <option name="totallyTimeSpent" value="59379000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1366" height="694" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -441,17 +373,17 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Learn" order="4" weight="0.32954547" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.25378788" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2624161" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5181208" side_tool="true" weight="0.32719547" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
       <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.4919463" weight="0.32719547" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32920355" />
+      <window_info anchor="bottom" id="Version Control" order="4" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32920355" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4818792" visible="true" weight="0.32743362" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4818792" weight="0.32719547" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -466,38 +398,6 @@
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Capture Tool" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Learn" order="4" weight="0.32954547" />
-      <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.25973153" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5167785" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Changes" order="2" />
-      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.49261746" weight="0.32719547" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32920355" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32920355" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.48322147" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" weight="0.32954547" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -515,9 +415,8 @@
     <MESSAGE value="Three libraries added.&#10;META-INF&#10;mp3agic&#10;javazoom" />
     <MESSAGE value="A file is only added if it has .mp3 extension.&#10;writes song addresses to a text file." />
     <MESSAGE value="SongPlayer class added. &#10;PauseAndPlayClickButton modified." />
-    <MESSAGE value="Graphical changes made.&#10;MusicSliderBar modified. &#10;(a text area as added to show time.)" />
-    <MESSAGE value="Graphical changes were made.&#10;TextArea to show time in MusicSliderBar had its text size changed and was set visible with showing 00:00 at first &#10;it can also be invisible at first and set visible when the song begins." />
-    <option name="LAST_COMMIT_MESSAGE" value="Graphical changes were made.&#10;TextArea to show time in MusicSliderBar had its text size changed and was set visible with showing 00:00 at first &#10;it can also be invisible at first and set visible when the song begins." />
+    <MESSAGE value="PauseAndPlayClickButton modified." />
+    <option name="LAST_COMMIT_MESSAGE" value="PauseAndPlayClickButton modified." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/GUI/MyJLayer.java" />
@@ -618,7 +517,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/ChoicesArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="174">
           <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -649,8 +548,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Song.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="361">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -666,7 +565,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MusicPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="78">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -676,7 +575,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForAddingSongs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="735">
           <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -686,11 +585,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Music.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="19">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -704,29 +600,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="48" />
+        <state relative-caret-position="2223">
+          <caret line="133" column="28" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/SongPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#4111#4112#0" expanded="true" />
+            <element signature="e#4141#4142#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ReplayButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="304">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -734,33 +622,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="42" selection-start-line="32" selection-start-column="10" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/package-info.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="35" column="105" selection-start-line="35" selection-start-column="105" selection-end-line="35" selection-end-column="105" />
+        <state relative-caret-position="252">
+          <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/Logic/SongPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="47" column="53" lean-forward="true" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
+        <state relative-caret-position="-280">
+          <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="113" column="41" lean-forward="true" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4111#4112#0" expanded="true" />
-            <element signature="e#4141#4142#0" expanded="true" />
-            <element signature="e#4188#4189#0" expanded="true" />
-            <element signature="e#4224#4225#0" expanded="true" />
           </folding>
         </state>
       </provider>

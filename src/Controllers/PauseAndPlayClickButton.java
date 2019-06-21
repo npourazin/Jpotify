@@ -28,7 +28,6 @@ public class PauseAndPlayClickButton implements ActionListener {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-//            Song.getSongPlayThread().start();
             if(ifFirstTimePlaying==0) {
                 try {
                     sliderThread=MusicSliderBar.getjSliderThread();
@@ -51,11 +50,6 @@ public class PauseAndPlayClickButton implements ActionListener {
             }
 
         } else {
-//            try {
-//                Thread.sleep(10);
-//            } catch (InterruptedException ex) {
-//                ex.printStackTrace();
-//            }
 
             jB.setText(" Play");
             try {

@@ -141,6 +141,10 @@ public class MusicSliderBar extends JPanel {
         return jSlider;
     }
 
+    public void setValueOfSlider(int v){
+        jSlider.setValue(v);
+    }
+
     public static Thread getjSliderThread() {
         return jSliderThread;
     }
