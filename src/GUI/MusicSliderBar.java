@@ -137,12 +137,13 @@ public class MusicSliderBar extends JPanel {
         @Override
         public void run() {
             while (currentTime <= MUSIC_LENGTH) {
+                jSlider.setValue(currentTime);
+
                 try {
                     TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                jSlider.setValue(currentTime);
                 moveSlider();
             }
         }
