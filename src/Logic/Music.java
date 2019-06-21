@@ -31,6 +31,8 @@ public class Music {
         try {
             songData =new SongData(absolutePath, Date.from(Instant.now()));
             catchData();
+            //next line not needed.
+            songData.setMusicLength(mp3File.getLengthInSeconds());
         } catch (IOException | UnsupportedTagException | InvalidDataException e) {
             e.printStackTrace();
         }
@@ -59,6 +61,7 @@ public class Music {
             songData.setAlbum(mp3File.getId3v2Tag().getAlbum());
             songData.setArtist(mp3File.getId3v2Tag().getArtist());
             songData.setGenre(mp3File.getId3v2Tag().getGenre());
+
             byte[] imageBytes = mp3File.getId3v2Tag().getAlbumImage();
             try {
                 if(imageBytes!=null){
