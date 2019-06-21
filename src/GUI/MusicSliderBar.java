@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class MusicSliderBar extends JPanel {
     private static SliderThread jSliderThread;
     private static JSlider jSlider;
-    private final int MUSIC_LENGTH;
+    private static int MUSIC_LENGTH ;
     private JButton previousButton;
     private JButton playButton;
     private JButton nextButton;
@@ -124,6 +124,10 @@ public class MusicSliderBar extends JPanel {
 
     public static JSlider getJSlider() {
         return jSlider;
+    }
+
+    public static int getMUSIC_LENGTH() {
+        return MUSIC_LENGTH;
     }
 
     public static SliderThread getjSliderThread() {

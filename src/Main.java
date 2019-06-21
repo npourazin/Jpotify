@@ -1,5 +1,6 @@
 import GUI.*;
 import Logic.Music;
+import Logic.Player;
 import Logic.SongData;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.UnsupportedTagException;
@@ -20,6 +21,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("hello");
+        Player player = new Player();
 //        try {
 //            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
 //            //false it to empty file

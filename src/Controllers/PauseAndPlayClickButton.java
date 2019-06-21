@@ -2,6 +2,7 @@ package Controllers;
 import GUI.*;
 
 import GUI.MusicSliderBar;
+import Logic.Player;
 import Logic.Song;
 import Logic.SongPlayer;
 import javazoom.jl.decoder.JavaLayerException;
@@ -30,19 +31,16 @@ public class PauseAndPlayClickButton implements ActionListener {
             }
 //            Song.getSongPlayThread().start();
             if(ifFirstTimePlaying==0) {
-                try {
-                    sliderThread = MusicSliderBar.getjSliderThread();
-                    sliderThread.setFlag(1);
-                    //bayad address file ro az y ja dg biare
-                    sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
+                sliderThread = MusicSliderBar.getjSliderThread();
+                sliderThread.setFlag(1);
+                //bayad address file ro az y ja dg biare
+//                    sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
+                sP = Player.getsP();
 //                    sliderThread.
-                    sliderThread.start();
+                sliderThread.start();
 
-                    //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
-                    //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
-                } catch (JavaLayerException ex) {
-                    ex.printStackTrace();
-                }
+                //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
+                //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
             }
             else {
                 sliderThread.setFlag(1);
