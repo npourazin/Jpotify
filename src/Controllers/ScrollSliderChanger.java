@@ -37,6 +37,7 @@ public class ScrollSliderChanger implements ChangeListener {
             MusicSliderBar.getjSliderThread().setCurrentTime(fps);
             double passedPercentage = (1.0) * fps / MusicSliderBar.getMUSIC_LENGTH();
             if (!PauseAndPlayClickButton.ifButtonPlaying())
+//            if (!MusicSliderBar.getJSlider().getValueIsAdjusting())return;
                 sP.playInMiddle((int) (frames*passedPercentage));
         }
 
