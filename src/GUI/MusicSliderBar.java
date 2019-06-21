@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.util.concurrent.TimeUnit;
 
 public class MusicSliderBar extends JPanel {
-    private static Thread jSliderThread;
+    private static SliderThread jSliderThread;
     private static JSlider jSlider;
     private final int MUSIC_LENGTH;
     private JButton previousButton;
@@ -109,7 +109,6 @@ public class MusicSliderBar extends JPanel {
         showTime.setVisible(true);
 
 
-
         //Creating image icon
         //TO DO -->  get song cover image
 //        ImageIcon imageIcon=new ImageIcon("images/songCover.jpg");
@@ -118,21 +117,7 @@ public class MusicSliderBar extends JPanel {
 
         //Thread for Sliding
         //TODO: make a separate class for the thread and have "current" as its local variable so it can be also stopped.
-        jSliderThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                int currentTime = 0;
-                while (currentTime <= MUSIC_LENGTH) {
-                    try {
-                        TimeUnit.SECONDS.sleep(1);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    jSlider.setValue(currentTime);
-                    currentTime++;
-                }
-            }
-        });
+        jSliderThread = new SliderThread();
 
 
     }
@@ -141,15 +126,54 @@ public class MusicSliderBar extends JPanel {
         return jSlider;
     }
 
-    public void setValueOfSlider(int v){
-        jSlider.setValue(v);
-    }
-
-    public static Thread getjSliderThread() {
+    public static SliderThread getjSliderThread() {
         return jSliderThread;
     }
 
+    public class SliderThread extends Thread {
+        private int currentTime = 0;
+        private int flag = 0;//0 if paused, 1 otherwise.
+
+        @Override
+        public void run() {
+            while (currentTime <= MUSIC_LENGTH) {
+                jSlider.setValue(currentTime);
+
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                moveSlider();
+            }
+        }
+
+        public int getCurrentTime() {
+            return currentTime;
+        }
+
+        public void setCurrentTime(int currentTime) {
+            this.currentTime = currentTime;
+        }
+
+        public void setFlag(int flag) {
+            this.flag = flag;
+        }
+
+        public int getFlag() {
+            return flag;
+        }
+
+        public void moveSlider() {
+            if (flag == 1) {
+                //it is being played
+                currentTime++;
+            }
+        }
+    }
 }
+
+
 
 
 

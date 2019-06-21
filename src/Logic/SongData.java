@@ -26,10 +26,12 @@ public class SongData extends Mp3File implements Serializable {
     private String album;
     private int genre;
     private Icon icon;
+    private long musicLength;
     private final Date timeItWasAdded;
 
     public SongData(String filename, Date date) throws IOException, UnsupportedTagException, InvalidDataException {
         super(filename);
+        musicLength = getLengthInSeconds();
         absolutePath = filename;
         timeItWasAdded =date;
         lastTimeListened = new Date(0);
@@ -101,6 +103,14 @@ public class SongData extends Mp3File implements Serializable {
 
     public void setAbsolutePath(String absolutePath) {
         this.absolutePath = absolutePath;
+    }
+
+    public long getMusicLength() {
+        return musicLength;
+    }
+
+    public void setMusicLength(long musicLength) {
+        this.musicLength = musicLength;
     }
 }
 

@@ -41,10 +41,6 @@ public class ClickListenerForAddingSongs implements ActionListener {
             //it only reads mp3 files
             //Space for R&D!!
             if(!absolutePath.endsWith(".mp3")) return;
-//            int c;
-//            while ((c = in.read()) != -1) {
-//                objectOutputStream.write(c);
-//            }
             fr.println(absolutePath);
             fr.flush();
 
