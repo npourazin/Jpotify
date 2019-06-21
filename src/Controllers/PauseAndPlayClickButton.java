@@ -33,7 +33,7 @@ public class PauseAndPlayClickButton implements ActionListener {
                 try {
                     sliderThread=MusicSliderBar.getjSliderThread();
                     //bayad address file ro az y ja dg biare
-                    sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
+                    sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
                     sliderThread.start();
                     //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
                     //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3

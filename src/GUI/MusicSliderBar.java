@@ -19,13 +19,14 @@ public class MusicSliderBar extends JPanel {
     private JButton playButton;
     private JButton nextButton;
     private JButton replayButton;
-
+    private JTextArea showTime;
 
     //    private Thread jSliderThread;
     MusicSliderBar(int musicLength) {
         super();
         this.setBackground(Color.cyan);
         this.setLayout(new GridLayout(2, 1));
+        //TODO: get music length in seconds. (now it was just set to 100)
         MUSIC_LENGTH = musicLength;
         JPanel topPanel = new JPanel();
         topPanel.setBackground(Color.cyan);
@@ -94,7 +95,19 @@ public class MusicSliderBar extends JPanel {
 //        jSlider.setValueIsAdjusting(true);
         jSlider.addChangeListener(new ScrollSliderChanger());
         jSlider.setBackground(Color.cyan);
-        this.add(jSlider);
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setBackground(Color.cyan);
+        bottomPanel.setLayout(new BorderLayout());
+        this.add(bottomPanel);
+        bottomPanel.add(jSlider, BorderLayout.CENTER);
+
+        //Creating a text field to show time
+        showTime = new JTextArea("00:00/00:00");
+        bottomPanel.add(showTime, BorderLayout.EAST);
+        showTime.setBackground(Color.cyan);
+        showTime.setVisible(false);
+
+
 
         //Creating image icon
         //TO DO -->  get song cover image
@@ -103,6 +116,7 @@ public class MusicSliderBar extends JPanel {
 //        topPanel.add(imageLable);
 
         //Thread for Sliding
+        //TODO: make a separate class for the thread and have "current" as its local variable so it can be also stopped.
         jSliderThread = new Thread(new Runnable() {
             @Override
             public void run() {
