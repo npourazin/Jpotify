@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class MusicSliderBar extends JPanel {
     private static SliderThread jSliderThread;
     private static JSlider jSlider;
-    private static int MUSIC_LENGTH ;
+    private static long MUSIC_LENGTH ;
     private JButton previousButton;
     private JButton playButton;
     private JButton nextButton;
@@ -22,7 +22,7 @@ public class MusicSliderBar extends JPanel {
     private JTextArea showTime;
 
     //    private Thread jSliderThread;
-    MusicSliderBar(int musicLength) {
+    MusicSliderBar(long musicLength) {
         super();
         this.setBackground(Color.cyan);
         this.setLayout(new GridLayout(2, 1));
@@ -86,10 +86,10 @@ public class MusicSliderBar extends JPanel {
 
 
         //Creating jSlider
-        jSlider = new JSlider(0, MUSIC_LENGTH, 0);
+        jSlider = new JSlider(0,(int) MUSIC_LENGTH, 0);
         jSlider.setVisible(true);
-        jSlider.setMinorTickSpacing(MUSIC_LENGTH);
-        jSlider.setMajorTickSpacing(MUSIC_LENGTH);
+        jSlider.setMinorTickSpacing((int)MUSIC_LENGTH);
+        jSlider.setMajorTickSpacing((int)MUSIC_LENGTH);
         jSlider.setPaintTicks(true);
         jSlider.setPaintLabels(true);
 //        jSlider.setValueIsAdjusting(true);
@@ -126,7 +126,7 @@ public class MusicSliderBar extends JPanel {
         return jSlider;
     }
 
-    public static int getMUSIC_LENGTH() {
+    public static long getMUSIC_LENGTH() {
         return MUSIC_LENGTH;
     }
 
@@ -134,15 +134,24 @@ public class MusicSliderBar extends JPanel {
         return jSliderThread;
     }
 
+    public String formatText(long curr){
+        long min =  curr/60;
+        long sec = curr - min*60;
+        long minAll =  MUSIC_LENGTH/60;
+        long secAll = MUSIC_LENGTH - minAll*60;
+        return ((min>=10)?""+min:"0"+min)+":"+ ((sec>=10)?""+sec:"0"+sec)+"/"+
+                ((minAll>=10)?""+minAll:"0"+minAll)+":"+ ((sec>=10)?""+secAll:"0"+secAll);
+    }
+
     public class SliderThread extends Thread {
-        private int currentTime = 0;
+        private long currentTime = 0;
         private int flag = 0;//0 if paused, 1 otherwise.
 
         @Override
         public void run() {
             while (currentTime <= MUSIC_LENGTH) {
-                jSlider.setValue(currentTime);
-
+                jSlider.setValue((int)currentTime);
+                showTime.setText(formatText(currentTime));
                 try {
                     TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
@@ -152,11 +161,11 @@ public class MusicSliderBar extends JPanel {
             }
         }
 
-        public int getCurrentTime() {
+        public long getCurrentTime() {
             return currentTime;
         }
 
-        public void setCurrentTime(int currentTime) {
+        public void setCurrentTime(long currentTime) {
             this.currentTime = currentTime;
         }
 
