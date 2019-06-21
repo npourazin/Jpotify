@@ -141,7 +141,7 @@ public class SongPlayer {
                 e.printStackTrace();
             }
         }
-        playSong();
+//        playSong();
     }
 
     public int getCurrentFrame(){
