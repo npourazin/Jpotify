@@ -10,9 +10,9 @@ import java.util.*;
 
 public class PlayerManager {
     private static SongPlayer sP;
-    ArrayList<SongData> songDataArrayList;
-    ArrayList<String> addresses;
-    ObjectInputStream objectInputStream;
+    private static ArrayList<SongData> songDataArrayList;
+    private ArrayList<String> addresses;
+    private ObjectInputStream objectInputStream;
 
     public PlayerManager() {
         Scanner sc;
@@ -61,6 +61,10 @@ public class PlayerManager {
 
         songDataArrayList.sort(new SortByTime());
 
+    }
+
+    public static ArrayList<SongData> getSongDataArrayList() {
+        return songDataArrayList;
     }
 }
 
