@@ -14,10 +14,11 @@ import java.awt.*;
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.Date;
 
-public class Music {
+public class Music implements Serializable {
     private Mp3File mp3File;
     private String absolutePath;
     private SongData songData;
@@ -31,7 +32,6 @@ public class Music {
         try {
             songData =new SongData(absolutePath, Date.from(Instant.now()));
             catchData();
-            //next line not needed.
             songData.setMusicLength(mp3File.getLengthInSeconds());
         } catch (IOException | UnsupportedTagException | InvalidDataException e) {
             e.printStackTrace();
@@ -75,30 +75,6 @@ public class Music {
             }
 
         }
-    }
-
-    public void playSong(){
-        FileInputStream fis = null;
-        try{
-            fis = new FileInputStream(songData.getAbsolutePath());
-            Player playMP3 = new Player(fis);
-            playMP3.play();
-            AdvancedPlayer player = new AdvancedPlayer(fis);
-            player.setPlayBackListener(new PlaybackListener() {
-                @Override
-                public void playbackFinished(PlaybackEvent event) {
-                    songData.setPausedOnFrame(event.getFrame());
-                }
-            });
-            //here we have Stream closed Exception when the son finishes
-            //manage it
-            player.play();
-        }
-        catch(Exception exc){
-            exc.printStackTrace();
-            System.out.println("Failed to play the file.");
-        }
-
     }
 
     public void setSongData(SongData songData) {
