@@ -1,5 +1,8 @@
 package GUI;
 
+import Logic.Music;
+import Logic.PlayerManager;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -23,7 +26,7 @@ public class JpotifyGUI extends JFrame {
 
 
 
-        MusicPanel musicPanel = new MusicPanel();
+        MusicPanel musicPanel = new MusicPanel(PlayerManager.getSongDataArrayList());
         this.add(musicPanel, BorderLayout.CENTER);
 
 

@@ -3,6 +3,7 @@ package GUI;
 import Logic.SongData;
 import Logic.SongPlayer;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.plaf.LayerUI;
 import java.awt.*;
@@ -18,14 +19,24 @@ public class MusicPanel extends JPanel {
         super();
         this.songs = songs;
         this.setVisible(true);
-        JLabel[] label=new JLabel[songs.size()];
-        int i=0;
-        for (SongData song : songs) {
-            label[i] = new JLabel(song.getArtist(), song.getIcon(), JLabel.CENTER);
+        JButton[] songButton= new JButton[12];
+//        int i=0;
+//        for (SongData song : this.songs) {
+//            this.setLayout(new GridLayout(3,3));
+//            songButton[i] = new JButton(song.getArtist());
+//            songButton[i].setVisible(true);
+//            this.add(songButton[i]);
+//            songButton[i].setIcon(song.getIcon());
+//            i++;
+//            System.out.println(i);
+//        }
+        this.setLayout(new GridLayout(3,4));
 
-            i++;
+        for (int i = 0; i <6 ; i++) {
+            songButton[i]=new JButton();
+            songButton[i].setVisible(true);
+            this.add(songButton[i]);
         }
-
 
 //        this.createPanel();
 //        this.setSize(800, 800);

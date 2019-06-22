@@ -129,6 +129,9 @@ public class MusicSliderBar extends JPanel {
 //        JLabel imageLable=new JLabel(imageIcon);
 //        topPanel.add(imageLable);
 
+//        JLabel currentSongLable = new JLabel(song.getArtist(), song.getIcon(), JLabel.CENTER);
+
+
         //Thread for Sliding
         //TODO: make a separate class for the thread and have "current" as its local variable so it can be also stopped.
         jSliderThread = new SliderThread();
