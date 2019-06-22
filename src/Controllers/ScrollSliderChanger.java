@@ -13,7 +13,8 @@ import javax.swing.event.ChangeListener;
 import java.io.IOException;
 
 public class ScrollSliderChanger implements ChangeListener {
-
+    private static int prev=0;
+    private static int next=0;
     @Override
     public void stateChanged(ChangeEvent e) {
         JSlider source = (JSlider) e.getSource();
@@ -35,11 +36,22 @@ public class ScrollSliderChanger implements ChangeListener {
             System.out.println("Go to time:" + fps + " of the song");
             //NOW we LITERALY need to go to that time of the song
             MusicSliderBar.getjSliderThread().setCurrentTime(fps);
+            if(next==0){
+                next=fps;
+            }else{
+                prev = next;
+                next=fps;
+            }
+
             double passedPercentage = (1.0) * fps / MusicSliderBar.getMUSIC_LENGTH();
-            if (!PauseAndPlayClickButton.ifButtonPlaying())
+//            if (!MusicSliderBar.getJSlider().getValueIsAdjusting()) {
+//                MusicSliderBar.getjSliderThread().setCurrentTime(MusicSliderBar.getjSliderThread().getCurrentTime()-1);
+//            }
+
+//            if (!PauseAndPlayClickButton.ifButtonPlaying())
+            if((Math.abs(next - prev)>1))
                 sP.playInMiddle((int) (frames * passedPercentage));
 
-            if (!MusicSliderBar.getJSlider().getValueIsAdjusting()) return;
         }
 
     }

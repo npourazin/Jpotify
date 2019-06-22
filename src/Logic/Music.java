@@ -81,6 +81,10 @@ public class Music implements Serializable {
         this.songData = songData;
     }
 
+    public SongData getSongData() {
+        return songData;
+    }
+
     public String getAbsolutePath() {
         return absolutePath;
     }

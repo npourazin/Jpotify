@@ -1,6 +1,10 @@
 import GUI.*;
 import Logic.PlayerManager;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -10,7 +14,11 @@ public class Main {
         System.out.println("hello");
         PlayerManager player = new PlayerManager();
 //        try {
-//            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
+        try {
+            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 //            //false it to empty file
 //            fr.close();
 //

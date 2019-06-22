@@ -1,6 +1,7 @@
 package Logic;
 
 import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 import javazoom.jl.player.advanced.AdvancedPlayer;
 
 import java.io.FileInputStream;
@@ -161,6 +162,11 @@ public class SongPlayer {
 
     public String getFileName() {
         return fileName;
+    }
+
+    public void setVolume(){
+//        (player.getGainControl()).setLevel((float)GUI.getVolumeSlider().getValue() / 150.0f);
+        //set volume
     }
 
 }
