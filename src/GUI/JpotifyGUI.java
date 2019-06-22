@@ -1,6 +1,7 @@
 package GUI;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class JpotifyGUI extends JFrame {
@@ -12,10 +13,14 @@ public class JpotifyGUI extends JFrame {
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-//        FileChooser fileChooser = new FileChooser();
+//        JScrollPane jScrollPane = new JScrollPane(this,   ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+
+//        jScrollPane.setPreferredSize(new Dimension(600, 600));
         ChoicesArea choicesArea = new ChoicesArea();
         choicesArea.setVisible(true);
+
         this.add(choicesArea, BorderLayout.WEST);
+
 
 
         MusicPanel musicPanel = new MusicPanel();
