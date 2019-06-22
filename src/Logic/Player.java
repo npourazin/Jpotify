@@ -5,7 +5,7 @@ import javazoom.jl.decoder.JavaLayerException;
 public class Player {
     private static SongPlayer sP;
 
-    public Player(){
+    public Player() {
         try {
             sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
             //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3

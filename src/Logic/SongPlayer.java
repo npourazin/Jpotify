@@ -9,12 +9,10 @@ import java.io.FileNotFoundException;
 public class SongPlayer {
     private Status playerStatus;
     private String fileName;
-    private int currentFrame;
     private Thread t = null;
 
     // the player actually doing all the work
     private AdvancedPlayer player;
-    private AdvancedPlayer sparePlayer;
 
     // locking object used to communicate with player thread
     private final Object playerLock = new Object();
@@ -26,12 +24,10 @@ public class SongPlayer {
     public SongPlayer(String fileName) throws JavaLayerException {
         playerStatus = Status.NOTSTARTED;
         this.fileName = fileName;
-        currentFrame=0;
         FileInputStream file = null;
         try {
             file = new FileInputStream(this.fileName);
             player = new AdvancedPlayer(file);
-            sparePlayer=new AdvancedPlayer(file);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -92,14 +88,14 @@ public class SongPlayer {
 
     private void playInternal() {
         while (playerStatus != Status.FINISHED) {
-                try {
-                    if (!player.decodeFrame()) {
-                        break;
-                    }
-                } catch (final JavaLayerException e) {
-                    System.out.println("EX");
+            try {
+                if (!player.decodeFrame()) {
                     break;
                 }
+            } catch (final JavaLayerException e) {
+                System.out.println("EX");
+                break;
+            }
 
             // check if paused or terminated
             synchronized (playerLock) {
@@ -115,6 +111,7 @@ public class SongPlayer {
         }
         close();
     }
+
     public void close() {
         synchronized (playerLock) {
             playerStatus = Status.FINISHED;
@@ -126,14 +123,16 @@ public class SongPlayer {
         }
     }
 
-    public boolean ifPlayerNotstarted(){
-        if(playerStatus==Status.NOTSTARTED)
+    public boolean ifPlayerNotstarted() {
+        if (playerStatus == Status.NOTSTARTED)
             return true;
         return false;
     }
 
     //play the song from a specific frame.
-    public void playInMiddle(int start){
+    public void playInMiddle(int start) {
+
+        //because we need to jump to the first frame , so we recreate the the file.
         FileInputStream file = null;
         try {
             file = new FileInputStream(this.fileName);
@@ -145,6 +144,9 @@ public class SongPlayer {
         } catch (JavaLayerException e) {
             e.printStackTrace();
         }
+
+
+        //jumping to the wanted frame.
         boolean ret = true;
         int offset = start;
         while (offset-- > 0 && ret) {
@@ -157,13 +159,7 @@ public class SongPlayer {
 //        playSong();
     }
 
-    public int getCurrentFrame(){
-        return currentFrame;
-    }
-    public void setCurrentFrame(int currentFrame){
-        this.currentFrame=currentFrame;
-    }
-    public String getFileName(){
+    public String getFileName() {
         return fileName;
     }
 

@@ -18,13 +18,13 @@ public class PauseAndPlayClickButton implements ActionListener {
     private static SongPlayer sP;
     private static int ifFirstTimePlaying = 0;
     private MusicSliderBar.SliderThread sliderThread;
-    private static boolean buttonPlaying=false;
+    private static boolean buttonPlaying = false;
 
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton jB = (JButton) (e.getSource());
         if (jB.getText().equals(" Play")) {
-            buttonPlaying=true;
+            buttonPlaying = true;
             jB.setText("Pause");
             try {
                 Image img = ImageIO.read(getClass().getResource("pause1.png"));
@@ -32,18 +32,16 @@ public class PauseAndPlayClickButton implements ActionListener {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-//            Song.getSongPlayThread().start();
             if (ifFirstTimePlaying == 0) {
                 sliderThread = MusicSliderBar.getjSliderThread();
                 sliderThread.setFlag(1);
                 //bayad address file ro az y ja dg biare
 //                    sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
+                //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
+                //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
                 sP = Player.getsP();
 //                    sliderThread.
                 sliderThread.start();
-
-                //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
-                //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
             } else {
                 sliderThread.setFlag(1);
                 if (sP == null) {
@@ -59,14 +57,12 @@ public class PauseAndPlayClickButton implements ActionListener {
             }
             if (sP.ifPlayerNotstarted()) {
                 sP.playSong();
-//                sP.playInMiddle(200);
-
             } else {
                 sP.resumeSong();
             }
 
         } else {
-            buttonPlaying=false;
+            buttonPlaying = false;
             jB.setText(" Play");
             try {
                 Image img = ImageIO.read(getClass().getResource("play1.png"));
@@ -85,7 +81,7 @@ public class PauseAndPlayClickButton implements ActionListener {
         return sP;
     }
 
-    public static boolean ifButtonPlaying(){
+    public static boolean ifButtonPlaying() {
         return buttonPlaying;
     }
 }
