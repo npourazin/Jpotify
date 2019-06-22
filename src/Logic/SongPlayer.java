@@ -10,7 +10,7 @@ public class SongPlayer {
     private Status playerStatus;
     private String fileName;
     private int currentFrame;
-
+    private Thread t = null;
 
     // the player actually doing all the work
     private AdvancedPlayer player;
@@ -49,7 +49,7 @@ public class SongPlayer {
                             playInternal();
                         }
                     };
-                    final Thread t = new Thread(r);
+                    Thread t = new Thread(r);
                     t.setDaemon(true);
                     t.setPriority(Thread.MAX_PRIORITY);
                     playerStatus = Status.PLAYING;
@@ -131,8 +131,20 @@ public class SongPlayer {
             return true;
         return false;
     }
-    //TODO: if we wanted to go back in the song there are some ways:1)overwrite the thread and make if not a final field   2)...?
+
+    //play the song from a specific frame.
     public void playInMiddle(int start){
+        FileInputStream file = null;
+        try {
+            file = new FileInputStream(this.fileName);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            player = new AdvancedPlayer(file);
+        } catch (JavaLayerException e) {
+            e.printStackTrace();
+        }
         boolean ret = true;
         int offset = start;
         while (offset-- > 0 && ret) {
@@ -148,26 +160,11 @@ public class SongPlayer {
     public int getCurrentFrame(){
         return currentFrame;
     }
-
     public void setCurrentFrame(int currentFrame){
         this.currentFrame=currentFrame;
     }
     public String getFileName(){
         return fileName;
-    }
-    //I dont know
-    public int getTotalFrames(){
-        int frames=0;
-        while(true){
-            try {
-                if (!sparePlayer.skipFrame()) break;
-                frames++;
-            } catch (JavaLayerException e) {
-                e.printStackTrace();
-            }
-
-        }
-        return frames;
     }
 
 }
