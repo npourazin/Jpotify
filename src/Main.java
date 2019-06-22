@@ -1,18 +1,6 @@
 import GUI.*;
-import Logic.Music;
-import Logic.Player;
-import Logic.SongData;
-import com.mpatric.mp3agic.InvalidDataException;
-import com.mpatric.mp3agic.UnsupportedTagException;
-import Logic.Song;
-import com.mpatric.mp3agic.InvalidDataException;
-import com.mpatric.mp3agic.UnsupportedTagException;
-import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.advanced.AdvancedPlayer;
+import Logic.PlayerManager;
 
-import javax.swing.*;
-import javax.swing.filechooser.FileSystemView;
-import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -20,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("hello");
-        Player player = new Player();
+        PlayerManager player = new PlayerManager();
 //        try {
 //            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
 //            //false it to empty file

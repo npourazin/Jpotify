@@ -1,12 +1,8 @@
 package Controllers;
 
-import GUI.*;
-
 import GUI.MusicSliderBar;
-import Logic.Player;
-import Logic.Song;
+import Logic.PlayerManager;
 import Logic.SongPlayer;
-import javazoom.jl.decoder.JavaLayerException;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -39,7 +35,7 @@ public class PauseAndPlayClickButton implements ActionListener {
 //                    sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
                 //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
                 //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
-                sP = Player.getsP();
+                sP = PlayerManager.getsP();
 //                    sliderThread.
                 sliderThread.start();
             } else {

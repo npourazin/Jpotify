@@ -16,7 +16,7 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
-public class SongData extends Mp3File implements Serializable {
+public class SongData implements Serializable {
     private File file;
     private String absolutePath;
     private Date lastTimeListened;
@@ -30,8 +30,8 @@ public class SongData extends Mp3File implements Serializable {
     private final Date timeItWasAdded;
 
     public SongData(String filename, Date date) throws IOException, UnsupportedTagException, InvalidDataException {
-        super(filename);
-        musicLength = getLengthInSeconds();
+//        super(filename);
+//        musicLength = getLengthInSeconds();
         absolutePath = filename;
         timeItWasAdded =date;
         lastTimeListened = new Date(0);

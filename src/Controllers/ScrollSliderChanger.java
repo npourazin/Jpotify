@@ -1,7 +1,7 @@
 package Controllers;
 
 import GUI.MusicSliderBar;
-import Logic.Player;
+import Logic.PlayerManager;
 import Logic.SongPlayer;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.Mp3File;
@@ -21,7 +21,7 @@ public class ScrollSliderChanger implements ChangeListener {
         SongPlayer sP;
         if (!source.getValueIsAdjusting()) {
             int fps = (int) source.getValue();
-            sP = Player.getsP();
+            sP = PlayerManager.getsP();
             try {
                 file = new Mp3File(sP.getFileName());
             } catch (IOException ex) {

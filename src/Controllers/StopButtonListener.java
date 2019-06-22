@@ -1,6 +1,6 @@
 package Controllers;
 
-import Logic.Player;
+import Logic.PlayerManager;
 import Logic.SongPlayer;
 
 import javax.swing.*;
@@ -13,7 +13,7 @@ public class StopButtonListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton jB = (JButton) (e.getSource());
-        sP= Player.getsP();
+        sP= PlayerManager.getsP();
         sP.stopSong();
     }
 }
