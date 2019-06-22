@@ -22,7 +22,7 @@ public class JpotifyGUI extends JFrame {
         ChoicesArea choicesArea = new ChoicesArea();
         choicesArea.setVisible(true);
 
-        this.add(choicesArea, BorderLayout.WEST);
+        this.add(choicesArea.getjScrollPane(), BorderLayout.WEST);
 
 
 
@@ -38,8 +38,11 @@ public class JpotifyGUI extends JFrame {
 //
         JLayer<Component> jLayer = new JLayer<>(musicPanel, new MyLayerUI());
         this.add(jLayer, BorderLayout.CENTER);
-        JLayer<Component> jLayer1 = new JLayer<>(choicesArea, new MyLayerUI());
-        this.add(jLayer1, BorderLayout.WEST);
+
+//        choicesArea.paint();
+        choicesArea.setBackground(Color.cyan);
+//        JLayer<Component> jLayer1 = new JLayer<>(choicesArea, new MyLayerUI());
+//        this.add(jLayer1, BorderLayout.WEST);
 
         //refreshes the layout after changes
         this.validate();
