@@ -24,7 +24,7 @@ public class SongPlayer {
     public SongPlayer(String fileName) throws JavaLayerException {
         playerStatus = Status.NOTSTARTED;
         this.fileName = fileName;
-        FileInputStream file = null;
+        FileInputStream file;
         try {
             file = new FileInputStream(this.fileName);
             player = new AdvancedPlayer(file);
