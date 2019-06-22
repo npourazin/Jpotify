@@ -1,5 +1,6 @@
 package Logic;
 
+import Controllers.ClickListenerForAddingSongs;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.UnsupportedTagException;
 import javazoom.jl.decoder.JavaLayerException;
@@ -18,23 +19,20 @@ public class PlayerManager {
         Scanner sc;
 
         File file;
-        try {
+
             addresses = new ArrayList<>();
             songDataArrayList = new ArrayList<>();
-            objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
+//            objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
 
             readSongDataFromFile();
             //create a button for each on song panel
             //by validating songs panel?
 
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
 
         try {
-            sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
+            sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
             //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
             //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
         } catch (JavaLayerException e) {
@@ -49,10 +47,21 @@ public class PlayerManager {
     public void readSongDataFromFile() {
 
         try {
+            int flag=0;
             SongData tmp;
+            if(ClickListenerForAddingSongs.getObjectInputStream()!=null) flag=1;
+            else {
+                objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
+            }
+
             while (true) {
-                tmp = (SongData) objectInputStream.readObject();
+                if(flag==1)
+                    tmp = (SongData) ClickListenerForAddingSongs.getObjectInputStream().readObject();
+                else {
+                    tmp = (SongData) objectInputStream.readObject();
+                }
                 songDataArrayList.add(tmp);
+
             }
         } catch (EOFException e) { }
         catch (IOException | ClassNotFoundException e) {
