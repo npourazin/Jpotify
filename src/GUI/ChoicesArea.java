@@ -29,6 +29,7 @@ public class ChoicesArea extends JPanel{
 
         JButton saveButton = new JButton("Add Song");
         saveButton.setFont(saveButton.getFont().deriveFont(14f)); // will only change size to 14pt
+//        saveButton.rep
 
         saveButton.setVisible(true);
         this.add(saveButton);
@@ -80,15 +81,12 @@ public class ChoicesArea extends JPanel{
         super.paint(g);
 
         Graphics2D g2 = (Graphics2D) g.create();
-
         int w = this.getWidth();
         int h = this.getHeight();
         //this line
         g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, .5f));
-
         g2.setPaint(new GradientPaint(0, 0, Color.pink, 0, h, Color.cyan));
         g2.fillRect(0, 0, w, h);
-
         g2.dispose();
     }
 

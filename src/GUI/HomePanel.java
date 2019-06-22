@@ -11,18 +11,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class MusicPanel extends JPanel {
-    private ArrayList<SongData> songs;
-    private static int numberOfSongs = 0;
-    private ArrayList<JButton> songButton;
+public class HomePanel extends JPanel {
 
-    MusicPanel(ArrayList<SongData> songs) {
+
+    public HomePanel() {
         super();
-        this.songs=new ArrayList<>();
-        this.songs = songs;
-        System.out.println(songs.size());
-        songButton=new ArrayList<>();
-        this.setVisible(true);
+
 //        int i=0;
 //        for (SongData song : this.songs) {
 //            this.setLayout(new GridLayout(3,3));
@@ -33,16 +27,7 @@ public class MusicPanel extends JPanel {
 //            i++;
 //            System.out.println(i);
 //        }
-        this.setLayout(new FlowLayout());
 
-        for (int i = 0; i <songs.size() ; i++) {
-            JButton j=new JButton();
-            songButton.add(j);
-            this.add(songButton.get(i));
-            songButton.get(i).setVisible(true);
-            songButton.get(i).setIcon(songs.get(i).getIcon());
-
-        }
 
 //        this.createPanel();
 //        this.setSize(800, 800);

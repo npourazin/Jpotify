@@ -1,10 +1,8 @@
 package GUI;
 
-import Logic.Music;
 import Logic.PlayerManager;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class JpotifyGUI extends JFrame {
@@ -24,9 +22,7 @@ public class JpotifyGUI extends JFrame {
 
         this.add(choicesArea.getjScrollPane(), BorderLayout.WEST);
 
-
-
-        MusicPanel musicPanel = new MusicPanel(PlayerManager.getSongDataArrayList());
+        HomePanel musicPanel = new HomePanel();
         this.add(musicPanel, BorderLayout.CENTER);
 
 
@@ -35,7 +31,6 @@ public class JpotifyGUI extends JFrame {
         musicSliderBar.setVisible(true);
         this.add(musicSliderBar,BorderLayout.SOUTH);
 
-//
         JLayer<Component> jLayer = new JLayer<>(musicPanel, new MyLayerUI());
         this.add(jLayer, BorderLayout.CENTER);
 
