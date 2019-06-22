@@ -23,7 +23,7 @@ public class ScrollSliderChanger implements ChangeListener {
             int fps = (int) source.getValue();
             sP = Player.getsP();
             try {
-                file=new Mp3File(sP.getFileName());
+                file = new Mp3File(sP.getFileName());
             } catch (IOException ex) {
                 ex.printStackTrace();
             } catch (UnsupportedTagException ex) {
@@ -37,8 +37,9 @@ public class ScrollSliderChanger implements ChangeListener {
             MusicSliderBar.getjSliderThread().setCurrentTime(fps);
             double passedPercentage = (1.0) * fps / MusicSliderBar.getMUSIC_LENGTH();
             if (!PauseAndPlayClickButton.ifButtonPlaying())
-//            if (!MusicSliderBar.getJSlider().getValueIsAdjusting())return;
-                sP.playInMiddle((int) (frames*passedPercentage));
+                sP.playInMiddle((int) (frames * passedPercentage));
+
+            if (!MusicSliderBar.getJSlider().getValueIsAdjusting()) return;
         }
 
     }

@@ -29,7 +29,7 @@ public class Main {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-       new Thread(JpotifyGUI::new).start();
+        new Thread(JpotifyGUI::new).start();
 
 //        Thread t = new Thread(() -> {
 //            try {
