@@ -3,6 +3,7 @@ package GUI;
 import Logic.SongData;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -10,9 +11,16 @@ public class SongsPanel extends JPanel {
     private ArrayList<SongData> songs;
     private ArrayList<JButton> songButton;
 
-
+private JScrollPane jScrollPane;
     public SongsPanel(ArrayList<SongData> songs){
         super();
+        jScrollPane = new JScrollPane(this);
+        jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        jScrollPane.setViewportBorder(new LineBorder(Color.pink));
+        jScrollPane.setBackground(Color.cyan);
+        jScrollPane.updateUI();
+        jScrollPane.setVisible(true);
         this.setLayout(new FlowLayout());
         this.songs=new ArrayList<>();
         this.songs = songs;
@@ -40,4 +48,8 @@ public class SongsPanel extends JPanel {
 
         }
     }
+    public JScrollPane getjScrollPane() {
+        return jScrollPane;
+    }
+
 }

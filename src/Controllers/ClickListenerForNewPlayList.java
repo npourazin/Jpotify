@@ -28,13 +28,5 @@ public class ClickListenerForNewPlayList implements ActionListener {
         addDialog.add(addButton);
 
     }
-    public static boolean getVisible(){
-        return visible;
-    }
-    public static void makeVisible(){
-        visible=true;
-    }
-    public static void makeNotVisible(){
-        visible=false;
-    }
+
 }

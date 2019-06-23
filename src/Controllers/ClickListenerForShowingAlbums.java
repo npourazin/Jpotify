@@ -15,7 +15,7 @@ public class ClickListenerForShowingAlbums implements ActionListener {
         AlbumsPanel albumsPanel=new AlbumsPanel();
         albumsPanel.setVisible(true);
         Main.getJpotifyGUI().getHomePanel().setVisible(false);
-        Main.getJpotifyGUI().add(albumsPanel, BorderLayout.CENTER);
+        Main.getJpotifyGUI().add(albumsPanel.getjScrollPane(), BorderLayout.CENTER);
 
         JLayer<Component> jLayer;
         jLayer = new JLayer<>(albumsPanel, new MyLayerUI());

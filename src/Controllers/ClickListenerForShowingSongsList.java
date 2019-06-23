@@ -16,7 +16,7 @@ public class ClickListenerForShowingSongsList implements ActionListener {
         SongsPanel songsPanel = new SongsPanel(PlayerManager.getSongDataArrayList());
         songsPanel.setVisible(true);
         Main.getJpotifyGUI().getHomePanel().setVisible(false);
-        Main.getJpotifyGUI().add(songsPanel, BorderLayout.CENTER);
+        Main.getJpotifyGUI().add(songsPanel.getjScrollPane(), BorderLayout.CENTER);
 
         JLayer<Component> jLayer;
         jLayer = new JLayer<>(songsPanel, new MyLayerUI());

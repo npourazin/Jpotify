@@ -26,7 +26,7 @@ public class JpotifyGUI extends JFrame {
         }
         this.setTitle("Jpotify");
         this.setVisible(true);
-        this.setSize(800, 500);
+        this.setSize(1000, 600);
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -36,6 +36,11 @@ public class JpotifyGUI extends JFrame {
         ChoicesArea choicesArea = new ChoicesArea();
         choicesArea.setVisible(true);
         this.add(choicesArea.getjScrollPane(), BorderLayout.WEST);
+
+
+        friendsActivityArea friendsActivityArea=new friendsActivityArea();
+        friendsActivityArea.setVisible(true);
+        this.add(friendsActivityArea,BorderLayout.EAST);
 
         JLayer<Component> jLayer;
 
