@@ -12,6 +12,8 @@ public class addButtonDialogListener implements ActionListener {
         System.out.println(playlistName);
 
         try {
+            //TODO: overwrite ALLERT!! fix this
+
 //            Scanner sc = new Scanner(new FileReader(new File("src/PlaylistNames.txt")));
             PrintWriter fr = new PrintWriter(new FileWriter(new File("src/PlaylistNames.txt"), true));
             fr.println(playlistName);

@@ -19,6 +19,7 @@ public class ListSelectionListener implements javax.swing.event.ListSelectionLis
                 return;
             }
             try {
+                //TODO: overwrite ALLERT!! fix this
                 Scanner sc = new Scanner(new FileReader(new File("src/playlistNames.txt")));
                 for (int i = 0; i <=index ; i++) {
                     playlistName=sc.nextLine();
