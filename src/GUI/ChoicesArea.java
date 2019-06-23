@@ -35,6 +35,13 @@ public class ChoicesArea extends JPanel{
         this.add(saveButton);
         saveButton.addActionListener(new ClickListenerForAddingSongs());
 
+
+        JButton homeButton=new JButton("Home");
+        homeButton.setVisible(true);
+        homeButton.setFont(homeButton.getFont().deriveFont(14f));
+        this.add(homeButton);
+        homeButton.addActionListener(new ClickListenerForShowingHome());
+
         JButton songsButton = new JButton("Songs");
         songsButton.setVisible(true);
         songsButton.setFont(songsButton.getFont().deriveFont(14f)); // will only change size to 14pt

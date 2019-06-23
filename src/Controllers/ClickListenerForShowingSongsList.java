@@ -18,7 +18,6 @@ public class ClickListenerForShowingSongsList implements ActionListener {
 //        ChoicesArea choicesArea = (ChoicesArea)actionEvent.getSource();
 //        choicesArea.validate();
         SongsPanel songsPanel = new SongsPanel(PlayerManager.getSongDataArrayList());
-        songsPanel.setVisible(ClickListenerForShowingSongsList.ifVisible());
         songsPanel.setVisible(true);
         Main.getJpotifyGUI().getHomePanel().setVisible(false);
         Main.getJpotifyGUI().add(songsPanel, BorderLayout.CENTER);
