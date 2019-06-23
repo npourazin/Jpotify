@@ -27,7 +27,7 @@ public class PlayerManager {
             readSongDataFromFile();
             //create a button for each on song panel
             //by validating songs panel?
-
+            //TODO: "mahvash" there can be a while that changes the string passed to the SongPlayer when sP.getStatus==finished.
 
             try {
                 sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");

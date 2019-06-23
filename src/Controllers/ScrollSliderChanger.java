@@ -63,8 +63,6 @@ public class ScrollSliderChanger implements ChangeListener {
                 sP.playInMiddle((int) (frames * passedPercentage));
             else flag = false;
 
-            System.out.println(flag);
-
         }
 
     }
