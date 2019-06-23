@@ -14,6 +14,10 @@ public class AlbumsPanel extends JPanel {
         this.setVisible(true);
         albumButton = new ArrayList<>();
 
+        //TODO: compelete the following code.
+
+        //TODO: give each button a listener to play the song
+
         for (int i = 0; i < 3; i++) {
             JButton j = new JButton();
             albumButton.add(j);

@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class SongsPanel extends JPanel {
     private ArrayList<SongData> songs;
-    private static int numberOfSongs = 0;
     private ArrayList<JButton> songButton;
 
 
@@ -20,6 +19,8 @@ public class SongsPanel extends JPanel {
         System.out.println(songs.size());
         songButton=new ArrayList<>();
         this.setVisible(true);
+
+        //TODO: make this uncomment when you had a proper array list and compelete the following code.
 //        for (int i = 0; i <songs.size() ; i++) {
 //            JButton j=new JButton();
 //            songButton.add(j);
@@ -28,6 +29,7 @@ public class SongsPanel extends JPanel {
 //            songButton.get(i).setIcon(songs.get(i).getIcon());
 //
 //        }
+        //TODO: give each button a listener to play the song
         for (int i = 0; i <6 ; i++) {
             JButton j=new JButton();
             songButton.add(j);

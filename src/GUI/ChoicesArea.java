@@ -74,12 +74,8 @@ public class ChoicesArea extends JPanel{
         }
 
 
-//        this.add(jScrollPane);
-//        jScrollPane.setLayout(new BorderLayout());
-
         DefaultListModel model = new DefaultListModel();
         JList list = new JList(model);
-//        jScrollPane.add(list);
 
     }
     @Override
