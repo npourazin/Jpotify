@@ -15,7 +15,7 @@ public class Main {
     private static JpotifyGUI jpotifyGUI;
     public static void main(String[] args) {
         System.out.println("hello");
-        PlayerManager player = new PlayerManager();
+        new Thread(PlayerManager::new).start();
 //        try {
         try {
             PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));

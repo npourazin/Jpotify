@@ -49,7 +49,11 @@ public class PauseAndPlayClickButton implements ActionListener {
             if (sP.ifPlayerNotstarted()) {
                 sP.playSong();
             } else {
-                sP.resumeSong();
+                if(ScrollSliderChanger.ifSliderChangedWhilePaused()){
+                    sP.pauseSong();
+                    sP.playInMiddle((int) (ScrollSliderChanger.getFrames() * ScrollSliderChanger.getPassedPercentage()));
+                }
+                else sP.resumeSong();
             }
 
         } else {

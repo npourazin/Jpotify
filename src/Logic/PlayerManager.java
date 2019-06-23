@@ -29,15 +29,14 @@ public class PlayerManager {
             //by validating songs panel?
 
 
+            try {
+                sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
+                //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
+                //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
+            } catch (JavaLayerException e) {
+                e.printStackTrace();
+            }
 
-
-        try {
-            sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
-            //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
-            //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
-        } catch (JavaLayerException e) {
-            e.printStackTrace();
-        }
     }
 
     public static SongPlayer getsP() {
