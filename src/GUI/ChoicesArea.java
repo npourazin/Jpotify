@@ -82,10 +82,10 @@ public class ChoicesArea extends JPanel{
         DefaultListModel model = new DefaultListModel();
         JList list = new JList(model);
         list.setVisible(true);
-        list.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.setLayoutOrientation(JList.VERTICAL);
         list.setVisibleRowCount(-1);
-
+        list.addListSelectionListener(new ListSelectionListener());
         this.add(list);
         try {
             String playlistName;
@@ -94,6 +94,7 @@ public class ChoicesArea extends JPanel{
                 playlistName=sc.nextLine();
                 model.addElement(playlistName);
             }
+
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         } catch (IOException ex) {
