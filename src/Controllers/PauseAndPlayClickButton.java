@@ -31,12 +31,7 @@ public class PauseAndPlayClickButton implements ActionListener {
             if (ifFirstTimePlaying == 0) {
                 sliderThread = MusicSliderBar.getjSliderThread();
                 sliderThread.setFlag(1);
-                //bayad address file ro az y ja dg biare
-//                    sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
-                //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
-                //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
                 sP = PlayerManager.getsP();
-//                    sliderThread.
                 sliderThread.start();
             } else {
                 sliderThread.setFlag(1);

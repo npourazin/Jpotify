@@ -157,8 +157,7 @@ public class SongPlayer {
                 e.printStackTrace();
             }
         }
-//        playerStatus=Status.PLAYING;
-//        playSong();
+        resumeSong();
     }
 
     public String getFileName() {
