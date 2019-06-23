@@ -5,7 +5,7 @@ import javax.swing.plaf.LayerUI;
 import java.awt.*;
 
 public class MyLayerUI extends LayerUI<Component> {
-    MyLayerUI() {
+    public MyLayerUI() {
         super();
     }
 

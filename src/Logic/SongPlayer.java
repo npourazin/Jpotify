@@ -157,6 +157,7 @@ public class SongPlayer {
                 e.printStackTrace();
             }
         }
+        playerStatus=Status.PLAYING;
 //        playSong();
     }
 

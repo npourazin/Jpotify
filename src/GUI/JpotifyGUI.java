@@ -1,13 +1,29 @@
 package GUI;
 
+import Controllers.ClickListenerForShowingSongsList;
 import Logic.PlayerManager;
 
 import javax.swing.*;
+import javax.swing.plaf.metal.MetalLookAndFeel;
+import javax.swing.plaf.metal.OceanTheme;
 import java.awt.*;
 
 public class JpotifyGUI extends JFrame {
+    private HomePanel homePanel;
     public JpotifyGUI(){
         super();
+
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
         this.setTitle("Jpotify");
         this.setVisible(true);
         this.setSize(800, 500);
@@ -19,20 +35,29 @@ public class JpotifyGUI extends JFrame {
 //        jScrollPane.setPreferredSize(new Dimension(600, 600));
         ChoicesArea choicesArea = new ChoicesArea();
         choicesArea.setVisible(true);
-
         this.add(choicesArea.getjScrollPane(), BorderLayout.WEST);
 
-        HomePanel musicPanel = new HomePanel();
-        this.add(musicPanel, BorderLayout.CENTER);
+        JLayer<Component> jLayer;
 
+//        if(HomePanel.ifVisible()) {
+            homePanel= new HomePanel();
+            homePanel.setVisible(true);
+            this.add(homePanel, BorderLayout.CENTER);
+            jLayer = new JLayer<>(homePanel, new MyLayerUI());
+            this.add(jLayer, BorderLayout.CENTER);
+//        }
 
+//        else if(ClickListenerForShowingSongsList.ifVisible()) {
+//            SongsPanel songsPanel = new SongsPanel(PlayerManager.getSongDataArrayList());
+//            songsPanel.setVisible(true);
+//            this.add(songsPanel, BorderLayout.CENTER);
+//            jLayer = new JLayer<>(songsPanel, new MyLayerUI());
+//            this.add(jLayer, BorderLayout.CENTER);
+//        }
         //time is to be given here it is given 100 as default
         MusicSliderBar musicSliderBar = new MusicSliderBar(100);
         musicSliderBar.setVisible(true);
         this.add(musicSliderBar,BorderLayout.SOUTH);
-
-        JLayer<Component> jLayer = new JLayer<>(musicPanel, new MyLayerUI());
-        this.add(jLayer, BorderLayout.CENTER);
 
 //        choicesArea.paint();
         choicesArea.setBackground(Color.cyan);
@@ -41,10 +66,9 @@ public class JpotifyGUI extends JFrame {
 
         //refreshes the layout after changes
         this.validate();
-
-
       //  this.pack();
-
-
+    }
+    public HomePanel getHomePanel(){
+        return homePanel;
     }
 }

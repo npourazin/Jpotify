@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class HomePanel extends JPanel {
-
+    private static boolean visible = true;
 
     public HomePanel() {
         super();
@@ -63,6 +63,18 @@ public class HomePanel extends JPanel {
         JButton orderButton = new JButton("Send Message");
         this.add(orderButton);
 
+    }
+
+    public static boolean ifPanelVisible() {
+        return visible;
+    }
+
+    public static void setPanelVisible() {
+        visible = true;
+    }
+
+    public static void setPanelNotVisible() {
+        visible = false;
     }
 }
 
