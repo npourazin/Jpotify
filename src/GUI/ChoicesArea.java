@@ -5,6 +5,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.io.*;
+import java.util.Scanner;
 
 
 public class ChoicesArea extends JPanel{
@@ -71,9 +73,32 @@ public class ChoicesArea extends JPanel{
             ex.printStackTrace();
         }
 
+        JLabel label=new JLabel("  Your Playlists:");
+        label.setVisible(true);
+        label.setFont(new Font("Verdana",9,13));
+        label.setBackground(Color.cyan);
+        this.add(label,BorderLayout.NORTH);
 
         DefaultListModel model = new DefaultListModel();
         JList list = new JList(model);
+        list.setVisible(true);
+        list.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        list.setLayoutOrientation(JList.VERTICAL);
+        list.setVisibleRowCount(-1);
+
+        this.add(list);
+        try {
+            String playlistName;
+            Scanner sc = new Scanner(new FileReader(new File("src/PlaylistNames.txt")));
+            while (sc.hasNext()){
+                playlistName=sc.nextLine();
+                model.addElement(playlistName);
+            }
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
     }
     @Override

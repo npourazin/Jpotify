@@ -53,8 +53,8 @@ public class ScrollSliderChanger implements ChangeListener {
                 sP.pauseSong();
                 sP.playInMiddle((int) (frames * passedPercentage));
             }
-//            else if ((Math.abs(next - prev) == 1) && MusicSliderBar.getjSliderThread().getFlag() == 0)
-//                sP.playInMiddle((int) (frames * passedPercentage));
+            else if ((Math.abs(next - prev) == 1) && MusicSliderBar.getjSliderThread().getFlag() == 0)
+                sP.playInMiddle((int) (frames * passedPercentage));
 
         }
 
