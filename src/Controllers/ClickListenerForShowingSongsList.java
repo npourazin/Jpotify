@@ -22,7 +22,6 @@ public class ClickListenerForShowingSongsList implements ActionListener {
         jLayer = new JLayer<>(songsPanel, new MyLayerUI());
         Main.getJpotifyGUI().add(jLayer, BorderLayout.CENTER);
         Main.getJpotifyGUI().validate();
-        System.out.println("A");
     }
 
 }
