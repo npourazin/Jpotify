@@ -37,6 +37,7 @@ public class PlayerManager {
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             sP = new SongPlayer(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             PauseAndPlayClickButton.setIfNewSong();
+
 //            Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
 //            Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
         } catch (JavaLayerException e) {

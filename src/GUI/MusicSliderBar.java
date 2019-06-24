@@ -4,19 +4,14 @@ import Controllers.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.plaf.metal.MetalLookAndFeel;
-import javax.swing.plaf.metal.OceanTheme;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.concurrent.TimeUnit;
 
 public class MusicSliderBar extends JPanel {
     private static SliderThread jSliderThread;
     private static JSlider jSlider;
-    private static long MUSIC_LENGTH ;
+    private static long musicLength;
+    private long MUSIC_LENGHT;
+
     private JButton previousButton;
     private JButton playButton;
     private JButton nextButton;
@@ -29,7 +24,7 @@ public class MusicSliderBar extends JPanel {
         this.setBackground(Color.cyan);
         this.setLayout(new GridLayout(2, 1));
         //TODO: get music length in seconds. (now it was just set to 100)
-        MUSIC_LENGTH = musicLength;
+        MUSIC_LENGHT = musicLength;
         JPanel topPanel = new JPanel();
         topPanel.setBackground(Color.cyan);
         topPanel.setLayout(new FlowLayout());
@@ -63,7 +58,7 @@ public class MusicSliderBar extends JPanel {
         playButton.setBackground(Color.cyan);
 
         //Creating stop button
-        JButton stopButton=new JButton("Stop");
+        JButton stopButton = new JButton("Stop");
         stopButton.setVisible(true);
         stopButton.setBackground(Color.cyan);
         topPanel.add(stopButton);
@@ -102,12 +97,11 @@ public class MusicSliderBar extends JPanel {
         }
 
 
-
         //Creating jSlider
-        jSlider = new JSlider(0,(int) MUSIC_LENGTH, 0);
+        jSlider = new JSlider(0, (int) MUSIC_LENGHT, 0);
         jSlider.setVisible(true);
-        jSlider.setMinorTickSpacing((int)MUSIC_LENGTH);
-        jSlider.setMajorTickSpacing((int)MUSIC_LENGTH);
+//        jSlider.setMinorTickSpacing(1);
+//        jSlider.setMajorTickSpacing(10);
         jSlider.setPaintTicks(true);
         jSlider.setPaintLabels(true);
 //        jSlider.setValueIsAdjusting(true);
@@ -127,7 +121,7 @@ public class MusicSliderBar extends JPanel {
         showTime.setVisible(true);
 
 
-               //Creating image icon
+        //Creating image icon
         //TO DO -->  get song cover image
 //        ImageIcon imageIcon=new ImageIcon("images/songCover.jpg");
 //        JLabel imageLable=new JLabel(imageIcon);
@@ -142,23 +136,26 @@ public class MusicSliderBar extends JPanel {
 
 
     }
-    public static JTextArea getShowTime(){
+
+    public static JTextArea getShowTime() {
         return showTime;
+    }
+
+    public static void setMusicLength(long length) {
+        musicLength =length;
     }
 
     public static JSlider getJSlider() {
         return jSlider;
     }
 
-    public static long getMUSIC_LENGTH() {
-        return MUSIC_LENGTH;
+    public static long getMusicLenght() {
+        return musicLength;
     }
 
     public static SliderThread getjSliderThread() {
         return jSliderThread;
     }
-
-
 
 
 }

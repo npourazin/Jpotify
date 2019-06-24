@@ -48,7 +48,7 @@ public class ScrollSliderChanger implements ChangeListener {
                 next = fps;
             }
 
-            passedPercentage = (1.0) * fps / MusicSliderBar.getMUSIC_LENGTH();
+            passedPercentage = (1.0) * fps / MusicSliderBar.getMusicLenght();
 //            if (!MusicSliderBar.getJSlider().getValueIsAdjusting()) {
 //                MusicSliderBar.getjSliderThread().setCurrentTime(MusicSliderBar.getjSliderThread().getCurrentTime()-1);
 //            }

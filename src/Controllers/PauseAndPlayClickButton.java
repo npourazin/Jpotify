@@ -1,6 +1,7 @@
 package Controllers;
 
 import GUI.MusicSliderBar;
+import Logic.Main;
 import Logic.PlayerManager;
 import Logic.SongData;
 import Logic.SongPlayer;
@@ -39,6 +40,15 @@ public class PauseAndPlayClickButton implements ActionListener {
                 sliderThread.setFlag(1);
                 sliderThread.setCurrentTime(0);
                 sP = PlayerManager.getsP();
+                MusicSliderBar.setMusicLength(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
+                MusicSliderBar.getJSlider().setMaximum((int) MusicSliderBar.getMusicLenght());
+
+                //WHAT THE ACTUAL FUUUUUCK!!!!!!  WHY CANT YOU SET WHAT YOU ARE WHOWING MEEEE!!?????
+                //TODO: fix this shit
+
+                System.out.println((int) MusicSliderBar.getMusicLenght());
+                MusicSliderBar.getJSlider().setMajorTickSpacing((int) MusicSliderBar.getMusicLenght());
+//                MusicSliderBar.getJSlider().setMinorTickSpacing((int) MusicSliderBar.getMusicLenght());
                 ifNewSong=false;
             }
             else {

@@ -10,7 +10,7 @@ public class SliderThread extends Thread {
 
     @Override
     public void run() {
-        while (currentTime <= MusicSliderBar.getMUSIC_LENGTH()) {
+        while (currentTime <= MusicSliderBar.getMusicLenght()) {
             MusicSliderBar.getJSlider().setValue((int)currentTime);
             MusicSliderBar.getShowTime().setText(formatText(currentTime));
             try {
@@ -48,8 +48,8 @@ public class SliderThread extends Thread {
     public String formatText(long curr){
         long min =  curr/60;
         long sec = curr - min*60;
-        long minAll =  MusicSliderBar.getMUSIC_LENGTH()/60;
-        long secAll = MusicSliderBar.getMUSIC_LENGTH() - minAll*60;
+        long minAll =  MusicSliderBar.getMusicLenght()/60;
+        long secAll = MusicSliderBar.getMusicLenght() - minAll*60;
         return ((min>=10)?""+min:"0"+min)+":"+ ((sec>=10)?""+sec:"0"+sec)+"/"+
                 ((minAll>=10)?""+minAll:"0"+minAll)+":"+ ((sec>=10)?""+secAll:"0"+secAll);
     }
