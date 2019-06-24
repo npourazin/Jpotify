@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
     private static JpotifyGUI jpotifyGUI;
@@ -16,6 +17,8 @@ public class Main {
     private static ObjectInputStream objIn;
     private static ArrayList<SongData> currentQueue;
     private static int songQueueIndex = 0;
+    private static String myName;
+    private static int holyFlag=0;
 
     public static void main(String[] args) {
 
@@ -38,43 +41,22 @@ public class Main {
 //        }
 //      new Thread(JpotifyGUI::new).start();
         jpotifyGUI = new JpotifyGUI();
+        PlayerManager player = new PlayerManager();
+
+        SignInOrSignUp signInOrSignUp = new SignInOrSignUp();
+        while (holyFlag!=1) {
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
+        signInOrSignUp.dispose();
+
+        jpotifyGUI=new JpotifyGUI();
 
         //TODO: write the changes in time and whatever to the file before closing
-
-
-//        Thread t = new Thread(() -> {
-//            try {
-//                SongData onDesk = new SongData("D:/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3", new Date(0));
-//                new Music(onDesk).playSong();
-//            } catch (IOException | InvalidDataException | UnsupportedTagException e) {
-//                e.printStackTrace();
-//            }
-//        });
-//        t.setPriority(Thread.MAX_PRIORITY);
-//        t.start();
-
-        System.out.println(new SimpleDateFormat("YYYY-MM-dd-HH:mm:ss").format(new Date(0)));
-//        FileInputStream file = null;
-//        AdvancedPlayer player = null;
-//        int count=0;
-//        try {
-//            file = new FileInputStream("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
-//            player = new AdvancedPlayer(file);
-//
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//            System.out.println("Failed to play the file.");
-//        } catch (JavaLayerException e) {
-//            e.printStackTrace();
-//        }
-//        while (true) {
-//            try {
-//                if(!player.decodeFrame()) break;
-//                count++;
-//            } catch (JavaLayerException e) {
-//                e.printStackTrace();
-//            }
-//        }
 
     }
 
@@ -167,6 +149,18 @@ public class Main {
             e.printStackTrace();
         }
 
+    }
+
+    public static String getMyName() {
+        return myName;
+    }
+
+    public static void setMyName(String myName) {
+        Main.myName = myName;
+    }
+
+    public static void setHolyFlag(int holyFlag) {
+        Main.holyFlag = holyFlag;
     }
 }
 
