@@ -28,7 +28,8 @@ private JScrollPane jScrollPane;
         songButton=new ArrayList<>();
         this.setVisible(visible);
         Dimension d=new Dimension(200,200);
-        //TODO: make this uncomment when you had a proper array list and compelete the following code.
+        //TODO : fix the size of the image icon
+
         for (int i = 0; i <songs.size() ; i++) {
             JButton j=new JButton();
             j.setPreferredSize(d);
@@ -36,6 +37,7 @@ private JScrollPane jScrollPane;
             this.add(songButton.get(i));
             songButton.get(i).setVisible(true);
             songButton.get(i).setIcon(songs.get(i).getIcon());
+            songButton.get(i).setText(songs.get(i).getSongName());
 
         }
         //TODO: give each button a listener to play the song

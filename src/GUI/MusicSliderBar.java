@@ -1,6 +1,7 @@
 package GUI;
 
 import Controllers.*;
+import Logic.Main;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -123,9 +124,7 @@ public class MusicSliderBar extends JPanel {
 
         //Creating image icon
         //TO DO -->  get song cover image
-//        ImageIcon imageIcon=new ImageIcon("images/songCover.jpg");
-//        JLabel imageLable=new JLabel(imageIcon);
-//        topPanel.add(imageLable);
+
 
 //        JLabel currentSongLable = new JLabel(song.getArtist(), song.getIcon(), JLabel.CENTER);
 

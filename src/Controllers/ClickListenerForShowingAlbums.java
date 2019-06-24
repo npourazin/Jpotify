@@ -13,21 +13,15 @@ import java.awt.event.ActionListener;
 public class ClickListenerForShowingAlbums implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-//        AlbumsPanel albumsPanel=new AlbumsPanel();
-        Main.getJpotifyGUI().remove(Main.getJpotifyGUI().getSongsPanel());
-        Main.getJpotifyGUI().remove(Main.getJpotifyGUI().getHomePanel());
-
-//        Main.getJpotifyGUI().getAlbumsPanel().setVisible(true);
-//        Main.getJpotifyGUI().getHomePanel().setVisible(false);
-//        Main.getJpotifyGUI().getSongsPanel().setVisible(false);
-        Main.getJpotifyGUI().add(Main.getJpotifyGUI().getAlbumsPanel().getjScrollPane(), BorderLayout.CENTER);
-
-
+        AlbumsPanel albumsPanel=new AlbumsPanel();
+        albumsPanel.setVisible(true);
+        Main.getJpotifyGUI().getHomePanel().removeAll();
+        Main.getJpotifyGUI().getHomePanel().add(albumsPanel);
         JLayer<Component> jLayer;
-        jLayer = new JLayer<>(Main.getJpotifyGUI().getAlbumsPanel(), new MyLayerUI());
+        jLayer = new JLayer<>(albumsPanel, new MyLayerUI());
         Main.getJpotifyGUI().add(jLayer, BorderLayout.CENTER);
-        Main.getJpotifyGUI().validate();
+//        Main.getJpotifyGUI().validate();
         Main.getJpotifyGUI().revalidate();
-        Main.getJpotifyGUI().repaint();
+//        Main.getJpotifyGUI().repaint();
     }
 }

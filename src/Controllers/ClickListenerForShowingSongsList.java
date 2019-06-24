@@ -13,22 +13,16 @@ public class ClickListenerForShowingSongsList implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-//        SongsPanel songsPanel = new SongsPanel(PlayerManager.getSongDataArrayList());
-        Main.getJpotifyGUI().remove(Main.getJpotifyGUI().getAlbumsPanel());
-        Main.getJpotifyGUI().remove(Main.getJpotifyGUI().getHomePanel());
-
-        Main.getJpotifyGUI().getSongsPanel().setVisible(true);
+        SongsPanel songsPanel = new SongsPanel(PlayerManager.getSongDataArrayList());
+        songsPanel.setVisible(true);
         Main.getJpotifyGUI().getHomePanel().setVisible(false);
-        Main.getJpotifyGUI().getAlbumsPanel().setVisible(false);
-        Main.getJpotifyGUI().add(Main.getJpotifyGUI().getSongsPanel().getjScrollPane(), BorderLayout.CENTER);
-
-
+        Main.getJpotifyGUI().add(songsPanel);
         JLayer<Component> jLayer;
-        jLayer = new JLayer<>(Main.getJpotifyGUI().getSongsPanel(), new MyLayerUI());
+        jLayer = new JLayer<>(songsPanel, new MyLayerUI());
         Main.getJpotifyGUI().add(jLayer, BorderLayout.CENTER);
-        Main.getJpotifyGUI().validate();
+//        Main.getJpotifyGUI().getContentPane().validate();
         Main.getJpotifyGUI().revalidate();
-        Main.getJpotifyGUI().repaint();
+//        Main.getJpotifyGUI().getContentPane().repaint();
     }
 
 }

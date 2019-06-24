@@ -1,5 +1,6 @@
 package Controllers;
 
+import GUI.ChoicesArea;
 import GUI.MusicSliderBar;
 import Logic.*;
 
@@ -46,6 +47,12 @@ public class PauseAndPlayClickButton implements ActionListener {
                 ifFirstTimePlaying=1;
             }
             if(ifNewSong){
+                //cong cover icon
+                //TODO : fix the size of the image icon
+                ChoicesArea.getSongIconLable().setIcon(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getIcon());
+                ChoicesArea.getSongIconLable().setText(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
+
+
                 System.out.println(sliderThread.getState());
                 sliderThread.setCurrentTime(0);
                 sliderThread.setFlag(1);

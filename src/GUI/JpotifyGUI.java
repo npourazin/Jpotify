@@ -10,16 +10,17 @@ import java.awt.*;
 
 public class JpotifyGUI extends JFrame {
     private HomePanel homePanel;
+    private static MusicSliderBar musicSliderBar;
 
+    public static ChoicesArea getChoicesArea() {
+        return choicesArea;
+    }
 
-    private SongsPanel songsPanel;
-    private AlbumsPanel albumsPanel;
+    private static ChoicesArea choicesArea;
 
     public JpotifyGUI() {
         super();
 
-        songsPanel=new SongsPanel(PlayerManager.getSongDataArrayList());
-        albumsPanel=new AlbumsPanel();
         this.addWindowListener(new JpotifyWindowActionListener());
 
         try {
@@ -42,7 +43,7 @@ public class JpotifyGUI extends JFrame {
 //        JScrollPane jScrollPane = new JScrollPane(this,   ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
 //        jScrollPane.setPreferredSize(new Dimension(600, 600));
-        ChoicesArea choicesArea = new ChoicesArea();
+         choicesArea = new ChoicesArea();
         choicesArea.setVisible(true);
         this.add(choicesArea.getjScrollPane(), BorderLayout.WEST);
 
@@ -55,7 +56,6 @@ public class JpotifyGUI extends JFrame {
 
 //        if(HomePanel.ifVisible()) {
         homePanel = new HomePanel();
-        homePanel.setVisible(true);
         this.add(homePanel, BorderLayout.CENTER);
         jLayer = new JLayer<>(homePanel, new MyLayerUI());
         this.add(jLayer, BorderLayout.CENTER);
@@ -69,7 +69,7 @@ public class JpotifyGUI extends JFrame {
 //            this.add(jLayer, BorderLayout.CENTER);
 //        }
         //time is to be given here it is given 100 as default
-        MusicSliderBar musicSliderBar = new MusicSliderBar(100);
+        musicSliderBar = new MusicSliderBar(100);
         musicSliderBar.setVisible(true);
         this.add(musicSliderBar, BorderLayout.SOUTH);
 
@@ -87,12 +87,7 @@ public class JpotifyGUI extends JFrame {
         return homePanel;
     }
 
-    public SongsPanel getSongsPanel() {
-        return songsPanel;
+    public static MusicSliderBar getMusicSliderBar() {
+        return musicSliderBar;
     }
-
-    public AlbumsPanel getAlbumsPanel() {
-        return albumsPanel;
-    }
-
 }
