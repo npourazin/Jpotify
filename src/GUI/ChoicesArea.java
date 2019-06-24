@@ -33,7 +33,7 @@ public class ChoicesArea extends JPanel{
 
         saveButton.setVisible(true);
         this.add(saveButton);
-        saveButton.addActionListener(new ClickListenerForAddingSongs());
+        saveButton.addActionListener(new ClickListenerForAddingSongs2());
 
 
         JButton homeButton=new JButton("Home");
@@ -89,6 +89,10 @@ public class ChoicesArea extends JPanel{
         this.add(list);
         try {
             String playlistName;
+            if(!new File("src/PlaylistNames.txt").exists()) {
+                PrintWriter fr = new PrintWriter(new FileWriter("src/PlaylistNames.txt"));
+            }
+            //Todo why new file?
             Scanner sc = new Scanner(new FileReader(new File("src/PlaylistNames.txt")));
             while (sc.hasNext()){
                 playlistName=sc.nextLine();
