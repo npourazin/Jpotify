@@ -6,12 +6,16 @@ import Logic.PlayerManager;
 import javax.swing.*;
 import java.io.*;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     private static JpotifyGUI jpotifyGUI;
     private static ObjectOutputStream objOut;
     private static ObjectInputStream objIn;
+    private static ArrayList<SongData> currentQueue;
+    private static int songQueueIndex = 0;
 
     public static void main(String[] args) {
 
@@ -19,7 +23,7 @@ public class Main {
 
 //        prepareObjIn();
 
-        PlayerManager player = new PlayerManager();
+        PlayerManager.PlayerManager();
 //        try {
 //        try {
 //            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
@@ -33,7 +37,7 @@ public class Main {
 //            e.printStackTrace();
 //        }
 //      new Thread(JpotifyGUI::new).start();
-        jpotifyGUI=new JpotifyGUI();
+        jpotifyGUI = new JpotifyGUI();
 
         //TODO: write the changes in time and whatever to the file before closing
 
@@ -73,7 +77,45 @@ public class Main {
 //        }
 
     }
-    public static JpotifyGUI getJpotifyGUI(){
+
+    public static void creatCurrentQueue(String fileName) {
+        currentQueue=null;
+        currentQueue=new ArrayList<SongData>();
+        try {
+            Scanner sc = new Scanner(new FileReader(new File(fileName)));
+            while (sc.hasNext()){
+                String absolutePath=sc.nextLine();
+                for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
+                    if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(absolutePath)){
+                        currentQueue.add(PlayerManager.getSongDataArrayList().get(i));
+                    }
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+
+    public static void setCurrentQueue(ArrayList<SongData> arr) {
+        currentQueue = arr;
+    }
+
+    public static int getSongQueueIndex() {
+        return songQueueIndex;
+    }
+
+    public static void setSongQueueIndex(int i) {
+        songQueueIndex = i;
+    }
+
+    public static ArrayList<SongData> getCurrentQueue() {
+        return currentQueue;
+    }
+
+    public static JpotifyGUI getJpotifyGUI() {
         return jpotifyGUI;
     }
 
@@ -93,12 +135,12 @@ public class Main {
         Main.objIn = objIn;
     }
 
-    public static void prepareObjOut(){
+    public static void prepareObjOut() {
         try {
-            if(objIn!=null){
+            if (objIn != null) {
                 objIn.close();
             }
-            if(objOut==null)
+            if (objOut == null)
                 objOut = new ObjectOutputStream(new FileOutputStream("src/AddedSongs.bin"));
         } catch (IOException e) {
             e.printStackTrace();
@@ -106,18 +148,18 @@ public class Main {
     }
 
     //TODO ? add synchronized?
-    public static void prepareObjIn(){
+    public static void prepareObjIn() {
         try {
-            if(!new File("src/AddedSongs.bin").exists()) return;
-            if(objOut!=null){
+            if (!new File("src/AddedSongs.bin").exists()) return;
+            if (objOut != null) {
                 objOut.flush();
                 objOut.close();
             }
-            if(objIn!=null) {
+            if (objIn != null) {
                 objIn.close();
-                objIn  = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
-            }else {
-                objIn  = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
+                objIn = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
+            } else {
+                objIn = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
             }
 
         } catch (IOException e) {
