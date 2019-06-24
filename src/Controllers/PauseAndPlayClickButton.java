@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 public class PauseAndPlayClickButton implements ActionListener {
     private static SongPlayer sP;
     private static int ifFirstTimePlaying = 0;
+    private static boolean ifNewSong=true;
     private SliderThread sliderThread;
     private static boolean buttonPlaying = false;
 
@@ -32,15 +33,26 @@ public class PauseAndPlayClickButton implements ActionListener {
             if (ifFirstTimePlaying == 0) {
                 sliderThread = MusicSliderBar.getjSliderThread();
                 sliderThread.setFlag(1);
-                sP = PlayerManager.getsP();
                 sliderThread.start();
-            } else {
+            }
+            if(ifNewSong){
+                sliderThread.setFlag(1);
+                sliderThread.setCurrentTime(0);
+                sP = PlayerManager.getsP();
+                ifNewSong=false;
+            }
+            else {
                 sliderThread.setFlag(1);
                 if (sP == null) {
                     return;
                 }
                 sP.resumeSong();
             }
+
+
+
+
+
             //niki:
             sliderThread.setFlag(1);
             if (sP == null) {
@@ -83,6 +95,15 @@ public class PauseAndPlayClickButton implements ActionListener {
     public static void setIfFirstTimePlaying(){
         ifFirstTimePlaying=0;
     }
+
+    public static boolean getIfNewSong(){
+        return ifNewSong;
+    }
+
+    public static void setIfNewSong(){
+        ifNewSong=true;
+    }
+
     public static boolean ifButtonPlaying() {
         return buttonPlaying;
     }
