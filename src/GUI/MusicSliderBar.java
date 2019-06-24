@@ -21,7 +21,7 @@ public class MusicSliderBar extends JPanel {
     private JButton playButton;
     private JButton nextButton;
     private JButton replayButton;
-    private JTextArea showTime;
+    private static JTextArea showTime;
 
     //    private Thread jSliderThread;
     MusicSliderBar(long musicLength) {
@@ -39,6 +39,7 @@ public class MusicSliderBar extends JPanel {
         previousButton = new JButton();
         previousButton.setVisible(true);
         previousButton.setBackground(Color.cyan);
+        previousButton.addActionListener(new PreviousButtonListener());
         topPanel.add(previousButton);
         try {
             Image img = ImageIO.read(getClass().getResource("previous1.png"));
@@ -78,6 +79,7 @@ public class MusicSliderBar extends JPanel {
         nextButton = new JButton();
         nextButton.setVisible(true);
         nextButton.setBackground(Color.cyan);
+        nextButton.addActionListener(new NextButtonListener());
         topPanel.add(nextButton);
         try {
             Image img = ImageIO.read(getClass().getResource("next1.png"));
@@ -125,7 +127,7 @@ public class MusicSliderBar extends JPanel {
         showTime.setVisible(true);
 
 
-        //Creating image icon
+               //Creating image icon
         //TO DO -->  get song cover image
 //        ImageIcon imageIcon=new ImageIcon("images/songCover.jpg");
 //        JLabel imageLable=new JLabel(imageIcon);
@@ -140,6 +142,9 @@ public class MusicSliderBar extends JPanel {
 
 
     }
+    public static JTextArea getShowTime(){
+        return showTime;
+    }
 
     public static JSlider getJSlider() {
         return jSlider;
@@ -153,56 +158,9 @@ public class MusicSliderBar extends JPanel {
         return jSliderThread;
     }
 
-    public String formatText(long curr){
-        long min =  curr/60;
-        long sec = curr - min*60;
-        long minAll =  MUSIC_LENGTH/60;
-        long secAll = MUSIC_LENGTH - minAll*60;
-        return ((min>=10)?""+min:"0"+min)+":"+ ((sec>=10)?""+sec:"0"+sec)+"/"+
-                ((minAll>=10)?""+minAll:"0"+minAll)+":"+ ((sec>=10)?""+secAll:"0"+secAll);
-    }
 
-    public class SliderThread extends Thread {
-        private long currentTime = 0;
-        private int flag = 0;//0 if paused, 1 otherwise.
 
-        @Override
-        public void run() {
-            while (currentTime <= MUSIC_LENGTH) {
-                jSlider.setValue((int)currentTime);
-                showTime.setText(formatText(currentTime));
-                try {
-                    TimeUnit.SECONDS.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                moveSlider();
-            }
-        }
 
-        public long getCurrentTime() {
-            return currentTime;
-        }
-
-        public void setCurrentTime(long currentTime) {
-            this.currentTime = currentTime;
-        }
-
-        public void setFlag(int flag) {
-            this.flag = flag;
-        }
-
-        public int getFlag() {
-            return flag;
-        }
-
-        public void moveSlider() {
-            if (flag == 1) {
-                //it is being played
-                currentTime++;
-            }
-        }
-    }
 }
 
 

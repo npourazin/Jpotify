@@ -2,6 +2,7 @@ package Controllers;
 
 import GUI.MusicSliderBar;
 import Logic.PlayerManager;
+import Logic.SongData;
 import Logic.SongPlayer;
 
 import javax.imageio.ImageIO;
@@ -13,7 +14,7 @@ import java.awt.event.ActionListener;
 public class PauseAndPlayClickButton implements ActionListener {
     private static SongPlayer sP;
     private static int ifFirstTimePlaying = 0;
-    private MusicSliderBar.SliderThread sliderThread;
+    private SliderThread sliderThread;
     private static boolean buttonPlaying = false;
 
     @Override
@@ -75,7 +76,13 @@ public class PauseAndPlayClickButton implements ActionListener {
     public static SongPlayer getSongCurrentPlayer() {
         return sP;
     }
+    public static void setsP(SongPlayer songPlayer){
+        sP=songPlayer;
+    }
 
+    public static void setIfFirstTimePlaying(){
+        ifFirstTimePlaying=0;
+    }
     public static boolean ifButtonPlaying() {
         return buttonPlaying;
     }

@@ -1,6 +1,8 @@
 package Logic;
 
 import Controllers.ClickListenerForAddingSongs;
+import Controllers.PauseAndPlayClickButton;
+import GUI.MusicSliderBar;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.UnsupportedTagException;
 import javazoom.jl.decoder.JavaLayerException;
@@ -32,7 +34,9 @@ public class PlayerManager {
             //by validating songs panel?
 
         try {
+            System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             sP = new SongPlayer(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
+            PauseAndPlayClickButton.setIfFirstTimePlaying();
 //            Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
 //            Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
         } catch (JavaLayerException e) {
