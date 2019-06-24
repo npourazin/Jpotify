@@ -16,63 +16,43 @@ public class PlayerManager {
     private ObjectInputStream objectInputStream;
 
     public PlayerManager() {
-        Scanner sc;
+//        Scanner sc;
+//        File file;
 
-        File file;
-
-            addresses = new ArrayList<>();
+//            addresses = new ArrayList<>();
             songDataArrayList = new ArrayList<>();
 //            objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
 
-            readSongDataFromFile();
-            //create a button for each on song panel
+
+
+            Main.prepareObjIn();
+            SavedSongData.readFromFile(Main.getObjIn());
+
+            songDataArrayList.sort(new SortByTime());
+
+                //create a button for each on song panel
             //by validating songs panel?
 
-
-            try {
-                sP = new SongPlayer("/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3");
-                //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
-                //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
-            } catch (JavaLayerException e) {
-                e.printStackTrace();
-            }
-
+        try {
+            sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
+            //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
+            //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
+        } catch (JavaLayerException e) {
+            e.printStackTrace();
+        }
     }
 
     public static SongPlayer getsP() {
         return sP;
     }
 
-    public void readSongDataFromFile() {
-
-        try {
-            int flag=0;
-            SongData tmp;
-            if(ClickListenerForAddingSongs.getObjectInputStream()!=null) flag=1;
-            else {
-                objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
-            }
-
-            while (true) {
-                if(flag==1)
-                    tmp = (SongData) ClickListenerForAddingSongs.getObjectInputStream().readObject();
-                else {
-                    tmp = (SongData) objectInputStream.readObject();
-                }
-                songDataArrayList.add(tmp);
-
-            }
-        } catch (EOFException e) { }
-        catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        songDataArrayList.sort(new SortByTime());
-
-    }
 
     public static ArrayList<SongData> getSongDataArrayList() {
         return songDataArrayList;
+    }
+
+    public static void setSongDataArrayList(ArrayList<SongData> songDataArrayList) {
+        PlayerManager.songDataArrayList = songDataArrayList;
     }
 }
 

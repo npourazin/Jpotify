@@ -4,24 +4,28 @@ import GUI.*;
 import Logic.PlayerManager;
 
 import javax.swing.*;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Main {
     private static JpotifyGUI jpotifyGUI;
+    private static ObjectOutputStream objOut;
+    private static ObjectInputStream objIn;
+
     public static void main(String[] args) {
+
         System.out.println("hello");
-        new Thread(PlayerManager::new).start();
+
+//        prepareObjIn();
+
+        PlayerManager player = new PlayerManager();
 //        try {
-        try {
-            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 //            //false it to empty file
 //            fr.close();
 //
@@ -30,6 +34,9 @@ public class Main {
 //        }
 //      new Thread(JpotifyGUI::new).start();
         jpotifyGUI=new JpotifyGUI();
+
+        //TODO: write the changes in time and whatever to the file before closing
+
 
 //        Thread t = new Thread(() -> {
 //            try {
@@ -70,6 +77,55 @@ public class Main {
         return jpotifyGUI;
     }
 
+    public static ObjectOutputStream getObjOut() {
+        return objOut;
+    }
+
+    public static void setObjOut(ObjectOutputStream objOut) {
+        Main.objOut = objOut;
+    }
+
+    public static ObjectInputStream getObjIn() {
+        return objIn;
+    }
+
+    public static void setObjIn(ObjectInputStream objIn) {
+        Main.objIn = objIn;
+    }
+
+    public static void prepareObjOut(){
+        try {
+            if(objIn!=null){
+                objIn.close();
+            }
+            if(objOut==null)
+                objOut = new ObjectOutputStream(new FileOutputStream("src/AddedSongs.bin"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //TODO ? add synchronized?
+    public static void prepareObjIn(){
+        try {
+            if(!new File("src/AddedSongs.bin").exists()) return;
+            if(objOut!=null){
+                objOut.flush();
+                objOut.close();
+            }
+            if(objIn!=null) {
+                objIn.close();
+                objIn  = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
+            }else {
+                objIn  = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
+            }
+
+        } catch (IOException e) {
+            //Todo figure out this damned exception
+            e.printStackTrace();
+        }
+
+    }
 }
 
 ///ailee - i will show you my-free-mp3s.com .mp3

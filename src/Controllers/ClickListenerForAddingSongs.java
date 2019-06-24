@@ -1,5 +1,6 @@
 package Controllers;
 import GUI.FileChooser;
+//import Logic.AppendingObjectOutputStream;
 import Logic.Music;
 import Logic.SongData;
 import com.mpatric.mp3agic.InvalidDataException;
@@ -17,22 +18,25 @@ public class ClickListenerForAddingSongs implements ActionListener {
     private File file;
     private static ObjectOutputStream objectOutputStream;
     private static ObjectInputStream objectInputStream;
+    ArrayList<SongData> songDataArrayList = new ArrayList<>();
+    private String absolutePath;
+    PrintWriter fr;
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
         file = fileChooser.getSelectedFile();
+        absolutePath  = file.getAbsolutePath();
         if(file==null){
             return;
         }
         try {
 //            objectOutputStream.reset();
-
+                objectOutputStream = new ObjectOutputStream(new FileOutputStream("src/AddedSongs.bin"));
 //            FileInputStream in = new FileInputStream(file.getAbsolutePath());
             Scanner sc = new Scanner(new FileReader(new File("src/AddedSongAdresses.txt")));
-            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
+            fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
             objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
 
-            String absolutePath  = file.getAbsolutePath();
             if(!absolutePath.endsWith(".mp3")) return;
 
             while(sc.hasNext()){
@@ -52,30 +56,18 @@ public class ClickListenerForAddingSongs implements ActionListener {
             } catch (EOFException e) { }
             catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
+                System.out.println();
             }
 
             Music music = new Music(absolutePath);
             songDataArrayList.add(music.getSongData());
-            for (int i = 0; i < songDataArrayList.size(); i++) {
-                objectOutputStream.flush();
 
-                objectOutputStream.writeObject(songDataArrayList.get(i));
-//                objectOutputStream.reset();
-            }
-//            objectOutputStream.reset();
+            writeToBinaryFile();
 
-            fr.println(absolutePath);
-            fr.flush();
-
-            objectOutputStream.flush();
-
-            objectOutputStream.close();
-            objectInputStream.close();
-//            objectInputStream.reset();
-//            objectOutputStream.reset();
 
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println();
         }
 
     }
@@ -86,5 +78,29 @@ public class ClickListenerForAddingSongs implements ActionListener {
 
     public static ObjectInputStream getObjectInputStream() {
         return objectInputStream;
+    }
+
+    public void writeToBinaryFile(){
+      try {
+          for (int i = 0; i < songDataArrayList.size(); i++) {
+              objectOutputStream.flush();
+
+              objectOutputStream.writeObject(songDataArrayList.get(i));
+//                objectOutputStream.reset();
+          }
+//            objectOutputStream.reset();
+
+          fr.println(absolutePath);
+          fr.flush();
+
+          objectOutputStream.flush();
+
+          objectOutputStream.close();
+          objectInputStream.close();
+//            objectInputStream.reset();
+//            objectOutputStream.reset();
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
     }
 }
