@@ -27,7 +27,7 @@ private JScrollPane jScrollPane;
         System.out.println(songs.size());
         songButton=new ArrayList<>();
         this.setVisible(visible);
-        Dimension d=new Dimension(300,300);
+        Dimension d=new Dimension(200,200);
         //TODO: make this uncomment when you had a proper array list and compelete the following code.
         for (int i = 0; i <songs.size() ; i++) {
             JButton j=new JButton();

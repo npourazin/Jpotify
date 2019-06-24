@@ -9,9 +9,9 @@ public class ClickListenerForShowingHome implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-//        Main.getJpotifyGUI().getHomePanel().setVisible(true);
-//        Main.getJpotifyGUI().getSongsPanel().setVisible(false);
-//        Main.getJpotifyGUI().getAlbumsPanel().setVisible(false);
+        Main.getJpotifyGUI().getHomePanel().setVisible(true);
+        Main.getJpotifyGUI().getSongsPanel().setVisible(false);
+        Main.getJpotifyGUI().getAlbumsPanel().setVisible(false);
         Main.getJpotifyGUI().remove(Main.getJpotifyGUI().getAlbumsPanel());
         Main.getJpotifyGUI().remove(Main.getJpotifyGUI().getSongsPanel());
 
