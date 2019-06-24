@@ -1,34 +1,24 @@
 package Controllers;
 
 import Logic.Main;
-import Logic.PlayerManager;
-import Logic.SavedSongData;
-
+import Network.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.io.IOException;
 
-public class WindowAction implements WindowListener {
+public class SignInOrSignUpWindowActionListener implements WindowListener {
     @Override
     public void windowOpened(WindowEvent windowEvent) {
-        Main.prepareObjIn();
-        SavedSongData.readFromFile(Main.getObjIn());
+        UserPassVerification.getCurrentUsers();
     }
 
     @Override
     public void windowClosing(WindowEvent windowEvent) {
-        Main.prepareObjOut();
-        SavedSongData.writeToFile(Main.getObjOut(), PlayerManager.getSongDataArrayList());
-        try {
-            Main.getObjOut().flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
     @Override
     public void windowClosed(WindowEvent windowEvent) {
-
+        Main.setHolyFlag(1);
     }
 
     @Override

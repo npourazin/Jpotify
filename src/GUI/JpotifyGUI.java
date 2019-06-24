@@ -1,12 +1,8 @@
 package GUI;
 
-import Controllers.ClickListenerForShowingSongsList;
-import Controllers.WindowAction;
-import Logic.PlayerManager;
+import Controllers.JpotifyWindowActionListener;
 
 import javax.swing.*;
-import javax.swing.plaf.metal.MetalLookAndFeel;
-import javax.swing.plaf.metal.OceanTheme;
 import java.awt.*;
 
 public class JpotifyGUI extends JFrame {
@@ -14,7 +10,7 @@ public class JpotifyGUI extends JFrame {
     public JpotifyGUI(){
         super();
 
-        this.addWindowListener(new WindowAction());
+        this.addWindowListener(new JpotifyWindowActionListener());
 
 //        try {
 //            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
