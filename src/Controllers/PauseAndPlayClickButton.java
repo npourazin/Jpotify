@@ -15,39 +15,55 @@ public class PauseAndPlayClickButton implements ActionListener {
     private static boolean ifNewSong=true;
     private SliderThread sliderThread;
     private static boolean buttonPlaying = false;
+    private static boolean endOfSong=false;
 
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton jB = (JButton) (e.getSource());
-        if (jB.getText().equals(" Play")) {
-            buttonPlaying = true;
+        if(endOfSong){
             jB.setText("Pause");
-            try {
-                Image img = ImageIO.read(getClass().getResource("pause1.png"));
-                jB.setIcon(new ImageIcon(img));
-            } catch (Exception ex) {
-                ex.printStackTrace();
+            MusicSliderBar.setjSliderThread(new SliderThread());
+            sliderThread=MusicSliderBar.getjSliderThread();
+            sliderThread.start();
+            System.out.println(sliderThread.getState());
+
+        }
+        if (jB.getText().equals(" Play") || endOfSong) {
+            if(jB.getText().equals(" Play")) {
+                buttonPlaying = true;
+                jB.setText("Pause");
+                try {
+                    Image img = ImageIO.read(getClass().getResource("pause1.png"));
+                    jB.setIcon(new ImageIcon(img));
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
             if (ifFirstTimePlaying == 0) {
                 sliderThread = MusicSliderBar.getjSliderThread();
                 sliderThread.setFlag(1);
                 sliderThread.start();
+                ifFirstTimePlaying=1;
             }
             if(ifNewSong){
+                System.out.println(sliderThread.getState());
                 sliderThread.setCurrentTime(0);
                 sliderThread.setFlag(1);
                 sP = PlayerManager.getsP();
                 MusicSliderBar.getJSlider().setValue(0);
                 MusicSliderBar.setMusicLength(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
-                MusicSliderBar.getJSlider().setMaximum((int) MusicSliderBar.getMusicLenght());
+                MusicSliderBar.getJSlider().setMaximum((int) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
 
                 //WHAT THE ACTUAL FUUUUUCK!!!!!!  WHY CANT YOU SET WHAT YOU ARE WHOWING MEEEE!!?????
                 //TODO: fix this shit
 
                 System.out.println((int) MusicSliderBar.getMusicLenght());
-                MusicSliderBar.getJSlider().setMajorTickSpacing((int) MusicSliderBar.getMusicLenght());
+//                MusicSliderBar.getJSlider().setMajorTickSpacing((int) MusicSliderBar.getMusicLenght());
 //                MusicSliderBar.getJSlider().setMinorTickSpacing((int) MusicSliderBar.getMusicLenght());
+
+                MusicSliderBar.getJSlider().setMajorTickSpacing(1000);
                 ifNewSong=false;
+                endOfSong=false;
             }
             else {
                 sliderThread.setFlag(1);
@@ -93,6 +109,9 @@ public class PauseAndPlayClickButton implements ActionListener {
         }
     }
 
+    public static void setEndOfSong(){
+        endOfSong=true;
+    }
     public static SongPlayer getSongCurrentPlayer() {
         return sP;
     }

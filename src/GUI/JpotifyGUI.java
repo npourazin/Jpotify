@@ -1,15 +1,25 @@
 package GUI;
 
 import Controllers.JpotifyWindowActionListener;
+import Logic.Main;
+import Logic.PlayerManager;
+import Logic.SongPlayer;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class JpotifyGUI extends JFrame {
     private HomePanel homePanel;
-    public JpotifyGUI(){
+
+
+    private SongsPanel songsPanel;
+    private AlbumsPanel albumsPanel;
+
+    public JpotifyGUI() {
         super();
 
+        songsPanel=new SongsPanel(PlayerManager.getSongDataArrayList());
+        albumsPanel=new AlbumsPanel();
         this.addWindowListener(new JpotifyWindowActionListener());
 
         try {
@@ -37,18 +47,18 @@ public class JpotifyGUI extends JFrame {
         this.add(choicesArea.getjScrollPane(), BorderLayout.WEST);
 
 
-        friendsActivityArea friendsActivityArea=new friendsActivityArea();
+        friendsActivityArea friendsActivityArea = new friendsActivityArea();
         friendsActivityArea.setVisible(true);
-        this.add(friendsActivityArea,BorderLayout.EAST);
+        this.add(friendsActivityArea, BorderLayout.EAST);
 
         JLayer<Component> jLayer;
 
 //        if(HomePanel.ifVisible()) {
-            homePanel= new HomePanel();
-            homePanel.setVisible(true);
-            this.add(homePanel, BorderLayout.CENTER);
-            jLayer = new JLayer<>(homePanel, new MyLayerUI());
-            this.add(jLayer, BorderLayout.CENTER);
+        homePanel = new HomePanel();
+        homePanel.setVisible(true);
+        this.add(homePanel, BorderLayout.CENTER);
+        jLayer = new JLayer<>(homePanel, new MyLayerUI());
+        this.add(jLayer, BorderLayout.CENTER);
 //        }
 
 //        else if(ClickListenerForShowingSongsList.ifVisible()) {
@@ -61,7 +71,7 @@ public class JpotifyGUI extends JFrame {
         //time is to be given here it is given 100 as default
         MusicSliderBar musicSliderBar = new MusicSliderBar(100);
         musicSliderBar.setVisible(true);
-        this.add(musicSliderBar,BorderLayout.SOUTH);
+        this.add(musicSliderBar, BorderLayout.SOUTH);
 
 //        choicesArea.paint();
         choicesArea.setBackground(Color.cyan);
@@ -70,9 +80,19 @@ public class JpotifyGUI extends JFrame {
 
         //refreshes the layout after changes
         this.validate();
-      //  this.pack();
+        //  this.pack();
     }
-    public HomePanel getHomePanel(){
+
+    public HomePanel getHomePanel() {
         return homePanel;
     }
+
+    public SongsPanel getSongsPanel() {
+        return songsPanel;
+    }
+
+    public AlbumsPanel getAlbumsPanel() {
+        return albumsPanel;
+    }
+
 }

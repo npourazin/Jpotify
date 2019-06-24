@@ -156,6 +156,7 @@ public class MusicSliderBar extends JPanel {
     public static SliderThread getjSliderThread() {
         return jSliderThread;
     }
+    public static void setjSliderThread(SliderThread sliderThread){jSliderThread=sliderThread;}
 
 
 }

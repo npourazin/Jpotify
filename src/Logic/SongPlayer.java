@@ -160,6 +160,10 @@ public class SongPlayer {
         resumeSong();
     }
 
+    public String getPlayerStatus(){
+        return playerStatus.toString();
+    }
+
     public String getFileName() {
         return fileName;
     }
