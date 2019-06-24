@@ -33,7 +33,10 @@ public class PlayerManager {
             //create a button for each on song panel
             //by validating songs panel?
 
+
         try {
+            if(Main.getCurrentQueue().size()==0) return;
+            System.out.println("Queue size: "+Main.getCurrentQueue().size());
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             sP = new SongPlayer(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             PauseAndPlayClickButton.setIfNewSong();

@@ -1,10 +1,7 @@
 package Controllers;
 
 import GUI.MusicSliderBar;
-import Logic.Main;
-import Logic.PlayerManager;
-import Logic.SongData;
-import Logic.SongPlayer;
+import Logic.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -37,9 +34,10 @@ public class PauseAndPlayClickButton implements ActionListener {
                 sliderThread.start();
             }
             if(ifNewSong){
-                sliderThread.setFlag(1);
                 sliderThread.setCurrentTime(0);
+                sliderThread.setFlag(1);
                 sP = PlayerManager.getsP();
+                MusicSliderBar.getJSlider().setValue(0);
                 MusicSliderBar.setMusicLength(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
                 MusicSliderBar.getJSlider().setMaximum((int) MusicSliderBar.getMusicLenght());
 

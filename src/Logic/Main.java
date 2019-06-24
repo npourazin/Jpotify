@@ -26,7 +26,6 @@ public class Main {
 
 //        prepareObjIn();
 
-        PlayerManager.PlayerManager();
 //        try {
 //        try {
 //            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
@@ -40,8 +39,6 @@ public class Main {
 //            e.printStackTrace();
 //        }
 //      new Thread(JpotifyGUI::new).start();
-        jpotifyGUI = new JpotifyGUI();
-        PlayerManager player = new PlayerManager();
 
         SignInOrSignUp signInOrSignUp = new SignInOrSignUp();
         while (holyFlag!=1) {
@@ -54,7 +51,9 @@ public class Main {
         }
         signInOrSignUp.dispose();
 
-        jpotifyGUI=new JpotifyGUI();
+        PlayerManager.PlayerManager();
+
+        jpotifyGUI = new JpotifyGUI();
 
         //TODO: write the changes in time and whatever to the file before closing
 
