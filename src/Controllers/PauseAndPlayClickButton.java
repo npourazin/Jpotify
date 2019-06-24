@@ -1,8 +1,7 @@
 package Controllers;
 
 import GUI.MusicSliderBar;
-import Logic.PlayerManager;
-import Logic.SongPlayer;
+import Logic.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -13,7 +12,8 @@ import java.awt.event.ActionListener;
 public class PauseAndPlayClickButton implements ActionListener {
     private static SongPlayer sP;
     private static int ifFirstTimePlaying = 0;
-    private MusicSliderBar.SliderThread sliderThread;
+    private static boolean ifNewSong=true;
+    private SliderThread sliderThread;
     private static boolean buttonPlaying = false;
 
     @Override
@@ -31,15 +31,36 @@ public class PauseAndPlayClickButton implements ActionListener {
             if (ifFirstTimePlaying == 0) {
                 sliderThread = MusicSliderBar.getjSliderThread();
                 sliderThread.setFlag(1);
-                sP = PlayerManager.getsP();
                 sliderThread.start();
-            } else {
+            }
+            if(ifNewSong){
+                sliderThread.setCurrentTime(0);
+                sliderThread.setFlag(1);
+                sP = PlayerManager.getsP();
+                MusicSliderBar.getJSlider().setValue(0);
+                MusicSliderBar.setMusicLength(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
+                MusicSliderBar.getJSlider().setMaximum((int) MusicSliderBar.getMusicLenght());
+
+                //WHAT THE ACTUAL FUUUUUCK!!!!!!  WHY CANT YOU SET WHAT YOU ARE WHOWING MEEEE!!?????
+                //TODO: fix this shit
+
+                System.out.println((int) MusicSliderBar.getMusicLenght());
+                MusicSliderBar.getJSlider().setMajorTickSpacing((int) MusicSliderBar.getMusicLenght());
+//                MusicSliderBar.getJSlider().setMinorTickSpacing((int) MusicSliderBar.getMusicLenght());
+                ifNewSong=false;
+            }
+            else {
                 sliderThread.setFlag(1);
                 if (sP == null) {
                     return;
                 }
                 sP.resumeSong();
             }
+
+
+
+
+
             //niki:
             sliderThread.setFlag(1);
             if (sP == null) {
@@ -74,6 +95,21 @@ public class PauseAndPlayClickButton implements ActionListener {
 
     public static SongPlayer getSongCurrentPlayer() {
         return sP;
+    }
+    public static void setsP(SongPlayer songPlayer){
+        sP=songPlayer;
+    }
+
+    public static void setIfFirstTimePlaying(){
+        ifFirstTimePlaying=0;
+    }
+
+    public static boolean getIfNewSong(){
+        return ifNewSong;
+    }
+
+    public static void setIfNewSong(){
+        ifNewSong=true;
     }
 
     public static boolean ifButtonPlaying() {

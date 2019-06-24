@@ -4,24 +4,19 @@ import Controllers.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.plaf.metal.MetalLookAndFeel;
-import javax.swing.plaf.metal.OceanTheme;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.concurrent.TimeUnit;
 
 public class MusicSliderBar extends JPanel {
     private static SliderThread jSliderThread;
     private static JSlider jSlider;
-    private static long MUSIC_LENGTH ;
+    private static long musicLength;
+    private long MUSIC_LENGHT;
+
     private JButton previousButton;
     private JButton playButton;
     private JButton nextButton;
     private JButton replayButton;
-    private JTextArea showTime;
+    private static JTextArea showTime;
 
     //    private Thread jSliderThread;
     MusicSliderBar(long musicLength) {
@@ -29,7 +24,7 @@ public class MusicSliderBar extends JPanel {
         this.setBackground(Color.cyan);
         this.setLayout(new GridLayout(2, 1));
         //TODO: get music length in seconds. (now it was just set to 100)
-        MUSIC_LENGTH = musicLength;
+        MUSIC_LENGHT = musicLength;
         JPanel topPanel = new JPanel();
         topPanel.setBackground(Color.cyan);
         topPanel.setLayout(new FlowLayout());
@@ -39,6 +34,7 @@ public class MusicSliderBar extends JPanel {
         previousButton = new JButton();
         previousButton.setVisible(true);
         previousButton.setBackground(Color.cyan);
+        previousButton.addActionListener(new PreviousButtonListener());
         topPanel.add(previousButton);
         try {
             Image img = ImageIO.read(getClass().getResource("previous1.png"));
@@ -62,7 +58,7 @@ public class MusicSliderBar extends JPanel {
         playButton.setBackground(Color.cyan);
 
         //Creating stop button
-        JButton stopButton=new JButton("Stop");
+        JButton stopButton = new JButton("Stop");
         stopButton.setVisible(true);
         stopButton.setBackground(Color.cyan);
         topPanel.add(stopButton);
@@ -78,6 +74,7 @@ public class MusicSliderBar extends JPanel {
         nextButton = new JButton();
         nextButton.setVisible(true);
         nextButton.setBackground(Color.cyan);
+        nextButton.addActionListener(new NextButtonListener());
         topPanel.add(nextButton);
         try {
             Image img = ImageIO.read(getClass().getResource("next1.png"));
@@ -100,12 +97,11 @@ public class MusicSliderBar extends JPanel {
         }
 
 
-
         //Creating jSlider
-        jSlider = new JSlider(0,(int) MUSIC_LENGTH, 0);
+        jSlider = new JSlider(0, (int) MUSIC_LENGHT, 0);
         jSlider.setVisible(true);
-        jSlider.setMinorTickSpacing((int)MUSIC_LENGTH);
-        jSlider.setMajorTickSpacing((int)MUSIC_LENGTH);
+//        jSlider.setMinorTickSpacing(1);
+//        jSlider.setMajorTickSpacing(10);
         jSlider.setPaintTicks(true);
         jSlider.setPaintLabels(true);
 //        jSlider.setValueIsAdjusting(true);
@@ -141,68 +137,27 @@ public class MusicSliderBar extends JPanel {
 
     }
 
+    public static JTextArea getShowTime() {
+        return showTime;
+    }
+
+    public static void setMusicLength(long length) {
+        musicLength =length;
+    }
+
     public static JSlider getJSlider() {
         return jSlider;
     }
 
-    public static long getMUSIC_LENGTH() {
-        return MUSIC_LENGTH;
+    public static long getMusicLenght() {
+        return musicLength;
     }
 
     public static SliderThread getjSliderThread() {
         return jSliderThread;
     }
 
-    public String formatText(long curr){
-        long min =  curr/60;
-        long sec = curr - min*60;
-        long minAll =  MUSIC_LENGTH/60;
-        long secAll = MUSIC_LENGTH - minAll*60;
-        return ((min>=10)?""+min:"0"+min)+":"+ ((sec>=10)?""+sec:"0"+sec)+"/"+
-                ((minAll>=10)?""+minAll:"0"+minAll)+":"+ ((sec>=10)?""+secAll:"0"+secAll);
-    }
 
-    public class SliderThread extends Thread {
-        private long currentTime = 0;
-        private int flag = 0;//0 if paused, 1 otherwise.
-
-        @Override
-        public void run() {
-            while (currentTime <= MUSIC_LENGTH) {
-                jSlider.setValue((int)currentTime);
-                showTime.setText(formatText(currentTime));
-                try {
-                    TimeUnit.SECONDS.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                moveSlider();
-            }
-        }
-
-        public long getCurrentTime() {
-            return currentTime;
-        }
-
-        public void setCurrentTime(long currentTime) {
-            this.currentTime = currentTime;
-        }
-
-        public void setFlag(int flag) {
-            this.flag = flag;
-        }
-
-        public int getFlag() {
-            return flag;
-        }
-
-        public void moveSlider() {
-            if (flag == 1) {
-                //it is being played
-                currentTime++;
-            }
-        }
-    }
 }
 
 

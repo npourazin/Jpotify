@@ -48,7 +48,7 @@ public class ScrollSliderChanger implements ChangeListener {
                 next = fps;
             }
 
-            passedPercentage = (1.0) * fps / MusicSliderBar.getMUSIC_LENGTH();
+            passedPercentage = (1.0) * fps / MusicSliderBar.getMusicLenght();
 //            if (!MusicSliderBar.getJSlider().getValueIsAdjusting()) {
 //                MusicSliderBar.getjSliderThread().setCurrentTime(MusicSliderBar.getjSliderThread().getCurrentTime()-1);
 //            }
@@ -62,8 +62,6 @@ public class ScrollSliderChanger implements ChangeListener {
             } else if ((Math.abs(next - prev) == 1) && MusicSliderBar.getjSliderThread().getFlag() == 0)
                 sP.playInMiddle((int) (frames * passedPercentage));
             else flag = false;
-
-            System.out.println(flag);
 
         }
 

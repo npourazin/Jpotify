@@ -1,6 +1,8 @@
 package Logic;
 
 import Controllers.ClickListenerForAddingSongs;
+import Controllers.PauseAndPlayClickButton;
+import GUI.MusicSliderBar;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.UnsupportedTagException;
 import javazoom.jl.decoder.JavaLayerException;
@@ -15,28 +17,32 @@ public class PlayerManager {
     private ArrayList<String> addresses;
     private ObjectInputStream objectInputStream;
 
-    public PlayerManager() {
+    public static void PlayerManager() {
 //        Scanner sc;
 //        File file;
 
-//            addresses = new ArrayList<>();
+//          addresses = new ArrayList<>();
             songDataArrayList = new ArrayList<>();
-//            objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
-
-
+//          objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
 
             Main.prepareObjIn();
             SavedSongData.readFromFile(Main.getObjIn());
-
             songDataArrayList.sort(new SortByTime());
 
-                //create a button for each on song panel
+            Main.creatCurrentQueue("src/AddedSongAdresses.txt");
+            //create a button for each on song panel
             //by validating songs panel?
 
+
         try {
-            sP = new SongPlayer("/home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3");
-            //Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
-            //Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
+            if(Main.getCurrentQueue().size()==0) return;
+            System.out.println("Queue size: "+Main.getCurrentQueue().size());
+            System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
+            sP = new SongPlayer(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
+            PauseAndPlayClickButton.setIfNewSong();
+
+//            Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
+//            Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
         } catch (JavaLayerException e) {
             e.printStackTrace();
         }

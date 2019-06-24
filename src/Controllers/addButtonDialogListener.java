@@ -24,5 +24,7 @@ public class addButtonDialogListener implements ActionListener {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+
+        //TODO:Dialog box for choosing songs to add
     }
 }
