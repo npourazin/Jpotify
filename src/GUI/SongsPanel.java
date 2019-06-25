@@ -36,7 +36,8 @@ private JScrollPane jScrollPane;
             songButton.add(j);
             this.add(songButton.get(i));
             songButton.get(i).setVisible(true);
-            songButton.get(i).setIcon(songs.get(i).getIcon());
+
+            songButton.get(i).setIcon(new ImageIcon(((ImageIcon) songs.get(i).getIcon()).getImage().getScaledInstance(130,130,Image.SCALE_DEFAULT)));
             songButton.get(i).setText(songs.get(i).getSongName());
 
         }

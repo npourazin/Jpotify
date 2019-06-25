@@ -49,7 +49,7 @@ public class PauseAndPlayClickButton implements ActionListener {
             if(ifNewSong){
                 //cong cover icon
                 //TODO : fix the size of the image icon
-                ChoicesArea.getSongIconLable().setIcon(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getIcon());
+                ChoicesArea.getSongIconLable().setIcon(new ImageIcon(((ImageIcon) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getIcon()).getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT)));
                 ChoicesArea.getSongIconLable().setText(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
 
 
