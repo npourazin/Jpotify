@@ -1,16 +1,11 @@
 package Logic;
 
-import Controllers.ClickListenerForAddingSongs;
 import Controllers.PauseAndPlayClickButton;
-import GUI.MusicSliderBar;
-import com.mpatric.mp3agic.InvalidDataException;
-import com.mpatric.mp3agic.UnsupportedTagException;
 import javazoom.jl.decoder.JavaLayerException;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
-import java.time.Instant;
 import java.util.*;
 
 public class PlayerManager {
