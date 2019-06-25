@@ -1,5 +1,6 @@
 package GUI;
 import Controllers.*;
+import Logic.Main;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -11,7 +12,7 @@ import java.util.Scanner;
 
 public class ChoicesArea extends JPanel{
     private JScrollPane jScrollPane ;
-
+    private static JLabel songIconLable;
     ChoicesArea(){
         this.setLayout(new GridLayout(10, 1));
 
@@ -103,8 +104,17 @@ public class ChoicesArea extends JPanel{
             ex.printStackTrace();
         } catch (IOException ex) {
             ex.printStackTrace();
-        }
+    }
 
+        songIconLable = new JLabel();
+        Dimension d=new Dimension(100,100);
+        songIconLable.setVisible(true);
+        songIconLable.setPreferredSize(d);
+       this.add(songIconLable);
+    }
+
+    public static JLabel getSongIconLable(){
+        return songIconLable;
     }
     @Override
     public void paint(Graphics g) {

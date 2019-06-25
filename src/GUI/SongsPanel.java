@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class SongsPanel extends JPanel {
     private ArrayList<SongData> songs;
     private ArrayList<JButton> songButton;
-
+    private static boolean visible=true;
 private JScrollPane jScrollPane;
     public SongsPanel(ArrayList<SongData> songs){
         super();
@@ -26,27 +26,33 @@ private JScrollPane jScrollPane;
         this.songs = songs;
         System.out.println(songs.size());
         songButton=new ArrayList<>();
-        this.setVisible(true);
+        this.setVisible(visible);
+        Dimension d=new Dimension(200,200);
+        //TODO : fix the size of the image icon
 
-        //TODO: make this uncomment when you had a proper array list and compelete the following code.
-//        for (int i = 0; i <songs.size() ; i++) {
-//            JButton j=new JButton();
-//            songButton.add(j);
-//            this.add(songButton.get(i));
-//            songButton.get(i).setVisible(true);
-//            songButton.get(i).setIcon(songs.get(i).getIcon());
-//
-//        }
-        //TODO: give each button a listener to play the song
-        for (int i = 0; i <6 ; i++) {
+        for (int i = 0; i <songs.size() ; i++) {
             JButton j=new JButton();
+            j.setPreferredSize(d);
             songButton.add(j);
-            ImageIcon mg=new ImageIcon("D:\\AUT\\Term2\\JpotifyFinalProject\\images\\songCover.jpg");
-            songButton.get(i).setIcon(mg);
-            this.add(j);
+            this.add(songButton.get(i));
             songButton.get(i).setVisible(true);
+            songButton.get(i).setIcon(songs.get(i).getIcon());
+            songButton.get(i).setText(songs.get(i).getSongName());
 
         }
+        //TODO: give each button a listener to play the song
+//        for (int i = 0; i <6 ; i++) {
+//            JButton j=new JButton();
+//            songButton.add(j);
+//            ImageIcon mg=new ImageIcon("D:\\AUT\\Term2\\JpotifyFinalProject\\images\\songCover.jpg");
+//            songButton.get(i).setIcon(mg);
+//            this.add(j);
+//            songButton.get(i).setVisible(true);
+//
+//        }
+    }
+    public static void setSongsPanelNotVisible(){
+        visible=false;
     }
     public JScrollPane getjScrollPane() {
         return jScrollPane;

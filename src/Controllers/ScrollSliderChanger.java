@@ -1,6 +1,7 @@
 package Controllers;
 
 import GUI.MusicSliderBar;
+import Logic.Main;
 import Logic.PlayerManager;
 import Logic.SongPlayer;
 import com.mpatric.mp3agic.InvalidDataException;
@@ -62,6 +63,16 @@ public class ScrollSliderChanger implements ChangeListener {
             } else if ((Math.abs(next - prev) == 1) && MusicSliderBar.getjSliderThread().getFlag() == 0)
                 sP.playInMiddle((int) (frames * passedPercentage));
             else flag = false;
+
+//            System.out.println(sP.getPlayerStatus());
+            if(fps==Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength()){
+                int newIndex=Main.getSongQueueIndex()+1;
+                if(newIndex<0 || newIndex>=Main.getCurrentQueue().size()) newIndex=0;
+                System.out.println(newIndex);
+                Main.setSongQueueIndex(newIndex);
+                PlayerManager.PlayerManager();
+                PauseAndPlayClickButton.setEndOfSong();
+            }
 
         }
 
