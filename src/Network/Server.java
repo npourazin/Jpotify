@@ -12,7 +12,7 @@ public class Server implements Runnable {
     private boolean isRun;
 
     public Server() throws IOException {
-        this.serverSocket = new ServerSocket(2000);
+        this.serverSocket = new ServerSocket(8080);
         this.executorService = Executors.newCachedThreadPool();
         isRun = true;
     }
@@ -60,6 +60,16 @@ public class Server implements Runnable {
                 e.printStackTrace();
             }
 
+        }
+    }
+
+
+    public static void main(String[] args) {
+        try {
+            Server server = new Server();
+            server.run();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
