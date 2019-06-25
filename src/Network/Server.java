@@ -10,6 +10,8 @@ public class Server implements Runnable {
     private ServerSocket serverSocket;
     ExecutorService executorService;
     private boolean isRun;
+    private static int numberOfClients=0;
+    private static int lastClientId=0;
 
     public Server() throws IOException {
         this.serverSocket = new ServerSocket(8080);
@@ -19,12 +21,20 @@ public class Server implements Runnable {
 
     @Override
     public void run() {
+        System.out.println("Welcome");
+        System.out.println("ready to connect!!");
         while (isRun) {
             try {
-                System.out.println("waiting...");
                 Socket socket = this.serverSocket.accept();
-                System.out.println(socket.getInetAddress());
-                this.executorService.submit(new Handler(socket));
+                System.out.println("new client ip: "+socket.getInetAddress());
+                Handler handler = new Handler(socket);
+                handler.setClientId(++lastClientId);
+                numberOfClients++;
+                System.out.println("client ID: "+lastClientId);
+
+                this.executorService.submit(handler);
+                System.out.println("ready to accept other clients...");
+
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -32,14 +42,21 @@ public class Server implements Runnable {
         }
     }
 
+
+    public static void processRequest(String request ){
+
+    }
+
     public static String sendData() {
         //TODO: send song name
-        return "Example: Dean Lewis";
+//        return "Example: Dean Lewis";
+        return "hello";
     }
 
     private static class Handler implements Runnable {
 
         private Socket client;
+        private int clientId;
 
         public Handler(Socket client) {
             this.client = client;
@@ -49,19 +66,42 @@ public class Server implements Runnable {
         public void run() {
             try {
                 int result;
-                BufferedReader bfRead = new BufferedReader(new InputStreamReader(client.getInputStream()));
-                String string = bfRead.readLine();
-                System.out.println("Message from client " + client.getInetAddress() + ":" + string);
+                BufferedReader inp = new BufferedReader(new InputStreamReader(client.getInputStream()));
+                PrintWriter out = new PrintWriter(new OutputStreamWriter(client.getOutputStream()), true);
+
+                while (true){
+                    String request = "";
+                    if(request.equals("quit") || request==null){
+                        System.out.println("GoodBye Client No."+clientId);
+                        break;
+                    }
+                    request=inp.readLine();
+                    processRequest(request);//?
+                    out.println(sendData());
+                }
+
+//                try {
+//
+//                }catch (IOException e){
+//
+//                }
 
 
-                PrintWriter bfWriter = new PrintWriter(new OutputStreamWriter(client.getOutputStream()));
-                bfWriter.println(sendData());
-                bfWriter.flush();
+
                 client.close();
+                Server.numberOfClients--;
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
+        }
+
+        public int getClientId() {
+            return clientId;
+        }
+
+        public void setClientId(int clientId) {
+            this.clientId = clientId;
         }
     }
 

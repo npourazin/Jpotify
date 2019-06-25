@@ -33,12 +33,14 @@ class Client{
                 //System.out.println("your input was taken!");
                 out.println(s);
                 if(s.equals("quit")) break;
-                while (true) {
+//                while (true) {
                     String fromServer = inp.readLine();
-                    if (fromServer.equals("finish"))
-                        break;
+//                    if(inp.readLine()==null) break;
+                    System.out.println("  "+fromServer);
+//                    if (fromServer.equals("finish"))
+//                        break;
                     System.out.println(fromServer);
-                }
+//                }
             }
         }catch (IOException e){
             System.out.println(e);
