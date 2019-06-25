@@ -44,7 +44,7 @@ public class Server implements Runnable {
 
 
     public static String processRequest(String request ){
-
+        return "";
     }
 
     public static Package sendData(String request) {
