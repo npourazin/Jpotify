@@ -58,7 +58,7 @@ public class PauseAndPlayClickButton implements ActionListener {
                 MusicSliderBar.setMusicLength(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
                 MusicSliderBar.getJSlider().setMaximum((int) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
 
-                //WHAT THE ACTUAL FUUUUUCK!!!!!!  WHY CANT YOU SET WHAT YOU ARE WHOWING MEEEE!!?????
+                //WHAT THE ACTUAL FUUUUUCK!!!!!!  WHY CANT YOU SET WHAT YOU ARE SHOWING MEEEE!!?????
                 //TODO: fix this shit
 
                 System.out.println((int) MusicSliderBar.getMusicLenght());

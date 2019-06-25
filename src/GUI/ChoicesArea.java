@@ -7,6 +7,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.*;
 import java.util.Scanner;
 
@@ -82,7 +84,8 @@ public class ChoicesArea extends JPanel {
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.setLayoutOrientation(JList.VERTICAL);
         list.setVisibleRowCount(-1);
-        list.addListSelectionListener(new ListSelectionListener());
+        list.addListSelectionListener(new SelectedPlaylistListener());
+//        list.addListSelectionListener(new ListSelectionListener());
         try {
             String playlistName;
             if (!new File("src/PlaylistNames.txt").exists()) {
@@ -100,6 +103,33 @@ public class ChoicesArea extends JPanel {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+
+        //Menu for right click on the list
+        final JPopupMenu popupMenu = new JPopupMenu();
+        JMenuItem showPlaylist=new JMenuItem("Show Playlist");
+        showPlaylist.addActionListener(new ShowPlaylistMenuItemClicked());
+        popupMenu.add(showPlaylist);
+        popupMenu.add(new JPopupMenu.Separator());
+        JMenuItem addSong =new JMenuItem("Add Songs");
+        addSong.addActionListener(new AddSongToPlaylistItemClicked());
+        popupMenu.add(addSong);
+        JMenuItem removeSong=new JMenuItem("Remove Songs");
+        removeSong.addActionListener(new RemoveSongFromPlaylistItemClicked());
+        popupMenu.add(removeSong);
+
+//        list.addMouseListener(new RightClickListener());
+        list.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+//                super.mouseClicked(e);
+                if (SwingUtilities.isRightMouseButton(e)    // if right mouse button clicked
+                        && !list.isSelectionEmpty()            // and list selection is not empty
+                        && list.locationToIndex(e.getPoint()) // and clicked point is
+                        == list.getSelectedIndex()) {       //   inside selected item bounds
+                    popupMenu.show(list, e.getX(), e.getY());
+                }
+            }
+        });
 
         jScrollPane = new JScrollPane();
         jScrollPane.setViewportView(list);
