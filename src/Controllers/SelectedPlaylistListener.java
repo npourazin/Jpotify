@@ -11,7 +11,8 @@ public class SelectedPlaylistListener implements javax.swing.event.ListSelection
     private static String playlistName;
     @Override
     public void valueChanged(ListSelectionEvent e) {
-//        ListSelectionModel element = (ListSelectionModel)e.getSource();
+
+        //finds the name of the selected play list
         if (e.getValueIsAdjusting() == false) {
             int index = e.getFirstIndex();
             playlistName = null;

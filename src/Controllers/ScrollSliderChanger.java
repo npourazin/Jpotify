@@ -40,6 +40,7 @@ public class ScrollSliderChanger implements ChangeListener {
             }
             frames = file.getFrameCount();
             System.out.println("Go to time:" + fps + " of the song");
+
             //NOW we LITERALY need to go to that time of the song
             MusicSliderBar.getjSliderThread().setCurrentTime(fps);
             if (next == 0) {
@@ -50,11 +51,6 @@ public class ScrollSliderChanger implements ChangeListener {
             }
 
             passedPercentage = (1.0) * fps / MusicSliderBar.getMusicLenght();
-//            if (!MusicSliderBar.getJSlider().getValueIsAdjusting()) {
-//                MusicSliderBar.getjSliderThread().setCurrentTime(MusicSliderBar.getjSliderThread().getCurrentTime()-1);
-//            }
-
-//            if (!PauseAndPlayClickButton.ifButtonPlaying())
             if ((Math.abs(next - prev) > 1)&& !PauseAndPlayClickButton.ifButtonPlaying())
                 flag = true;
             else if ((Math.abs(next - prev) > 1) ) {
@@ -64,7 +60,6 @@ public class ScrollSliderChanger implements ChangeListener {
                 sP.playInMiddle((int) (frames * passedPercentage));
             else flag = false;
 
-//            System.out.println(sP.getPlayerStatus());
             if(fps==Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength()){
                 int newIndex=Main.getSongQueueIndex()+1;
                 if(newIndex<0 || newIndex>=Main.getCurrentQueue().size()) newIndex=0;

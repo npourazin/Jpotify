@@ -1,6 +1,4 @@
 package Controllers;
-
-import GUI.ChoicesArea;
 import GUI.DialogBoxChooseName;
 import Logic.Main;
 
