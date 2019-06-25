@@ -14,6 +14,8 @@ public class addButtonDialogListener implements ActionListener {
         System.out.println(playlistName);
 
         try {
+
+            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/PlaylistNames.txt"), true));
             //In order to avoid adding an existing playlist
             Scanner sc = new Scanner(new FileReader(new File("src/PlaylistNames.txt")));
             while (sc.hasNext()){
@@ -22,7 +24,6 @@ public class addButtonDialogListener implements ActionListener {
                     return;
                 }
             }
-            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/PlaylistNames.txt"), true));
             fr.println(playlistName);
             fr.flush();
 

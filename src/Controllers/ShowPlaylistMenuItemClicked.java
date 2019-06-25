@@ -16,7 +16,7 @@ public class ShowPlaylistMenuItemClicked implements ActionListener {
 
         System.out.println(SelectedPlaylistListener.getPlaylistName());
         System.out.println("clicked");
-        Main.creatCurrentQueue("src/"+SelectedPlaylistListener.getPlaylistName()+".txt");
+        Main.creatCurrentQueue(SelectedPlaylistListener.getPlaylistName());
 
 
         //cleaning everything
