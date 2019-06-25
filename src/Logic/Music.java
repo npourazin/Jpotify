@@ -56,7 +56,7 @@ public class Music implements Serializable {
             songData.setArtist(mp3File.getId3v1Tag().getArtist());
             songData.setGenre(mp3File.getId3v1Tag().getGenre());
         }
-        else if(mp3File.hasId3v2Tag()){
+        if(mp3File.hasId3v2Tag()){
             songData.setSongName(mp3File.getId3v2Tag().getTitle());
             songData.setAlbum(mp3File.getId3v2Tag().getAlbum());
             songData.setArtist(mp3File.getId3v2Tag().getArtist());

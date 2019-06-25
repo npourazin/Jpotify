@@ -40,6 +40,7 @@ public class SavedSongData {
         music.getSongData().setLastTimeListened(new Date(0));
         
         PlayerManager.getSongDataArrayList().add(music.getSongData());
+        //todo songs queue?
         PlayerManager.getSongDataArrayList().sort(new SortByTime());
 
         System.out.println("PlayerManager.getSongDataArrayList().size() = " + PlayerManager.getSongDataArrayList().size());

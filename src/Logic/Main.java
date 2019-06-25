@@ -24,22 +24,6 @@ public class Main {
 
         System.out.println("hello");
 
-//        prepareObjIn();
-
-//        try {
-//        try {
-//            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//            //false it to empty file
-//            fr.close();
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//      new Thread(JpotifyGUI::new).start();
-
         SignInOrSignUp signInOrSignUp = new SignInOrSignUp();
         while (holyFlag!=1) {
             try {
@@ -77,8 +61,6 @@ public class Main {
         }
 
     }
-
-
 
     public static void setCurrentQueue(ArrayList<SongData> arr) {
         currentQueue = arr;
@@ -166,4 +148,18 @@ public class Main {
 ///ailee - i will show you my-free-mp3s.com .mp3
 
 //💟💟💟❤️
+////        prepareObjIn();
 //
+////        try {
+////        try {
+////            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
+////        } catch (IOException e) {
+////            e.printStackTrace();
+////        }
+////            //false it to empty file
+////            fr.close();
+////
+////        } catch (IOException e) {
+////            e.printStackTrace();
+////        }
+////      new Thread(JpotifyGUI::new).start();
