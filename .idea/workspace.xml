@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/AddSongToPlaylistItemClicked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/AddSongToPlaylistItemClicked.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingAlbums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingAlbums.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/SelectedPlaylistListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/SelectedPlaylistListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/ClickListenerForNewPlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ClickListenerForNewPlaylist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/SelectSongToAddToPlaylistListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/SelectSongToAddToPlaylistListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SongsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SongsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/PlayerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/ChoicesArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ChoicesArea.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="539">
+              <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,8 +102,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/SelectSongToAddToPlaylistListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="211">
+              <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1725#1726#0" expanded="true" />
+                <element signature="e#1761#1762#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForNewPlaylist.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,7 +125,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/SelectSongToRemoveFromPlaylist.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
@@ -185,13 +195,11 @@
         <option value="$PROJECT_DIR$/src/Controllers/RemoveSongFromPlaylistItemClicked.java" />
         <option value="$PROJECT_DIR$/src/Controllers/SelectSongToRemoveFromPlaylist.java" />
         <option value="$PROJECT_DIR$/src/GUI/DialogBoxList.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/SelectSongToAddToPlaylistListener.java" />
         <option value="$PROJECT_DIR$/src/GUI/ChoicesArea.java" />
         <option value="$PROJECT_DIR$/src/GUI/JpotifyGUI.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSongsList.java" />
         <option value="$PROJECT_DIR$/src/Logic/Main.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ShowPlaylistMenuItemClicked.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForNewPlayList.java" />
         <option value="$PROJECT_DIR$/src/GUI/DialogBoxChooseName.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingHome.java" />
         <option value="$PROJECT_DIR$/src/Controllers/NextButtonListener.java" />
@@ -200,11 +208,13 @@
         <option value="$PROJECT_DIR$/src/Controllers/ReplayButtonListener.java" />
         <option value="$PROJECT_DIR$/src/GUI/SongsPanel.java" />
         <option value="$PROJECT_DIR$/src/Logic/PlayerManager.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java" />
         <option value="$PROJECT_DIR$/src/Controllers/AddSongToPlaylistItemClicked.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingAlbums.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java" />
         <option value="$PROJECT_DIR$/src/Controllers/SelectedPlaylistListener.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/SelectSongToAddToPlaylistListener.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForNewPlayList.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java" />
       </list>
     </option>
   </component>
@@ -371,14 +381,7 @@
       <workItem from="1561289316879" duration="12734000" />
       <workItem from="1561354514070" duration="7227000" />
       <workItem from="1561364044799" duration="35485000" />
-      <workItem from="1561449098660" duration="32108000" />
-    </task>
-    <task id="LOCAL-00009" summary="Controllers Separated.&#10;panel changes made.">
-      <created>1560926572522</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1560926572522</updated>
+      <workItem from="1561449098660" duration="32593000" />
     </task>
     <task id="LOCAL-00010" summary="Two libraries added.&#10;META-INF&#10;mp3agic">
       <created>1560934375390</created>
@@ -716,11 +719,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561496497486</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Multiple classes modified, bugs fixed.">
+      <created>1561496858004</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1561496858004</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204443000" />
+    <option name="totallyTimeSpent" value="204928000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -781,7 +791,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="text file attached." />
     <MESSAGE value="Bug fixed.&#10;problem in slider in specific cases." />
     <MESSAGE value="nearly dead;" />
     <MESSAGE value="Can now read saved songs from binary file.&#10;Can also write in it.&#10;well,&#10;Probably." />
@@ -806,7 +815,8 @@
     <MESSAGE value="Updating playlist menu feature added." />
     <MESSAGE value="Creation of current queue of songs modified." />
     <MESSAGE value="Raplay button modified." />
-    <option name="LAST_COMMIT_MESSAGE" value="Raplay button modified." />
+    <MESSAGE value="Multiple classes modified, bugs fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiple classes modified, bugs fixed." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/GUI/FileChooser.java">
@@ -1077,16 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForNewPlayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/DialogBoxChooseName.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -1211,16 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/AddSongToPlaylistItemClicked.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1248,6 +1238,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/SelectSongToRemoveFromPlaylist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/SelectedPlaylistListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7">
@@ -1260,18 +1260,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/SelectSongToAddToPlaylistListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="211">
+          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForNewPlaylist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/SelectSongToRemoveFromPlaylist.java">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        <state relative-caret-position="539">
+          <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

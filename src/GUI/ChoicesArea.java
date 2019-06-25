@@ -1,7 +1,6 @@
 package GUI;
 
 import Controllers.*;
-import Logic.Main;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -65,7 +64,7 @@ public class ChoicesArea extends JPanel {
         newPlayListButton.setVisible(true);
         newPlayListButton.setFont(newPlayListButton.getFont().deriveFont(14f));
         this.add(newPlayListButton);
-        newPlayListButton.addActionListener(new ClickListenerForNewPlayList());
+        newPlayListButton.addActionListener(new ClickListenerForNewPlaylist());
         try {
             Image img = ImageIO.read(getClass().getResource("add1.png"));
             newPlayListButton.setIcon(new ImageIcon(img));

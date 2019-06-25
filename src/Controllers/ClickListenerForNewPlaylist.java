@@ -12,24 +12,12 @@ import java.awt.event.MouseAdapter;
 import java.io.*;
 import java.util.Scanner;
 
-public class ClickListenerForNewPlayList implements ActionListener {
+public class ClickListenerForNewPlaylist implements ActionListener {
     private static boolean visible=false;
     @Override
     public void actionPerformed(ActionEvent e) {
         visible=true;
         new DialogBoxChooseName();
-
-        try {
-            Scanner sc = new Scanner(new FileReader(new File("src/PlaylistNames.txt")));
-            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/PlaylistNames.txt"), true));
-
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-
 
     }
 

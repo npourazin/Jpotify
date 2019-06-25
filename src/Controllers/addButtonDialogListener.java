@@ -17,8 +17,10 @@ public class addButtonDialogListener implements ActionListener {
             //In order to avoid adding an existing playlist
             Scanner sc = new Scanner(new FileReader(new File("src/PlaylistNames.txt")));
             while (sc.hasNext()){
-                if(sc.nextLine().equals(playlistName))
+                if(sc.nextLine().equals(playlistName)) {
+                    System.out.println("playlist exists");
                     return;
+                }
             }
             PrintWriter fr = new PrintWriter(new FileWriter(new File("src/PlaylistNames.txt"), true));
             fr.println(playlistName);
