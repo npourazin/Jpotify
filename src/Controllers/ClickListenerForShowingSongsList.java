@@ -25,6 +25,12 @@ public class ClickListenerForShowingSongsList implements ActionListener {
         Main.getJpotifyGUI().getHomePanel().removeAll();
         Main.getJpotifyGUI().getHomePanel().add(Main.getJpotifyGUI().getSongsPanel(),BorderLayout.CENTER);
         Main.getJpotifyGUI().revalidate();
+
+        //set all songs as the current playlist
+        Main.creatCurrentQueue("AddedSongAdresses");
+        Main.setSongQueueIndex(0);
+        PlayerManager.PlayerManager();
+
     }
 
 }

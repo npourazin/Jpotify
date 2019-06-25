@@ -33,5 +33,13 @@ public class ShowPlaylistMenuItemClicked implements ActionListener {
         Main.getJpotifyGUI().getHomePanel().removeAll();
         Main.getJpotifyGUI().getHomePanel().add(Main.getJpotifyGUI().getPlaylistPanel(), BorderLayout.CENTER);
         Main.getJpotifyGUI().revalidate();
+
+
+        //set this playlist as current queue
+        Main.creatCurrentQueue(SelectedPlaylistListener.getPlaylistName());
+        Main.setSongQueueIndex(0);
+        PlayerManager.PlayerManager();
+
+
     }
 }
