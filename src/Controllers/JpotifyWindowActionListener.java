@@ -3,6 +3,7 @@ package Controllers;
 import Logic.Main;
 import Logic.PlayerManager;
 import Logic.SavedSongData;
+import javazoom.jl.player.Player;
 
 import java.awt.*;
 import java.awt.event.WindowEvent;
@@ -20,8 +21,10 @@ public class JpotifyWindowActionListener implements WindowListener {
     public void windowClosing(WindowEvent windowEvent) {
         try {
             PrintWriter fr = new PrintWriter(new FileWriter("src/LastSongListened.txt"));
-            fr.println(PlayerManager.getsP().getFileName());
-            fr.flush();
+            if(PlayerManager.getsP()!=null) {
+                fr.println(PlayerManager.getsP().getFileName());
+                fr.flush();
+            }
 
         } catch (IOException e) {
             e.printStackTrace();

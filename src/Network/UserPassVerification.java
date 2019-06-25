@@ -51,14 +51,15 @@ public class UserPassVerification {
     public static void getCurrentUsers(){
         try {
             sc =  new Scanner(new FileReader("src/UserPasses.txt"));
+            while (sc.hasNext()){
+                String tmp1 = sc.nextLine();
+                String tmp2 = sc.nextLine();
+                userPasses.put(tmp1, tmp2);
+                System.out.println(tmp1+"!"+ tmp2);
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        while (sc.hasNext()){
-            String tmp1 = sc.nextLine();
-            String tmp2 = sc.nextLine();
-            userPasses.put(tmp1, tmp2);
-            System.out.println(tmp1+"!"+ tmp2);
-        }
+
     }
 }
