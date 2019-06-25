@@ -6,10 +6,11 @@ import java.awt.*;
 
 public class friendsActivityArea extends JPanel {
     private JScrollPane jScrollPane;
-    public friendsActivityArea(){
+
+    public friendsActivityArea() {
         super();
         this.setLayout(new BorderLayout());
-         jScrollPane= new JScrollPane(this);
+        jScrollPane = new JScrollPane(this);
         jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         jScrollPane.setViewportBorder(new LineBorder(Color.pink));
@@ -18,11 +19,11 @@ public class friendsActivityArea extends JPanel {
         jScrollPane.setVisible(true);
 
 //        this.setBackground(Color.cyan);
-        JLabel label=new JLabel(" Friends Activity ");
+        JLabel label = new JLabel(" Friends Activity ");
         label.setVisible(true);
-        label.setFont(new Font("Verdana",9,18));
+        label.setFont(new Font("Verdana", 9, 18));
         label.setBackground(Color.cyan);
-        this.add(label,BorderLayout.NORTH);
+        this.add(label, BorderLayout.NORTH);
     }
 
     @Override

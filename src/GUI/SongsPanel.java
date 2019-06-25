@@ -41,8 +41,6 @@ public class SongsPanel extends JPanel {
         songButton = new ArrayList<>();
         this.setVisible(visible);
         Dimension d = new Dimension(200, 200);
-        //TODO : fix the size of the image icon
-
         for (int i = 0; i < songs.size(); i++) {
             JButton j = new JButton();
             j.setPreferredSize(d);
