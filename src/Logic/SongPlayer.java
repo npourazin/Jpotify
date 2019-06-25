@@ -12,8 +12,9 @@ import javax.sound.sampled.SourceDataLine;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.Serializable;
 
-public class SongPlayer {
+public class SongPlayer implements Serializable {
     private Status playerStatus;
     private String fileName;
     private Thread t = null;

@@ -28,6 +28,9 @@ class Client{
             BufferedReader inp = new BufferedReader(new InputStreamReader(a.socket.getInputStream()));
             PrintWriter out = new PrintWriter(new OutputStreamWriter(a.socket.getOutputStream()), true);
 
+            ObjectInputStream ois = new ObjectInputStream(a.socket.getInputStream());
+
+
             while (true) {
                 String s = sc.next();
                 //System.out.println("your input was taken!");
@@ -36,7 +39,7 @@ class Client{
 //                while (true) {
                     String fromServer = inp.readLine();
 //                    if(inp.readLine()==null) break;
-                    System.out.println("  "+fromServer);
+//                    System.out.println("  "+fromServer);
 //                    if (fromServer.equals("finish"))
 //                        break;
                     System.out.println(fromServer);

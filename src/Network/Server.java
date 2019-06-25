@@ -43,14 +43,14 @@ public class Server implements Runnable {
     }
 
 
-    public static void processRequest(String request ){
+    public static String processRequest(String request ){
 
     }
 
-    public static String sendData() {
-        //TODO: send song name
-//        return "Example: Dean Lewis";
-        return "hello";
+    public static Package sendData(String request) {
+        Package pac = new Package(request);
+        //TODO what is the package that is sent??
+        return pac;
     }
 
     private static class Handler implements Runnable {
@@ -69,6 +69,9 @@ public class Server implements Runnable {
                 BufferedReader inp = new BufferedReader(new InputStreamReader(client.getInputStream()));
                 PrintWriter out = new PrintWriter(new OutputStreamWriter(client.getOutputStream()), true);
 
+//                ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
+                ObjectOutputStream oos = new ObjectOutputStream(client.getOutputStream());
+
                 while (true){
                     String request = "";
                     if(request.equals("quit") || request==null){
@@ -76,8 +79,8 @@ public class Server implements Runnable {
                         break;
                     }
                     request=inp.readLine();
-                    processRequest(request);//?
-                    out.println(sendData());
+                    String requestedAbsolutePath = processRequest(request);//?
+                    oos.writeObject(sendData(requestedAbsolutePath));//hello
                 }
 
 //                try {
