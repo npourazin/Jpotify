@@ -1,6 +1,7 @@
 package Controllers;
 
 import GUI.ChoicesArea;
+import GUI.DialogBoxChooseName;
 import Logic.Main;
 
 import java.awt.event.ActionEvent;
@@ -11,13 +12,16 @@ import java.util.Scanner;
 public class addButtonDialogListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        String playlistName=ClickListenerForNewPlayList.getTextField().getText();
+        String playlistName= DialogBoxChooseName.getTextField().getText();
         System.out.println(playlistName);
 
         try {
-            //TODO: overwrite ALLERT!! fix this
-
-//            Scanner sc = new Scanner(new FileReader(new File("src/PlaylistNames.txt")));
+            //In order to avoid adding an existing playlist
+            Scanner sc = new Scanner(new FileReader(new File("src/PlaylistNames.txt")));
+            while (sc.hasNext()){
+                if(sc.nextLine().equals(playlistName))
+                    return;
+            }
             PrintWriter fr = new PrintWriter(new FileWriter(new File("src/PlaylistNames.txt"), true));
             fr.println(playlistName);
             fr.flush();

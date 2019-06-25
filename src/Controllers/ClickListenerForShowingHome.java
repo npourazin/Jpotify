@@ -9,6 +9,7 @@ public class ClickListenerForShowingHome implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        //cleans everything
         Main.getJpotifyGUI().getHomePanel().setVisible(true);
         Main.getJpotifyGUI().getHomePanel().removeAll();
         Main.getJpotifyGUI().getContentPane().invalidate();

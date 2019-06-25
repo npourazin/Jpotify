@@ -14,9 +14,8 @@ public class MusicSliderBar extends JPanel {
     private static JSlider jSlider;
     private static long musicLength;
     private long MUSIC_LENGHT;
-
     private JButton previousButton;
-    private JButton playButton;
+    private static JButton playButton;
     private JButton nextButton;
     private JButton replayButton;
     private static JTextArea showTime;
@@ -150,6 +149,9 @@ public class MusicSliderBar extends JPanel {
 
     }
 
+    public static JButton getPlayButton(){
+        return playButton;
+    }
     public static JTextArea getShowTime() {
         return showTime;
     }
