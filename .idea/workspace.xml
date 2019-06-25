@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Network/UserPassVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/UserPassVerification.java" afterDir="false" />
-    </list>
+    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Network/UserPassVerification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="53" column="33" lean-forward="true" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+            <state relative-caret-position="105">
+              <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/src/GUI/SongsPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="117">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
@@ -428,21 +424,7 @@
       <workItem from="1561120380518" duration="9240000" />
       <workItem from="1561289316879" duration="12734000" />
       <workItem from="1561354514070" duration="26218000" />
-      <workItem from="1561433647907" duration="20520000" />
-    </task>
-    <task id="LOCAL-00003" summary="Cool graphics added.">
-      <created>1560850768909</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1560850768909</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Cool graphics added.&#10;Slider added.">
-      <created>1560858270766</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1560858270766</updated>
+      <workItem from="1561433647907" duration="20655000" />
     </task>
     <task id="LOCAL-00005" summary="Cool graphics added.&#10;Slider added.">
       <created>1560858503385</created>
@@ -773,15 +755,28 @@
       <option name="project" value="LOCAL" />
       <updated>1561468673538</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Bug found.">
+      <created>1561471689661</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1561471689661</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Bug fixed.">
+      <created>1561471708713</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1561471708713</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176361000" />
+    <option name="totallyTimeSpent" value="176496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="694" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -829,7 +824,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PlaySong class modified(playInMiddle method added)&#10;ScrollSliderChanger class modified." />
     <MESSAGE value="PlaySong class modified" />
     <MESSAGE value="Minor changes" />
     <MESSAGE value="PlayerManager class made and somehow implemented." />
@@ -842,7 +836,6 @@
     <MESSAGE value="nearly dead;" />
     <MESSAGE value="Can now read saved songs from binary file.&#10;Can also write in it.&#10;well,&#10;Probably." />
     <MESSAGE value="playlist file added." />
-    <MESSAGE value="Bug fixed." />
     <MESSAGE value="Can read Binary files.&#10;Can also write in them.&#10;well,&#10;&#10;&#10;&#10;Probably?" />
     <MESSAGE value="Can read Binary files.&#10;Can also write in them.&#10;well,&#10;&#10;&#10;Probably?" />
     <MESSAGE value="Sign in and sign up frame." />
@@ -854,7 +847,9 @@
     <MESSAGE value="File comparator class added." />
     <MESSAGE value="Saves last listened song and also can show it's time with lastModified() called on the saving file." />
     <MESSAGE value="Minor changes and some files attached." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes and some files attached." />
+    <MESSAGE value="Bug found." />
+    <MESSAGE value="Bug fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixed." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Controllers/pause1.png">
@@ -1266,7 +1261,7 @@
     <entry file="file://$PROJECT_DIR$/src/GUI/SongsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
@@ -1289,8 +1284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Network/UserPassVerification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="53" column="33" lean-forward="true" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+        <state relative-caret-position="105">
+          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
