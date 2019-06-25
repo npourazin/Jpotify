@@ -48,6 +48,7 @@ public class UserPassVerification {
         return true;
     }
 
+
     public static void getCurrentUsers(){
         try {
             sc =  new Scanner(new FileReader("src/UserPasses.txt"));
