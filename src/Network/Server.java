@@ -21,8 +21,10 @@ public class Server implements Runnable {
     public void run() {
         while (isRun) {
             try {
-                Socket client = this.serverSocket.accept();
-                this.executorService.submit(new Handler(client));
+                System.out.println("waiting...");
+                Socket socket = this.serverSocket.accept();
+                System.out.println(socket.getInetAddress());
+                this.executorService.submit(new Handler(socket));
 
             } catch (IOException e) {
                 e.printStackTrace();
