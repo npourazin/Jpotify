@@ -6,6 +6,8 @@ import Logic.Main;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class MusicSliderBar extends JPanel {
     private static SliderThread jSliderThread;
@@ -132,6 +134,18 @@ public class MusicSliderBar extends JPanel {
         //Thread for Sliding
         //TODO: make a separate class for the thread and have "current" as its local variable so it can be also stopped.
         jSliderThread = new SliderThread();
+
+        jSlider. addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                Point p = e.getPoint();
+                double percent = p.x / ((double) jSlider.getWidth());
+                int range = jSlider.getMaximum() - jSlider.getMinimum();
+                double newVal = range * percent;
+                int result = (int)(jSlider.getMinimum() + newVal);
+                jSlider.setValue(result);
+            }
+        });
 
 
     }

@@ -1,11 +1,17 @@
 package Logic;
 
+import com.mpatric.mp3agic.InvalidDataException;
+import com.mpatric.mp3agic.Mp3File;
+import com.mpatric.mp3agic.UnsupportedTagException;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 import javazoom.jl.player.advanced.AdvancedPlayer;
 
+import javax.sound.sampled.FloatControl;
+import javax.sound.sampled.SourceDataLine;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class SongPlayer {
     private Status playerStatus;
@@ -168,9 +174,19 @@ public class SongPlayer {
         return fileName;
     }
 
-    public void setVolume(){
+    public void setVolume() throws InvalidDataException, IOException, UnsupportedTagException {
 //        (player.getGainControl()).setLevel((float)GUI.getVolumeSlider().getValue() / 150.0f);
         //set volume
+
+        SourceDataLine source =null;
+        Mp3File mp3File = new Mp3File(this.getFileName());
+        source = (SourceDataLine) mp3File;
+        FloatControl volControl = (FloatControl) source.getControl(FloatControl.Type.MASTER_GAIN);
+        if (volControl != null) {
+            //0.73F -> random!!!!!!!
+            float newGain = Math.min(Math.max(0.73F, volControl.getMinimum()), volControl.getMaximum());
+            volControl.setValue(newGain);
+        }
     }
 
 }
