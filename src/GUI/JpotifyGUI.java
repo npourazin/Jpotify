@@ -9,8 +9,29 @@ import javax.swing.*;
 import java.awt.*;
 
 public class JpotifyGUI extends JFrame {
-    private HomePanel homePanel;
+    private static HomePanel homePanel;
     private static MusicSliderBar musicSliderBar;
+    private static JLayer<Component> jLayer;
+    private static AlbumsPanel albumsPanel;
+
+    public static void setSongsPanel(SongsPanel songsPanel) {
+        JpotifyGUI.songsPanel = songsPanel;
+    }
+
+    public void setAlbumsPanel(AlbumsPanel albumsPanel) {
+        JpotifyGUI.albumsPanel = albumsPanel;
+    }
+
+    private static SongsPanel songsPanel;
+
+    public static SongsPanel getSongsPanel() {
+        return songsPanel;
+    }
+
+    public static AlbumsPanel getAlbumsPanel() {
+        return albumsPanel;
+    }
+
 
     public static ChoicesArea getChoicesArea() {
         return choicesArea;
@@ -43,16 +64,15 @@ public class JpotifyGUI extends JFrame {
 //        JScrollPane jScrollPane = new JScrollPane(this,   ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
 //        jScrollPane.setPreferredSize(new Dimension(600, 600));
-         choicesArea = new ChoicesArea();
+        choicesArea = new ChoicesArea();
         choicesArea.setVisible(true);
-        this.add(choicesArea.getjScrollPane(), BorderLayout.WEST);
+        this.add(choicesArea, BorderLayout.WEST);
 
 
         friendsActivityArea friendsActivityArea = new friendsActivityArea();
         friendsActivityArea.setVisible(true);
         this.add(friendsActivityArea, BorderLayout.EAST);
 
-        JLayer<Component> jLayer;
 
 //        if(HomePanel.ifVisible()) {
         homePanel = new HomePanel();
@@ -83,6 +103,9 @@ public class JpotifyGUI extends JFrame {
         //  this.pack();
     }
 
+    public static JLayer<Component> getjLayer(){
+        return jLayer;
+    }
     public HomePanel getHomePanel() {
         return homePanel;
     }

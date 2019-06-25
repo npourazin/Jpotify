@@ -1,4 +1,5 @@
 package GUI;
+
 import Controllers.*;
 import Logic.Main;
 
@@ -10,22 +11,17 @@ import java.io.*;
 import java.util.Scanner;
 
 
-public class ChoicesArea extends JPanel{
-    private JScrollPane jScrollPane ;
+public class ChoicesArea extends JPanel {
+    private JScrollPane jScrollPane;
+    //TODO: make not static:
     private static JLabel songIconLable;
-    ChoicesArea(){
+
+    ChoicesArea() {
         this.setLayout(new GridLayout(10, 1));
 
 //        jScrollPane = new JScrollPane();
 //        this.add(jScrollPane, BorderLayout.WEST);
 //         jScrollPane = new JScrollPane(this,   ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-        jScrollPane = new JScrollPane(this);
-        jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-        jScrollPane.setViewportBorder(new LineBorder(Color.pink));
-//        jScrollPane.setBackground(Color.cyan);
-        jScrollPane.updateUI();
-        jScrollPane.setVisible(true);
 
 
         JButton saveButton = new JButton("Add Song");
@@ -37,7 +33,7 @@ public class ChoicesArea extends JPanel{
         saveButton.addActionListener(new ClickListenerForAddingSongs2());
 
 
-        JButton homeButton=new JButton("Home");
+        JButton homeButton = new JButton("Home");
         homeButton.setVisible(true);
         homeButton.setFont(homeButton.getFont().deriveFont(14f));
         this.add(homeButton);
@@ -56,13 +52,13 @@ public class ChoicesArea extends JPanel{
             ex.printStackTrace();
         }
 
-        JButton albumsButton=new JButton("Albums");
+        JButton albumsButton = new JButton("Albums");
         albumsButton.setVisible(true);
         albumsButton.setFont(albumsButton.getFont().deriveFont(14f)); // will only change size to 14pt
         this.add(albumsButton);
         albumsButton.addActionListener(new ClickListenerForShowingAlbums());
 
-        JButton newPlayListButton=new JButton("New PlayList");
+        JButton newPlayListButton = new JButton("New PlayList");
         newPlayListButton.setVisible(true);
         newPlayListButton.setFont(newPlayListButton.getFont().deriveFont(14f));
         this.add(newPlayListButton);
@@ -74,11 +70,11 @@ public class ChoicesArea extends JPanel{
             ex.printStackTrace();
         }
 
-        JLabel label=new JLabel("  Your Playlists:");
-        label.setVisible(true);
-        label.setFont(new Font("Verdana",9,13));
-        label.setBackground(Color.cyan);
-        this.add(label,BorderLayout.NORTH);
+        JLabel playlistLable = new JLabel("  Your Playlists:");
+        playlistLable.setVisible(true);
+        playlistLable.setFont(new Font("Verdana", 9, 13));
+        playlistLable.setBackground(Color.cyan);
+        this.add(playlistLable, BorderLayout.NORTH);
 
         DefaultListModel model = new DefaultListModel();
         JList list = new JList(model);
@@ -87,16 +83,15 @@ public class ChoicesArea extends JPanel{
         list.setLayoutOrientation(JList.VERTICAL);
         list.setVisibleRowCount(-1);
         list.addListSelectionListener(new ListSelectionListener());
-        this.add(list);
         try {
             String playlistName;
-            if(!new File("src/PlaylistNames.txt").exists()) {
+            if (!new File("src/PlaylistNames.txt").exists()) {
                 PrintWriter fr = new PrintWriter(new FileWriter("src/PlaylistNames.txt"));
             }
             //Todo why new file?
             Scanner sc = new Scanner(new FileReader(new File("src/PlaylistNames.txt")));
-            while (sc.hasNext()){
-                playlistName=sc.nextLine();
+            while (sc.hasNext()) {
+                playlistName = sc.nextLine();
                 model.addElement(playlistName);
             }
 
@@ -104,18 +99,39 @@ public class ChoicesArea extends JPanel{
             ex.printStackTrace();
         } catch (IOException ex) {
             ex.printStackTrace();
-    }
+        }
 
+        jScrollPane = new JScrollPane();
+        jScrollPane.setViewportView(list);
+        this.add(jScrollPane);
+        jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane.setViewportBorder(new LineBorder(Color.pink));
+        jScrollPane.updateUI();
+        jScrollPane.setVisible(true);
+
+
+        JLabel currentSongLable = new JLabel("  Current Song:");
+        currentSongLable.setVisible(true);
+        currentSongLable.setFont(new Font("Verdana", 9, 13));
+        currentSongLable.setBackground(Color.cyan);
+        this.add(currentSongLable, BorderLayout.NORTH);
+
+        //creating song icon
+//        JPanel bottomPanel = new JPanel();
         songIconLable = new JLabel();
-        Dimension d=new Dimension(100,100);
+        Dimension d = new Dimension(200, 400);
         songIconLable.setVisible(true);
         songIconLable.setPreferredSize(d);
-       this.add(songIconLable);
+        this.add(songIconLable,BorderLayout.SOUTH);
+//        bottomPanel.add(songIconLable);
+//        this.add(bottomPanel,SpringLayout.SOUTH);
     }
 
-    public static JLabel getSongIconLable(){
+    public static JLabel getSongIconLable() {
         return songIconLable;
     }
+
     @Override
     public void paint(Graphics g) {
 
@@ -131,9 +147,6 @@ public class ChoicesArea extends JPanel{
         g2.dispose();
     }
 
-    public JScrollPane getjScrollPane() {
-        return jScrollPane;
-    }
 }
 
 
