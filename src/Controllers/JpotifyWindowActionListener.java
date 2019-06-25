@@ -4,9 +4,10 @@ import Logic.Main;
 import Logic.PlayerManager;
 import Logic.SavedSongData;
 
+import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.io.IOException;
+import java.io.*;
 
 public class JpotifyWindowActionListener implements WindowListener {
     @Override
@@ -17,6 +18,14 @@ public class JpotifyWindowActionListener implements WindowListener {
 
     @Override
     public void windowClosing(WindowEvent windowEvent) {
+        try {
+            PrintWriter fr = new PrintWriter(new FileWriter("src/LastSongListened.txt"));
+            fr.println(PlayerManager.getsP().getFileName());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         Main.prepareObjOut();
         SavedSongData.writeToFile(Main.getObjOut(), PlayerManager.getSongDataArrayList());
         try {
@@ -24,6 +33,7 @@ public class JpotifyWindowActionListener implements WindowListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     @Override

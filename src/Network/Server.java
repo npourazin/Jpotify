@@ -1,8 +1,13 @@
 package Network;
 
+import Logic.Main;
+import Logic.PlayerManager;
+import javazoom.jl.player.Player;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -10,8 +15,8 @@ public class Server implements Runnable {
     private ServerSocket serverSocket;
     ExecutorService executorService;
     private boolean isRun;
-    private static int numberOfClients=0;
-    private static int lastClientId=0;
+    private static int numberOfClients = 0;
+    private static int lastClientId = 0;
 
     public Server() throws IOException {
         this.serverSocket = new ServerSocket(8080);
@@ -26,11 +31,11 @@ public class Server implements Runnable {
         while (isRun) {
             try {
                 Socket socket = this.serverSocket.accept();
-                System.out.println("new client ip: "+socket.getInetAddress());
+                System.out.println("new client ip: " + socket.getInetAddress());
                 Handler handler = new Handler(socket);
                 handler.setClientId(++lastClientId);
                 numberOfClients++;
-                System.out.println("client ID: "+lastClientId);
+                System.out.println("client ID: " + lastClientId);
 
                 this.executorService.submit(handler);
                 System.out.println("ready to accept other clients...");
@@ -43,11 +48,20 @@ public class Server implements Runnable {
     }
 
 
-    public static String processRequest(String request ){
-        return "";
+    public static String processRequest() {
+        if (PlayerManager.getsP() != null) {
+            return PlayerManager.getsP().getFileName();
+        } else {
+            try {
+                Scanner sc = new Scanner(new FileReader("src/LastSongListened.txt"));
+                return sc.nextLine();
+            } catch (FileNotFoundException e) {
+                return null;
+            }
+        }
     }
 
-    public static Package sendData(String request) {
+    public static Package makePackageForData(String request) {
         Package pac = new Package(request);
         //TODO what is the package that is sent??
         return pac;
@@ -72,15 +86,19 @@ public class Server implements Runnable {
 //                ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
                 ObjectOutputStream oos = new ObjectOutputStream(client.getOutputStream());
 
-                while (true){
-                    String request = "";
-                    if(request.equals("quit") || request==null){
-                        System.out.println("GoodBye Client No."+clientId);
+                String request = "";
+
+                while (true) {
+                    if (request.equals("quit") || request == null) {
+                        System.out.println("GoodBye Client No." + clientId);
                         break;
                     }
-                    request=inp.readLine();
-                    String requestedAbsolutePath = processRequest(request);//?
-                    oos.writeObject(sendData(requestedAbsolutePath));//hello
+                    request = inp.readLine();
+                    //it doesnt matter what it is as long as it is not quit
+                    //TODO: out.println(manual)
+
+                    String requestedAbsolutePath = processRequest();//?
+                    oos.writeObject(makePackageForData(requestedAbsolutePath));//hello
                 }
 
 //                try {
@@ -88,7 +106,6 @@ public class Server implements Runnable {
 //                }catch (IOException e){
 //
 //                }
-
 
 
                 client.close();

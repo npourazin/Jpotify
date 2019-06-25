@@ -36,17 +36,23 @@ class Client{
                 //System.out.println("your input was taken!");
                 out.println(s);
                 if(s.equals("quit")) break;
+                Package received = (Package) ois.readObject();
+
+                //TODO:
+                // pass the read package's SongPlayer and since u also need it's data use its music
+                // also display the package servers name somewhere!!
+                //
+
 //                while (true) {
-                    String fromServer = inp.readLine();
-//                    if(inp.readLine()==null) break;
-//                    System.out.println("  "+fromServer);
-//                    if (fromServer.equals("finish"))
-//                        break;
-                    System.out.println(fromServer);
+                    //TODO: read the manual!!
+//                    String fromServer = inp.readLine();
+//                    System.out.println(fromServer);
 //                }
             }
         }catch (IOException e){
             System.out.println(e);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
 
     }
