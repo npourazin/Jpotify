@@ -76,8 +76,8 @@ public class JpotifyGUI extends JFrame {
 
 //        if(HomePanel.ifVisible()) {
         homePanel = new HomePanel();
-        this.add(homePanel, BorderLayout.CENTER);
-        jLayer = new JLayer<>(homePanel, new MyLayerUI());
+        this.add(homePanel.getjScrollPane(), BorderLayout.CENTER);
+        jLayer = new JLayer<>(homePanel.getjScrollPane(), new MyLayerUI());
         this.add(jLayer, BorderLayout.CENTER);
 //        }
 

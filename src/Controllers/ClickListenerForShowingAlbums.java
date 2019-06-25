@@ -24,7 +24,7 @@ public class ClickListenerForShowingAlbums implements ActionListener {
         AlbumsPanel albumsPanel=new AlbumsPanel();
         Main.getJpotifyGUI().setAlbumsPanel(albumsPanel);
         Main.getJpotifyGUI().getHomePanel().removeAll();
-        Main.getJpotifyGUI().getHomePanel().add(Main.getJpotifyGUI().getAlbumsPanel());
+        Main.getJpotifyGUI().getHomePanel().add(Main.getJpotifyGUI().getAlbumsPanel(),BorderLayout.CENTER);
         Main.getJpotifyGUI().revalidate();
     }
 }

@@ -13,13 +13,6 @@ private JScrollPane jScrollPane;
         super();
         this.setLayout(new FlowLayout());
         this.setVisible(true);
-        jScrollPane = new JScrollPane(this);
-        jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-        jScrollPane.setViewportBorder(new LineBorder(Color.pink));
-        jScrollPane.setBackground(Color.cyan);
-        jScrollPane.updateUI();
-        jScrollPane.setVisible(true);
 
 
         albumButton = new ArrayList<>();

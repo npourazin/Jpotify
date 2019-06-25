@@ -50,7 +50,6 @@ public class PauseAndPlayClickButton implements ActionListener {
                 //cong cover icon
                 ChoicesArea.getSongIconLable().setIcon(new ImageIcon(((ImageIcon) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getIcon()).getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT)));
                 ChoicesArea.getSongIconLable().setText(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
-
                 System.out.println(sliderThread.getState());
                 sliderThread.setCurrentTime(0);
                 sliderThread.setFlag(1);

@@ -5,6 +5,7 @@ import Logic.SongPlayer;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import javax.swing.plaf.LayerUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,9 +14,17 @@ import java.util.ArrayList;
 
 public class HomePanel extends JPanel {
     private static boolean visible = true;
+    private static JScrollPane jScrollPane;
 
     public HomePanel() {
         super();
+        jScrollPane = new JScrollPane(this);
+        jScrollPane.setViewportView(this);
+        jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane.setViewportBorder(new LineBorder(Color.pink));
+        jScrollPane.updateUI();
+        jScrollPane.setVisible(true);
 
 //        int i=0;
 //        for (SongData song : this.songs) {
@@ -32,6 +41,10 @@ public class HomePanel extends JPanel {
 //        this.createPanel();
 //        this.setSize(800, 800);
 //        this.add(new MusicSliderBar());
+    }
+
+    public JScrollPane getjScrollPane(){
+        return jScrollPane;
     }
 
 //    public void addSong(SongData songData) {

@@ -23,7 +23,7 @@ public class ClickListenerForShowingSongsList implements ActionListener {
         SongsPanel songsPanel = new SongsPanel(PlayerManager.getSongDataArrayList());
         Main.getJpotifyGUI().setSongsPanel(songsPanel);
         Main.getJpotifyGUI().getHomePanel().removeAll();
-        Main.getJpotifyGUI().getHomePanel().add(Main.getJpotifyGUI().getSongsPanel());
+        Main.getJpotifyGUI().getHomePanel().add(Main.getJpotifyGUI().getSongsPanel(),BorderLayout.CENTER);
         Main.getJpotifyGUI().revalidate();
     }
 

@@ -120,7 +120,7 @@ public class ChoicesArea extends JPanel {
         //creating song icon
 //        JPanel bottomPanel = new JPanel();
         songIconLable = new JLabel();
-        Dimension d = new Dimension(200, 400);
+        Dimension d = new Dimension(200, 800);
         songIconLable.setVisible(true);
         songIconLable.setPreferredSize(d);
         this.add(songIconLable,BorderLayout.SOUTH);
