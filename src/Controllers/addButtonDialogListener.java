@@ -1,5 +1,8 @@
 package Controllers;
 
+import GUI.ChoicesArea;
+import Logic.Main;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
@@ -25,6 +28,8 @@ public class addButtonDialogListener implements ActionListener {
             ex.printStackTrace();
         }
 
+        //refresh
+        Main.getJpotifyGUI().getChoicesArea().getModel().addElement(playlistName);
         //TODO:Dialog box for choosing songs to add
     }
 }

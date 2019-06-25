@@ -15,10 +15,11 @@ import java.util.Scanner;
 
 public class ChoicesArea extends JPanel {
     private JScrollPane jScrollPane;
+    private static DefaultListModel model;
     //TODO: make not static:
     private static JLabel songIconLable;
 
-    ChoicesArea() {
+    public ChoicesArea() {
         this.setLayout(new GridLayout(10, 1));
 
 //        jScrollPane = new JScrollPane();
@@ -78,7 +79,7 @@ public class ChoicesArea extends JPanel {
         playlistLable.setBackground(Color.cyan);
         this.add(playlistLable, BorderLayout.NORTH);
 
-        DefaultListModel model = new DefaultListModel();
+        model = new DefaultListModel();
         JList list = new JList(model);
         list.setVisible(true);
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -156,6 +157,9 @@ public class ChoicesArea extends JPanel {
         this.add(songIconLable,BorderLayout.SOUTH);
 //        bottomPanel.add(songIconLable);
 //        this.add(bottomPanel,SpringLayout.SOUTH);
+    }
+    public static DefaultListModel getModel(){
+        return model;
     }
 
     public static JLabel getSongIconLable() {

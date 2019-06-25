@@ -1,5 +1,8 @@
 package Controllers;
 
+import GUI.ChoicesArea;
+import Logic.Main;
+
 import javax.swing.event.ListSelectionEvent;
 import java.io.*;
 import java.util.Scanner;
@@ -32,6 +35,8 @@ public class SelectSongToAddToPlaylistListener implements javax.swing.event.List
                 ex.printStackTrace();
             }
         }
+
+        //refresh
     }
 
     public static String getSongDirectory(){
