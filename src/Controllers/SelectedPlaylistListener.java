@@ -12,11 +12,13 @@ public class SelectedPlaylistListener implements javax.swing.event.ListSelection
     @Override
     public void valueChanged(ListSelectionEvent e) {
 
+        JList jL = (JList) (e.getSource());
+
         //finds the name of the selected play list
         if (e.getValueIsAdjusting() == false) {
-            int index = e.getFirstIndex();
+            int index = jL.getSelectedIndex();
             playlistName = null;
-            System.out.println(e.getFirstIndex());
+            System.out.println(jL.getSelectedIndex());
             Scanner sc = null;
             try {
                 sc = new Scanner(new FileReader(new File("src/playlistNames.txt")));
