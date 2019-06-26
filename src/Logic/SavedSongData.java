@@ -28,6 +28,7 @@ public class SavedSongData {
     public static void writeToFile(ObjectOutputStream objOut, ArrayList<SongData> songDataArrayList){
         try {
            objOut.writeObject(songDataArrayList);
+           objOut.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }

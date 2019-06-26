@@ -52,11 +52,7 @@ public class ClickListenerForAddingSongs2 implements ActionListener {
 
         Main.prepareObjOut();
         SavedSongData.addToFile(Main.getObjOut(), absolutePath);
-        try {
-            Main.getObjOut().flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
     }
 
