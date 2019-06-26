@@ -35,8 +35,8 @@ public class Main {
 
         }
         signInOrSignUp.dispose();
-
-        PlayerManager.PlayerManager();
+        new PlayerManager();
+        PlayerManager.playerManager();
 
         jpotifyGUI = new JpotifyGUI();
 

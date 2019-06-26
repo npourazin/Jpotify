@@ -38,7 +38,7 @@ public class ShowPlaylistMenuItemClicked implements ActionListener {
         //set this playlist as current queue
         Main.creatCurrentQueue(SelectedPlaylistListener.getPlaylistName());
         Main.setSongQueueIndex(0);
-        PlayerManager.PlayerManager();
+        PlayerManager.playerManager();
 
 
     }

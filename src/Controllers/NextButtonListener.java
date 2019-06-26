@@ -13,6 +13,6 @@ public class NextButtonListener implements ActionListener {
         if( newIndex>=Main.getCurrentQueue().size()) newIndex=0;
         System.out.println(newIndex);
         Main.setSongQueueIndex(newIndex);
-        PlayerManager.PlayerManager();
+        PlayerManager.playerManager();
     }
 }
