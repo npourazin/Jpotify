@@ -57,7 +57,7 @@ public class SavedSongData {
 
         System.out.println("PlayerManager.getSongDataArrayList().size() = " + PlayerManager.getSongDataArrayList().size());
         
-        writeToFile(PlayerManager.getSongDataArrayList());
+//        writeToFile(PlayerManager.getSongDataArrayList());
     }
 }
 
