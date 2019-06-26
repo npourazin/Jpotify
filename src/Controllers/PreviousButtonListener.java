@@ -13,5 +13,7 @@ public class PreviousButtonListener implements ActionListener {
         if(newIndex<0) newIndex=Main.getCurrentQueue().size()-1;
         Main.setSongQueueIndex(newIndex);
         PlayerManager.playerManager();
+        PauseAndPlayClickButton.setSongToPlay();
+
     }
 }

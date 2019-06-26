@@ -10,18 +10,12 @@ import java.awt.*;
 
 public class JpotifyGUI extends JFrame {
     private static HomePanel homePanel;
+    private static SongsPanel songsPanel;
     private static MusicSliderBar musicSliderBar;
-    private static PlaylistPanel playlistPanel;
     private static JLayer<Component> jLayer;
     private static AlbumsPanel albumsPanel;
 
-    public void setPlaylistPanel(PlaylistPanel playlistPanel){
-        JpotifyGUI.playlistPanel=playlistPanel;
-    }
 
-    public static PlaylistPanel getPlaylistPanel(){
-        return playlistPanel;
-    }
     public static void setSongsPanel(SongsPanel songsPanel) {
         JpotifyGUI.songsPanel = songsPanel;
     }
@@ -29,8 +23,6 @@ public class JpotifyGUI extends JFrame {
     public void setAlbumsPanel(AlbumsPanel albumsPanel) {
         JpotifyGUI.albumsPanel = albumsPanel;
     }
-
-    private static SongsPanel songsPanel;
 
     public static SongsPanel getSongsPanel() {
         return songsPanel;

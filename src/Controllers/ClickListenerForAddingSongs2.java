@@ -30,6 +30,7 @@ public class ClickListenerForAddingSongs2 implements ActionListener {
         if(!absolutePath.endsWith(".mp3")) return;
 
         try {
+            //writing to text file
             PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
             Scanner sc = new Scanner(new FileReader(new File("src/AddedSongAdresses.txt")));
 
@@ -43,6 +44,8 @@ public class ClickListenerForAddingSongs2 implements ActionListener {
             fr.println(absolutePath);
             fr.flush();
 
+
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -53,6 +56,22 @@ public class ClickListenerForAddingSongs2 implements ActionListener {
         Main.prepareObjOut();
         SavedSongData.addToFile(absolutePath);
 
+        //adding to an album
+        Music newMusic=new Music(absolutePath);
+        String albumName=newMusic.getSongData().getAlbum();
+        System.out.println(albumName);
+        try {
+            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/"+albumName+".txt"), true));
+            fr.println(newMusic.getAbsolutePath());
+            fr.flush();
+
+            fr= new PrintWriter(new FileWriter(new File("src/AllAlbums.txt"), true));
+            fr.println(albumName);
+            fr.flush();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
