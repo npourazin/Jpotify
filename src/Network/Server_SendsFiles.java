@@ -81,13 +81,16 @@ public class Server_SendsFiles implements Runnable{
             BufferedInputStream bis = null;
             OutputStream os = null;
 
+            //TODO: client tells u what they want and u serve it
+            // change friendsActivityArea.isAskedForLastListened()
+            // the client request also needs a buffered stream reading
+
+
             if( friendsActivityArea.isAskedForLastListened() ) {
                 String lastListenedSongPath="";
                 try {
-                    Scanner sc= new Scanner(new FileReader("src/LastSongListened.txt"));
-                    if(sc.hasNext()){
-                        lastListenedSongPath=sc.nextLine();
-                    }else{
+                   lastListenedSongPath = processRequest();
+                   if(lastListenedSongPath.equals("") || lastListenedSongPath==null){
                         client.close();
                         numberOfClients--;
                         return;
@@ -98,43 +101,28 @@ public class Server_SendsFiles implements Runnable{
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                try {
-                    if (lastListenedSongPath.equals("")) {
-                        client.close();
-                        numberOfClients--;
-                        return;
-                    }
+                sendFile(fis, bis, os, lastListenedSongPath);
 
-                    File myFile = new File(lastListenedSongPath);
-                    byte[] mybytearray = new byte[(int) myFile.length()];
-
-                    fis = new FileInputStream(myFile);
-                    bis = new BufferedInputStream(fis);
-                    bis.read(mybytearray, 0, mybytearray.length);
-
-                    os = client.getOutputStream();
-                    System.out.println("Sending " + lastListenedSongPath + "(" + mybytearray.length + " bytes)");
-
-                    os.write(mybytearray, 0, mybytearray.length);
-                    os.flush();
-
-                    System.out.println("Done.");
-
-                    client.close();
-                    numberOfClients--;
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }finally {
+            }else{
+                //asked for the shared playlist
+                //get the file name for shared playlist here
+                if(!new File("src/SharedPlaylist.txt").exists()){
                     try {
-                        if (bis != null) bis.close();
-                        if (os != null) os.close();
-                        if (client != null) client.close();
+                        client.close();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    numberOfClients--;
+                    return;
                 }
-            }else{
-                //asked for the shared playlist
+                try {
+                    Scanner sc = new Scanner(new FileReader("src/SharedPlaylist.txt"));
+                    while (sc.hasNext()){
+                        sendFile(fis, bis, os, sc.nextLine());
+                    }
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
 
 
             }
@@ -148,6 +136,38 @@ public class Server_SendsFiles implements Runnable{
         public void setClientId(int clientId) {
             this.clientId = clientId;
         }
+
+        private void sendFile(FileInputStream fis, BufferedInputStream bis, OutputStream os, String path ){
+
+            try {
+                File myFile = new File(path);
+                byte[] mybytearray = new byte[(int) myFile.length()];
+
+                fis = new FileInputStream(myFile);
+                bis = new BufferedInputStream(fis);
+                bis.read(mybytearray, 0, mybytearray.length);
+                os = client.getOutputStream();
+
+                System.out.println("Sending " + path + "(" + mybytearray.length + " bytes)");
+                os.write(mybytearray, 0, mybytearray.length);
+                os.flush();
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }finally {
+                try {
+                    numberOfClients--;
+                    if (bis != null) bis.close();
+                    if (os != null) os.close();
+                    if (client != null) client.close();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
 
