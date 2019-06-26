@@ -32,9 +32,9 @@ public class Main {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
         signInOrSignUp.dispose();
+
         new PlayerManager();
         PlayerManager.playerManager();
 
