@@ -34,9 +34,11 @@ public class PlayerManager {
             //Change last time listened
             for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
 
-                if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath()));
-                    PlayerManager.getSongDataArrayList().get(i).setLastTimeListened( Date.from(Instant.now()));
+                if (PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath())){
+                    ;
+                PlayerManager.getSongDataArrayList().get(i).setLastTimeListened(Date.from(Instant.now()));
                 System.out.println("Last time listened modified");
+            }
 
             }
 

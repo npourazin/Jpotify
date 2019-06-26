@@ -66,7 +66,7 @@ public class ScrollSliderChanger implements ChangeListener {
                 System.out.println(newIndex);
                 Main.setSongQueueIndex(newIndex);
                 PlayerManager.playerManager();
-                PauseAndPlayClickButton.setEndOfSong();
+                PauseAndPlayClickButton.setIfNewSong();
             }
 
         }

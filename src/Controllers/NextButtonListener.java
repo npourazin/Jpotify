@@ -14,5 +14,6 @@ public class NextButtonListener implements ActionListener {
         System.out.println(newIndex);
         Main.setSongQueueIndex(newIndex);
         PlayerManager.playerManager();
+
     }
 }
