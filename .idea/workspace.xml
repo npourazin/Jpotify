@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/NextButtonListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/NextButtonListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/SliderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/SliderThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/PlayerManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            <state relative-caret-position="323">
+              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -136,7 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/GUI/MusicPanel.java" />
         <option value="$PROJECT_DIR$/src/GUI/SliderSliding.java" />
         <option value="$PROJECT_DIR$/src/javazoom/spi/mpeg/sampled/convert/DecodedMpegAudioInputStream.java" />
         <option value="$PROJECT_DIR$/src/MainGUIPanel.form" />
@@ -186,6 +177,7 @@
         <option value="$PROJECT_DIR$/src/Controllers/NextButtonListener.java" />
         <option value="$PROJECT_DIR$/src/Logic/PlayerManager.java" />
         <option value="$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.kt" />
         <option value="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" />
       </list>
     </option>
@@ -347,14 +339,7 @@
       <workItem from="1561354514070" duration="7227000" />
       <workItem from="1561364044799" duration="35485000" />
       <workItem from="1561449098660" duration="34689000" />
-      <workItem from="1561524682588" duration="13909000" />
-    </task>
-    <task id="LOCAL-00014" summary="Graphical changes made.&#10;MusicSliderBar modified. &#10;(a text area as added to show time.)">
-      <created>1561093589131</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1561093589131</updated>
+      <workItem from="1561524682588" duration="14198000" />
     </task>
     <task id="LOCAL-00015" summary="Graphical changes were made.&#10;TextArea to show time in MusicSliderBar had its text size changed and was set visible with showing 00:00 at first &#10;it can also be invisible at first and set visible when the song begins.">
       <created>1561094007548</created>
@@ -692,11 +677,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561531888434</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Autoplaying next song feature added">
+      <created>1561539393166</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1561539393166</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220933000" />
+    <option name="totallyTimeSpent" value="221222000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -757,7 +749,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bug fixed." />
     <MESSAGE value="Can read Binary files.&#10;Can also write in them.&#10;well,&#10;&#10;&#10;&#10;Probably?" />
     <MESSAGE value="Can read Binary files.&#10;Can also write in them.&#10;well,&#10;&#10;&#10;Probably?" />
     <MESSAGE value="Making currentQueue feature added" />
@@ -782,7 +773,8 @@
     <MESSAGE value="Bugs fixed." />
     <MESSAGE value="PlayerManager constructor recreated." />
     <MESSAGE value="Null song data handled." />
-    <option name="LAST_COMMIT_MESSAGE" value="Null song data handled." />
+    <MESSAGE value="Autoplaying next song feature added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Autoplaying next song feature added" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Network/UserPassVerification.java">
@@ -1178,9 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LastSongListened.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/NextButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1203,10 +1192,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LastSongListened.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="323">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
         </state>
       </provider>
     </entry>
