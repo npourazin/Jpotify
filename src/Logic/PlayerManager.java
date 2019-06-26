@@ -5,6 +5,7 @@ import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 
 import java.io.*;
+import java.time.Instant;
 import java.util.*;
 
 public class PlayerManager {
@@ -33,11 +34,21 @@ public class PlayerManager {
 
 
         try {
+            //TODO: update last time listened
             if(Main.getCurrentQueue()==null) return;
             System.out.println("Queue size: "+Main.getCurrentQueue().size());
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             sP = new SongPlayer(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             PauseAndPlayClickButton.setIfNewSong();
+
+            //Change last time listened
+            for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
+
+                if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath()));
+                    PlayerManager.getSongDataArrayList().get(i).setLastTimeListened( Date.from(Instant.now()));
+                System.out.println("Last time listened modified");
+
+            }
 
 //            Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
 //            Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
