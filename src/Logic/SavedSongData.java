@@ -28,13 +28,11 @@ public class SavedSongData {
         PlayerManager.setSongDataArrayList(tmpArr);
     }
 
-    public static void writeToFile(ObjectOutputStream objOut, ArrayList<SongData> songDataArrayList){
+    public static void writeToFile(ArrayList<SongData> songDataArrayList){
         System.err.println("delete this shit later");
         Main.prepareObjOut();
         try {
-           objOut.writeObject(songDataArrayList);
            Main.getObjOut().writeObject(songDataArrayList);
-           objOut.flush();
             Main.getObjOut().flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,7 +57,7 @@ public class SavedSongData {
 
         System.out.println("PlayerManager.getSongDataArrayList().size() = " + PlayerManager.getSongDataArrayList().size());
         
-        writeToFile(objOut, PlayerManager.getSongDataArrayList());
+        writeToFile(PlayerManager.getSongDataArrayList());
     }
 }
 
