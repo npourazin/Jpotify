@@ -78,3 +78,14 @@ class SortByTime implements Comparator<SongData> {
         return 0;
     }
 }
+class SortRandomly implements Comparator<SongData> {
+
+    @Override
+    public int compare(SongData songData, SongData t1) {
+        Random random = new Random();
+        int a = random.nextInt();
+        a = Math.abs(a);
+        if(a%3==2) return -1;
+        return a%3;
+    }
+}
