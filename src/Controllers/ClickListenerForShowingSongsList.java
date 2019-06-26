@@ -29,7 +29,7 @@ public class ClickListenerForShowingSongsList implements ActionListener {
         //set all songs as the current playlist
         Main.creatCurrentQueue("AddedSongAdresses");
         Main.setSongQueueIndex(0);
-        PlayerManager.PlayerManager();
+        PlayerManager.playerManager();
 
     }
 

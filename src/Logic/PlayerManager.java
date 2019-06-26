@@ -2,6 +2,8 @@ package Logic;
 
 import Controllers.PauseAndPlayClickButton;
 import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
+
 import java.io.*;
 import java.util.*;
 
@@ -11,21 +13,23 @@ public class PlayerManager {
     private ArrayList<String> addresses;
     private ObjectInputStream objectInputStream;
 
-    public static void PlayerManager() {
-//        Scanner sc;
-//        File file;
-
-//          addresses = new ArrayList<>();
+    public PlayerManager(){
+    //          addresses = new ArrayList<>();
             songDataArrayList = new ArrayList<>();
-//          objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
+    //          objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
 
             Main.prepareObjIn();
             SavedSongData.readFromFile(Main.getObjIn());
             songDataArrayList.sort(new SortByTime());
 
-//            Main.creatCurrentQueue("src/"+fileName+".txt");
+    //            Main.creatCurrentQueue("src/"+fileName+".txt");
             //create a button for each on song panel
             //by validating songs panel?
+    }
+    public static void playerManager() {
+//        Scanner sc;
+//        File file;
+
 
 
         try {

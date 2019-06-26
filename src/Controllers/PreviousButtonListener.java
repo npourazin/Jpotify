@@ -12,6 +12,6 @@ public class PreviousButtonListener implements ActionListener {
         int newIndex= Main.getSongQueueIndex()-1;
         if(newIndex<0) newIndex=Main.getCurrentQueue().size()-1;
         Main.setSongQueueIndex(newIndex);
-        PlayerManager.PlayerManager();
+        PlayerManager.playerManager();
     }
 }
