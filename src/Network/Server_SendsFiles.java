@@ -85,7 +85,6 @@ public class Server_SendsFiles implements Runnable{
             // change friendsActivityArea.isAskedForLastListened()
             // the client request also needs a buffered stream reading
 
-
             if( friendsActivityArea.isAskedForLastListened() ) {
                 String lastListenedSongPath="";
                 try {
