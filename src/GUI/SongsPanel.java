@@ -69,8 +69,8 @@ public class SongsPanel extends JPanel {
                 gbc.gridx=0;
                 gbc.gridy++;
             }
-            this.repaint();
-            this.revalidate();
+//            this.repaint();
+//            this.revalidate();
                 //            songButton.get(i).setText("Artist:"+songs.get(i).getArtist()+"\n");
 //            songButton.get(i).setText("Album:"+songs.get(i).getAlbum());
 
