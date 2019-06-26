@@ -138,4 +138,8 @@ public class PauseAndPlayClickButton implements ActionListener {
     public static boolean ifButtonPlaying() {
         return buttonPlaying;
     }
+
+    public static int getIfFirstTimePlaying() {
+        return ifFirstTimePlaying;
+    }
 }

@@ -21,7 +21,8 @@ public class JpotifyWindowActionListener implements WindowListener {
     public void windowClosing(WindowEvent windowEvent) {
         try {
             PrintWriter fr = new PrintWriter(new FileWriter("src/LastSongListened.txt"));
-            if(PlayerManager.getsP()!=null) {
+            //Todo ***
+            if(PauseAndPlayClickButton.getIfFirstTimePlaying()==1) {
                 fr.println(PlayerManager.getsP().getFileName());
                 fr.flush();
             }
