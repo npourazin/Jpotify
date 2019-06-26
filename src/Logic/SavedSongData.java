@@ -1,11 +1,14 @@
 package Logic;
 
+import javazoom.spi.mpeg.sampled.file.MpegAudioFileFormat;
+
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.MissingFormatArgumentException;
 
 public class SavedSongData {
 
@@ -26,21 +29,31 @@ public class SavedSongData {
     }
 
     public static void writeToFile(ObjectOutputStream objOut, ArrayList<SongData> songDataArrayList){
+        System.err.println("delete this shit later");
+        Main.prepareObjOut();
         try {
            objOut.writeObject(songDataArrayList);
+           Main.getObjOut().writeObject(songDataArrayList);
            objOut.flush();
+            Main.getObjOut().flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public static void addToFile(ObjectOutputStream objOut, String absolutePath1){
-        if(absolutePath1==null) return;
+        System.out.println("tryina adddddddd");
+
+        if(absolutePath1==null) {
+            System.err.println("absolute path for the song that is being added was passed as null!!");
+            return;
+        }
         
         Music music = new Music(absolutePath1);
         music.getSongData().setLastTimeListened(new Date(0));
         
         PlayerManager.getSongDataArrayList().add(music.getSongData());
+
         //todo songs queue?
         PlayerManager.getSongDataArrayList().sort(new SortByTime());
 
