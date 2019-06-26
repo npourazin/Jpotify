@@ -54,37 +54,51 @@ public class Music implements Serializable {
 
 
         if (mp3File.hasId3v1Tag()) {
-            songData.setSongName(mp3File.getId3v1Tag().getTitle());
-            songData.setAlbum(mp3File.getId3v1Tag().getAlbum());
-            songData.setArtist(mp3File.getId3v1Tag().getArtist());
-            songData.setGenre(mp3File.getId3v1Tag().getGenre());
-
 
             //Handle empty field
-            if (mp3File.getId3v1Tag().getTitle().equals(""))
+            if (mp3File.getId3v1Tag().getTitle()==null)
                 songData.setSongName("Unknown");
-            if (mp3File.getId3v1Tag().getAlbum().equals(""))
-                songData.setAlbum("Unknown");
-            if (mp3File.getId3v1Tag().getArtist().equals(""))
-                songData.setArtist("Unknown");
-            //TODO: getGenre() does not provide a .equals method , handle it
+            else
+                songData.setSongName(mp3File.getId3v1Tag().getTitle());
 
-//         if(mp3File.getId3v1Tag().getGenre())
+            if (mp3File.getId3v1Tag().getAlbum()==null)
+                songData.setAlbum("Unknown");
+            else
+                songData.setAlbum(mp3File.getId3v1Tag().getAlbum());
+
+            if (mp3File.getId3v1Tag().getArtist()==null)
+                songData.setArtist("Unknown");
+            else
+                songData.setArtist(mp3File.getId3v1Tag().getArtist());
+
+            songData.setGenre(0);
+            songData.setGenre(mp3File.getId3v1Tag().getGenre());
+
+            //TODO: getGenre() does not provide a .equals method , handle it
 
         }
         if (mp3File.hasId3v2Tag()) {
-            songData.setSongName(mp3File.getId3v2Tag().getTitle());
-            songData.setAlbum(mp3File.getId3v2Tag().getAlbum());
-            songData.setArtist(mp3File.getId3v2Tag().getArtist());
-            songData.setGenre(mp3File.getId3v2Tag().getGenre());
 
             //Handle empty field
             if (mp3File.getId3v2Tag().getTitle()==null)
                 songData.setSongName("Unknown");
+            else
+                songData.setSongName(mp3File.getId3v2Tag().getTitle());
+
             if (mp3File.getId3v2Tag().getAlbum()==null)
                 songData.setAlbum("Unknown");
+            else
+                songData.setAlbum(mp3File.getId3v2Tag().getAlbum());
+
             if (mp3File.getId3v2Tag().getArtist()==null)
                 songData.setArtist("Unknown");
+            else
+                songData.setArtist(mp3File.getId3v2Tag().getArtist());
+
+            songData.setGenre(0);
+            songData.setGenre(mp3File.getId3v2Tag().getGenre());
+
+
             //TODO: getGenre() does not provide a .equals method , handle it
 
 //         if(mp3File.getId3v2Tag().getGenre())
@@ -102,7 +116,7 @@ public class Music implements Serializable {
                 //handle empty icon
                 else {
                     try {
-                        Image img = ImageIO.read(getClass().getResource("images/defaultSongIcon.png"));
+                        Image img = ImageIO.read(getClass().getResource("defaultSongIcon.png"));
                         songData.setIcon(new ImageIcon(img));
 
                     } catch (Exception ex) {
