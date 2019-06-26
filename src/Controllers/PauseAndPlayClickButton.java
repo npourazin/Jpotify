@@ -13,19 +13,19 @@ import java.awt.event.ActionListener;
 public class PauseAndPlayClickButton implements ActionListener {
     private static SongPlayer sP;
     private static boolean ifFirstTimePlaying = true;
-    private static boolean ifNewSong=true;
+    private static boolean ifNewSong = true;
     private static boolean buttonPlaying = false;
-    private static boolean endOfSong=false;
+    private static boolean endOfSong = false;
     private static SliderThread sliderThread;
 
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton jB = (JButton) (e.getSource());
-        if(endOfSong){
+        if (endOfSong) {
 
         }
         if (jB.getText().equals(" Play") || endOfSong) {
-            if(jB.getText().equals(" Play")) {
+            if (jB.getText().equals(" Play")) {
                 buttonPlaying = true;
                 jB.setText("Pause");
                 try {
@@ -56,26 +56,27 @@ public class PauseAndPlayClickButton implements ActionListener {
         }
     }
 
-    public static void setSongToPlay(){
+    public static void setSongToPlay() {
         buttonPlaying = true;
         if (ifFirstTimePlaying) {
             sliderThread = MusicSliderBar.getjSliderThread();
             sliderThread.setFlag(1);
             sliderThread.start();
-            ifFirstTimePlaying=false;
+            ifFirstTimePlaying = false;
 
         }
-        if(ifNewSong && !ifFirstTimePlaying){
+        if (ifNewSong && !ifFirstTimePlaying) {
 
             //song cover icon
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()));
-            MusicSliderBar.getSongIconLable().setIcon(new ImageIcon(((ImageIcon) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getIcon()).getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT)));
+            MusicSliderBar.getSongIconLable().setIcon(new ImageIcon(((ImageIcon) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getIcon()).getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
             MusicSliderBar.getSongIconLable().setText(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
             System.out.println(sliderThread.getState());
             sliderThread.setCurrentTime(0);
             sliderThread.setFlag(1);
-            sP.pauseSong();
-            sP=null;
+            if (sP != null)
+                sP.pauseSong();
+            sP = null;
             sP = PlayerManager.getsP();
             MusicSliderBar.getJSlider().setValue(0);
             MusicSliderBar.setMusicLength(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
@@ -89,12 +90,10 @@ public class PauseAndPlayClickButton implements ActionListener {
 //                MusicSliderBar.getJSlider().setMinorTickSpacing((int) MusicSliderBar.getMusicLenght());
 
             MusicSliderBar.getJSlider().setMajorTickSpacing(1000);
-            ifNewSong=false;
-            endOfSong=false;
-            ifFirstTimePlaying=false;
-        }
-
-        else {
+            ifNewSong = false;
+            endOfSong = false;
+            ifFirstTimePlaying = false;
+        } else {
             sliderThread.setFlag(1);
             if (sP == null) {
                 return;
@@ -111,39 +110,40 @@ public class PauseAndPlayClickButton implements ActionListener {
         if (sP.ifPlayerNotstarted()) {
             sP.playSong();
         } else {
-            if(ScrollSliderChanger.ifSliderChangedWhilePaused()){
+            if (ScrollSliderChanger.ifSliderChangedWhilePaused()) {
                 sP.pauseSong();
                 sP.playInMiddle((int) (ScrollSliderChanger.getFrames() * ScrollSliderChanger.getPassedPercentage()));
-            }
-            else sP.resumeSong();
+            } else sP.resumeSong();
         }
 
     }
 
-    public static boolean getIfFirstTimePlaying(){
+    public static boolean getIfFirstTimePlaying() {
         return ifFirstTimePlaying;
     }
 
-    public static void setEndOfSong(){
-        endOfSong=true;
+    public static void setEndOfSong() {
+        endOfSong = true;
     }
+
     public static SongPlayer getSongCurrentPlayer() {
         return sP;
     }
-    public static void setsP(SongPlayer songPlayer){
-        sP=songPlayer;
+
+    public static void setsP(SongPlayer songPlayer) {
+        sP = songPlayer;
     }
 
-    public static void setIfFirstTimePlaying(){
-        ifFirstTimePlaying=true;
+    public static void setIfFirstTimePlaying() {
+        ifFirstTimePlaying = true;
     }
 
-    public static boolean getIfNewSong(){
+    public static boolean getIfNewSong() {
         return ifNewSong;
     }
 
-    public static void setIfNewSong(){
-        ifNewSong=true;
+    public static void setIfNewSong() {
+        ifNewSong = true;
     }
 
     public static boolean ifButtonPlaying() {

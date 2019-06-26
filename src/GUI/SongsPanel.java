@@ -1,5 +1,6 @@
 package GUI;
 
+import Controllers.PlaySpecificSongOnClick;
 import Logic.SongData;
 
 import javax.swing.*;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 
 public class SongsPanel extends JPanel {
     private ArrayList<SongData> songs;
-    private ArrayList<JButton> songButton;
+    private static ArrayList<JButton> songButton;
     private JScrollPane jScrollPane;
 
     public SongsPanel(ArrayList<SongData> songs) {
@@ -27,15 +28,6 @@ public class SongsPanel extends JPanel {
         this.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
-
-//        gbc.gridy = nextGridY++;
-//        gbc.fill = GridBagConstraints.HORIZONTAL;
-//        gbc.insets = new Insets(3, 3, 3, 3);
-//        super.add(button, gbc);
-//        return button;
-//        gbc.gridx=0;
-//        gbc.gridy=0;
-//        this.setBorder(new EmptyBorder(0, ChoicesArea.WIDTH, 0, friendsActivityArea.WIDTH));
         gbc.gridx=0;
         gbc.gridy=0;
 
@@ -53,6 +45,7 @@ public class SongsPanel extends JPanel {
             songButton.get(i).setLayout(new BorderLayout());
             this.add(songButton.get(i), gbc);
             songButton.get(i).setVisible(true);
+            songButton.get(i).addActionListener(new PlaySpecificSongOnClick());
             if( songs.get(i).getIcon()!=null)
                  songButton.get(i).setIcon(new ImageIcon(((ImageIcon) songs.get(i).getIcon()).getImage().getScaledInstance(130, 130, Image.SCALE_DEFAULT)));
             if(songs.get(i).getSongName()!=null){
@@ -71,22 +64,16 @@ public class SongsPanel extends JPanel {
             }
             this.repaint();
             this.revalidate();
-                //            songButton.get(i).setText("Artist:"+songs.get(i).getArtist()+"\n");
-//            songButton.get(i).setText("Album:"+songs.get(i).getAlbum());
 
         }
 
 
         //TODO: give each button a listener to play the song
-//        for (int i = 0; i <6 ; i++) {
-//            JButton j=new JButton();
-//            songButton.add(j);
-//            ImageIcon mg=new ImageIcon("D:\\AUT\\Term2\\JpotifyFinalProject\\images\\songCover.jpg");
-//            songButton.get(i).setIcon(mg);
-//            this.add(j);
-//            songButton.get(i).setVisible(true);
-//
-//        }
+
+    }
+
+    public static ArrayList<JButton> getSongButton() {
+        return songButton;
     }
 
 
