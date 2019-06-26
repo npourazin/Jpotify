@@ -23,7 +23,7 @@ public class SongsPanel extends JPanel {
         jScrollPane.setViewportBorder(new LineBorder(Color.pink));
         jScrollPane.updateUI();
         jScrollPane.setVisible(true);
-        this.setLayout(new FlowLayout());
+        this.setLayout(new GroupLayout(this));
 
         this.songs = new ArrayList<>();
         this.songs = songs;

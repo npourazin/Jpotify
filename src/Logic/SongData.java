@@ -28,10 +28,12 @@ public class SongData implements Serializable {
     private Icon icon;
     private long musicLength;
     private final Date timeItWasAdded;
+    private int isLiked=0;//0 iif not liked, 1 otherwise;
 
     public SongData(String filename, Date date) throws IOException, UnsupportedTagException, InvalidDataException {
 //        super(filename);
 //        musicLength = getLengthInSeconds();
+
         absolutePath = filename;
         timeItWasAdded =date;
         lastTimeListened = new Date(0);
@@ -111,6 +113,14 @@ public class SongData implements Serializable {
 
     public void setMusicLength(long musicLength) {
         this.musicLength = musicLength;
+    }
+
+    public int getIsLiked() {
+        return isLiked;
+    }
+
+    public void setIsLiked(int isLiked) {
+        this.isLiked = isLiked;
     }
 }
 

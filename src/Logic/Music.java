@@ -79,11 +79,11 @@ public class Music implements Serializable {
             songData.setGenre(mp3File.getId3v2Tag().getGenre());
 
             //Handle empty field
-            if (mp3File.getId3v2Tag().getTitle().equals(""))
+            if (mp3File.getId3v2Tag().getTitle()==null)
                 songData.setSongName("Unknown");
-            if (mp3File.getId3v2Tag().getAlbum().equals(""))
+            if (mp3File.getId3v2Tag().getAlbum()==null)
                 songData.setAlbum("Unknown");
-            if (mp3File.getId3v2Tag().getArtist().equals(""))
+            if (mp3File.getId3v2Tag().getArtist()==null)
                 songData.setArtist("Unknown");
             //TODO: getGenre() does not provide a .equals method , handle it
 
@@ -93,8 +93,11 @@ public class Music implements Serializable {
             try {
                 if (imageBytes != null) {
                     Image img = ImageIO.read(new ByteArrayInputStream(imageBytes));
-                    Icon icon = new ImageIcon(img);
-                    songData.setIcon(icon);
+                    if (img!=null){
+                        Icon icon = new ImageIcon(img);
+                        songData.setIcon(icon);
+                    }
+
                 }
                 //handle empty icon
                 else {

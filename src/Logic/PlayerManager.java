@@ -27,6 +27,9 @@ public class PlayerManager {
             //TODO: update last time listened
             if(Main.getCurrentQueue()==null) return;
             System.out.println("Queue size: "+Main.getCurrentQueue().size());
+
+            if(Main.getCurrentQueue().size()==0) return;
+
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             sP = new SongPlayer(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             PauseAndPlayClickButton.setIfNewSong();
