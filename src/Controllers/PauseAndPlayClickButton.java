@@ -57,6 +57,16 @@ public class PauseAndPlayClickButton implements ActionListener {
     }
 
     public static void setSongToPlay() {
+        if(MusicSliderBar.getPlayButton().getText().equals(" Play")) {
+            MusicSliderBar.getPlayButton().setText(" Pause");
+            try {
+                Image img = ImageIO.read(PauseAndPlayClickButton.class.getResource("pause1.png"));
+                MusicSliderBar.getPlayButton().setIcon(new ImageIcon(img));
+
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
         buttonPlaying = true;
         if (ifFirstTimePlaying) {
             sliderThread = MusicSliderBar.getjSliderThread();

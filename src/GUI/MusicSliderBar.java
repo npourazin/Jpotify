@@ -186,6 +186,9 @@ public class MusicSliderBar extends JPanel {
 
     }
 
+    public static void setPlayButton(JButton playButton) {
+        MusicSliderBar.playButton = playButton;
+    }
     public static JButton getPlayButton(){
         return playButton;
     }
