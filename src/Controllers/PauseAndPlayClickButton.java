@@ -31,6 +31,8 @@ public class PauseAndPlayClickButton implements ActionListener {
                 try {
                     Image img = ImageIO.read(getClass().getResource("pause1.png"));
                     jB.setIcon(new ImageIcon(img));
+                    sP = PlayerManager.getsP();
+
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
@@ -55,7 +57,7 @@ public class PauseAndPlayClickButton implements ActionListener {
     }
 
     public static void setSongToPlay(){
-
+        buttonPlaying = true;
         if (ifFirstTimePlaying) {
             sliderThread = MusicSliderBar.getjSliderThread();
             sliderThread.setFlag(1);
@@ -65,13 +67,15 @@ public class PauseAndPlayClickButton implements ActionListener {
         }
         if(ifNewSong && !ifFirstTimePlaying){
 
-            //cong cover icon
+            //song cover icon
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()));
             MusicSliderBar.getSongIconLable().setIcon(new ImageIcon(((ImageIcon) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getIcon()).getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT)));
             MusicSliderBar.getSongIconLable().setText(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
             System.out.println(sliderThread.getState());
             sliderThread.setCurrentTime(0);
             sliderThread.setFlag(1);
+            sP.pauseSong();
+            sP=null;
             sP = PlayerManager.getsP();
             MusicSliderBar.getJSlider().setValue(0);
             MusicSliderBar.setMusicLength(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
@@ -115,6 +119,7 @@ public class PauseAndPlayClickButton implements ActionListener {
         }
 
     }
+
     public static boolean getIfFirstTimePlaying(){
         return ifFirstTimePlaying;
     }
