@@ -1,6 +1,5 @@
 package Controllers;
 
-//import GUI.PlaylistPanel;
 import GUI.SongsPanel;
 import Logic.Main;
 import Logic.PlayerManager;
@@ -10,13 +9,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ShowPlaylistMenuItemClicked implements ActionListener {
+public class ShowSpecificAlbumOnClick implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        System.out.println(SelectedPlaylistListener.getPlaylistName());
-        System.out.println("clicked");
-        Main.creatCurrentQueue(SelectedPlaylistListener.getPlaylistName());
+        JButton jB = (JButton) (e.getSource());
+        System.out.println(jB.getName());
+        Main.creatCurrentQueue(jB.getName());
 
 
         //cleaning everything
@@ -28,18 +27,16 @@ public class ShowPlaylistMenuItemClicked implements ActionListener {
 
 
         //making new panel show up
-        SongsPanel playlistPanel = new SongsPanel(Main.getCurrentQueue());
-        Main.getJpotifyGUI().setSongsPanel(playlistPanel);
+        SongsPanel albumPlaylistPanel = new SongsPanel(Main.getCurrentQueue());
+        Main.getJpotifyGUI().setSongsPanel(albumPlaylistPanel);
         Main.getJpotifyGUI().getHomePanel().removeAll();
         Main.getJpotifyGUI().getHomePanel().add(Main.getJpotifyGUI().getSongsPanel(), BorderLayout.CENTER);
         Main.getJpotifyGUI().revalidate();
 
 
         //set this playlist as current queue
-        Main.creatCurrentQueue(SelectedPlaylistListener.getPlaylistName());
         Main.setSongQueueIndex(0);
         PlayerManager.playerManager();
-
 
     }
 }

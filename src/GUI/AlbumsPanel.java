@@ -1,5 +1,7 @@
 package GUI;
 
+import Controllers.ShowSpecificAlbumOnClick;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -41,9 +43,11 @@ public class AlbumsPanel extends JPanel {
             JButton j = new JButton();
             j.setPreferredSize(d);
             albumButton.add(j);
+            albumButton.get(i).addActionListener(new ShowSpecificAlbumOnClick());
             albumButton.get(i).setLayout(new BorderLayout());
             this.add(albumButton.get(i), gbc);
             albumButton.get(i).setVisible(true);
+            albumButton.get(i).setName(albums.get(i));
 
             try {
 
