@@ -1,5 +1,8 @@
 package Controllers;
 
+import GUI.ChoicesArea;
+import Logic.Main;
+
 import javax.swing.event.ListSelectionEvent;
 import java.io.*;
 import java.util.Scanner;
@@ -25,13 +28,23 @@ public class SelectSongToAddToPlaylistListener implements javax.swing.event.List
 
             //writing the selected item to the file
             try {
+
                 PrintWriter pw=new PrintWriter(new FileWriter(new File("src/"+SelectedPlaylistListener.getPlaylistName()+".txt"), true));
+                //It prohibits adding an exisying song
+                Scanner scanner=new Scanner(new FileReader(new File("src/"+SelectedPlaylistListener.getPlaylistName()+".txt")));
+                while (scanner.hasNext()){
+                    if(scanner.nextLine().equals(songDirectory)) {
+                        System.out.println("Song Exists");
+                        return;
+                    }
+                }
                 pw.println(songDirectory);
                 pw.flush();
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
         }
+
     }
 
     public static String getSongDirectory(){

@@ -22,6 +22,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        currentQueue=null;
         System.out.println("hello");
 
         SignInOrSignUp signInOrSignUp = new SignInOrSignUp();
@@ -47,11 +48,17 @@ public class Main {
         currentQueue=null;
         currentQueue=new ArrayList<SongData>();
         try {
-            Scanner sc = new Scanner(new FileReader(new File(fileName)));
+            Scanner sc = new Scanner(new FileReader(new File("src/"+fileName+".txt")));
+            //this way we get the current play list in the order that it is stored in the .bin file
+            //first we get all the elements from text file
+            ArrayList<String> songPaths=new ArrayList<>();
             while (sc.hasNext()){
-                String absolutePath=sc.nextLine();
-                for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
-                    if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(absolutePath)){
+                songPaths.add(sc.nextLine());
+            }
+
+            for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
+                for (int j = 0; j <songPaths.size() ; j++) {
+                    if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(songPaths.get(j))){
                         currentQueue.add(PlayerManager.getSongDataArrayList().get(i));
                     }
                 }

@@ -2,9 +2,6 @@ package Logic;
 
 import Controllers.PauseAndPlayClickButton;
 import javazoom.jl.decoder.JavaLayerException;
-
-import javax.swing.*;
-import java.awt.*;
 import java.io.*;
 import java.util.*;
 
@@ -26,13 +23,13 @@ public class PlayerManager {
             SavedSongData.readFromFile(Main.getObjIn());
             songDataArrayList.sort(new SortByTime());
 
-            Main.creatCurrentQueue("src/AddedSongAdresses.txt");
+//            Main.creatCurrentQueue("src/"+fileName+".txt");
             //create a button for each on song panel
             //by validating songs panel?
 
 
         try {
-            if(Main.getCurrentQueue().size()==0) return;
+            if(Main.getCurrentQueue()==null) return;
             System.out.println("Queue size: "+Main.getCurrentQueue().size());
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             sP = new SongPlayer(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());

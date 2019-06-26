@@ -19,7 +19,7 @@ public class JpotifyGUI extends JFrame {
         JpotifyGUI.playlistPanel=playlistPanel;
     }
 
-    public PlaylistPanel getPlaylistPanel(){
+    public static PlaylistPanel getPlaylistPanel(){
         return playlistPanel;
     }
     public static void setSongsPanel(SongsPanel songsPanel) {

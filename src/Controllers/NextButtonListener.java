@@ -10,7 +10,7 @@ public class NextButtonListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         int newIndex=Main.getSongQueueIndex()+1;
-        if(newIndex<0 || newIndex>=Main.getCurrentQueue().size()) newIndex=0;
+        if( newIndex>=Main.getCurrentQueue().size()) newIndex=0;
         System.out.println(newIndex);
         Main.setSongQueueIndex(newIndex);
         PlayerManager.PlayerManager();
