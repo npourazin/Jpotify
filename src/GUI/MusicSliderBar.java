@@ -1,7 +1,6 @@
 package GUI;
 
 import Controllers.*;
-import Logic.Main;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -95,18 +94,19 @@ public class MusicSliderBar extends JPanel {
         }
         playButton.setBackground(Color.cyan);
 
-        //Creating stop button
-        JButton stopButton = new JButton("Stop");
-        stopButton.setVisible(true);
-        stopButton.setBackground(Color.cyan);
-        topPanel.add(stopButton);
-        stopButton.addActionListener(new StopButtonListener());
-        try {
-            Image img = ImageIO.read(getClass().getResource("stop1.png"));
-            stopButton.setIcon(new ImageIcon(img));
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        //Creating ShufflePlay button
+        JButton shufflePlayButton = new JButton("Shuffle Play");
+        shufflePlayButton.setVisible(true);
+        shufflePlayButton.setBackground(Color.cyan);
+        topPanel.add(shufflePlayButton);
+        shufflePlayButton.addActionListener(new ShufflePlayButtonListener());
+        //TODO: get proper image icon for SHUFFLE PLAY
+//        try {
+//            Image img = ImageIO.read(getClass().getResource("stop1.png"));
+//            shufflePlayButton.setIcon(new ImageIcon(img));
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
 
         //Creating next button
         nextButton = new JButton();

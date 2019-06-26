@@ -20,6 +20,12 @@ public class PauseAndPlayClickButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        //do nothing if there was not a queue to play from
+        if(Main.getCurrentQueue()==null || Main.getCurrentQueue().size()==0)
+            return;
+
+
         JButton jB = (JButton) (e.getSource());
         if (endOfSong) {
 

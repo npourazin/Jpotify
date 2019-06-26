@@ -16,7 +16,7 @@ public class ShowPlaylistMenuItemClicked implements ActionListener {
 
         System.out.println(SelectedPlaylistListener.getPlaylistName());
         System.out.println("clicked");
-        Main.creatCurrentQueue(SelectedPlaylistListener.getPlaylistName());
+        Main.creatCurrentQueueByAdd(SelectedPlaylistListener.getPlaylistName());
 
 
         //cleaning everything
@@ -36,7 +36,7 @@ public class ShowPlaylistMenuItemClicked implements ActionListener {
 
 
         //set this playlist as current queue
-        Main.creatCurrentQueue(SelectedPlaylistListener.getPlaylistName());
+        Main.creatCurrentQueueByAdd(SelectedPlaylistListener.getPlaylistName());
         Main.setSongQueueIndex(0);
         PlayerManager.playerManager();
 

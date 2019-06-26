@@ -15,7 +15,7 @@ public class ClickListenerForShowingSongsList implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
 
         //set all songs as the current playlist
-        Main.creatCurrentQueue("AddedSongAdresses");
+        Main.creatCurrentQueueByTime("AddedSongAdresses");
         Main.setSongQueueIndex(0);
         PlayerManager.playerManager();
 

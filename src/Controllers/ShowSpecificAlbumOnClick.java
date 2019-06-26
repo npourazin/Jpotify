@@ -15,7 +15,7 @@ public class ShowSpecificAlbumOnClick implements ActionListener {
 
         JButton jB = (JButton) (e.getSource());
         System.out.println(jB.getName());
-        Main.creatCurrentQueue(jB.getName());
+        Main.creatCurrentQueueByAdd(jB.getName());
 
 
         //cleaning everything
