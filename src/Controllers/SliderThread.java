@@ -1,6 +1,8 @@
 package Controllers;
 
 import GUI.MusicSliderBar;
+import Logic.Main;
+import Logic.PlayerManager;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,7 +13,7 @@ public class SliderThread extends Thread {
     @Override
     public void run() {
         while (currentTime <= MusicSliderBar.getMusicLenght()) {
-            MusicSliderBar.getJSlider().setValue((int)currentTime);
+            MusicSliderBar.getJSlider().setValue((int) currentTime);
             MusicSliderBar.getShowTime().setText(formatText(currentTime));
             try {
                 TimeUnit.SECONDS.sleep(1);
@@ -19,6 +21,16 @@ public class SliderThread extends Thread {
                 e.printStackTrace();
             }
             moveSlider();
+            if (currentTime == MusicSliderBar.getMusicLenght()){
+                int newIndex= Main.getSongQueueIndex()+1;
+                if( newIndex>=Main.getCurrentQueue().size()) newIndex=0;
+                System.out.println(newIndex);
+                Main.setSongQueueIndex(newIndex);
+                PlayerManager.playerManager();
+                currentTime=0;
+                PauseAndPlayClickButton.setSongToPlay();
+            }
+
         }
     }
 
@@ -42,6 +54,8 @@ public class SliderThread extends Thread {
         if (flag == 1) {
             //it is being played
             currentTime++;
+//            if(currentTime==MusicSliderBar.getMusicLenght())
+//                currentTime--;
         }
     }
 

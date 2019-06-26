@@ -45,6 +45,8 @@ public class Main {
     }
 
     public static void creatCurrentQueue(String fileName) {
+
+        //TODO: sort the main array list
         currentQueue=null;
         currentQueue=new ArrayList<SongData>();
         try {
@@ -56,6 +58,8 @@ public class Main {
                 songPaths.add(sc.nextLine());
             }
 
+            System.out.println("main:"+PlayerManager.getSongDataArrayList().size());
+            System.out.println("read:"+songPaths.size());
             for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
                 for (int j = 0; j <songPaths.size() ; j++) {
                     if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(songPaths.get(j))){
@@ -63,6 +67,8 @@ public class Main {
                     }
                 }
             }
+
+            System.out.println("sub:"+currentQueue.size());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

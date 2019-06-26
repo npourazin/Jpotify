@@ -51,6 +51,7 @@ public class SavedSongData {
         music.getSongData().setLastTimeListened(new Date(0));
         
         PlayerManager.getSongDataArrayList().add(music.getSongData());
+        System.out.println("---=-=---  "+PlayerManager.getSongDataArrayList());
 
         //todo songs queue?
         PlayerManager.getSongDataArrayList().sort(new SortByTime());
