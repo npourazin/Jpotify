@@ -16,7 +16,6 @@ public class ChoicesArea extends JPanel {
     private JScrollPane jScrollPane;
     private static DefaultListModel model;
     //TODO: make not static:
-    private static JLabel songIconLable;
 
     public ChoicesArea() {
         this.setLayout(new GridLayout(10, 1));
@@ -164,9 +163,7 @@ public class ChoicesArea extends JPanel {
         return model;
     }
 
-    public static JLabel getSongIconLable() {
-        return songIconLable;
-    }
+
 
     @Override
     public void paint(Graphics g) {

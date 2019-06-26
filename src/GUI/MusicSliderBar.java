@@ -26,12 +26,14 @@ public class MusicSliderBar extends JPanel {
     MusicSliderBar(long musicLength) {
         super();
         this.setBackground(Color.cyan);
-        this.setLayout(new GridLayout(1, 2));
+        this.setLayout(new BorderLayout());
+        this.setVisible(true);
 
         JPanel currSongPanel = new JPanel();
         currSongPanel.setLayout(new BorderLayout());
+        currSongPanel.setVisible(true);
 
-        JLabel currentSongLable = new JLabel("  Current Song:");
+        JLabel currentSongLable = new JLabel("");
         currentSongLable.setVisible(true);
         currentSongLable.setFont(new Font("Verdana", 9, 13));
         currentSongLable.setBackground(Color.cyan);
@@ -40,17 +42,24 @@ public class MusicSliderBar extends JPanel {
         //creating song icon
 //        JPanel bottomPanel = new JPanel();
         songIconLable = new JLabel();
-        Dimension d = new Dimension(200, 800);
+        Dimension d = new Dimension(300, 150);
         songIconLable.setVisible(true);
         songIconLable.setPreferredSize(d);
 
         currSongPanel.add(songIconLable,BorderLayout.SOUTH);
         currSongPanel.setVisible(true);
-        this.add(currSongPanel);
+        currSongPanel.setBackground(Color.cyan);
+
+        this.add(currSongPanel, BorderLayout.WEST);
 
         JPanel rightPanel = new JPanel();
         rightPanel.setVisible(true);
-        this.add(rightPanel);
+        this.add(rightPanel, BorderLayout.CENTER);
+
+//        this.add(currSongPanel);
+        currSongPanel.setVisible(true);
+
+
         rightPanel.setLayout(new GridLayout(2, 1));
         //TODO: get music length in seconds. (now it was just set to 100)
         MUSIC_LENGHT = musicLength;
@@ -139,6 +148,7 @@ public class MusicSliderBar extends JPanel {
         JPanel bottomPanel = new JPanel();
         bottomPanel.setBackground(Color.cyan);
         bottomPanel.setLayout(new BorderLayout());
+        bottomPanel.setVisible(true);
         rightPanel.add(bottomPanel);
         bottomPanel.add(jSlider, BorderLayout.CENTER);
 
