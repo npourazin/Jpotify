@@ -19,18 +19,45 @@ public class MusicSliderBar extends JPanel {
     private JButton nextButton;
     private JButton replayButton;
     private static JTextArea showTime;
+    private static JLabel songIconLable;
+
 
     //    private Thread jSliderThread;
     MusicSliderBar(long musicLength) {
         super();
         this.setBackground(Color.cyan);
-        this.setLayout(new GridLayout(2, 1));
+        this.setLayout(new GridLayout(1, 2));
+
+        JPanel currSongPanel = new JPanel();
+        currSongPanel.setLayout(new BorderLayout());
+
+        JLabel currentSongLable = new JLabel("  Current Song:");
+        currentSongLable.setVisible(true);
+        currentSongLable.setFont(new Font("Verdana", 9, 13));
+        currentSongLable.setBackground(Color.cyan);
+        currSongPanel.add(currentSongLable, BorderLayout.NORTH);
+
+        //creating song icon
+//        JPanel bottomPanel = new JPanel();
+        songIconLable = new JLabel();
+        Dimension d = new Dimension(200, 800);
+        songIconLable.setVisible(true);
+        songIconLable.setPreferredSize(d);
+
+        currSongPanel.add(songIconLable,BorderLayout.SOUTH);
+        currSongPanel.setVisible(true);
+        this.add(currSongPanel);
+
+        JPanel rightPanel = new JPanel();
+        rightPanel.setVisible(true);
+        this.add(rightPanel);
+        rightPanel.setLayout(new GridLayout(2, 1));
         //TODO: get music length in seconds. (now it was just set to 100)
         MUSIC_LENGHT = musicLength;
         JPanel topPanel = new JPanel();
         topPanel.setBackground(Color.cyan);
         topPanel.setLayout(new FlowLayout());
-        this.add(topPanel);
+        rightPanel.add(topPanel);
 
         //Creating previous button
         previousButton = new JButton();
@@ -112,7 +139,7 @@ public class MusicSliderBar extends JPanel {
         JPanel bottomPanel = new JPanel();
         bottomPanel.setBackground(Color.cyan);
         bottomPanel.setLayout(new BorderLayout());
-        this.add(bottomPanel);
+        rightPanel.add(bottomPanel);
         bottomPanel.add(jSlider, BorderLayout.CENTER);
 
         //Creating a text field to show time
@@ -172,6 +199,9 @@ public class MusicSliderBar extends JPanel {
         return jSliderThread;
     }
     public static void setjSliderThread(SliderThread sliderThread){jSliderThread=sliderThread;}
+    public static JLabel getSongIconLable() {
+        return songIconLable;
+    }
 
 
 }

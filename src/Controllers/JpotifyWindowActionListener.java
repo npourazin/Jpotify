@@ -22,7 +22,7 @@ public class JpotifyWindowActionListener implements WindowListener {
         try {
             PrintWriter fr = new PrintWriter(new FileWriter("src/LastSongListened.txt"));
             //Todo ***
-            if(PauseAndPlayClickButton.getIfFirstTimePlaying()==1) {
+            if(true) {
                 fr.println(PlayerManager.getsP().getFileName());
                 fr.flush();
             }
