@@ -11,27 +11,17 @@ import java.util.*;
 public class PlayerManager {
     private static SongPlayer sP;
     private static ArrayList<SongData> songDataArrayList;
-    private ArrayList<String> addresses;
-    private ObjectInputStream objectInputStream;
 
     public PlayerManager(){
-    //          addresses = new ArrayList<>();
+
             songDataArrayList = new ArrayList<>();
-    //          objectInputStream = new ObjectInputStream(new FileInputStream("src/AddedSongs.bin"));
 
             Main.prepareObjIn();
             SavedSongData.readFromFile(Main.getObjIn());
             songDataArrayList.sort(new SortByTime());
 
-    //            Main.creatCurrentQueue("src/"+fileName+".txt");
-            //create a button for each on song panel
-            //by validating songs panel?
     }
     public static void playerManager() {
-//        Scanner sc;
-//        File file;
-
-
 
         try {
             //TODO: update last time listened

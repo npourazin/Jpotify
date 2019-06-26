@@ -32,14 +32,14 @@ public class SavedSongData {
         System.err.println("delete this shit later");
         Main.prepareObjOut();
         try {
-           Main.getObjOut().writeObject(songDataArrayList);
+            Main.getObjOut().writeObject(songDataArrayList);
             Main.getObjOut().flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void addToFile(ObjectOutputStream objOut, String absolutePath1){
+    public static void addToFile(String absolutePath1){
         System.out.println("tryina adddddddd");
 
         if(absolutePath1==null) {
@@ -58,7 +58,7 @@ public class SavedSongData {
 
         System.out.println("PlayerManager.getSongDataArrayList().size() = " + PlayerManager.getSongDataArrayList().size());
         
-        writeToFile(PlayerManager.getSongDataArrayList());
+//        writeToFile(PlayerManager.getSongDataArrayList());
     }
 }
 

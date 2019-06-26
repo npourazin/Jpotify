@@ -51,6 +51,6 @@ public class SliderThread extends Thread {
         long minAll =  MusicSliderBar.getMusicLenght()/60;
         long secAll = MusicSliderBar.getMusicLenght() - minAll*60;
         return ((min>=10)?""+min:"0"+min)+":"+ ((sec>=10)?""+sec:"0"+sec)+"/"+
-                ((minAll>=10)?""+minAll:"0"+minAll)+":"+ ((sec>=10)?""+secAll:"0"+secAll);
+                ((minAll>=10)?""+minAll:"0"+minAll)+":"+ ((secAll>=10)?""+secAll:"0"+secAll);
     }
 }

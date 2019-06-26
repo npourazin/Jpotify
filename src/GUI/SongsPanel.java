@@ -36,11 +36,21 @@ public class SongsPanel extends JPanel {
             JButton j = new JButton();
             j.setPreferredSize(d);
             songButton.add(j);
+            songButton.get(i).setLayout(new BorderLayout());
             this.add(songButton.get(i));
             songButton.get(i).setVisible(true);
-            songButton.get(i).setIcon(new ImageIcon(((ImageIcon) songs.get(i).getIcon()).getImage().getScaledInstance(130, 130, Image.SCALE_DEFAULT)));
-            songButton.get(i).setText(songs.get(i).getSongName());
-//            songButton.get(i).setText("Artist:"+songs.get(i).getArtist()+"\n");
+            if( songs.get(i).getIcon()!=null)
+                 songButton.get(i).setIcon(new ImageIcon(((ImageIcon) songs.get(i).getIcon()).getImage().getScaledInstance(130, 130, Image.SCALE_DEFAULT)));
+            if(songs.get(i).getSongName()!=null){
+                JTextArea a = new JTextArea(songs.get(i).getSongName());
+                songButton.get(i).add(a, BorderLayout.SOUTH);
+
+            }
+            else{
+                JTextArea a = new JTextArea("UNKNOWN");
+                songButton.get(i).add(a, BorderLayout.SOUTH);
+            }
+                //            songButton.get(i).setText("Artist:"+songs.get(i).getArtist()+"\n");
 //            songButton.get(i).setText("Album:"+songs.get(i).getAlbum());
         }
 

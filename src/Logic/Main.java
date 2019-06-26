@@ -17,7 +17,7 @@ public class Main {
     private static ObjectInputStream objIn;
     private static ArrayList<SongData> currentQueue;
     private static int songQueueIndex = 0;
-    private static String myName;
+    private static String myName = "admin";
     private static int holyFlag=0;
 
     public static void main(String[] args) {
@@ -32,9 +32,9 @@ public class Main {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
         signInOrSignUp.dispose();
+
         new PlayerManager();
         PlayerManager.playerManager();
 
