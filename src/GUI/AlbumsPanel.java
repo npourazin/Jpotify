@@ -55,8 +55,6 @@ public class AlbumsPanel extends JPanel {
             }
             this.repaint();
             this.revalidate();
-            //TODO: choose the image icon of each album from one of it songs
-
             Scanner sc= null;
             try {
                 sc = new Scanner(new FileReader(new File("src/"+albums.get(i)+".txt")));
