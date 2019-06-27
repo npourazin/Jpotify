@@ -47,7 +47,13 @@ public class AlbumsPanel extends JPanel {
             this.add(albumButton.get(i), gbc);
             albumButton.get(i).setVisible(true);
             albumButton.get(i).setName(albums.get(i));
-
+            gbc.gridx++;
+            if (gbc.gridx == 3) {
+                gbc.gridx = 0;
+                gbc.gridy++;
+            }
+            this.repaint();
+            this.revalidate();
             //TODO: choose the image icon of each album from one of it songs
             try {
 
@@ -60,13 +66,7 @@ public class AlbumsPanel extends JPanel {
             JTextArea a = new JTextArea(albums.get(i));
             albumButton.get(i).add(a, BorderLayout.SOUTH);
 
-            gbc.gridx++;
-            if (gbc.gridx == 3) {
-                gbc.gridx = 0;
-                gbc.gridy++;
-            }
-            this.repaint();
-            this.revalidate();
+
         }
     }
 
