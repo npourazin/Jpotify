@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/PlayerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/QueueIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/QueueIndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/RemoveFavouriteMenuClicked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/RemoveFavouriteMenuClicked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/RemovePlaylistItemClicked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/RemovePlaylistItemClicked.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,6 +34,30 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/RemovePlaylistItemClicked.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/RemoveSongFromPlaylistItemClicked.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-38">
@@ -44,11 +69,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/PlayerManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
               <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/RemoveFavouriteMenuClicked.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/SliderThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="25" column="50" selection-start-line="25" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/QueueIndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,7 +178,6 @@
         <option value="$PROJECT_DIR$/src/Controllers/EditNamePlaylistItemClicked.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSharedPlaylist.java" />
         <option value="$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/RemovePlaylistItemClicked.java" />
         <option value="$PROJECT_DIR$/src/Controllers/StopButtonListener.java" />
         <option value="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ShufflePlayButtonListener.java" />
@@ -127,13 +187,14 @@
         <option value="$PROJECT_DIR$/src/GUI/ChoicesArea.java" />
         <option value="$PROJECT_DIR$/src/GUI/AlbumsPanel.java" />
         <option value="$PROJECT_DIR$/src/GUI/SongsPanel.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/RemoveFavouriteMenuClicked.java" />
         <option value="$PROJECT_DIR$/src/Controllers/AddFavouriteMenuClicked.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingFavouritePlaylist.java" />
         <option value="$PROJECT_DIR$/src/Controllers/RepeatButtonListener.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/QueueIndexController.java" />
         <option value="$PROJECT_DIR$/src/Logic/Main.java" />
         <option value="$PROJECT_DIR$/src/Logic/PlayerManager.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/QueueIndexController.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/RemovePlaylistItemClicked.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/RemoveFavouriteMenuClicked.java" />
       </list>
     </option>
   </component>
@@ -303,21 +364,7 @@
       <workItem from="1561449098660" duration="34689000" />
       <workItem from="1561524682588" duration="30979000" />
       <workItem from="1561587815289" duration="10655000" />
-      <workItem from="1561624552288" duration="1593000" />
-    </task>
-    <task id="LOCAL-00027" summary="static SongData.">
-      <created>1561192825755</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1561192825755</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Scroller for choices panel made.">
-      <created>1561201216239</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1561201216239</updated>
+      <workItem from="1561624552288" duration="3323000" />
     </task>
     <task id="LOCAL-00029" summary="drag on slider completed.">
       <created>1561219190107</created>
@@ -648,11 +695,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561626996222</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Sort by time modified">
+      <created>1561627520715</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1561627520715</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Shuffle play updated">
+      <created>1561627695598</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1561627695598</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250251000" />
+    <option name="totallyTimeSpent" value="251981000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,17 +734,17 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Learn" order="4" weight="0.32954547" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.21946308" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.21946308" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.32214764" side_tool="true" visible="true" weight="0.25212464" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.3228188" side_tool="true" visible="true" weight="0.25212464" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
-      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.4818792" weight="0.4022663" />
+      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.48120806" weight="0.4022663" />
       <window_info anchor="bottom" id="Version Control" order="4" sideWeight="0.49015152" weight="0.32920355" />
       <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.49932885" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.4986577" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.67785233" visible="true" weight="0.25212464" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.6771812" visible="true" weight="0.25212464" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49932885" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -713,8 +774,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Scroll Slider added to home panel." />
-    <MESSAGE value="Adding songs to playlist feature added." />
     <MESSAGE value="showing songs from playlist feature added." />
     <MESSAGE value="Remove songs from playlist feature added." />
     <MESSAGE value="Updating playlist menu feature added." />
@@ -738,7 +797,9 @@
     <MESSAGE value="Shuffle play added." />
     <MESSAGE value="Favourite playlist added." />
     <MESSAGE value="Replay button listener modified.&#10;Shuffle play updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replay button listener modified.&#10;Shuffle play updated" />
+    <MESSAGE value="Sort by time modified" />
+    <MESSAGE value="Shuffle play updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shuffle play updated" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Network/FileComparator.java">
@@ -1069,40 +1130,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/RemoveSongFromPlaylistItemClicked.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/RemovePlaylistItemClicked.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/SongsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/RemoveFavouriteMenuClicked.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1123,16 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/SliderThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="25" column="50" selection-start-line="25" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1167,16 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/QueueIndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-38">
@@ -1191,6 +1202,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/SliderThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="25" column="50" selection-start-line="25" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/QueueIndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/RemoveSongFromPlaylistItemClicked.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/RemovePlaylistItemClicked.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/RemoveFavouriteMenuClicked.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

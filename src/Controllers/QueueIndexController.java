@@ -11,7 +11,7 @@ public class QueueIndexController {
             newIndex=Main.getSongQueueIndex();
         }
         else if (ShufflePlayButtonListener.isShuffleOn()) {
-            //
+            //generates a random index indicator
             do {
                 Random rand = new Random();
                 newIndex = rand.nextInt(Main.getCurrentQueue().size());

@@ -24,6 +24,8 @@ public class RemovePlaylistItemClicked implements ActionListener {
                 }
                count++;
             }
+
+
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         }
