@@ -64,8 +64,8 @@ public class ParseFromweb {
         else if(text.contains("Search Results Web results")&& text.contains("Source:"))
             return text.substring(text.indexOf("Search Results Knowledge result")+26, text.indexOf("Source:"));
         else
-            return text;
-//            return "Unfortunately couldn't find any results :( ";
+//            return text;
+            return "Unfortunately couldn't find any results :( ";
     }
 
 
