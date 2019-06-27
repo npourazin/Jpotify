@@ -7,10 +7,10 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-public class SearcBarPanel extends JPanel {
+public class SearchBarPanel extends JPanel {
     private static JTextField searched;
 
-    public SearcBarPanel(){
+    public SearchBarPanel(){
         this.setVisible(true);
         this.setLayout(new GridLayout(1, 3));
 
@@ -66,7 +66,7 @@ public class SearcBarPanel extends JPanel {
     }
 
     public static void setSearched(JTextField searched) {
-        SearcBarPanel.searched = searched;
+        SearchBarPanel.searched = searched;
     }
 
     @Override

@@ -75,16 +75,6 @@ public class Main {
 
     }
 
-    public static void sortByTimeQueue(){
-        currentQueue.sort(new SortByTime());
-    }
-
-
-//    public static void shufflePlayQueue() {
-//
-//        currentQueue.sort(new SortRandomly());
-//
-//    }
 
     public static void creatCurrentQueueByAdd(String fileName) {
         currentQueue=null;

@@ -10,7 +10,6 @@ import java.awt.event.ActionListener;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.time.chrono.MinguoChronology;
 import java.util.ArrayList;
 
 public class ClickListenerForSearchButton implements ActionListener {
@@ -21,7 +20,7 @@ public class ClickListenerForSearchButton implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         JButton jButton = (JButton) actionEvent.getSource();
         jButton.repaint();
-        String request = SearcBarPanel.getSearched().getText().trim();
+        String request = SearchBarPanel.getSearched().getText().trim();
 
         //empty the previous search results
         try {

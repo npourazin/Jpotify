@@ -25,6 +25,7 @@ public class DialogBoxChooseName extends JDialog {
         addButton.setVisible(true);
         addButton.addActionListener(new addButtonDialogListener());
         addDialog.add(addButton);
+
     }
     public static JTextField getTextField() {
         return textField;
