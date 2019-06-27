@@ -58,7 +58,7 @@ public class Music implements Serializable {
             //Handle empty field
             if (mp3File.getId3v1Tag().getTitle()==null) {
                 songData.setSongName(getNameForMe(mp3File.getFilename()));
-                if(getNameForMe(mp3File.getFilename())==null)
+                if(getNameForMe(mp3File.getFilename())==null || getNameForMe(mp3File.getFilename()).equals(""))
                       songData.setSongName("Unknown");
             } else
                 songData.setSongName(mp3File.getId3v1Tag().getTitle());
@@ -68,7 +68,7 @@ public class Music implements Serializable {
             if (mp3File.getId3v1Tag().getAlbum()==null)
                 songData.setAlbum("Unknown");
             else if(mp3File.getId3v1Tag().getAlbum().equals(""))
-                songData.setSongName("Unknown");
+                songData.setAlbum("Unknown");
             else
                 songData.setAlbum(mp3File.getId3v1Tag().getAlbum());
 
@@ -77,7 +77,7 @@ public class Music implements Serializable {
             if (mp3File.getId3v1Tag().getArtist()==null)
                 songData.setArtist("Unknown");
             else if(mp3File.getId3v1Tag().getArtist().equals(""))
-                songData.setSongName("Unknown");
+                songData.setArtist("Unknown");
             else
                 songData.setArtist(mp3File.getId3v1Tag().getArtist());
 
@@ -100,22 +100,16 @@ public class Music implements Serializable {
             //Handle empty field
             if (mp3File.getId3v2Tag().getTitle()==null){
                 songData.setSongName(getNameForMe(mp3File.getFilename()));
-                if(getNameForMe(mp3File.getFilename())==null)
+                if(getNameForMe(mp3File.getFilename())==null || getNameForMe(mp3File.getFilename()).equals(""))
                     songData.setSongName("Unknown");
-            }
-            if (mp3File.getId3v2Tag().getTitle()==null)
-                songData.setSongName("Unknown");
-            else if(mp3File.getId3v2Tag().getTitle().equals(""))
-                songData.setSongName("Unknown");
-            else
+            }else
                 songData.setSongName(mp3File.getId3v2Tag().getTitle());
-
 
 
             if (mp3File.getId3v2Tag().getAlbum()==null)
                 songData.setAlbum("Unknown");
             else if(mp3File.getId3v2Tag().getAlbum().equals(""))
-                songData.setSongName("Unknown");
+                songData.setAlbum("Unknown");
             else
                 songData.setAlbum(mp3File.getId3v2Tag().getAlbum());
 
@@ -124,7 +118,7 @@ public class Music implements Serializable {
             if (mp3File.getId3v2Tag().getArtist()==null)
                 songData.setArtist("Unknown");
             else if(mp3File.getId3v2Tag().getArtist().equals(""))
-                songData.setSongName("Unknown");
+                songData.setArtist("Unknown");
             else
                 songData.setArtist(mp3File.getId3v2Tag().getArtist());
 
