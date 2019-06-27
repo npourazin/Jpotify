@@ -14,10 +14,19 @@ public class JpotifyGUI extends JFrame {
     private static MusicSliderBar musicSliderBar;
     private static JLayer<Component> jLayer;
     private static AlbumsPanel albumsPanel;
+    private static SearcBarPanel searcBarPanel;
 
 
     public static void setSongsPanel(SongsPanel songsPanel) {
         JpotifyGUI.songsPanel = songsPanel;
+    }
+
+    public static SearcBarPanel getSearcBarPanel() {
+        return searcBarPanel;
+    }
+
+    public static void setSearcBarPanel(SearcBarPanel searcBarPanel) {
+        JpotifyGUI.searcBarPanel = searcBarPanel;
     }
 
     public void setAlbumsPanel(AlbumsPanel albumsPanel) {
@@ -92,6 +101,11 @@ public class JpotifyGUI extends JFrame {
         musicSliderBar = new MusicSliderBar(100);
         musicSliderBar.setVisible(true);
         this.add(musicSliderBar, BorderLayout.SOUTH);
+
+        searcBarPanel = new SearcBarPanel();
+        searcBarPanel.setVisible(true);
+//        searcBarPanel.setBackground(Color.LIGHT_GRAY);
+        this.add(searcBarPanel, BorderLayout.NORTH);
 
 //        choicesArea.paint();
         choicesArea.setBackground(Color.cyan);
