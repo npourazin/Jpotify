@@ -143,7 +143,7 @@ public class Music implements Serializable {
             if (os.contains("win")){
                 //Operating system is based on Windows
                 if (string.charAt(i)=='\\'){
-                    return string.substring(i);
+                    return string.substring(i+1);
                 }
             }
             else if (os.contains("nix") || os.contains("aix") || os.contains("nux") || os.contains("osx")){
@@ -151,7 +151,7 @@ public class Music implements Serializable {
                 //Operating system is Apple OSX based
 
                 if(string.charAt(i)=='/'){
-                    return string.substring(i);
+                    return string.substring(i+1);
                 }
 
             }
