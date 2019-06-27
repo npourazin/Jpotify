@@ -1,40 +1,47 @@
 package Controllers;
 
-import Logic.Main;
-import com.mpatric.mp3agic.InvalidDataException;
-import com.mpatric.mp3agic.Mp3File;
-import com.mpatric.mp3agic.UnsupportedTagException;
-import javazoom.jl.decoder.Bitstream;
-import javazoom.jl.decoder.Decoder;
-import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.FactoryRegistry;
-import javazoom.jl.player.JavaSoundAudioDevice;
-
+import javax.sound.sampled.*;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import java.io.IOException;
+
 
 public class VolumeChangeListener implements ChangeListener {
     @Override
     public void stateChanged(ChangeEvent e) {
         JSlider volumeSlider = (JSlider) e.getSource();
-        if(!volumeSlider.getValueIsAdjusting()) {
-            int value = volumeSlider.getValue();
+            float value = volumeSlider.getValue();
+            setVolume(value);
 
-//            Bitstream bitstream = new Bitstream(conn.getInputStream()/*new FileInputStream(quick_file)*/);
-//            System.out.println(bitstream);
-//            Decoder decoder = new Decoder();
-//            decoder.setEqualizer(equalizer);
-            JavaSoundAudioDevice audio = null;
-            try {
-                 audio = (JavaSoundAudioDevice) FactoryRegistry.systemRegistry().createAudioDevice();
-            } catch (JavaLayerException ex) {
-                ex.printStackTrace();
+
+    }
+
+    //sets the volume
+    public static void setVolume(float value) {
+
+        try {
+            Mixer.Info[] infos = AudioSystem.getMixerInfo();
+            for (Mixer.Info info : infos) {
+                Mixer mixer = AudioSystem.getMixer(info);
+                if (mixer.isLineSupported(Port.Info.SPEAKER)) {
+                    Port port = (Port) mixer.getLine(Port.Info.SPEAKER);
+                    port.open();
+                    if (port.isControlSupported(FloatControl.Type.VOLUME)) {
+                        FloatControl volume = (FloatControl) port.getControl(FloatControl.Type.VOLUME);
+                        volume.setValue(value / 100);
+                    }
+                    port.close();
+                }
             }
-            JavaSoundAudioDevice jsAudio = audio;
-            jsAudio.setLineGain(value);
-            System.out.println(value);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Erro\n" + ex);
         }
     }
+
+
 }
+
+
+
+
+

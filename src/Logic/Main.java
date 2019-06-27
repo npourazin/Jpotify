@@ -1,5 +1,6 @@
 package Logic;
 
+import Controllers.VolumeChangeListener;
 import GUI.*;
 import Logic.PlayerManager;
 
@@ -35,6 +36,8 @@ public class Main {
         }
         signInOrSignUp.dispose();
 
+        //set volume to middle
+        VolumeChangeListener.setVolume(50);
         new PlayerManager();
         PlayerManager.playerManager();
 

@@ -20,6 +20,10 @@ public class SongPlayer implements Serializable {
     private String fileName;
     private Thread t = null;
 
+    public AdvancedPlayer getPlayer() {
+        return player;
+    }
+
     // the player actually doing all the work
     private AdvancedPlayer player;
 
