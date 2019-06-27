@@ -39,7 +39,7 @@ public class ClickListenerForSearchButton implements ActionListener {
         try {
             PrintWriter fr = new PrintWriter(new FileWriter("src/SearchResults.txt"), true);
             for (SongData a : searchResults){
-                fr.println(a.getAbsolutePath());
+                fr.println(a.getSongName());
                 fr.flush();
             }
         } catch (IOException e) {
