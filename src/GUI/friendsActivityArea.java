@@ -6,6 +6,7 @@ import java.awt.*;
 
 public class friendsActivityArea extends JPanel {
     private JScrollPane jScrollPane;
+    private static boolean askedForLastListened = true;
 
     public friendsActivityArea() {
         super();
@@ -24,6 +25,14 @@ public class friendsActivityArea extends JPanel {
         label.setFont(new Font("Verdana", 9, 18));
         label.setBackground(Color.cyan);
         this.add(label, BorderLayout.NORTH);
+    }
+
+    public static boolean isAskedForLastListened() {
+        return askedForLastListened;
+    }
+
+    public static void setAskedForLastListened(boolean askedForLastListened) {
+        friendsActivityArea.askedForLastListened = askedForLastListened;
     }
 
     @Override

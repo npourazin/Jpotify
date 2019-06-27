@@ -145,6 +145,9 @@ public class MusicSliderBar extends JPanel {
 //        jSlider.setValueIsAdjusting(true);
         jSlider.addChangeListener(new ScrollSliderChanger());
         jSlider.setBackground(Color.cyan);
+
+        jSlider.setPaintTrack(true);
+
         JPanel bottomPanel = new JPanel();
         bottomPanel.setBackground(Color.cyan);
         bottomPanel.setLayout(new BorderLayout());
