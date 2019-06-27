@@ -17,7 +17,8 @@ public class ParseFromweb {
         String s1="";
 //        String s2= "stronger+kelly+clarkson";
         String s3="";
-
+//        String s4 ="";
+//        String s5 ="";
 
 
 
@@ -27,6 +28,11 @@ public class ParseFromweb {
             //Operating system is based on Windows
             s1 = "https://www.google.com/search?client=firefox-b-d&channel=trow&q=";
             s3 = "+lyrics&ie=utf-8&oe=utf-8";
+//            s1 = "https://www.google.com/search?q=";
+//            s3 = "&aqs=chrome..69i57j0l5.5217j0j7&sourceid=chrome&ie=UTF-8";
+//            s4 = "&oq=";
+//            s5 ="+lyrics";
+//            s=s1+s2+s5+s4+s2+s5+s3;
         }
         else if (os.contains("osx")){
             //Operating system is Apple OSX based
@@ -37,10 +43,9 @@ public class ParseFromweb {
             s3 = "+lyrics&ie=utf-8&oe=utf-8";
         }
 
-
-
-
         String s = s1 + s2 + s3;
+
+
 
         Document doc = Jsoup.connect(s).get();
         log(doc.title());
