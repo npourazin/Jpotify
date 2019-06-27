@@ -35,5 +35,7 @@ public class addButtonDialogListener implements ActionListener {
 
         //refresh
         Main.getJpotifyGUI().getChoicesArea().getModel().addElement(playlistName);
+
+
     }
 }
