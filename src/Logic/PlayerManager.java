@@ -24,7 +24,6 @@ public class PlayerManager {
     public static void playerManager() {
 
         try {
-            //TODO: update last time listened
             if(Main.getCurrentQueue()==null) return;
             System.out.println("Queue size: "+Main.getCurrentQueue().size());
 
@@ -71,13 +70,13 @@ class SortByTime implements Comparator<SongData> {
     public int compare(SongData songData, SongData t1) {
         if (songData.getLastTimeListened() != t1.getLastTimeListened()) {
             if (songData.getLastTimeListened().after(t1.getLastTimeListened())) {
-                return 1;
-            } else return -1;
+                return -1;
+            } else return 1;
         }
         if (songData.getTimeItWasAdded().after(t1.getTimeItWasAdded())) {
-            return 1;
-        } else if (songData.getTimeItWasAdded().before(t1.getTimeItWasAdded())) {
             return -1;
+        } else if (songData.getTimeItWasAdded().before(t1.getTimeItWasAdded())) {
+            return 1;
         }
 
         return 0;
