@@ -4,6 +4,7 @@ import GUI.*;
 import Logic.Main;
 import Logic.SongData;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileWriter;
@@ -18,6 +19,8 @@ public class ClickListenerForSearchButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
+        JButton jButton = (JButton) actionEvent.getSource();
+        jButton.repaint();
         String request = SearcBarPanel.getSearched().getText().trim();
 
         //empty the previous search results

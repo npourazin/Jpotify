@@ -17,6 +17,7 @@ public class MusicSliderBar extends JPanel {
     private static JButton playButton;
     private JButton nextButton;
     private JButton replayButton;
+    private JButton repeatButton;
     private static JTextArea showTime;
     private static JLabel songIconLable;
 
@@ -41,7 +42,7 @@ public class MusicSliderBar extends JPanel {
         //creating song icon
 //        JPanel bottomPanel = new JPanel();
         songIconLable = new JLabel();
-        Dimension d = new Dimension(300, 150);
+        Dimension d = new Dimension(250, 150);
         songIconLable.setVisible(true);
         songIconLable.setPreferredSize(d);
 
@@ -94,20 +95,6 @@ public class MusicSliderBar extends JPanel {
         }
         playButton.setBackground(Color.cyan);
 
-        //Creating ShufflePlay button
-        JButton shufflePlayButton = new JButton("Shuffle Play Off");
-        shufflePlayButton.setVisible(true);
-        shufflePlayButton.setBackground(Color.cyan);
-        topPanel.add(shufflePlayButton);
-        shufflePlayButton.addActionListener(new ShufflePlayButtonListener());
-        //TODO: get proper image icon for SHUFFLE PLAY
-//        try {
-//            Image img = ImageIO.read(getClass().getResource("stop1.png"));
-//            shufflePlayButton.setIcon(new ImageIcon(img));
-//        } catch (Exception ex) {
-//            ex.printStackTrace();
-//        }
-
         //Creating next button
         nextButton = new JButton();
         nextButton.setVisible(true);
@@ -120,6 +107,40 @@ public class MusicSliderBar extends JPanel {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
+        //Creating ShufflePlay button
+        JButton shufflePlayButton = new JButton("Off");
+        shufflePlayButton.setVisible(true);
+        shufflePlayButton.setBackground(Color.cyan);
+        topPanel.add(shufflePlayButton);
+        shufflePlayButton.addActionListener(new ShufflePlayButtonListener());
+        try {
+            Image img = ImageIO.read(getClass().getResource("shuffle1.png"));
+            shufflePlayButton.setIcon(new ImageIcon(img));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        //TODO: get proper image icon for SHUFFLE PLAY
+//        try {
+//            Image img = ImageIO.read(getClass().getResource("stop1.png"));
+//            shufflePlayButton.setIcon(new ImageIcon(img));
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
+
+        //creating repeat button
+         repeatButton= new JButton("Off");
+        repeatButton.setVisible(true);
+        repeatButton.setBackground(Color.cyan);
+        topPanel.add(repeatButton);
+        repeatButton.addActionListener(new RepeatButtonListener());
+        try {
+            Image img = ImageIO.read(getClass().getResource("repeat1.png"));
+            repeatButton.setIcon(new ImageIcon(img));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
 
         //Creating replay button
         replayButton = new JButton("Replay");
