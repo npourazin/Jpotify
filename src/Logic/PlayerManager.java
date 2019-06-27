@@ -1,12 +1,8 @@
 package Logic;
 
-import Controllers.PauseAndPlayClickButton;
-import com.mpatric.mp3agic.InvalidDataException;
-import com.mpatric.mp3agic.UnsupportedTagException;
+import Controllers.ButtonListenerPauseAndPlay;
 import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.Player;
 
-import java.io.*;
 import java.time.Instant;
 import java.util.*;
 
@@ -34,7 +30,7 @@ public class PlayerManager {
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             sP = new SongPlayer(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
 //            sP.setVolume();
-            PauseAndPlayClickButton.setIfNewSong();
+            ButtonListenerPauseAndPlay.setIfNewSong();
 
             //Change last time listened
             for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {

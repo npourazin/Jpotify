@@ -51,7 +51,7 @@ public class ScrollSliderChanger implements ChangeListener {
             }
 
             passedPercentage = (1.0) * fps / MusicSliderBar.getMusicLenght();
-            if ((Math.abs(next - prev) > 1)&& !PauseAndPlayClickButton.ifButtonPlaying())
+            if ((Math.abs(next - prev) > 1)&& !ButtonListenerPauseAndPlay.ifButtonPlaying())
                 flag = true;
             else if ((Math.abs(next - prev) > 1) ) {
                 sP.pauseSong();
@@ -66,7 +66,7 @@ public class ScrollSliderChanger implements ChangeListener {
                 System.out.println(newIndex);
                 Main.setSongQueueIndex(newIndex);
                 PlayerManager.playerManager();
-                PauseAndPlayClickButton.setIfNewSong();
+                ButtonListenerPauseAndPlay.setIfNewSong();
             }
 
         }

@@ -72,7 +72,7 @@ public class MusicSliderBar extends JPanel {
         previousButton = new JButton();
         previousButton.setVisible(true);
         previousButton.setBackground(Color.cyan);
-        previousButton.addActionListener(new PreviousButtonListener());
+        previousButton.addActionListener(new ButtonListenerPrevious());
         topPanel.add(previousButton);
         try {
             Image img = ImageIO.read(getClass().getResource("previous1.png"));
@@ -85,7 +85,7 @@ public class MusicSliderBar extends JPanel {
         playButton = new JButton();
         playButton.setVisible(true);
         playButton.setText(" Play");
-        playButton.addActionListener(new PauseAndPlayClickButton());
+        playButton.addActionListener(new ButtonListenerPauseAndPlay());
         topPanel.add(playButton);
         try {
             Image img = ImageIO.read(getClass().getResource("play1.png"));
@@ -99,7 +99,7 @@ public class MusicSliderBar extends JPanel {
         nextButton = new JButton();
         nextButton.setVisible(true);
         nextButton.setBackground(Color.cyan);
-        nextButton.addActionListener(new NextButtonListener());
+        nextButton.addActionListener(new ButtonListenerNext());
         topPanel.add(nextButton);
         try {
             Image img = ImageIO.read(getClass().getResource("next1.png"));
@@ -113,27 +113,22 @@ public class MusicSliderBar extends JPanel {
         shufflePlayButton.setVisible(true);
         shufflePlayButton.setBackground(Color.cyan);
         topPanel.add(shufflePlayButton);
-        shufflePlayButton.addActionListener(new ShufflePlayButtonListener());
+        shufflePlayButton.addActionListener(new ButtonListenerShufflePlay());
         try {
             Image img = ImageIO.read(getClass().getResource("shuffle1.png"));
             shufflePlayButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        //TODO: get proper image icon for SHUFFLE PLAY
-//        try {
-//            Image img = ImageIO.read(getClass().getResource("stop1.png"));
-//            shufflePlayButton.setIcon(new ImageIcon(img));
-//        } catch (Exception ex) {
-//            ex.printStackTrace();
-//        }
+
+
 
         //creating repeat button
          repeatButton= new JButton("Off");
         repeatButton.setVisible(true);
         repeatButton.setBackground(Color.cyan);
         topPanel.add(repeatButton);
-        repeatButton.addActionListener(new RepeatButtonListener());
+        repeatButton.addActionListener(new ButtonListenerRepeat());
         try {
             Image img = ImageIO.read(getClass().getResource("repeat1.png"));
             repeatButton.setIcon(new ImageIcon(img));
@@ -147,7 +142,7 @@ public class MusicSliderBar extends JPanel {
         replayButton.setVisible(true);
         replayButton.setBackground(Color.cyan);
         topPanel.add(replayButton);
-        replayButton.addActionListener(new ReplayButtonListener());
+        replayButton.addActionListener(new ButtonListenerReplay());
         try {
             Image img = ImageIO.read(getClass().getResource("replay1.png"));
             replayButton.setIcon(new ImageIcon(img));
@@ -159,13 +154,32 @@ public class MusicSliderBar extends JPanel {
         lyricsButton.setVisible(true);
         lyricsButton.setBackground(Color.cyan);
         topPanel.add(lyricsButton);
-        lyricsButton.addActionListener(new ClickListenerForShowingLyrics());
+        lyricsButton.addActionListener(new ButtonListenerLyric());
         try {
             Image img = ImageIO.read(getClass().getResource("lyrics1.png"));
             lyricsButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
+
+        //creating volume slider
+        JSlider volumeSlider=new JSlider(0,100,50);
+        volumeSlider.setVisible(true);
+        volumeSlider.addChangeListener(new VolumeChangeListener());
+        volumeSlider.setPaintLabels(true);
+        volumeSlider.setPaintTrack(true);
+        volumeSlider.setMajorTickSpacing(100);
+        volumeSlider.setBackground(Color.cyan);
+        topPanel.add(volumeSlider);
+
+        //Volume lable
+        JLabel volume=new JLabel(":Volume");
+        volume.setFont(new Font("M",20,15));
+        volume.setVisible(true);
+        topPanel.add(volume);
+
+
 
         //Creating jSlider
         jSlider = new JSlider(0, (int) MUSIC_LENGHT, 0);

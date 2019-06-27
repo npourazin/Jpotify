@@ -10,7 +10,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class RemoveFavouriteMenuClicked implements ActionListener {
+public class MenuClickedRemoveFavourite implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JMenuItem menuItem = (JMenuItem) (e.getSource());

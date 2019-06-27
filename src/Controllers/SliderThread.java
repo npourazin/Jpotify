@@ -2,7 +2,6 @@ package Controllers;
 
 import GUI.MusicSliderBar;
 import Logic.Main;
-import Logic.PlayerManager;
 
 import java.util.concurrent.TimeUnit;
 
@@ -25,7 +24,7 @@ public class SliderThread extends Thread {
                 int newIndex= Main.getSongQueueIndex()+1;
                 QueueIndexController.setIndex(newIndex);
                 currentTime=0;
-                PauseAndPlayClickButton.setSongToPlay();
+                ButtonListenerPauseAndPlay.setSongToPlay();
             }
 
         }

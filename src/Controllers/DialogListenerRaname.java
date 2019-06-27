@@ -9,7 +9,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class RanameDialogBoxListener implements ActionListener {
+public class DialogListenerRaname implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String oldName=SelectedPlaylistListener.getPlaylistName();
@@ -24,7 +24,7 @@ public class RanameDialogBoxListener implements ActionListener {
         }
         while (sc.hasNext()){
             if(sc.nextLine().equals(newName)) {
-                System.out.println("playlist exists");
+                System.out.println("playlist already exists");
                 return;
             }
         }

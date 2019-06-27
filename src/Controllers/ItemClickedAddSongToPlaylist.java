@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-public class AddSongToPlaylistItemClicked implements ActionListener {
+public class ItemClickedAddSongToPlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 

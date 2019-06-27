@@ -1,11 +1,9 @@
 package GUI;
 
 import Controllers.*;
-import Logic.Main;
 import Logic.SongData;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -74,11 +72,11 @@ public class SongsPanel extends JPanel {
             JPopupMenu popupMenu = new JPopupMenu();
 
             JMenuItem addFavourite=new JMenuItem("Add to Favourite");
-            addFavourite.addActionListener(new AddFavouriteMenuClicked());
+            addFavourite.addActionListener(new MenuClickedAddFavourite());
             popupMenu.add(addFavourite);
 
             JMenuItem removeFavourite=new JMenuItem("Remove from Favourite");
-            removeFavourite.addActionListener(new RemoveFavouriteMenuClicked());
+            removeFavourite.addActionListener(new MenuClickedRemoveFavourite());
             popupMenu.add(removeFavourite);
             int finalI = i;
             songButton.get(i).addMouseListener(new MouseAdapter() {

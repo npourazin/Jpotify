@@ -20,6 +20,6 @@ public class PlaySpecificSongOnClick implements ActionListener {
         }
         Main.setSongQueueIndex(newIndex);
         PlayerManager.playerManager();
-        PauseAndPlayClickButton.setSongToPlay();
+        ButtonListenerPauseAndPlay.setSongToPlay();
     }
 }
