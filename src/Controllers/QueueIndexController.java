@@ -15,7 +15,8 @@ public class QueueIndexController {
             do {
                 Random rand = new Random();
                 newIndex = rand.nextInt(Main.getCurrentQueue().size());
-            }while (newIndex!=Main.getSongQueueIndex());
+            }while (newIndex==Main.getSongQueueIndex());
+
         } else {
             if (newIndex >= Main.getCurrentQueue().size()) newIndex = 0;
             else if (newIndex < 0) newIndex = Main.getCurrentQueue().size() - 1;
