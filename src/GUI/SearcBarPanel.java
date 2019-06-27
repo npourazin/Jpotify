@@ -24,7 +24,7 @@ public class SearcBarPanel extends JPanel {
         name.setBackground(Color.cyan);
         tmp1.add(name, BorderLayout.WEST);
 
-        searched = new JTextField("     ");
+        searched = new JTextField(" ");
         searched.setEditable(true);
         searched.setVisible(true);
         searched.setBackground(Color.white);
@@ -33,6 +33,10 @@ public class SearcBarPanel extends JPanel {
 //        this.setBorder(new EmptyBorder(2, 5, 2, 5));
         searched.setBorder(new EmptyBorder(10, 3,10,3));
         tmp1.add(searched);
+        Dimension d = new Dimension(150, 40);
+//        tmp1.setPreferredSize(d);
+//        searched.setSize(d);
+
 
         JPanel tmp2 = new JPanel();
         tmp2.setVisible(true);
