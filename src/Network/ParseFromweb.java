@@ -36,6 +36,7 @@ public class ParseFromweb {
         }
         else if (os.contains("osx")){
             //Operating system is Apple OSX based
+            //TODO add code to support mac os;
         }
         else if (os.contains("nix") || os.contains("aix") || os.contains("nux")){
             //Operating system is based on Linux/Unix/*AIX

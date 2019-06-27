@@ -41,6 +41,9 @@ public class ClickListenerForAddingSongs2 implements ActionListener {
                 }
             }
 
+            Main.prepareObjOut();
+            SavedSongData.addToFile(absolutePath);
+
             fr.println(absolutePath);
             fr.flush();
 
@@ -53,8 +56,7 @@ public class ClickListenerForAddingSongs2 implements ActionListener {
         }
 
 
-        Main.prepareObjOut();
-        SavedSongData.addToFile(absolutePath);
+
 
         //adding to an album
         Music newMusic=new Music(absolutePath);

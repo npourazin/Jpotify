@@ -56,9 +56,11 @@ public class Music implements Serializable {
         if (mp3File.hasId3v1Tag()) {
 
             //Handle empty field
-            if (mp3File.getId3v1Tag().getTitle()==null)
-                songData.setSongName("Unknown");
-            else
+            if (mp3File.getId3v1Tag().getTitle()==null) {
+                songData.setSongName(getNameForMe(mp3File.getFilename()));
+                if(getNameForMe(mp3File.getFilename())==null)
+                      songData.setSongName("Unknown");
+            } else
                 songData.setSongName(mp3File.getId3v1Tag().getTitle());
 
             if (mp3File.getId3v1Tag().getAlbum()==null)
@@ -80,8 +82,11 @@ public class Music implements Serializable {
         if (mp3File.hasId3v2Tag()) {
 
             //Handle empty field
-            if (mp3File.getId3v2Tag().getTitle()==null)
-                songData.setSongName("Unknown");
+            if (mp3File.getId3v2Tag().getTitle()==null){
+                songData.setSongName(getNameForMe(mp3File.getFilename()));
+                if(getNameForMe(mp3File.getFilename())==null)
+                    songData.setSongName("Unknown");
+            }
             else
                 songData.setSongName(mp3File.getId3v2Tag().getTitle());
 
@@ -130,6 +135,30 @@ public class Music implements Serializable {
 
         }
     }
+    private static String getNameForMe(String string){
+        for (int i = string.length()-1; i>=0 ; i--) {
+
+
+            String os = System.getProperty("os.name").toLowerCase();
+            if (os.contains("win")){
+                //Operating system is based on Windows
+                if (string.charAt(i)=='\\'){
+                    return string.substring(i);
+                }
+            }
+            else if (os.contains("nix") || os.contains("aix") || os.contains("nux") || os.contains("osx")){
+                //Operating system is based on Linux/Unix/*AIX
+                //Operating system is Apple OSX based
+
+                if(string.charAt(i)=='/'){
+                    return string.substring(i);
+                }
+
+            }
+        }
+        return null;
+    }
+
 
     public void setSongData(SongData songData) {
         this.songData = songData;

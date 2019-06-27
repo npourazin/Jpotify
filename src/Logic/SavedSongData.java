@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.MissingFormatArgumentException;
 
 public class SavedSongData {
-
+    private static int CouldBeAdded;
     public static void readFromFile(  ObjectInputStream objIn ){
         ArrayList<SongData> tmpArr = new ArrayList<>();
         if(objIn==null) return;
@@ -49,6 +49,7 @@ public class SavedSongData {
         
         Music music = new Music(absolutePath1);
         music.getSongData().setLastTimeListened(new Date(0));
+        System.out.println("rthis damned song had its music made!!!!!");
         
         PlayerManager.getSongDataArrayList().add(music.getSongData());
         System.out.println("---=-=---  "+PlayerManager.getSongDataArrayList());
