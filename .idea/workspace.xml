@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
+    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="Photos attached.">
+      <change afterPath="$PROJECT_DIR$/src/Network/ParseFromweb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jpotify.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Jpotify.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/SearcBarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SearcBarPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,17 +47,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/SearcBarPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="29" column="44" lean-forward="true" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+            <state relative-caret-position="116">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1129#1130#0" expanded="true" />
                 <element signature="e#1160#1161#0" expanded="true" />
                 <element signature="e#1421#1422#0" expanded="true" />
                 <element signature="e#1470#1471#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Network/ParseFromweb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-479">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,18 +148,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForAddingSongs2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mpatric/mp3agic/Mp3File.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="117">
@@ -183,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingAlbums.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForNewPlayList.java" />
         <option value="$PROJECT_DIR$/src/Controllers/StopButtonListener.java" />
         <option value="$PROJECT_DIR$/src/Logic/Player.java" />
@@ -234,6 +237,7 @@
         <option value="$PROJECT_DIR$/src/Controllers/RepeatButtonListener.java" />
         <option value="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" />
         <option value="$PROJECT_DIR$/src/GUI/SearcBarPanel.java" />
+        <option value="$PROJECT_DIR$/src/Network/ParseFromweb.java" />
       </list>
     </option>
   </component>
@@ -297,14 +301,13 @@
               <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
               <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Logic" type="462c0819:PsiDirectoryNode" />
+              <item name="javazoom" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
               <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Logic" type="462c0819:PsiDirectoryNode" />
-              <item name="PlayerManager.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
@@ -328,8 +331,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Logic" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Lib/jsoup-1.12.1.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -356,7 +359,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.ParseFromweb">
     <configuration name="BinaryReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Logic.BinaryReader" />
       <module name="Jpotify" />
@@ -409,8 +412,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Network.Server" />
+    <configuration name="ParseFromweb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Network.ParseFromweb" />
       <module name="Jpotify" />
       <extension name="coverage">
         <pattern>
@@ -424,11 +427,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ParseFromweb" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.BinaryReader" />
         <item itemvalue="Application.FileComparator" />
         <item itemvalue="Application.Client" />
-        <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
   </component>
@@ -451,14 +454,7 @@
       <workItem from="1561433647907" duration="23424000" />
       <workItem from="1561478365109" duration="10160000" />
       <workItem from="1561524643509" duration="40338000" />
-      <workItem from="1561598902820" duration="14116000" />
-    </task>
-    <task id="LOCAL-00028" summary="Scroller for choices panel made.">
-      <created>1561201216239</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1561201216239</updated>
+      <workItem from="1561598902820" duration="18870000" />
     </task>
     <task id="LOCAL-00029" summary="drag on slider completed.">
       <created>1561219190107</created>
@@ -796,11 +792,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561615239225</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Photos attached.">
+      <created>1561622172184</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1561622172184</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243879000" />
+    <option name="totallyTimeSpent" value="248633000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -831,7 +834,7 @@
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32920355" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32920355" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4840909" visible="true" weight="0.32566372" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4840909" weight="0.32566372" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -861,7 +864,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor changes and some files attached." />
     <MESSAGE value="Bug found." />
     <MESSAGE value="Conflicts resolved." />
     <MESSAGE value="Bug fixed in Music class." />
@@ -886,7 +888,8 @@
     <MESSAGE value="SearchBar class created." />
     <MESSAGE value="SearchBar graphics made.&#10;TODO: complete listeners and connect them." />
     <MESSAGE value="Visual improvement!!&#10;icons for shuffle and repeat buttons added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Visual improvement!!&#10;icons for shuffle and repeat buttons added." />
+    <MESSAGE value="Photos attached." />
+    <option name="LAST_COMMIT_MESSAGE" value="Photos attached." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -919,16 +922,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Network/Server3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="35" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/SongPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1355,6 +1348,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/SearcBarPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1129#1130#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1421#1422#0" expanded="true" />
+            <element signature="e#1470#1471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1365,16 +1372,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/SearcBarPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Network/ParseFromweb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="29" column="44" lean-forward="true" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        <state relative-caret-position="-479">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1129#1130#0" expanded="true" />
-            <element signature="e#1160#1161#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
           </folding>
         </state>
       </provider>

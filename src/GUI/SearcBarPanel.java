@@ -38,6 +38,7 @@ public class SearcBarPanel extends JPanel {
 //        searched.setSize(d);
 
 
+
         JPanel tmp2 = new JPanel();
         tmp2.setVisible(true);
         tmp2.setLayout(new FlowLayout());
