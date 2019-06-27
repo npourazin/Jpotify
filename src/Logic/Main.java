@@ -44,8 +44,9 @@ public class Main {
 
     }
 
-    public static void creatCurrentQueue(String fileName) {
+    public static void creatCurrentQueueByTime(String fileName) {
 
+        PlayerManager.getSongDataArrayList().sort(new SortByTime());
         //TODO: sort the main array list
         currentQueue=null;
         currentQueue=new ArrayList<SongData>();
@@ -58,8 +59,8 @@ public class Main {
                 songPaths.add(sc.nextLine());
             }
 
-            System.out.println("main:"+PlayerManager.getSongDataArrayList().size());
-            System.out.println("read:"+songPaths.size());
+//            System.out.println("main:"+PlayerManager.getSongDataArrayList().size());
+//            System.out.println("read:"+songPaths.size());
             for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
                 for (int j = 0; j <songPaths.size() ; j++) {
                     if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(songPaths.get(j))){
@@ -74,6 +75,45 @@ public class Main {
         }
 
     }
+
+    public static void sortByTimeQueue(){
+        currentQueue.sort(new SortByTime());
+    }
+
+
+//    public static void shufflePlayQueue() {
+//
+//        currentQueue.sort(new SortRandomly());
+//
+//    }
+
+    public static void creatCurrentQueueByAdd(String fileName) {
+        currentQueue=null;
+        currentQueue=new ArrayList<SongData>();
+        try {
+            Scanner sc = new Scanner(new FileReader(new File("src/"+fileName+".txt")));
+            //this way we get the current play list in the order that it is stored in the .bin file
+            //first we get all the elements from text file
+            ArrayList<String> songPaths=new ArrayList<>();
+            while (sc.hasNext()){
+                songPaths.add(sc.nextLine());
+            }
+
+                for (int j = 0; j <songPaths.size() ; j++) {
+                    for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
+                    if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(songPaths.get(j))){
+                        currentQueue.add(PlayerManager.getSongDataArrayList().get(i));
+                    }
+                }
+            }
+
+            System.out.println("sub:"+currentQueue.size());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     public static void setCurrentQueue(ArrayList<SongData> arr) {
         currentQueue = arr;

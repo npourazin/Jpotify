@@ -1,22 +1,20 @@
 package Controllers;
 
-//import GUI.PlaylistPanel;
 import GUI.SongsPanel;
 import Logic.Main;
 import Logic.PlayerManager;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ShowPlaylistMenuItemClicked implements ActionListener {
+public class ClickListenerForShowingFavouritePlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        System.out.println(SelectedPlaylistListener.getPlaylistName());
-        System.out.println("clicked");
-        Main.creatCurrentQueueByAdd(SelectedPlaylistListener.getPlaylistName());
+        //set all songs as the current playlist
+        Main.creatCurrentQueueByTime("Favourite");
+        Main.setSongQueueIndex(0);
+        PlayerManager.playerManager();
 
 
         //cleaning everything
@@ -28,17 +26,11 @@ public class ShowPlaylistMenuItemClicked implements ActionListener {
 
 
         //making new panel show up
-        SongsPanel playlistPanel = new SongsPanel(Main.getCurrentQueue());
-        Main.getJpotifyGUI().setSongsPanel(playlistPanel);
+        SongsPanel songsPanel = new SongsPanel(Main.getCurrentQueue());
+        Main.getJpotifyGUI().setSongsPanel(songsPanel);
         Main.getJpotifyGUI().getHomePanel().removeAll();
         Main.getJpotifyGUI().getHomePanel().add(Main.getJpotifyGUI().getSongsPanel(), BorderLayout.CENTER);
         Main.getJpotifyGUI().revalidate();
-
-
-        //set this playlist as current queue
-        Main.creatCurrentQueueByAdd(SelectedPlaylistListener.getPlaylistName());
-        Main.setSongQueueIndex(0);
-        PlayerManager.playerManager();
 
 
     }

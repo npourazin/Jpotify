@@ -25,7 +25,6 @@ public class SelectSongToRemoveFromPlaylist implements javax.swing.event.ListSel
             }
 
             while (sc.hasNext()) {
-                System.out.println(count + "-" + index);
                 if (count != index)
                     songPath.add(sc.nextLine());
                 else sc.nextLine();

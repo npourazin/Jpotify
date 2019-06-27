@@ -59,6 +59,19 @@ public class ChoicesArea extends JPanel {
         this.add(albumsButton);
         albumsButton.addActionListener(new ClickListenerForShowingAlbums());
 
+        JButton favouritePlaylistButton = new JButton("Favourite Playlist");
+        favouritePlaylistButton.setVisible(true);
+        favouritePlaylistButton.setFont(favouritePlaylistButton.getFont().deriveFont(14f)); // will only change size to 14pt
+        this.add(favouritePlaylistButton);
+        favouritePlaylistButton.addActionListener(new ClickListenerForShowingFavouritePlaylist());
+
+        JButton sharedPlaylistButton = new JButton("Shared Playlist");
+        sharedPlaylistButton.setVisible(true);
+        sharedPlaylistButton.setFont(sharedPlaylistButton.getFont().deriveFont(14f)); // will only change size to 14pt
+        this.add(sharedPlaylistButton);
+        sharedPlaylistButton.addActionListener(new ClickListenerForShowingSharedPlaylist());
+
+
         JButton newPlayListButton = new JButton("New PlayList");
         newPlayListButton.setVisible(true);
         newPlayListButton.setFont(newPlayListButton.getFont().deriveFont(14f));
@@ -104,7 +117,7 @@ public class ChoicesArea extends JPanel {
         }
 
         //Menu for right click on the list
-        final JPopupMenu popupMenu = new JPopupMenu();
+        JPopupMenu popupMenu = new JPopupMenu();
         JMenuItem showPlaylist=new JMenuItem("Show Playlist");
         showPlaylist.addActionListener(new ShowPlaylistMenuItemClicked());
         popupMenu.add(showPlaylist);
@@ -115,6 +128,13 @@ public class ChoicesArea extends JPanel {
         JMenuItem removeSong=new JMenuItem("Remove Songs");
         removeSong.addActionListener(new RemoveSongFromPlaylistItemClicked());
         popupMenu.add(removeSong);
+        popupMenu.add(new JPopupMenu.Separator());
+        JMenuItem renamePlaylist=new JMenuItem("Rename Playlist");
+        renamePlaylist.addActionListener(new EditNamePlaylistItemClicked());
+        popupMenu.add(renamePlaylist);
+        JMenuItem removePlaylist=new JMenuItem("Remove Playlist");
+        removePlaylist.addActionListener(new RemovePlaylistItemClicked());
+        popupMenu.add(removePlaylist);
 
 //        list.addMouseListener(new RightClickListener());
         list.addMouseListener(new MouseAdapter() {

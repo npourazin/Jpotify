@@ -23,10 +23,7 @@ public class SliderThread extends Thread {
             moveSlider();
             if (currentTime == MusicSliderBar.getMusicLenght()){
                 int newIndex= Main.getSongQueueIndex()+1;
-                if( newIndex>=Main.getCurrentQueue().size()) newIndex=0;
-                System.out.println(newIndex);
-                Main.setSongQueueIndex(newIndex);
-                PlayerManager.playerManager();
+                QueueIndexController.setIndex(newIndex);
                 currentTime=0;
                 PauseAndPlayClickButton.setSongToPlay();
             }

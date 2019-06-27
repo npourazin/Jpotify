@@ -38,15 +38,12 @@ public class PlayerManager {
             for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
 
                 if (PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath())){
-                    ;
                 PlayerManager.getSongDataArrayList().get(i).setLastTimeListened(Date.from(Instant.now()));
                 System.out.println("Last time listened modified");
             }
 
             }
 
-//            Mahvash:  :/AUT/Term2/JpotifyFinalProject/songs/DeanLewis.mp3
-//            Niki: /home/niki/Desktop/ailee - i will show you my-free-mp3s.com .mp3
         } catch (JavaLayerException e) {
             e.printStackTrace();
         }
@@ -69,6 +66,7 @@ public class PlayerManager {
 
 class SortByTime implements Comparator<SongData> {
 
+    //TODO: can you make it sort decending dear NIKI???
     @Override
     public int compare(SongData songData, SongData t1) {
         if (songData.getLastTimeListened() != t1.getLastTimeListened()) {
