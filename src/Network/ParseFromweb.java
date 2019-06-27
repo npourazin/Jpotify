@@ -30,8 +30,10 @@ public class ParseFromweb {
         for (Element headline : newsHeadlines) {
             log("%s\n\t%s", headline.attr("title"), headline.absUrl("href"));
         }
-
-        return text.substring(text.indexOf("Search Results Knowledge result")+32, text.indexOf("Source:"));
+        if(text.contains("Search Results Knowledge result")&& text.contains("Source:"))
+            return text.substring(text.indexOf("Search Results Knowledge result")+32, text.indexOf("Source:"));
+        else
+            return "Unfortunately couldn't find any results :( ";
     }
 
     private static final Pattern urlPattern = Pattern.compile("(?:^|[\\W])((ht|f)tp(s?):\\/\\/|www\\.)"
