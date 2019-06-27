@@ -30,6 +30,8 @@ import javazoom.jl.decoder.SampleBuffer;
 import javazoom.jl.player.AudioDevice;
 import javazoom.jl.player.FactoryRegistry;
 
+import javax.sound.sampled.FloatControl;
+
 /**
  * a hybrid of javazoom.jl.player.Player tweeked to include <code>play(startFrame, endFrame)</code>
  * hopefully this will be included in the api
@@ -239,4 +241,6 @@ public class AdvancedPlayer
 		listener.playbackFinished(createEvent(PlaybackEvent.STOPPED));
 		close();
 	}
+
+
 }

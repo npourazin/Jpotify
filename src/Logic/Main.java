@@ -59,9 +59,8 @@ public class Main {
                 songPaths.add(sc.nextLine());
             }
 
-//            System.out.println("main:"+PlayerManager.getSongDataArrayList().size());
-//            System.out.println("read:"+songPaths.size());
             for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
+//                System.out.println(PlayerManager.getSongDataArrayList().get(i).getSongName()+"    "+PlayerManager.getSongDataArrayList().get(i).getLastTimeListened());
                 for (int j = 0; j <songPaths.size() ; j++) {
                     if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(songPaths.get(j))){
                         currentQueue.add(PlayerManager.getSongDataArrayList().get(i));
@@ -76,16 +75,6 @@ public class Main {
 
     }
 
-    public static void sortByTimeQueue(){
-        currentQueue.sort(new SortByTime());
-    }
-
-
-//    public static void shufflePlayQueue() {
-//
-//        currentQueue.sort(new SortRandomly());
-//
-//    }
 
     public static void creatCurrentQueueByAdd(String fileName) {
         currentQueue=null;

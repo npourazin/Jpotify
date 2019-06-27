@@ -1,6 +1,8 @@
 package Logic;
 
 import Controllers.PauseAndPlayClickButton;
+import com.mpatric.mp3agic.InvalidDataException;
+import com.mpatric.mp3agic.UnsupportedTagException;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 
@@ -24,7 +26,6 @@ public class PlayerManager {
     public static void playerManager() {
 
         try {
-            //TODO: update last time listened
             if(Main.getCurrentQueue()==null) return;
             System.out.println("Queue size: "+Main.getCurrentQueue().size());
 
@@ -32,6 +33,7 @@ public class PlayerManager {
 
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             sP = new SongPlayer(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
+//            sP.setVolume();
             PauseAndPlayClickButton.setIfNewSong();
 
             //Change last time listened
@@ -46,7 +48,7 @@ public class PlayerManager {
 
         } catch (JavaLayerException e) {
             e.printStackTrace();
-        }
+        }  
     }
 
     public static SongPlayer getsP() {
@@ -71,13 +73,13 @@ class SortByTime implements Comparator<SongData> {
     public int compare(SongData songData, SongData t1) {
         if (songData.getLastTimeListened() != t1.getLastTimeListened()) {
             if (songData.getLastTimeListened().after(t1.getLastTimeListened())) {
-                return 1;
-            } else return -1;
+                return -1;
+            } else return 1;
         }
         if (songData.getTimeItWasAdded().after(t1.getTimeItWasAdded())) {
-            return 1;
-        } else if (songData.getTimeItWasAdded().before(t1.getTimeItWasAdded())) {
             return -1;
+        } else if (songData.getTimeItWasAdded().before(t1.getTimeItWasAdded())) {
+            return 1;
         }
 
         return 0;

@@ -15,5 +15,9 @@ public class ClickListenerForShowingSearchResults implements ActionListener {
         // dispose the list that eas shown?
         // after that particular song finishes what happens?
 
+        if(ClickListenerForSearchButton.getSearchResults()!=null) {
+            DialogBoxList searchResults=new DialogBoxList("SearchResults",new SelectPlayFromSearchMenu());
+        }
+
     }
 }

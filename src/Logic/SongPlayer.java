@@ -4,10 +4,11 @@ import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.Mp3File;
 import com.mpatric.mp3agic.UnsupportedTagException;
 import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.Player;
 import javazoom.jl.player.advanced.AdvancedPlayer;
 
 import javax.sound.sampled.FloatControl;
+import javax.sound.sampled.Line;
+import javax.sound.sampled.Port;
 import javax.sound.sampled.SourceDataLine;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -166,6 +167,8 @@ public class SongPlayer implements Serializable {
         }
         resumeSong();
     }
+
+
 
     public String getPlayerStatus(){
         return playerStatus.toString();

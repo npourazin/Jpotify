@@ -17,7 +17,7 @@ public class ClickListenerForNewPlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         visible=true;
-        new DialogBoxChooseName();
+        new DialogBoxChooseName("ADD",new addButtonDialogListener());
 
     }
 

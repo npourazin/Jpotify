@@ -1,6 +1,7 @@
 package Controllers;
 
 import GUI.SongsPanel;
+import Logic.Main;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,21 +13,25 @@ import java.util.Scanner;
 public class RemoveFavouriteMenuClicked implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        JMenuItem menuItem=(JMenuItem)(e.getSource());
+        JMenuItem menuItem = (JMenuItem) (e.getSource());
         System.out.println(SongsPanel.getFavouriteSong());
-        ArrayList<String> songPaths=new ArrayList<>();
+        ArrayList<String> songPaths = new ArrayList<>();
         try {
-            int count=0;
-            Scanner sc=new Scanner(new FileReader(new File("src/Favourite.txt")));
-            while (sc.hasNext()){
-                String temp=sc.nextLine();
-                if(!temp.equals(SongsPanel.getFavouriteSong()))
-                    songPaths.add(temp);
-                    count++;
+            int count = 0, index = -1;
+            Scanner sc = new Scanner(new FileReader(new File("src/Favourite.txt")));
+            while (sc.hasNext()) {
+                songPaths.add(sc.nextLine());;
+                if (songPaths.get(count).equals(SongsPanel.getFavouriteSong()))
+                    index = count;
+                count++;
             }
-            PrintWriter pw=new PrintWriter(new FileWriter(new File("src/Favourite.txt"),false),true);
-            for (int i = 0; i <count-1 ; i++) {
-                pw.println(songPaths.get(i));
+            //if the selected song was not on the list do nothing
+            if (index == -1) return;
+
+            PrintWriter pw = new PrintWriter(new FileWriter(new File("src/Favourite.txt"), false), true);
+            for (int i = 0; i < count; i++) {
+                if (i != index)
+                    pw.println(songPaths.get(i));
             }
 
         } catch (IOException ex) {

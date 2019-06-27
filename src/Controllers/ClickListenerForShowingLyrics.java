@@ -1,9 +1,11 @@
 package Controllers;
 
+import GUI.PlaylistPanel;
 import Logic.Main;
 import Network.*;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,15 +20,34 @@ public class ClickListenerForShowingLyrics implements ActionListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        JFrame jDialog = new JFrame();
+
+        String newLyric = "";
+        for (int i = 0; i <lyrics.length() ; i++) {
+            if(lyrics.charAt(i)==' ' && i%10==0){
+                newLyric+=lyrics.charAt(i)+"\n";
+            }else {
+                newLyric+=lyrics.charAt(i);
+            }
+        }
+
+        //TODO: fix the slider
+        JDialog jDialog = new JDialog();
         jDialog.setSize(400, 400);
         jDialog.setVisible(true);
-        JLabel currentSongLable = new JLabel(lyrics);
-        currentSongLable.setVisible(true);
-        currentSongLable.setFont(new Font("Verdana", 9, 13));
-        currentSongLable.setBackground(Color.cyan);
-        JPanel jPanel = new JPanel();
-        jPanel.setLayout(new BorderLayout());
-        jDialog.add(currentSongLable, BorderLayout.CENTER);
+        JTextArea currentSongText=new JTextArea();
+        currentSongText.setVisible(true);
+        currentSongText.setFont(new Font("Verdana", 9, 13));
+        currentSongText.setBackground(Color.cyan);
+        currentSongText.setText(newLyric);
+        JScrollPane jScrollPane;
+        jScrollPane = new JScrollPane(currentSongText);
+        jScrollPane.setViewportView(currentSongText);
+        jScrollPane.setVisible(true);
+        jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane.setVisible(true);
+        jDialog.add(currentSongText,BorderLayout.CENTER);
+
+
     }
 }

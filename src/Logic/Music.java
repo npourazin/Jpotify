@@ -63,18 +63,34 @@ public class Music implements Serializable {
             } else
                 songData.setSongName(mp3File.getId3v1Tag().getTitle());
 
+
+
             if (mp3File.getId3v1Tag().getAlbum()==null)
                 songData.setAlbum("Unknown");
+            else if(mp3File.getId3v1Tag().getAlbum().equals(""))
+                songData.setSongName("Unknown");
             else
                 songData.setAlbum(mp3File.getId3v1Tag().getAlbum());
 
+
+
             if (mp3File.getId3v1Tag().getArtist()==null)
                 songData.setArtist("Unknown");
+            else if(mp3File.getId3v1Tag().getArtist().equals(""))
+                songData.setSongName("Unknown");
             else
                 songData.setArtist(mp3File.getId3v1Tag().getArtist());
 
             songData.setGenre(0);
             songData.setGenre(mp3File.getId3v1Tag().getGenre());
+
+            try {
+                Image img = ImageIO.read(getClass().getResource("defaultSongIcon.png"));
+                songData.setIcon(new ImageIcon(img));
+
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
 
             //TODO: getGenre() does not provide a .equals method , handle it
 
@@ -87,16 +103,28 @@ public class Music implements Serializable {
                 if(getNameForMe(mp3File.getFilename())==null)
                     songData.setSongName("Unknown");
             }
+            if (mp3File.getId3v2Tag().getTitle()==null)
+                songData.setSongName("Unknown");
+            else if(mp3File.getId3v2Tag().getTitle().equals(""))
+                songData.setSongName("Unknown");
             else
                 songData.setSongName(mp3File.getId3v2Tag().getTitle());
 
+
+
             if (mp3File.getId3v2Tag().getAlbum()==null)
                 songData.setAlbum("Unknown");
+            else if(mp3File.getId3v2Tag().getAlbum().equals(""))
+                songData.setSongName("Unknown");
             else
                 songData.setAlbum(mp3File.getId3v2Tag().getAlbum());
 
+
+
             if (mp3File.getId3v2Tag().getArtist()==null)
                 songData.setArtist("Unknown");
+            else if(mp3File.getId3v2Tag().getArtist().equals(""))
+                songData.setSongName("Unknown");
             else
                 songData.setArtist(mp3File.getId3v2Tag().getArtist());
 
