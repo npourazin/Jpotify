@@ -59,11 +59,17 @@ public class ChoicesArea extends JPanel {
         this.add(albumsButton);
         albumsButton.addActionListener(new ClickListenerForShowingAlbums());
 
+        JButton favouritePlaylistButton = new JButton("Favourite Playlist");
+        favouritePlaylistButton.setVisible(true);
+        favouritePlaylistButton.setFont(favouritePlaylistButton.getFont().deriveFont(14f)); // will only change size to 14pt
+        this.add(favouritePlaylistButton);
+        favouritePlaylistButton.addActionListener(new ClickListenerForShowingFavouritePlaylist());
+
         JButton sharedPlaylistButton = new JButton("Shared Playlist");
-        albumsButton.setVisible(true);
-        albumsButton.setFont(albumsButton.getFont().deriveFont(14f)); // will only change size to 14pt
-        this.add(albumsButton);
-        albumsButton.addActionListener(new ClickListenerForShowingSharedPlaylist());
+        sharedPlaylistButton.setVisible(true);
+        sharedPlaylistButton.setFont(sharedPlaylistButton.getFont().deriveFont(14f)); // will only change size to 14pt
+        this.add(sharedPlaylistButton);
+        sharedPlaylistButton.addActionListener(new ClickListenerForShowingSharedPlaylist());
 
 
         JButton newPlayListButton = new JButton("New PlayList");

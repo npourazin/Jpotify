@@ -37,7 +37,6 @@ public class AlbumsPanel extends JPanel {
             e.printStackTrace();
         }
 
-        //TODO: give each button a listener to play the song
         Dimension d = new Dimension(160, 160);
         for (int i = 0; i < albums.size(); i++) {
             JButton j = new JButton();
@@ -49,6 +48,7 @@ public class AlbumsPanel extends JPanel {
             albumButton.get(i).setVisible(true);
             albumButton.get(i).setName(albums.get(i));
 
+            //TODO: choose the image icon of each album from one of it songs
             try {
 
                 Image img = ImageIO.read(getClass().getResource("defaultSongIcon.png"));
