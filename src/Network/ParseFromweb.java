@@ -26,7 +26,7 @@ public class ParseFromweb {
         if (os.contains("win")){
             //Operating system is based on Windows
             s1 = "https://www.google.com/search?client=firefox-b-d&channel=trow&q=";
-            s3 = "";
+            s3 = "+lyrics&ie=utf-8&oe=utf-8";
         }
         else if (os.contains("osx")){
             //Operating system is Apple OSX based
@@ -36,6 +36,7 @@ public class ParseFromweb {
             s1 = "https://www.google.com/search?client=ubuntu&channel=fs&q=";
             s3 = "+lyrics&ie=utf-8&oe=utf-8";
         }
+
 
 
 
