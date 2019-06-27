@@ -18,6 +18,7 @@ public class MusicSliderBar extends JPanel {
     private JButton nextButton;
     private JButton replayButton;
     private JButton repeatButton;
+    private JButton lyricsButton;
     private static JTextArea showTime;
     private static JLabel songIconLable;
 
@@ -143,7 +144,7 @@ public class MusicSliderBar extends JPanel {
 
 
         //Creating replay button
-        replayButton = new JButton("Replay");
+        replayButton = new JButton("");
         replayButton.setVisible(true);
         replayButton.setBackground(Color.cyan);
         topPanel.add(replayButton);
@@ -155,6 +156,17 @@ public class MusicSliderBar extends JPanel {
             ex.printStackTrace();
         }
 
+        lyricsButton = new JButton("Lyrics");
+        lyricsButton.setVisible(true);
+        lyricsButton.setBackground(Color.cyan);
+        topPanel.add(lyricsButton);
+        lyricsButton.addActionListener(new ClickListenerForShowingLyrics());
+        try {
+            Image img = ImageIO.read(getClass().getResource("lyrics1.png"));
+            lyricsButton.setIcon(new ImageIcon(img));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
 
         //Creating jSlider
         jSlider = new JSlider(0, (int) MUSIC_LENGHT, 0);
