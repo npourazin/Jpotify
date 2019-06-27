@@ -130,7 +130,7 @@ public class ChoicesArea extends JPanel {
         popupMenu.add(removeSong);
         popupMenu.add(new JPopupMenu.Separator());
         JMenuItem renamePlaylist=new JMenuItem("Rename Playlist");
-        renamePlaylist.addActionListener(new EditNamePlaylistItemClicked());
+        renamePlaylist.addActionListener(new RenamePlaylistItemClicked());
         popupMenu.add(renamePlaylist);
         JMenuItem removePlaylist=new JMenuItem("Remove Playlist");
         removePlaylist.addActionListener(new RemovePlaylistItemClicked());
