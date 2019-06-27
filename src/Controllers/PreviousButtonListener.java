@@ -10,8 +10,7 @@ public class PreviousButtonListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         int newIndex= Main.getSongQueueIndex()-1;
-        if(newIndex<0) newIndex=Main.getCurrentQueue().size()-1;
-        Main.setSongQueueIndex(newIndex);
+        QueueIndexController.setIndex(newIndex);
         PlayerManager.playerManager();
         PauseAndPlayClickButton.setSongToPlay();
 

@@ -1,6 +1,8 @@
 package GUI;
 
 import Controllers.PlaySpecificSongOnClick;
+import Controllers.ShufflePlayButtonListener;
+import Logic.Main;
 import Logic.SongData;
 
 import javax.swing.*;
@@ -77,6 +79,7 @@ public class SongsPanel extends JPanel {
             this.revalidate();
 
         }
+
 
 
     }

@@ -95,7 +95,7 @@ public class MusicSliderBar extends JPanel {
         playButton.setBackground(Color.cyan);
 
         //Creating ShufflePlay button
-        JButton shufflePlayButton = new JButton("Shuffle Play");
+        JButton shufflePlayButton = new JButton("Shuffle Play Off");
         shufflePlayButton.setVisible(true);
         shufflePlayButton.setBackground(Color.cyan);
         topPanel.add(shufflePlayButton);
