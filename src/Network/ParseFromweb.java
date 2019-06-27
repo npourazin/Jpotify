@@ -61,9 +61,13 @@ public class ParseFromweb {
         }
         if(text.contains("Search Results Knowledge result")&& text.contains("Source:"))
             return text.substring(text.indexOf("Search Results Knowledge result")+32, text.indexOf("Source:"));
+        else if(text.contains("Search Results Web results")&& text.contains("Source:"))
+            return text.substring(text.indexOf("Search Results Knowledge result")+26, text.indexOf("Source:"));
         else
-            return "Unfortunately couldn't find any results :( ";
+            return text;
+//            return "Unfortunately couldn't find any results :( ";
     }
+
 
     private static final Pattern urlPattern = Pattern.compile("(?:^|[\\W])((ht|f)tp(s?):\\/\\/|www\\.)"
                     + "(([\\w\\-]+\\.){1,}?([\\w\\-.~]+\\/?)*"
@@ -103,7 +107,7 @@ public class ParseFromweb {
     public static void main(String[] args) {
         try {
 //            parser("stronger+kelly+clarkson");
-            System.out.println(parser(makeURL("/home/niki/Downloads/DeanLewis.mp3")));
+            System.out.println(parser(makeURL("/home/niki/Desktop/Kelly Clarkson_Stronger.mp3")));
 
         } catch (IOException e) {
             e.printStackTrace();
