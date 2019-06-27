@@ -24,7 +24,7 @@ public class RanameDialogBoxListener implements ActionListener {
         }
         while (sc.hasNext()){
             if(sc.nextLine().equals(newName)) {
-                System.out.println("playlist exists");
+                System.out.println("playlist already exists");
                 return;
             }
         }

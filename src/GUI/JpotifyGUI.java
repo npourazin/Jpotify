@@ -33,7 +33,7 @@ public class JpotifyGUI extends JFrame {
         }
         this.setTitle("Jpotify");
         this.setVisible(true);
-        this.setSize(1000, 600);
+        this.setSize(1200, 700);
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
