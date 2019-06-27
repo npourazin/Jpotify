@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingLyrics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Network/ParseFromweb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/ParseFromweb.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Network/ParseFromweb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="101">
+              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#676#677#0" expanded="true" />
@@ -88,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="39" column="51" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="39" selection-end-column="51" />
+            <state relative-caret-position="146">
+              <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingLyrics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+            <state>
+              <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -237,9 +236,9 @@
         <option value="$PROJECT_DIR$/src/Controllers/ShufflePlayButtonListener.java" />
         <option value="$PROJECT_DIR$/src/Controllers/RepeatButtonListener.java" />
         <option value="$PROJECT_DIR$/src/GUI/SearcBarPanel.java" />
-        <option value="$PROJECT_DIR$/src/Network/ParseFromweb.java" />
         <option value="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingLyrics.java" />
+        <option value="$PROJECT_DIR$/src/Network/ParseFromweb.java" />
       </list>
     </option>
   </component>
@@ -456,21 +455,7 @@
       <workItem from="1561433647907" duration="23424000" />
       <workItem from="1561478365109" duration="10160000" />
       <workItem from="1561524643509" duration="40338000" />
-      <workItem from="1561598902820" duration="20516000" />
-    </task>
-    <task id="LOCAL-00030" summary="text file attached.">
-      <created>1561219242745</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1561219242745</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Bug fixed.&#10;problem in slider in specific cases.">
-      <created>1561219977753</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1561219977753</updated>
+      <workItem from="1561598902820" duration="22253000" />
     </task>
     <task id="LOCAL-00032" summary="nearly dead;">
       <created>1561355386282</created>
@@ -801,11 +786,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561628103492</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Shows lyrics but not properly.">
+      <created>1561629642094</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1561629642094</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Shows proper error message when the song couldn't be found.">
+      <created>1561630762846</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1561630762847</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250279000" />
+    <option name="totallyTimeSpent" value="252016000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -866,8 +865,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Conflicts resolved." />
-    <MESSAGE value="Bug fixed in Music class." />
     <MESSAGE value="Sort Randomly Comparator added." />
     <MESSAGE value="Exception handled.&#10;(wasn't flushing data properly.)" />
     <MESSAGE value="Bug fixed.&#10;Couldn't add more than one song before.&#10;ps. I dont even know why it was fixed but well.&#10;changes in writeToFile method in SavedSongData class." />
@@ -891,7 +888,9 @@
     <MESSAGE value="Visual improvement!!&#10;icons for shuffle and repeat buttons added." />
     <MESSAGE value="Photos attached." />
     <MESSAGE value="Can read Lyrics from web;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can read Lyrics from web;" />
+    <MESSAGE value="Shows lyrics but not properly." />
+    <MESSAGE value="Shows proper error message when the song couldn't be found." />
+    <option name="LAST_COMMIT_MESSAGE" value="Shows proper error message when the song couldn't be found." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1352,34 +1351,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/ParseFromweb.java">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingLyrics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state>
+          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="39" column="51" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="39" selection-end-column="51" />
+        <state relative-caret-position="146">
+          <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingLyrics.java">
+    <entry file="file://$PROJECT_DIR$/src/Network/ParseFromweb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        <state relative-caret-position="101">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
           </folding>
         </state>
       </provider>
