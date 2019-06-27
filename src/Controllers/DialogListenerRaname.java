@@ -9,7 +9,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class RanameDialogBoxListener implements ActionListener {
+public class DialogListenerRaname implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String oldName=SelectedPlaylistListener.getPlaylistName();

@@ -7,10 +7,10 @@ import java.util.Random;
 
 public class QueueIndexController {
     public static void setIndex(int newIndex) {
-        if(RepeatButtonListener.isRepeatOn()){
+        if(ButtonListenerRepeat.isRepeatOn()){
             newIndex=Main.getSongQueueIndex();
         }
-        else if (ShufflePlayButtonListener.isShuffleOn()) {
+        else if (ButtonListenerShufflePlay.isShuffleOn()) {
             //generates a random index indicator
             do {
                 Random rand = new Random();

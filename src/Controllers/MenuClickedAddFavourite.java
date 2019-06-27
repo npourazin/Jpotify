@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Scanner;
 
-public class AddFavouriteMenuClicked implements ActionListener {
+public class MenuClickedAddFavourite implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JMenuItem menuItem=(JMenuItem)(e.getSource());

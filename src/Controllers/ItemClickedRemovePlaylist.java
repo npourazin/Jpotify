@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class RemovePlaylistItemClicked implements ActionListener {
+public class ItemClickedRemovePlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String playlistName=SelectedPlaylistListener.getPlaylistName();

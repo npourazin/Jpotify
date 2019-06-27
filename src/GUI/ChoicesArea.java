@@ -31,7 +31,7 @@ public class ChoicesArea extends JPanel {
 
         saveButton.setVisible(true);
         this.add(saveButton);
-        saveButton.addActionListener(new ClickListenerForAddingSongs2());
+        saveButton.addActionListener(new ClickListenerForAddingSongs());
 
 
         JButton homeButton = new JButton("Home");
@@ -119,21 +119,21 @@ public class ChoicesArea extends JPanel {
         //Menu for right click on the list
         JPopupMenu popupMenu = new JPopupMenu();
         JMenuItem showPlaylist=new JMenuItem("Show Playlist");
-        showPlaylist.addActionListener(new ShowPlaylistMenuItemClicked());
+        showPlaylist.addActionListener(new ItemClickedShowPlaylist());
         popupMenu.add(showPlaylist);
         popupMenu.add(new JPopupMenu.Separator());
         JMenuItem addSong =new JMenuItem("Add Songs");
-        addSong.addActionListener(new AddSongToPlaylistItemClicked());
+        addSong.addActionListener(new ItemClickedAddSongToPlaylist());
         popupMenu.add(addSong);
         JMenuItem removeSong=new JMenuItem("Remove Songs");
-        removeSong.addActionListener(new RemoveSongFromPlaylistItemClicked());
+        removeSong.addActionListener(new ItemClickedRemoveSongFromPlaylist());
         popupMenu.add(removeSong);
         popupMenu.add(new JPopupMenu.Separator());
         JMenuItem renamePlaylist=new JMenuItem("Rename Playlist");
-        renamePlaylist.addActionListener(new RenamePlaylistItemClicked());
+        renamePlaylist.addActionListener(new ItemClickedRenamePlaylist());
         popupMenu.add(renamePlaylist);
         JMenuItem removePlaylist=new JMenuItem("Remove Playlist");
-        removePlaylist.addActionListener(new RemovePlaylistItemClicked());
+        removePlaylist.addActionListener(new ItemClickedRemovePlaylist());
         popupMenu.add(removePlaylist);
 
 //        list.addMouseListener(new RightClickListener());

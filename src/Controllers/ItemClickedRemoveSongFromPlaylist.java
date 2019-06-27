@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class RemoveSongFromPlaylistItemClicked implements ActionListener {
+public class ItemClickedRemoveSongFromPlaylist implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {

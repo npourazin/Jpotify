@@ -8,12 +8,11 @@ import javazoom.jl.player.Player;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import static Logic.SavedSongData.*;
 
-public class ClickListenerForAddingSongs2 implements ActionListener {
+public class ClickListenerForAddingSongs implements ActionListener {
     private String absolutePath;
     private File file;
 
@@ -27,7 +26,6 @@ public class ClickListenerForAddingSongs2 implements ActionListener {
         absolutePath  = file.getAbsolutePath();
         if(!absolutePath.endsWith(".mp3")) return;
 
-//        Music newSong=null;
         try {
             //writing to text file
             PrintWriter fr = new PrintWriter(new FileWriter(new File("src/AddedSongAdresses.txt"), true));
@@ -53,18 +51,6 @@ public class ClickListenerForAddingSongs2 implements ActionListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        //adding to search results
-
-//        try {
-//            newSong=new Music(absolutePath);
-//            PrintWriter fr = new PrintWriter(new FileWriter(new File("src/SearchResults.txt"), true),true);
-//            fr.println(newSong.getSongData().getSongName());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-
 
 
         //adding to an album

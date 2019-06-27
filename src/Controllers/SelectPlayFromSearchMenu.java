@@ -36,7 +36,7 @@ public class SelectPlayFromSearchMenu implements javax.swing.event.ListSelection
                     System.out.println(songName);
                     Main.setSongQueueIndex(i);
                     PlayerManager.playerManager();
-                    PauseAndPlayClickButton.setSongToPlay();
+                    ButtonListenerPauseAndPlay.setSongToPlay();
                 }
             }
         }

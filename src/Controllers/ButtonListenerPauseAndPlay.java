@@ -1,6 +1,5 @@
 package Controllers;
 
-import GUI.ChoicesArea;
 import GUI.MusicSliderBar;
 import Logic.*;
 
@@ -10,7 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class PauseAndPlayClickButton implements ActionListener {
+public class ButtonListenerPauseAndPlay implements ActionListener {
     private static SongPlayer sP;
     private static boolean ifFirstTimePlaying = true;
     private static boolean ifNewSong = true;
@@ -66,7 +65,7 @@ public class PauseAndPlayClickButton implements ActionListener {
         if(MusicSliderBar.getPlayButton().getText().equals(" Play")) {
             MusicSliderBar.getPlayButton().setText(" Pause");
             try {
-                Image img = ImageIO.read(PauseAndPlayClickButton.class.getResource("pause1.png"));
+                Image img = ImageIO.read(ButtonListenerPauseAndPlay.class.getResource("pause1.png"));
                 MusicSliderBar.getPlayButton().setIcon(new ImageIcon(img));
 
             } catch (Exception ex) {

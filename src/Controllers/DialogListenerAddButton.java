@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Scanner;
 
-public class addButtonDialogListener implements ActionListener {
+public class DialogListenerAddButton implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String playlistName= DialogBoxChooseName.getTextField().getText();
