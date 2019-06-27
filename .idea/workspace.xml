@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AlbumsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AlbumsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SongsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SongsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/Music.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-779">
-              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+            <state relative-caret-position="380">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,7 +162,6 @@
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSongsList.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ShowPlaylistMenuItemClicked.java" />
         <option value="$PROJECT_DIR$/src/Controllers/SelectSongToRemoveFromPlaylist.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java" />
         <option value="$PROJECT_DIR$/src/Controllers/EditNamePlaylistItemClicked.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSharedPlaylist.java" />
         <option value="$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java" />
@@ -190,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/GUI/AlbumsPanel.java" />
         <option value="$PROJECT_DIR$/src/Logic/Music.java" />
         <option value="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java" />
       </list>
     </option>
   </component>
@@ -365,14 +361,7 @@
       <workItem from="1561449098660" duration="34689000" />
       <workItem from="1561524682588" duration="30979000" />
       <workItem from="1561587815289" duration="10655000" />
-      <workItem from="1561624552288" duration="13839000" />
-    </task>
-    <task id="LOCAL-00032" summary="nearly dead;">
-      <created>1561355386282</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1561355386282</updated>
+      <workItem from="1561624552288" duration="14170000" />
     </task>
     <task id="LOCAL-00033" summary="Can now read saved songs from binary file.&#10;Can also write in it.&#10;well,&#10;Probably.">
       <created>1561357734246</created>
@@ -710,11 +699,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561637659862</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Songs and Albums panels modified">
+      <created>1561641499385</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1561641499385</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262497000" />
+    <option name="totallyTimeSpent" value="262828000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -735,7 +731,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Learn" order="4" weight="0.32954547" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.21946308" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.21946308" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.32885906" side_tool="true" visible="true" weight="0.06657224" />
@@ -745,7 +741,7 @@
       <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.49932885" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.4986577" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.67114097" visible="true" weight="0.06657224" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.67114097" visible="true" weight="0.06657224" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49932885" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -775,7 +771,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creation of current queue of songs modified." />
     <MESSAGE value="Raplay button modified." />
     <MESSAGE value="Multiple classes modified, bugs fixed." />
     <MESSAGE value="Overwriting in files fixed." />
@@ -800,7 +795,8 @@
     <MESSAGE value="Removing songs from favourite playlist modified." />
     <MESSAGE value="AlbumsPanel updated" />
     <MESSAGE value="Lyric dialog box modified." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lyric dialog box modified." />
+    <MESSAGE value="Songs and Albums panels modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Songs and Albums panels modified" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingHome.java">
@@ -1260,8 +1256,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-779">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        <state relative-caret-position="380">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
