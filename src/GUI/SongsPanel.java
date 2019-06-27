@@ -40,7 +40,7 @@ public class SongsPanel extends JPanel {
         System.out.println(songs.size());
         songButton = new ArrayList<>();
         this.setVisible(true);
-        Dimension d = new Dimension(160, 160);
+        Dimension d = new Dimension(180, 180);
         System.out.println("song size:" + songs.size());
 
         //showing songs
@@ -54,9 +54,9 @@ public class SongsPanel extends JPanel {
             songButton.get(i).setName(songs.get(i).getAbsolutePath());
             songButton.get(i).addActionListener(new PlaySpecificSongOnClick());
             if (songs.get(i).getIcon() != null)
-                songButton.get(i).setIcon(new ImageIcon(((ImageIcon) songs.get(i).getIcon()).getImage().getScaledInstance(130, 130, Image.SCALE_DEFAULT)));
+                songButton.get(i).setIcon(new ImageIcon(((ImageIcon) songs.get(i).getIcon()).getImage().getScaledInstance(150, 150, Image.SCALE_DEFAULT)));
             if (songs.get(i).getSongName() != null) {
-                JTextArea a = new JTextArea(songs.get(i).getSongName());
+                JTextArea a = new JTextArea("Song:"+songs.get(i).getSongName()+"\nArtist:"+songs.get(i).getArtist());
                 songButton.get(i).add(a, BorderLayout.SOUTH);
             } else {
                 JTextArea a = new JTextArea("UNKNOWN");

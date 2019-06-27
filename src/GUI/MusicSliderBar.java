@@ -62,7 +62,6 @@ public class MusicSliderBar extends JPanel {
 
 
         rightPanel.setLayout(new GridLayout(2, 1));
-        //TODO: get music length in seconds. (now it was just set to 100)
         MUSIC_LENGHT = musicLength;
         JPanel topPanel = new JPanel();
         topPanel.setBackground(Color.cyan);

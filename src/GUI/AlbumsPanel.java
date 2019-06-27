@@ -1,6 +1,7 @@
 package GUI;
 
 import Controllers.ShowSpecificAlbumOnClick;
+import Logic.Music;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -37,7 +38,7 @@ public class AlbumsPanel extends JPanel {
             e.printStackTrace();
         }
 
-        Dimension d = new Dimension(160, 160);
+        Dimension d = new Dimension(180, 180);
         for (int i = 0; i < albums.size(); i++) {
             JButton j = new JButton();
             j.setPreferredSize(d);
@@ -55,15 +56,33 @@ public class AlbumsPanel extends JPanel {
             this.repaint();
             this.revalidate();
             //TODO: choose the image icon of each album from one of it songs
-            try {
 
-                Image img = ImageIO.read(getClass().getResource("defaultSongIcon.png"));
-                albumButton.get(i).setIcon(new ImageIcon(img.getScaledInstance(130,130,Image.SCALE_DEFAULT)));
-            } catch (IOException e) {
+            Scanner sc= null;
+            try {
+                sc = new Scanner(new FileReader(new File("src/"+albums.get(i)+".txt")));
+            } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
+            boolean flag=false;
+            Music music=null;
+            if (sc.hasNext()){
+                music=new Music(sc.nextLine());
+                flag=true;
+            }
+            if(flag){
+                albumButton.get(i).setIcon(new ImageIcon(((ImageIcon) music.getSongData().getIcon()).getImage().getScaledInstance(150, 150, Image.SCALE_DEFAULT)));
+            }
+            else {
+                try {
 
-            JTextArea a = new JTextArea(albums.get(i));
+                    Image img = ImageIO.read(getClass().getResource("defaultSongIcon.png"));
+                    albumButton.get(i).setIcon(new ImageIcon(img.getScaledInstance(150, 150, Image.SCALE_DEFAULT)));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            JTextArea a = new JTextArea("Album:"+albums.get(i));
             albumButton.get(i).add(a, BorderLayout.SOUTH);
 
 
