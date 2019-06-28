@@ -51,11 +51,14 @@ public class Client_ReceivesFiles {
         FileOutputStream fos = null;
         BufferedOutputStream bos = null;
         Socket sock = null;
+
         try {
             sock = client_receivesFiles.getSocket();
             System.out.println("Connected!");
+            ///TODO get lastlistened status from my server to update Friends activiy UI
 
             // receive file
+            System.out.println();
             byte [] mybytearray  = new byte [FILE_SIZE];
             InputStream is = sock.getInputStream();
             fos = new FileOutputStream(FILE_TO_RECEIVED);
