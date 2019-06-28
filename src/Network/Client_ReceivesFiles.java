@@ -1,5 +1,7 @@
 package Network;
 
+import Logic.Main;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.Arrays;
@@ -10,6 +12,7 @@ public class Client_ReceivesFiles {
 
 
     private Socket socket;
+    private int ID;
 
     Client_ReceivesFiles(String ip, int port) throws IOException {
         this.socket = new Socket(ip, port);
@@ -31,7 +34,6 @@ public class Client_ReceivesFiles {
     private static int id = files.size() + 1;
 
     //TODO create different folders for different clients in RECEIVED;
-    public final static String FILE_TO_RECEIVED = "src/RECEIVED/" + id + ".mp3";
     // you may change this, I give a
     // different name because i don't want to
     // overwrite the one used by server...
@@ -40,13 +42,26 @@ public class Client_ReceivesFiles {
     // should bigger than the file to be downloaded
 
     public static void main(String[] args) throws IOException {
+
         Client_ReceivesFiles client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
+
+        BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
+        PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
+
+        out.println("start "+ Main.getMyName());
+        out.println("get --myID");
+        client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
+
 
         receiveFile(client_receivesFiles);
 
     }
 
     public static void receiveFile(Client_ReceivesFiles client_receivesFiles) {
+         String FILE_TO_RECEIVED = "src/RECEIVED/" + id + ".mp3";
+
+
+
         int bytesRead;
         int current = 0;
         FileOutputStream fos = null;
@@ -92,6 +107,13 @@ public class Client_ReceivesFiles {
         }
     }
 
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 }
 
 /*
