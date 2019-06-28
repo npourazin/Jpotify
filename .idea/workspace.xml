@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
+    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="Library added">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/DialogListenerRaname.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/DialogListenerRaname.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,29 +32,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/MyLayerUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="317">
               <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/friendsActivityArea.java">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/ItemClickedRenamePlaylist.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="47" column="72" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
+            <state relative-caret-position="133">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/ChoicesArea.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/DialogListenerRaname.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3534">
-              <caret line="197" column="54" selection-start-line="197" selection-start-column="54" selection-end-line="197" selection-end-column="54" />
+            <state relative-caret-position="254">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,7 +121,6 @@
         <option value="$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java" />
         <option value="$PROJECT_DIR$/src/Controllers/DialogListenerAddButton.java" />
         <option value="$PROJECT_DIR$/src/Controllers/RanameDialogBoxListener.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/DialogListenerRaname.java" />
         <option value="$PROJECT_DIR$/src/Controllers/RepeatButtonListener.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ButtonListenerRepeat.java" />
         <option value="$PROJECT_DIR$/src/Controllers/PreviousButtonListener.java" />
@@ -138,6 +142,7 @@
         <option value="$PROJECT_DIR$/src/GUI/ChoicesArea.java" />
         <option value="$PROJECT_DIR$/src/GUI/friendsActivityArea.java" />
         <option value="$PROJECT_DIR$/src/GUI/MyLayerUI.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/DialogListenerRaname.java" />
       </list>
     </option>
   </component>
@@ -316,21 +321,7 @@
       <workItem from="1561624552288" duration="20142000" />
       <workItem from="1561651668883" duration="5897000" />
       <workItem from="1561662330178" duration="8272000" />
-      <workItem from="1561705542805" duration="407000" />
-    </task>
-    <task id="LOCAL-00043" summary="Next and Previous listeners modified.">
-      <created>1561386808858</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1561386808858</updated>
-    </task>
-    <task id="LOCAL-00044" summary="JSlider modified.">
-      <created>1561391754888</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1561391754888</updated>
+      <workItem from="1561705542805" duration="2073000" />
     </task>
     <task id="LOCAL-00045" summary="Minor Changes , Bugs fixed.">
       <created>1561393818284</created>
@@ -661,11 +652,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561669420054</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Minor changes">
+      <created>1561706065030</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1561706065032</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Library added">
+      <created>1561706477591</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1561706477591</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283376000" />
+    <option name="totallyTimeSpent" value="285042000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -689,14 +694,14 @@
       <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2295302" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.34630874" side_tool="true" visible="true" weight="0.25212464" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.34697986" side_tool="true" visible="true" weight="0.25212464" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
-      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.4671141" weight="0.4022663" />
+      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.46644294" weight="0.4022663" />
       <window_info anchor="bottom" id="Version Control" order="4" sideWeight="0.49015152" weight="0.32920355" />
       <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.49932885" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49798658" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.6536913" visible="true" weight="0.25212464" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.65302014" visible="true" weight="0.25212464" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49932885" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -726,8 +731,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AlbumsPanel modified." />
-    <MESSAGE value="Listener for playing an specific song added." />
     <MESSAGE value="Bugs in playing specific song fixed." />
     <MESSAGE value="Showing songs of an album feature added." />
     <MESSAGE value="Default icon added." />
@@ -751,7 +754,9 @@
     <MESSAGE value="Volume Slider GUI added." />
     <MESSAGE value="Volume slider listener added" />
     <MESSAGE value="Major name editing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Major name editing." />
+    <MESSAGE value="Minor changes" />
+    <MESSAGE value="Library added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Library added" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$PROJECT_DIR$/src/Lib/jl1.0.1.jar!/javazoom/jl/player/Player.class">
@@ -1038,16 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ItemClickedRenamePlaylist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ItemClickedRemovePlaylist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1062,16 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/DialogListenerRaname.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1170,12 +1155,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MyLayerUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="317">
           <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/friendsActivityArea.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/FriendsActivityArea.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
           <caret line="47" column="72" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
@@ -1185,7 +1170,27 @@
     <entry file="file://$PROJECT_DIR$/src/GUI/ChoicesArea.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3534">
-          <caret line="197" column="54" selection-start-line="197" selection-start-column="54" selection-end-line="197" selection-end-column="54" />
+          <caret line="200" column="54" selection-start-line="200" selection-start-column="54" selection-end-line="200" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ItemClickedRenamePlaylist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/DialogListenerRaname.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
