@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+
 public class ButtonListenerLyric implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
@@ -35,7 +36,6 @@ public class ButtonListenerLyric implements ActionListener {
             }
         }
 
-        //TODO: fix the slider
         JDialog jDialog = new JDialog();
         jDialog.setSize(500, 400);
         jDialog.setVisible(true);
@@ -63,17 +63,3 @@ public class ButtonListenerLyric implements ActionListener {
 
     }
 }
-
-
-
-
-
-
-// String newLyric = "";
-//        for (int i = 0; i < lyrics.length(); i++) {
-//            if (lyrics.charAt(i) == ' ' && i % 10 == 0) {
-//                newLyric += lyrics.charAt(i) + "\n";
-//            } else {
-//                newLyric += lyrics.charAt(i);
-//            }
-//        }

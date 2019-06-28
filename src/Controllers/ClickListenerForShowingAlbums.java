@@ -5,7 +5,9 @@ import Logic.Main;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * this class contains a listener for
+ */
 public class ClickListenerForShowingAlbums implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
