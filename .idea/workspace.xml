@@ -96,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Logic/Music.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="60" column="32" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="32" />
+            <state relative-caret-position="1349">
+              <caret line="197" column="16" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -373,14 +373,7 @@
       <workItem from="1561624552288" duration="20142000" />
       <workItem from="1561651668883" duration="5897000" />
       <workItem from="1561662330178" duration="8272000" />
-      <workItem from="1561705542805" duration="17770000" />
-    </task>
-    <task id="LOCAL-00049" summary="Bugs fixed in showing song covers">
-      <created>1561450224217</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1561450224217</updated>
+      <workItem from="1561705542805" duration="18144000" />
     </task>
     <task id="LOCAL-00050" summary="Switching between different panels feature added.">
       <created>1561459170185</created>
@@ -718,11 +711,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561725970350</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Reading last 128 bytes for ID3V1 tags.">
+      <created>1561729825947</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1561729825947</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300739000" />
+    <option name="totallyTimeSpent" value="301113000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,7 +783,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removing playlist feater added." />
     <MESSAGE value="Shuffle play added." />
     <MESSAGE value="Favourite playlist added." />
     <MESSAGE value="Replay button listener modified.&#10;Shuffle play updated" />
@@ -808,7 +807,8 @@
     <MESSAGE value="SharedPlaylist modified." />
     <MESSAGE value="FriendActivity panel modified" />
     <MESSAGE value="Liking songs updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Liking songs updated" />
+    <MESSAGE value="Reading last 128 bytes for ID3V1 tags." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reading last 128 bytes for ID3V1 tags." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSearchResults.java">
@@ -1253,8 +1253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Music.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="60" column="32" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="32" />
+        <state relative-caret-position="1349">
+          <caret line="197" column="16" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -134,7 +134,6 @@ public class Music implements Serializable {
         } else
             songData.setSongName(mp3File.getId3v1Tag().getTitle());
 
-
         if (mp3File.getId3v1Tag().getAlbum() == null)
             songData.setAlbum("Unknown");
         else if (mp3File.getId3v1Tag().getAlbum().equals(""))
@@ -186,9 +185,18 @@ public class Music implements Serializable {
         String id3 = new String(last128);
         String tag = id3.substring(0, 3);
         if (tag.equals("TAG")) {
-            songData.setSongName(id3.substring(3, 32));
-            songData.setArtist(id3.substring(33, 62));
-            songData.setAlbum(id3.substring(63, 91));
+            if (id3.substring(3, 32) == null || id3.substring(3, 32) == "")
+                songData.setSongName("Unknown");
+            else
+                songData.setSongName(id3.substring(3, 32));
+            if (id3.substring(33, 62) == null || id3.substring(33, 62) == "")
+                songData.setArtist("Unknown");
+            else
+                songData.setArtist(id3.substring(33, 62));
+            if (id3.substring(63, 91) == null || id3.substring(63, 91) == "")
+                songData.setAlbum("Unknown");
+            else
+                songData.setAlbum(id3.substring(63, 91));
         } else
             System.out.println(" does not contain ID3 information.");
         try {
