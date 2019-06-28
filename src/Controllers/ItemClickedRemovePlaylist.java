@@ -8,6 +8,11 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * this class contains a listener of one of the items on a menu
+ * and removes the playlist that the menu was called on it
+ * @author Mahvash
+ */
 public class ItemClickedRemovePlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

@@ -7,6 +7,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
+/**
+ * This class contains a listener for the playlist names' list
+ * and it stores the name of the selected item of the list in a
+ * static string
+ * @author Mahvash
+ */
 public class SelectedPlaylistListener implements javax.swing.event.ListSelectionListener {
     private static String playlistName;
     @Override

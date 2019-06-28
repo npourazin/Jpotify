@@ -7,7 +7,10 @@ import Logic.PlayerManager;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * this class contains a listener for the button that shows favourite playlist panel
+ * @author Mahvash
+ */
 public class ClickListenerForShowingFavouritePlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

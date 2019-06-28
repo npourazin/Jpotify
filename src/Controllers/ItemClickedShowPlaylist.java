@@ -9,7 +9,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * this class contains a listener of one of the items on a menu
+ * and shows the songs on the playlist that the menu was called on it
+ * @author Mahvash
+ */
 public class ItemClickedShowPlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

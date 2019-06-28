@@ -8,6 +8,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * This class contains a listener for clicking a button and
+ * plays the song this button points to.
+ * @author Mahvash
+ */
 public class PlaySpecificSongOnClick implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

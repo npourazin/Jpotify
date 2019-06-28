@@ -9,8 +9,16 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * This class has two methods that manage storing the liked and disliked
+ * songs
+ * @author Mahvash
+ */
 public class FavouriteManager {
-
+    /**
+     * this methods saves the song's path in the text file "Favourite.txt"
+     * @param selectedSongPath
+     */
     public static void addFavourite(String selectedSongPath) {
         System.out.println(selectedSongPath);
         try {
@@ -24,6 +32,10 @@ public class FavouriteManager {
         }
     }
 
+    /**
+     * This method removes the song's path from the text file "Favourite.txt"
+     * @param selectedSongPath
+     */
     public static void removeFavourite(String selectedSongPath) {
         System.out.println(selectedSongPath);
         ArrayList<String> songPaths = new ArrayList<>();

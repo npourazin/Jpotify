@@ -6,7 +6,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 /**
- * this class contains a listener for
+ * this class contains a listener for the button , and it shows the albums panel
+ * @author Mahvash
  */
 public class ClickListenerForShowingAlbums implements ActionListener {
     @Override

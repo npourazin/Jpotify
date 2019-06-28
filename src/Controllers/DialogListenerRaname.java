@@ -8,7 +8,11 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * this class contains a listener that gets a string from a static method and replace
+ * it with an existing one in the text file "PlaylistNames.txt"
+ * @author Mahvash
+ */
 public class DialogListenerRaname implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

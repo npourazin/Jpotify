@@ -8,7 +8,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * this class contains a listener for the button that shows the song's panel
+ * @author Mahvash
+ */
 public class ClickListenerForShowingSongsList implements ActionListener {
 
     @Override

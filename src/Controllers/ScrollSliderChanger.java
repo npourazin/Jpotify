@@ -13,6 +13,10 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.io.IOException;
 
+/**
+ * This class contains a listener for a scroll slider on the Music slider bar
+ * @author Mahvash , Niki
+ */
 public class ScrollSliderChanger implements ChangeListener {
     private static int prev = 0;
     private static int next = 0;
@@ -20,6 +24,12 @@ public class ScrollSliderChanger implements ChangeListener {
     private static double passedPercentage;
     private static int frames;
 
+    /**
+     * This method is a lsitener that sets the value of the slider based on
+     * the current time of the song which is being played , and also notified if
+     * the slider's value was changed manually.
+     * @param e
+     */
     @Override
     public void stateChanged(ChangeEvent e) {
         JSlider source = (JSlider) e.getSource();

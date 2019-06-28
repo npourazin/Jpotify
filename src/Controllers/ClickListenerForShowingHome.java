@@ -4,7 +4,10 @@ import Logic.Main;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * this class contains a listener for the button that shows the home panel
+ * @author Mahvash
+ */
 public class ClickListenerForShowingHome implements ActionListener {
 
     @Override

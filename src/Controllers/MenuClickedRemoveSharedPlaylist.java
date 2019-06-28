@@ -8,7 +8,11 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * this class contains a listener of one of the items on a menu
+ * and removes the right clicked song from the shared playlist
+ * @author Mahvash
+ */
 public class MenuClickedRemoveSharedPlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

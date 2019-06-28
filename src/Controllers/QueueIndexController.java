@@ -5,7 +5,16 @@ import Logic.PlayerManager;
 
 import java.util.Random;
 
+/**
+ * This class contains a method for controlling the song queue
+ * @author Mahvash
+ */
 public class QueueIndexController {
+    /**
+     * this method sets a new index for the song queue array list
+     * based on the flags it gets from static methods
+     * @param newIndex the index given to the method to be analysed
+     */
     public static void setIndex(int newIndex) {
         if(ButtonListenerRepeat.isRepeatOn()){
             newIndex=Main.getSongQueueIndex();

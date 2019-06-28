@@ -7,7 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Scanner;
-
+/**
+ * this class contains a listener of one of the items on a menu
+ * and adds the right clicked song to the shared playlist
+ * @author Mahvash
+ */
 public class MenuClickedAddSharedPlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

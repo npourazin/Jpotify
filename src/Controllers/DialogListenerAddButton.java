@@ -7,6 +7,11 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Scanner;
 
+/**
+ * this class contains a listener that gets a string from a static method and stores
+ * it as the playlist name in a the text file "PlaylistNames.txt"
+ * @author Mahvash
+ */
 public class DialogListenerAddButton implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
