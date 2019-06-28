@@ -9,7 +9,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MenuClickedRemoveFavourite implements ActionListener {
+public class MenuClickedRemoveSharedPlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JMenuItem menuItem = (JMenuItem) (e.getSource());
@@ -17,7 +17,7 @@ public class MenuClickedRemoveFavourite implements ActionListener {
         ArrayList<String> songPaths = new ArrayList<>();
         try {
             int count = 0, index = -1;
-            Scanner sc = new Scanner(new FileReader(new File("src/Favourite.txt")));
+            Scanner sc = new Scanner(new FileReader(new File("src/SharedPlaylist.txt")));
             while (sc.hasNext()) {
                 songPaths.add(sc.nextLine());;
                 if (songPaths.get(count).equals(SongsPanel.getSelectedSongPath()))
@@ -27,7 +27,7 @@ public class MenuClickedRemoveFavourite implements ActionListener {
             //if the selected song was not on the list do nothing
             if (index == -1) return;
 
-            PrintWriter pw = new PrintWriter(new FileWriter(new File("src/Favourite.txt"), false), true);
+            PrintWriter pw = new PrintWriter(new FileWriter(new File("src/SharedPlaylist.txt"), false), true);
             for (int i = 0; i < count; i++) {
                 if (i != index)
                     pw.println(songPaths.get(i));

@@ -71,8 +71,11 @@ public class DialogListenerRaname implements ActionListener {
         }
 
         //refresh
-        Main.getJpotifyGUI().getChoicesArea().getModel().removeElement(oldName);
-        Main.getJpotifyGUI().getChoicesArea().getModel().addElement(newName);
+        Main.getJpotifyGUI().getChoicesArea().getModel().removeAllElements();
+        for (int i = 0; i <allPlaylist.size() ; i++) {
+            Main.getJpotifyGUI().getChoicesArea().getModel().addElement(allPlaylist.get(i));
+        }
+
 
     }
 }

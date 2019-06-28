@@ -8,15 +8,15 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Scanner;
 
-public class MenuClickedAddFavourite implements ActionListener {
+public class MenuClickedAddSharedPlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JMenuItem menuItem=(JMenuItem)(e.getSource());
         System.out.println(SongsPanel.getSelectedSongPath());
         try {
 
-            PrintWriter pw=new PrintWriter(new FileWriter(new File("src/Favourite.txt"),true),true);
-            Scanner sc=new Scanner(new FileReader(new File("src/Favourite.txt")));
+            PrintWriter pw=new PrintWriter(new FileWriter(new File("src/SharedPlaylist.txt"),true),true);
+            Scanner sc=new Scanner(new FileReader(new File("src/SharedPlaylist.txt")));
             while (sc.hasNext()){
                 if(sc.nextLine().equals(SongsPanel.getSelectedSongPath()))
                     return;

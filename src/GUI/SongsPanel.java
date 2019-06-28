@@ -14,7 +14,7 @@ public class SongsPanel extends JPanel {
     private ArrayList<SongData> songs;
     private static ArrayList<JButton> songButton;
     private JScrollPane jScrollPane;
-    private static String favouriteSong=null;
+    private static String selectedSong =null;
 
     public SongsPanel(ArrayList<SongData> songs) {
         super();
@@ -71,13 +71,26 @@ public class SongsPanel extends JPanel {
             }
             JPopupMenu popupMenu = new JPopupMenu();
 
-            JMenuItem addFavourite=new JMenuItem("Add to Favourite");
+            JMenuItem addFavourite=new JMenuItem("Like");
             addFavourite.addActionListener(new MenuClickedAddFavourite());
             popupMenu.add(addFavourite);
 
-            JMenuItem removeFavourite=new JMenuItem("Remove from Favourite");
+            JMenuItem removeFavourite=new JMenuItem("Dislike");
             removeFavourite.addActionListener(new MenuClickedRemoveFavourite());
             popupMenu.add(removeFavourite);
+
+            popupMenu.add(new JPopupMenu.Separator());
+
+            JMenuItem addSharedPlaylist=new JMenuItem("Add to Shared Playlist");
+            addSharedPlaylist.addActionListener(new MenuClickedAddSharedPlaylist());
+            popupMenu.add(addSharedPlaylist);
+
+
+            JMenuItem removeSharedPlaylist=new JMenuItem("Remove from Shared Playlist");
+            removeSharedPlaylist.addActionListener(new MenuClickedRemoveSharedPlaylist());
+            popupMenu.add(removeSharedPlaylist);
+
+
             int finalI = i;
             songButton.get(i).addMouseListener(new MouseAdapter() {
                 @Override
@@ -85,7 +98,7 @@ public class SongsPanel extends JPanel {
 //                super.mouseClicked(e);
                     if (SwingUtilities.isRightMouseButton(e)) {
                         popupMenu.show(songButton.get(finalI), e.getX(), e.getY());
-                        favouriteSong=songs.get(finalI).getAbsolutePath();
+                        selectedSong =songs.get(finalI).getAbsolutePath();
                     }
                 }
             });
@@ -98,8 +111,8 @@ public class SongsPanel extends JPanel {
         //TODO: give each button a listener to play the song
 
     }
-    public static String getFavouriteSong() {
-        return favouriteSong;
+    public static String getSelectedSongPath() {
+        return selectedSong;
     }
     public static ArrayList<JButton> getSongButton() {
         return songButton;
