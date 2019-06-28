@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NonUsefulMahvashTrashCan/Trash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NonUsefulMahvashTrashCan/Trash.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,79 +34,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Network/ParseFromWeb.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3322#3323#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="156" column="54" selection-start-line="156" selection-start-column="54" selection-end-line="156" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/ButtonListenerLyric.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/SearchBarPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-435">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="23" selection-end-column="7" />
+            <state relative-caret-position="-87">
+              <caret line="218" column="42" lean-forward="true" selection-start-line="218" selection-start-column="42" selection-end-line="218" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Network/FileComparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="26" column="55" lean-forward="true" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Network/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="28" selection-end-column="104" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#receiveFile#0;class#Client_ReceivesFiles#0" />
+                <element signature="method#readAFile#0;class#Client_ReceivesFiles#0" />
+                <element signature="method#deleteDirectoryRecursionJava6#0;class#Client_ReceivesFiles#0" />
+                <element signature="method#prepareReceivedFilesDestination#0;class#Client_ReceivesFiles#0" />
+                <element signature="method#readMoreThanOneFiles#0;class#Client_ReceivesFiles#0" />
+                <element signature="e#3477#3478#0" expanded="true" />
+                <element signature="e#3502#3503#0" expanded="true" />
+                <element signature="e#3535#3536#0" expanded="true" />
+                <element signature="e#3563#3564#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,23 +57,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="170" column="10" selection-start-line="170" selection-start-column="10" selection-end-line="170" selection-end-column="10" />
+            <state relative-caret-position="47">
+              <caret line="172" column="94" selection-start-line="172" selection-start-column="94" selection-end-line="172" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3479#4346#1" />
+                <element signature="e#4423#5404#1" />
                 <element signature="e#5716#5877#1" />
-                <element signature="e#5515#5582#1" />
                 <element signature="e#6511#7492#1" />
                 <element signature="e#7734#7794#1" />
                 <element signature="e#8101#8262#1" />
                 <element signature="e#8351#8488#1" />
-                <element signature="e#9689#9690#0" expanded="true" />
-                <element signature="e#9929#9930#0" expanded="true" />
-                <element signature="e#10026#10027#0" expanded="true" />
+                <element signature="e#12387#12388#0" expanded="true" />
+                <element signature="e#12627#12628#0" expanded="true" />
+                <element signature="e#12724#12725#0" expanded="true" />
                 <element signature="method#sendFile#0;class#Handler#0;class#Server_SendsFiles#0" />
-                <element signature="e#11192#11193#0" expanded="true" />
-                <element signature="e#11300#11301#0" expanded="true" />
+                <element signature="e#13890#13891#0" expanded="true" />
+                <element signature="e#13998#13999#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -182,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForAddingSongs.java" />
         <option value="$PROJECT_DIR$/src/Controllers/WindowAction.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForAccountManager.java" />
@@ -231,6 +172,7 @@
         <option value="$PROJECT_DIR$/src/GUI/SearchBarPanel.java" />
         <option value="$PROJECT_DIR$/src/Network/ParseFromWeb.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ButtonListenerLyric.java" />
+        <option value="$PROJECT_DIR$/src/NonUsefulMahvashTrashCan/Trash.java" />
         <option value="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" />
         <option value="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" />
       </list>
@@ -275,32 +217,7 @@
               <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
               <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="javazoom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Logic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Logic" type="462c0819:PsiDirectoryNode" />
-              <item name="PlayerManager.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
@@ -355,7 +272,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Server_SendsFiles">
     <configuration name="BinaryReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Logic.BinaryReader" />
       <module name="Jpotify" />
@@ -395,19 +312,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParseFromWeb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Network.ParseFromWeb" />
-      <module name="Jpotify" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Network.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Server_SendsFiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Network.Server_SendsFiles" />
       <module name="Jpotify" />
@@ -421,13 +325,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Trash" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NonUsefulMahvashTrashCan.Trash" />
+      <module name="Jpotify" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="NonUsefulMahvashTrashCan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Client_ReceivesFiles" />
         <item itemvalue="Application.Server_SendsFiles" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Trash" />
         <item itemvalue="Application.BinaryReader" />
-        <item itemvalue="Application.ParseFromWeb" />
       </list>
     </recent_temporary>
   </component>
@@ -451,21 +368,7 @@
       <workItem from="1561478365109" duration="10160000" />
       <workItem from="1561524643509" duration="40338000" />
       <workItem from="1561598902820" duration="40949000" />
-      <workItem from="1561693875542" duration="22040000" />
-    </task>
-    <task id="LOCAL-00048" summary="Server changed.">
-      <created>1561466043817</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1561466043817</updated>
-    </task>
-    <task id="LOCAL-00049" summary="File comparator class added.">
-      <created>1561466429941</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1561466429941</updated>
+      <workItem from="1561693875542" duration="35091000" />
     </task>
     <task id="LOCAL-00050" summary="Saves last listened song and also can show it's time with lastModified() called on the saving file.">
       <created>1561468087966</created>
@@ -796,11 +699,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561718493612</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Server_sendsFiles completed but not tested.">
+      <created>1561723217975</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1561723217975</updated>
+    </task>
+    <task id="LOCAL-00098" summary="Client_receivesFiles progressed.">
+      <created>1561726383116</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1561726383116</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292752000" />
+    <option name="totallyTimeSpent" value="305803000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -821,7 +738,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Learn" order="4" weight="0.32954547" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2931818" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2931818" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5159091" side_tool="true" weight="0.32566372" />
@@ -831,7 +748,7 @@
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32920355" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32920355" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4840909" weight="0.32566372" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4840909" visible="true" weight="0.32566372" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -862,8 +779,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="conflicts resolved.&#10;files receiver client class added but is still empty." />
-    <MESSAGE value="Receives files (semi-bugful!)" />
     <MESSAGE value="SearchBar class created." />
     <MESSAGE value="SearchBar graphics made.&#10;TODO: complete listeners and connect them." />
     <MESSAGE value="Visual improvement!!&#10;icons for shuffle and repeat buttons added." />
@@ -887,7 +802,9 @@
     <MESSAGE value="TODO added." />
     <MESSAGE value="Bug fixed." />
     <MESSAGE value="file attached." />
-    <option name="LAST_COMMIT_MESSAGE" value="file attached." />
+    <MESSAGE value="Server_sendsFiles completed but not tested." />
+    <MESSAGE value="Client_receivesFiles progressed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Client_receivesFiles progressed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -923,13 +840,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controllers/QueueIndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/RemovePlaylistItemClicked.java" />
     <entry file="file://$PROJECT_DIR$/src/Controllers/SelectSongToAddToPlaylistListener.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1203,55 +1113,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/SearchBarPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="156" column="54" selection-start-line="156" selection-start-column="54" selection-end-line="156" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ButtonListenerLyric.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Network/Server.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1065">
           <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="23" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/ParseFromWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3322#3323#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1265,25 +1130,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/NonUsefulMahvashTrashCan/Trash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="method#deleteDirectoryRecursionJava6#0;class#Trash#0" />
+            <element signature="method#main#0;class#Trash#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/SearchBarPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ButtonListenerLyric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Network/ParseFromWeb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3322#3323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="156" column="54" selection-start-line="156" selection-start-column="54" selection-end-line="156" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="218" column="42" lean-forward="true" selection-start-line="218" selection-start-column="42" selection-end-line="218" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#receiveFile#0;class#Client_ReceivesFiles#0" />
+            <element signature="method#readAFile#0;class#Client_ReceivesFiles#0" />
+            <element signature="method#deleteDirectoryRecursionJava6#0;class#Client_ReceivesFiles#0" />
+            <element signature="method#prepareReceivedFilesDestination#0;class#Client_ReceivesFiles#0" />
+            <element signature="method#readMoreThanOneFiles#0;class#Client_ReceivesFiles#0" />
+            <element signature="e#3477#3478#0" expanded="true" />
+            <element signature="e#3502#3503#0" expanded="true" />
+            <element signature="e#3535#3536#0" expanded="true" />
+            <element signature="e#3563#3564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="170" column="10" selection-start-line="170" selection-start-column="10" selection-end-line="170" selection-end-column="10" />
+        <state relative-caret-position="47">
+          <caret line="172" column="94" selection-start-line="172" selection-start-column="94" selection-end-line="172" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3479#4346#1" />
+            <element signature="e#4423#5404#1" />
             <element signature="e#5716#5877#1" />
-            <element signature="e#5515#5582#1" />
             <element signature="e#6511#7492#1" />
             <element signature="e#7734#7794#1" />
             <element signature="e#8101#8262#1" />
             <element signature="e#8351#8488#1" />
-            <element signature="e#9689#9690#0" expanded="true" />
-            <element signature="e#9929#9930#0" expanded="true" />
-            <element signature="e#10026#10027#0" expanded="true" />
+            <element signature="e#12387#12388#0" expanded="true" />
+            <element signature="e#12627#12628#0" expanded="true" />
+            <element signature="e#12724#12725#0" expanded="true" />
             <element signature="method#sendFile#0;class#Handler#0;class#Server_SendsFiles#0" />
-            <element signature="e#11192#11193#0" expanded="true" />
-            <element signature="e#11300#11301#0" expanded="true" />
+            <element signature="e#13890#13891#0" expanded="true" />
+            <element signature="e#13998#13999#0" expanded="true" />
           </folding>
         </state>
       </provider>

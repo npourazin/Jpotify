@@ -3,6 +3,11 @@ package NonUsefulMahvashTrashCan;
 import com.mpatric.mp3agic.Mp3File;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.LinkOption;
+import java.nio.file.Path;
 import java.time.*;
 import java.util.*;
 import java.sql.Time;
@@ -24,9 +29,53 @@ public class Trash {
         cal.set(Calendar.MILLISECOND, 0);
         lastTimeListened = cal;
     }
+//    static String routePath = Trash.getClass().getClassLoader().getResource(File.separator).getPath();
 
 
-    public static void main(String[] args) {
+    public static void deleteDirectoryRecursion(Path path) throws IOException {
+        if (Files.isDirectory(path, LinkOption.NOFOLLOW_LINKS)) {
+            try (DirectoryStream<Path> entries = Files.newDirectoryStream(path)) {
+                for (Path entry : entries) {
+                    deleteDirectoryRecursion(entry);
+                }
+            }
+        }
+        Files.delete(path);
+    }
+
+    public static void deleteDirectoryRecursionJava6(File file) throws IOException {
+        if (file.isDirectory()) {
+            File[] entries = file.listFiles();
+            if (entries != null) {
+                for (File entry : entries) {
+                    deleteDirectoryRecursionJava6(entry);
+                }
+            }
+        }
+        if (!file.delete()) {
+            throw new IOException("Failed to delete " + file);
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+
+//        new File("/src/RECEIVED/a2a").mkdir();
+//        File f = new File("./src");
+//
+////        File file = new File(routePath+"/src/RECEIVED/a/");
+////        File file = new File("/home/niki/IdeaProjects/Jpotify/src/RECEIVED/a/");
+//        File file = new File("src/RECEIVED/b/");
+//
+//        if (!file.exists()) {
+//            if (file.mkdir()) {
+//                System.out.println("Directory is created!");
+//            } else {
+//                System.out.println("Failed to create directory!");
+//            }
+//        }
+        deleteDirectoryRecursionJava6(new File("src/RECEIVED/a/"));
+
+
 //        Time time = new Time(System.currentTimeMillis());
 //        System.out.println("\nisBefore6() currentTimeMillis\n" + time);
 //
