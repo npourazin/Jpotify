@@ -3,6 +3,7 @@ package Controllers;
 import Logic.Main;
 import Logic.PlayerManager;
 import Logic.SavedSongData;
+import javazoom.jl.player.Player;
 
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
@@ -37,6 +38,7 @@ public class JpotifyWindowActionListener implements WindowListener {
 
     @Override
     public void windowClosed(WindowEvent windowEvent) {
+        //TODO WIFE
         Main.setJpotifyGUIWindowClosed(true);
     }
 
