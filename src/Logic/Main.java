@@ -24,6 +24,7 @@ public class Main {
     private static int holyFlag=0;
     private static  Server_SendsFiles server_sendsFiles;
     private static Client_ReceivesFiles client_receivesFiles;
+    private static boolean jpotifyGUIWindowClosed; //1 if closed, 0 otherwise.
 
     public static void main(String[] args) {
 
@@ -201,6 +202,14 @@ public class Main {
 
     public static void setHolyFlag(int holyFlag) {
         Main.holyFlag = holyFlag;
+    }
+
+    public static boolean isJpotifyGUIWindowClosed() {
+        return jpotifyGUIWindowClosed;
+    }
+
+    public static void setJpotifyGUIWindowClosed(boolean isJpotifyGUIWindowClosed) {
+        Main.jpotifyGUIWindowClosed = isJpotifyGUIWindowClosed;
     }
 }
 

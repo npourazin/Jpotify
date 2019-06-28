@@ -59,6 +59,10 @@ public class PlayerManager {
     public static void setSongDataArrayList(ArrayList<SongData> songDataArrayList) {
         PlayerManager.songDataArrayList = songDataArrayList;
     }
+
+    public static void setsP(SongPlayer sP) {
+        PlayerManager.sP = sP;
+    }
 }
 
 

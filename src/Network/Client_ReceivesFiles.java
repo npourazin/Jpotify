@@ -71,7 +71,7 @@ public class Client_ReceivesFiles {
         //just check what i wrote?
         //use how it was called?
 
-        getLastListenedData();
+        getLastListenedTime();
 
 //
 //        out.println("quit");
@@ -207,8 +207,43 @@ public class Client_ReceivesFiles {
         client_receivesFiles.getSocket().close();
     }
 
-    public static void getLastListenedData() throws IOException {
+//    public static void getLastListenedData() throws IOException {
+//
+//        BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
+//        PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
+//
+//        out.println("start " + Main.getMyName());
+//        out.println("get --myID");
+//        client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
+//
+//        out.println("get --lastListened");
+//
+//        String songName = inp.readLine();
+//        System.out.println(songName);
+//        String lastDate = inp.readLine();
+//        System.out.println(lastDate);
+//
+//        //TODO WIFE
+//        //TODO mahvaaaaaaaaaaaaaaaaaaaaaaaaaash take theseeeeeeeeeeeeeeeeee
+//        // the two strings above are the pieces of data that must be shown besides the server's button
+//
+//        out.println("get --yourName");
+//        String name = inp.readLine();
+//        System.out.println(name);
+//
+//        //TODO WIFE
+//        // also the name string above is the server's name
+//        // make a button with these for the friends panel
+//
+//        //TODO WIFE
+//        // this method must be called each time you refresh FriendActivity section.
+//
+//        out.println("quit");
+//        client_receivesFiles.getSocket().close();
+//
+//    }
 
+    public static String getLastListenedTitle() throws IOException {
         BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
         PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
 
@@ -216,33 +251,51 @@ public class Client_ReceivesFiles {
         out.println("get --myID");
         client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
 
-        out.println("get --lastListened");
+        out.println("get title --lastListened");
 
         String songName = inp.readLine();
-        System.out.println(songName);
-        String lastDate = inp.readLine();
-        System.out.println(lastDate);
-
-        //TODO WIFE
-        //TODO mahvaaaaaaaaaaaaaaaaaaaaaaaaaash take theseeeeeeeeeeeeeeeeee
-        // the two strings above are the pieces of data that must be shown besides the server's button
-
-        out.println("get --yourName");
-        String name = inp.readLine();
-        System.out.println(name);
-
-        //TODO WIFE
-        // also the name string above is the server's name
-        // make a button with these for the friends panel
-
-        //TODO WIFE
-        // this method must be called each time you refresh FriendActivity section.
 
         out.println("quit");
         client_receivesFiles.getSocket().close();
 
+        return songName;
     }
 
+    public static String getLastListenedTime() throws IOException {
+        BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
+        PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
+
+        out.println("start " + Main.getMyName());
+        out.println("get --myID");
+        client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
+
+        out.println("get time --lastListened");
+
+        String lastTime = inp.readLine();
+
+        out.println("quit");
+        client_receivesFiles.getSocket().close();
+
+        return lastTime+" ago";
+    }
+
+    public static String getYourName() throws IOException {
+        BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
+        PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
+
+        out.println("start " + Main.getMyName());
+        out.println("get --myID");
+        client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
+
+        out.println("get --yourName");
+
+        String name = inp.readLine();
+
+        out.println("quit");
+        client_receivesFiles.getSocket().close();
+
+        return name;
+    }
 
     public int getID() {
         return ID;
