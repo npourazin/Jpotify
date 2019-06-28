@@ -80,8 +80,10 @@ public class ButtonListenerPauseAndPlay implements ActionListener {
             ifFirstTimePlaying = false;
 
         }
+
         if (ifNewSong && !ifFirstTimePlaying) {
 
+//            System.out.println(PlayerManager.getsP().getPlayerStatus());
             //song cover icon
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()));
             MusicSliderBar.getSongIconLable().setIcon(new ImageIcon(((ImageIcon) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getIcon()).getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
