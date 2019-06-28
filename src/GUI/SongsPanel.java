@@ -65,7 +65,7 @@ public class SongsPanel extends JPanel {
 //            songButton.get(i).setForeground(null);
 //            songButton.get(i).setBackground(null);
             gbc.gridx++;
-            if (gbc.gridx == 3) {
+            if (gbc.gridx == 4) {
                 gbc.gridx = 0;
                 gbc.gridy++;
             }

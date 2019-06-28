@@ -220,6 +220,7 @@ public class MusicSliderBar extends JPanel {
         //TODO: make a separate class for the thread and have "current" as its local variable so it can be also stopped.
         jSliderThread = new SliderThread();
 
+        //creating a listener class for it in this case creates undesired lag.
         jSlider. addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
@@ -231,6 +232,23 @@ public class MusicSliderBar extends JPanel {
                 jSlider.setValue(result);
             }
         });
+
+        volumeSlider. addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                Point p = e.getPoint();
+                double percent = p.x / ((double) volumeSlider.getWidth());
+                int range = volumeSlider.getMaximum() - volumeSlider.getMinimum();
+                double newVal = range * percent;
+                int result = (int)(volumeSlider.getMinimum() + newVal);
+                volumeSlider.setValue(result);
+            }
+        });
+
+
+        // had a bug  and was deprecated
+//        jSlider.addMouseListener(new MouseListenerForSliders());
+//        volumeSlider.addMouseListener(new MouseListenerForSliders());
 
 
     }

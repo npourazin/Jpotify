@@ -132,16 +132,18 @@ public class Music implements Serializable {
 
             byte[] imageBytes = mp3File.getId3v2Tag().getAlbumImage();
             try {
+                int localFlag=0;
                 if (imageBytes != null) {
                     Image img = ImageIO.read(new ByteArrayInputStream(imageBytes));
                     if (img!=null){
+                        localFlag=1;
                         Icon icon = new ImageIcon(img);
                         songData.setIcon(icon);
                     }
 
                 }
                 //handle empty icon
-                else {
+                if(localFlag==0){
                     try {
                         Image img = ImageIO.read(getClass().getResource("defaultSongIcon.png"));
                         songData.setIcon(new ImageIcon(img));

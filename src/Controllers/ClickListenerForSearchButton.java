@@ -22,6 +22,8 @@ public class ClickListenerForSearchButton implements ActionListener {
         jButton.repaint();
         String request = SearchBarPanel.getSearched().getText().trim();
 
+        searchResults = new ArrayList<>();
+
         //empty the previous search results
         try {
             PrintWriter fr = new PrintWriter(new FileWriter("src/SearchResults.txt"));
@@ -31,7 +33,7 @@ public class ClickListenerForSearchButton implements ActionListener {
 
 
         for(SongData a: Main.getCurrentQueue()){
-            if(a.getSongName().contains(request)  || a.getAlbum().contains(request) || a.getArtist().contains(request)){
+            if(a.getSongName().toLowerCase().contains(request.toLowerCase())  || a.getAlbum().toLowerCase().contains(request.toLowerCase()) || a.getArtist().toLowerCase().contains(request.toLowerCase())){
                 searchResults.add(a);
             }
         }

@@ -38,7 +38,6 @@ public class ClickListenerForAddingSongs implements ActionListener {
                 }
             }
 
-            Main.prepareObjOut();
             SavedSongData.addToFile(absolutePath);
 
             fr.println(absolutePath);

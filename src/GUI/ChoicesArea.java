@@ -26,7 +26,7 @@ public class ChoicesArea extends JPanel {
 
 
         JButton saveButton = new JButton("Add Song");
-        saveButton.setFont(saveButton.getFont().deriveFont(14f)); // will only change size to 14pt
+        saveButton.setFont(saveButton.getFont().deriveFont(12f)); // will only change size to 14pt
 //        saveButton.rep
 
         saveButton.setVisible(true);
@@ -36,13 +36,13 @@ public class ChoicesArea extends JPanel {
 
         JButton homeButton = new JButton("Home");
         homeButton.setVisible(true);
-        homeButton.setFont(homeButton.getFont().deriveFont(14f));
+        homeButton.setFont(homeButton.getFont().deriveFont(12f));
         this.add(homeButton);
         homeButton.addActionListener(new ClickListenerForShowingHome());
 
         JButton songsButton = new JButton("Songs");
         songsButton.setVisible(true);
-        songsButton.setFont(songsButton.getFont().deriveFont(14f)); // will only change size to 14pt
+        songsButton.setFont(songsButton.getFont().deriveFont(12f)); // will only change size to 14pt
 
         this.add(songsButton);
         songsButton.addActionListener(new ClickListenerForShowingSongsList());
@@ -55,26 +55,30 @@ public class ChoicesArea extends JPanel {
 
         JButton albumsButton = new JButton("Albums");
         albumsButton.setVisible(true);
-        albumsButton.setFont(albumsButton.getFont().deriveFont(14f)); // will only change size to 14pt
+        albumsButton.setFont(albumsButton.getFont().deriveFont(12f)); // will only change size to 14pt
         this.add(albumsButton);
         albumsButton.addActionListener(new ClickListenerForShowingAlbums());
 
         JButton favouritePlaylistButton = new JButton("Favourite Playlist");
         favouritePlaylistButton.setVisible(true);
-        favouritePlaylistButton.setFont(favouritePlaylistButton.getFont().deriveFont(14f)); // will only change size to 14pt
+        favouritePlaylistButton.setFont(favouritePlaylistButton.getFont().deriveFont(12f)); // will only change size to 14pt
         this.add(favouritePlaylistButton);
         favouritePlaylistButton.addActionListener(new ClickListenerForShowingFavouritePlaylist());
 
+        //<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
+        // title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+        // title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
         JButton sharedPlaylistButton = new JButton("Shared Playlist");
         sharedPlaylistButton.setVisible(true);
-        sharedPlaylistButton.setFont(sharedPlaylistButton.getFont().deriveFont(14f)); // will only change size to 14pt
+        sharedPlaylistButton.setFont(sharedPlaylistButton.getFont().deriveFont(12f)); // will only change size to 14pt
         this.add(sharedPlaylistButton);
         sharedPlaylistButton.addActionListener(new ClickListenerForShowingSharedPlaylist());
 
 
         JButton newPlayListButton = new JButton("New PlayList");
         newPlayListButton.setVisible(true);
-        newPlayListButton.setFont(newPlayListButton.getFont().deriveFont(14f));
+        newPlayListButton.setFont(newPlayListButton.getFont().deriveFont(12f));
         this.add(newPlayListButton);
         newPlayListButton.addActionListener(new ClickListenerForNewPlaylist());
         try {
@@ -86,7 +90,7 @@ public class ChoicesArea extends JPanel {
 
         JLabel playlistLable = new JLabel("  Your Playlists:");
         playlistLable.setVisible(true);
-        playlistLable.setFont(new Font("Verdana", 9, 13));
+        playlistLable.setFont(new Font("Verdana", 9, 10));
         playlistLable.setBackground(Color.cyan);
         this.add(playlistLable, BorderLayout.NORTH);
 
@@ -103,7 +107,6 @@ public class ChoicesArea extends JPanel {
             if (!new File("src/PlaylistNames.txt").exists()) {
                 PrintWriter fr = new PrintWriter(new FileWriter("src/PlaylistNames.txt"));
             }
-            //Todo why new file?
             Scanner sc = new Scanner(new FileReader(new File("src/PlaylistNames.txt")));
             while (sc.hasNext()) {
                 playlistName = sc.nextLine();

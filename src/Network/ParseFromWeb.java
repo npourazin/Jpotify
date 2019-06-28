@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class ParseFromweb {
+public class ParseFromWeb {
     public static String parser(String s2) throws IOException {
         String s1="";
 //        String s2= "stronger+kelly+clarkson";
@@ -59,11 +59,19 @@ public class ParseFromweb {
         for (Element headline : newsHeadlines) {
             log("%s\n\t%s", headline.attr("title"), headline.absUrl("href"));
         }
-        if(text.contains("Search Results Knowledge result")&& text.contains("Source:"))
-            return text.substring(text.indexOf("Search Results Knowledge result")+32, text.indexOf("Source:"));
-        else
+        if(text.contains("Search Results Knowledge result")&& text.contains("Source:")) {
+//            if (!text.substring(text.indexOf("Search Results Knowledge result") + 32, text.indexOf("Source:")).trim().equals(""))
+                return text.substring(text.indexOf("Search Results Knowledge result") + 32, text.indexOf("Source:"));
+        }
+        else if(text.contains("Search Results Web results")&& text.contains("Source:")) {
+//                if (!text.substring(text.indexOf("Search Results Web result") + 32, text.indexOf("Source:")).trim().equals(""))
+                    return text.substring(text.indexOf("Search Results Web result") + 26, text.indexOf("Source:"));
+        }
+//            return text;
             return "Unfortunately couldn't find any results :( ";
+
     }
+
 
     private static final Pattern urlPattern = Pattern.compile("(?:^|[\\W])((ht|f)tp(s?):\\/\\/|www\\.)"
                     + "(([\\w\\-]+\\.){1,}?([\\w\\-.~]+\\/?)*"
@@ -103,7 +111,7 @@ public class ParseFromweb {
     public static void main(String[] args) {
         try {
 //            parser("stronger+kelly+clarkson");
-            System.out.println(parser(makeURL("/home/niki/Downloads/DeanLewis.mp3")));
+            System.out.println(parser(makeURL("/home/niki/Desktop/Kelly Clarkson_Stronger.mp3")));
 
         } catch (IOException e) {
             e.printStackTrace();
