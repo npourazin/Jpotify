@@ -37,7 +37,7 @@ public class JpotifyGUI extends JFrame {
         this.setVisible(true);
         this.setSize(1200, 600);
         this.setLayout(new BorderLayout());
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+//        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 
         choicesArea = new ChoicesArea();

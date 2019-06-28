@@ -53,7 +53,7 @@ public class Server_SendsFiles implements Runnable {
 
     public static String processRequest() {
 //        PlayerManager.getsP() != null;
-        if (PlayerManager.getsP() != null) {
+        if (!Main.isJpotifyGUIWindowClosed()) {
             //now
             return PlayerManager.getsP().getFileName();
         } else {
@@ -99,15 +99,15 @@ public class Server_SendsFiles implements Runnable {
                 while (localFlag == 0) {
                     if (protocolCommand.startsWith("start")) {
                         clientName = protocolCommand.substring(protocolCommand.indexOf("start") + 6);
-                        localFlag=1;
+                        localFlag = 1;
                     } else out.println("start <yourName>");
                 }
-                System.out.println("heh that thing is called "+ clientName);
+                System.out.println("heh that thing is called " + clientName);
 
                 while (true) {
                     protocolCommand = inp.readLine();
                     if (protocolCommand.contains("quit")) {
-                        System.out.println(clientId + clientName+ " went off!!!");
+                        System.out.println(clientId + clientName + " went off!!!");
                         break;//or break?
                     }
 
@@ -130,8 +130,7 @@ public class Server_SendsFiles implements Runnable {
                                     e.printStackTrace();
                                 }
                                 sendFile(fis, bis, os, lastListenedSongPath);
-                            }
-                            else if (protocolCommand.contains("--SharedPlaylist")) {
+                            } else if (protocolCommand.contains("--SharedPlaylist")) {
                                 if (!new File("src/SharedPlaylist.txt").exists()) {
                                     try {
                                         client.close();
@@ -141,12 +140,12 @@ public class Server_SendsFiles implements Runnable {
                                     numberOfClients--;
                                     return;
                                 }
-                                int count=0;
+                                int count = 0;
                                 try {
                                     Scanner sc = new Scanner(new FileReader("src/SharedPlaylist.txt"));
                                     while (sc.hasNext()) {
                                         sc.nextLine();
-                                        count ++;
+                                        count++;
                                     }
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
@@ -160,45 +159,43 @@ public class Server_SendsFiles implements Runnable {
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
                                 }
-                            }
-                            else {
+                            } else {
                                 out.println("Invalid command");
                                 out.println("See 'get --help'.");
                             }
-                        }
-                        else {
+                        } else {
                             if (protocolCommand.contains("--lastListened")) {
-                                System.out.println("--lastListened");
-                                System.out.println("still alive");
 //                                System.out.println(PlayerManager.getsP().getFileName());
 //                                if (Main.getCurrentQueue().get(Main.getSongQueueIndex())!=null) {
 //                                if (PlayerManager.getsP().getPlayerStatus().equals("PLAYING")) {
-                                if (PlayerManager.getsP()!= null) {
-                                    System.out.println("in here1");
-                                    out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
-                                     out.println("now");
-                                    System.out.println("sent");
+                                if (protocolCommand.contains("title")) {
+                                    if (!Main.isJpotifyGUIWindowClosed()) {
+//                                        System.out.println("in here1");
+                                        out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
+                                        out.println("now");
+//                                        System.out.println("sent");
 
-                                } else {
-                                    System.out.println("in here 2");
-                                    try {
-                                        Scanner sc = new Scanner(new FileReader("src/LastSongListened.txt"));
-                                        Music music = new Music(sc.nextLine());
-                                        out.println(music.getSongData().getSongName());
-                                    } catch (FileNotFoundException e) {
-                                        out.println("An error occurred while fetching file name.");
+                                    } else {
+//                                        System.out.println("in here 2");
+                                        try {
+                                            Scanner sc = new Scanner(new FileReader("src/LastSongListened.txt"));
+                                            Music music = new Music(sc.nextLine());
+                                            out.println(music.getSongData().getSongName());
+                                        } catch (FileNotFoundException e) {
+                                            out.println("An error occurred while fetching file name.");
+                                        }
                                     }
-                                    Date dateListened = new Date(new File("src/LastSongListened.txt").lastModified());
-                                    //TODO WIFE
-                                    //TODO maaaaahvaaash ;))))))
-                                    // in diff string write the time difference string between dateListened and now
-                                    String diff ="get it from my koose mahi";
-                                    out.println(diff);
-                                    System.out.println("sent");
+
                                 }
-                                System.out.println("what");
-                            }
-                            else if (protocolCommand.contains("--sharedPlaylist")) {
+                                else if (protocolCommand.contains("time")) {
+                                    Date dateListened = new Date(new File("src/LastSongListened.txt").lastModified());
+
+                                    //TODO WIFE
+                                    String diff = "get it from my koose mahi";
+                                    out.println(diff);
+                                }
+
+                            } else if (protocolCommand.contains("--sharedPlaylist")) {
                                 if (!new File("src/SharedPlaylist.txt").exists()) {
                                     try {
                                         client.close();
@@ -208,12 +205,12 @@ public class Server_SendsFiles implements Runnable {
                                     numberOfClients--;
                                     return;
                                 }
-                                int count=0;
+                                int count = 0;
                                 try {
                                     Scanner sc = new Scanner(new FileReader("src/SharedPlaylist.txt"));
                                     while (sc.hasNext()) {
                                         sc.nextLine();
-                                        count ++;
+                                        count++;
                                     }
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
@@ -222,13 +219,12 @@ public class Server_SendsFiles implements Runnable {
                                 try {
                                     Scanner sc = new Scanner(new FileReader("src/SharedPlaylist.txt"));
                                     while (sc.hasNext()) {
-                                       out.println(sc.nextLine());
+                                        out.println(sc.nextLine());
                                     }
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
                                 }
-                            }
-                            else if (protocolCommand.contains("--help")) {
+                            } else if (protocolCommand.contains("--help")) {
                                 out.println("HELP:");
                                 //TODO guide the lost sheep to salivation .
                                 out.println("These are common commands used in various situations:");
@@ -237,17 +233,13 @@ public class Server_SendsFiles implements Runnable {
                                 out.println("start <name>");
                                 out.println("some switches: --myID, --myName, --LastListened, --sharedPlaylist, --help");
 
-                            }
-                            else if(protocolCommand.contains("--myName")){
+                            } else if (protocolCommand.contains("--myName")) {
                                 out.println(clientName);
-                            }
-                            else if(protocolCommand.contains("--yourName")){
+                            } else if (protocolCommand.contains("--yourName")) {
                                 out.println(Main.getMyName());
-                            }
-                            else if(protocolCommand.contains("--myID")){
+                            } else if (protocolCommand.contains("--myID")) {
                                 out.println(clientId);
-                            }
-                            else {
+                            } else {
                                 out.println("Invalid command");
                                 out.println("See 'get --help'.");
                             }
@@ -260,9 +252,8 @@ public class Server_SendsFiles implements Runnable {
                 }
             } catch (IOException e) {
                 e.printStackTrace();
-            }
-            finally {
-                if(client!=null) {
+            } finally {
+                if (client != null) {
                     try {
                         client.close();
                     } catch (IOException e) {
@@ -331,7 +322,7 @@ public class Server_SendsFiles implements Runnable {
 
     public static void main(String[] args) {
 //        try {
-            Main.server_sendsFiles.run();
+//            Main.server_sendsFiles.run();
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }

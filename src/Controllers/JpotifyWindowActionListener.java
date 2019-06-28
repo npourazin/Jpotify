@@ -13,6 +13,9 @@ public class JpotifyWindowActionListener implements WindowListener {
     public void windowOpened(WindowEvent windowEvent) {
         Main.prepareObjIn();
         SavedSongData.readFromFile(Main.getObjIn());
+
+        Main.setJpotifyGUIWindowClosed(false);
+
     }
 
     @Override
@@ -34,7 +37,7 @@ public class JpotifyWindowActionListener implements WindowListener {
 
     @Override
     public void windowClosed(WindowEvent windowEvent) {
-
+        Main.setJpotifyGUIWindowClosed(true);
     }
 
     @Override
