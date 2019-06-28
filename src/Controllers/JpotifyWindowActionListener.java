@@ -39,6 +39,7 @@ public class JpotifyWindowActionListener implements WindowListener {
     @Override
     public void windowClosed(WindowEvent windowEvent) {
         //TODO WIFE
+        PlayerManager.getsP().close();
         Main.setJpotifyGUIWindowClosed(true);
     }
 

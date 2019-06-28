@@ -13,6 +13,7 @@ import java.util.Scanner;
  * static string
  * @author Mahvash
  */
+
 public class SelectedPlaylistListener implements javax.swing.event.ListSelectionListener {
     private static String playlistName;
     @Override
