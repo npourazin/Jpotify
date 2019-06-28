@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class ParseFromweb {
+public class ParseFromWeb {
     public static String parser(String s2) throws IOException {
         String s1="";
 //        String s2= "stronger+kelly+clarkson";

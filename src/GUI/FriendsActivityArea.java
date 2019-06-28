@@ -4,11 +4,11 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
-public class friendsActivityArea extends JPanel {
+public class FriendsActivityArea extends JPanel {
     private JScrollPane jScrollPane;
     private static boolean askedForLastListened = true;
 
-    public friendsActivityArea() {
+    public FriendsActivityArea() {
         super();
         this.setLayout(new BorderLayout());
         jScrollPane = new JScrollPane(this);
@@ -32,7 +32,7 @@ public class friendsActivityArea extends JPanel {
     }
 
     public static void setAskedForLastListened(boolean askedForLastListened) {
-        friendsActivityArea.askedForLastListened = askedForLastListened;
+        FriendsActivityArea.askedForLastListened = askedForLastListened;
     }
 
     @Override

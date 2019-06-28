@@ -1,12 +1,10 @@
 package Controllers;
 
-import GUI.PlaylistPanel;
 import Logic.Main;
 import Network.*;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +15,7 @@ public class ButtonListenerLyric implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         String lyrics = "";
         try {
-            lyrics = ParseFromweb.parser(ParseFromweb.makeURL(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath()));
+            lyrics = ParseFromWeb.parser(ParseFromWeb.makeURL(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath()));
         } catch (IOException e) {
             e.printStackTrace();
         }
