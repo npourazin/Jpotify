@@ -19,9 +19,9 @@ public class Client_ReceivesFiles {
         return socket;
     }
 
-    public void fetchData() {
-
-    }
+//    public void fetchData() {
+//
+//    }
 
     //    public final static int SOCKET_PORT = 8080;
     public final static String SERVER = "127.0.0.1";  // localhost
