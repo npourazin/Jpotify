@@ -1,5 +1,7 @@
 package GUI;
 
+import Controllers.ClickListenerForFriendPlaylist;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -51,8 +53,9 @@ public class FriendsActivityArea extends JPanel {
             friend.add(friendLastSong);
 
 
-            JButton getPlaylist=new JButton("Get Their Playlist !");
+            JButton getPlaylist=new JButton("Play Their Playlist !");
             getPlaylist.setBackground(Color.pink);
+            getPlaylist.addActionListener(new ClickListenerForFriendPlaylist());
             friend.add(getPlaylist);
 //            this.add(new JSeparator());
         }

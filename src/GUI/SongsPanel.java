@@ -1,20 +1,24 @@
 package GUI;
 
 import Controllers.*;
+import Logic.PlayerManager;
 import Logic.SongData;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class SongsPanel extends JPanel {
-    private ArrayList<SongData> songs;
+    //    private ArrayList<SongData> songs;
     private static ArrayList<JButton> songButton;
     private JScrollPane jScrollPane;
-    private static String selectedSong =null;
+    private static String selectedSong = null;
 
     public SongsPanel(ArrayList<SongData> songs) {
         super();
@@ -32,13 +36,13 @@ public class SongsPanel extends JPanel {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 0;
-
-        this.songs = new ArrayList<>();
-        this.songs = songs;
+//
+//        this.songs = new ArrayList<>();
+//        this.songs = songs;
         System.out.println(songs.size());
         songButton = new ArrayList<>();
         this.setVisible(true);
-        Dimension d = new Dimension(180, 180);
+        Dimension d = new Dimension(180, 200);
         System.out.println("song size:" + songs.size());
 
         //showing songs
@@ -54,13 +58,83 @@ public class SongsPanel extends JPanel {
             if (songs.get(i).getIcon() != null)
                 songButton.get(i).setIcon(new ImageIcon(((ImageIcon) songs.get(i).getIcon()).getImage().getScaledInstance(150, 150, Image.SCALE_DEFAULT)));
             if (songs.get(i).getSongName() != null) {
-                JTextArea a = new JTextArea("Song:"+songs.get(i).getSongName()+"\nArtist:"+songs.get(i).getArtist());
+                JTextArea a = new JTextArea("Song:" + songs.get(i).getSongName() + "\nArtist:" + songs.get(i).getArtist());
                 songButton.get(i).add(a, BorderLayout.SOUTH);
             } else {
                 JTextArea a = new JTextArea("UNKNOWN");
                 songButton.get(i).add(a, BorderLayout.NORTH);
 
             }
+            int finalI = i;
+
+            JButton likeButton = new JButton();
+            likeButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    for (int k = 0; k < PlayerManager.getSongDataArrayList().size(); k++) {
+                        if (PlayerManager.getSongDataArrayList().get(k).getAbsolutePath().equals(songs.get(finalI).getAbsolutePath())) {
+                            //remove from favourite
+                            if (songs.get(finalI).getIsLiked()) {
+                                PlayerManager.getSongDataArrayList().get(k).setIsLiked(false);
+                                FavouriteManager.removeFavourite(songs.get(finalI).getAbsolutePath());
+
+                                //change button to disliked
+                                try {
+                                    Image img = ImageIO.read(getClass().getResource("Dislike.png"));
+                                    likeButton.setIcon((Icon) new ImageIcon(img.getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
+                                    likeButton.setPreferredSize(new Dimension(30, 30));
+                                } catch (Exception ex) {
+                                    ex.printStackTrace();
+                                }
+                            }
+                            //add to favorite
+                            else {
+                                PlayerManager.getSongDataArrayList().get(k).setIsLiked(true);
+                                FavouriteManager.addFavourite(songs.get(finalI).getAbsolutePath());
+
+                                //change button to liked
+                                try {
+                                    Image img = ImageIO.read(getClass().getResource("Like.png"));
+                                    likeButton.setIcon((Icon) new ImageIcon(img.getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
+                                    likeButton.setPreferredSize(new Dimension(30, 30));
+                                } catch (Exception ex) {
+                                    ex.printStackTrace();
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+            });
+//            likeButton.addMouseMotionListener(new MouseAdapter() {
+//                @Override
+//                public void mouseClicked(MouseEvent e) {
+//                    super.mouseClicked(e);
+//                    System.out.println("SSS");
+//                }
+//            });
+
+            if (songs.get(i).getIsLiked()) {
+                try {
+                    Image img = ImageIO.read(getClass().getResource("Like.png"));
+                    likeButton.setIcon((Icon) new ImageIcon(img.getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
+                    likeButton.setPreferredSize(new Dimension(30, 30));
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            } else {
+                try {
+                    Image img = ImageIO.read(getClass().getResource("Dislike.png"));
+                    likeButton.setIcon((Icon) new ImageIcon(img.getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
+                    likeButton.setPreferredSize(new Dimension(30, 30));
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+
+            likeButton.setVisible(true);
+            songButton.get(i).add(likeButton, BorderLayout.NORTH);
+
 //            songButton.get(i).setBorder(new EmptyBorder(10, 10, 10, 10));
 //            songButton.get(i).setForeground(null);
 //            songButton.get(i).setBackground(null);
@@ -71,34 +145,33 @@ public class SongsPanel extends JPanel {
             }
             JPopupMenu popupMenu = new JPopupMenu();
 
-            JMenuItem addFavourite=new JMenuItem("Like");
-            addFavourite.addActionListener(new MenuClickedAddFavourite());
-            popupMenu.add(addFavourite);
-
-            JMenuItem removeFavourite=new JMenuItem("Dislike");
-            removeFavourite.addActionListener(new MenuClickedRemoveFavourite());
-            popupMenu.add(removeFavourite);
+//            JMenuItem addFavourite = new JMenuItem("Like");
+//            addFavourite.addActionListener(new MenuClickedAddFavourite());
+//            popupMenu.add(addFavourite);
+//
+//            JMenuItem removeFavourite = new JMenuItem("Dislike");
+//            removeFavourite.addActionListener(new MenuClickedRemoveFavourite());
+//            popupMenu.add(removeFavourite);
 
             popupMenu.add(new JPopupMenu.Separator());
 
-            JMenuItem addSharedPlaylist=new JMenuItem("Add to Shared Playlist");
+            JMenuItem addSharedPlaylist = new JMenuItem("Add to Shared Playlist");
             addSharedPlaylist.addActionListener(new MenuClickedAddSharedPlaylist());
             popupMenu.add(addSharedPlaylist);
 
 
-            JMenuItem removeSharedPlaylist=new JMenuItem("Remove from Shared Playlist");
+            JMenuItem removeSharedPlaylist = new JMenuItem("Remove from Shared Playlist");
             removeSharedPlaylist.addActionListener(new MenuClickedRemoveSharedPlaylist());
             popupMenu.add(removeSharedPlaylist);
 
 
-            int finalI = i;
             songButton.get(i).addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
 //                super.mouseClicked(e);
                     if (SwingUtilities.isRightMouseButton(e)) {
                         popupMenu.show(songButton.get(finalI), e.getX(), e.getY());
-                        selectedSong =songs.get(finalI).getAbsolutePath();
+                        selectedSong = songs.get(finalI).getAbsolutePath();
                     }
                 }
             });
@@ -111,9 +184,11 @@ public class SongsPanel extends JPanel {
         //TODO: give each button a listener to play the song
 
     }
+
     public static String getSelectedSongPath() {
         return selectedSong;
     }
+
     public static ArrayList<JButton> getSongButton() {
         return songButton;
     }

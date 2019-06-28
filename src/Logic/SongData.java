@@ -28,7 +28,7 @@ public class SongData implements Serializable {
     private Icon icon;
     private long musicLength;
     private final Date timeItWasAdded;
-    private int isLiked=0;//0 iif not liked, 1 otherwise;
+    private boolean isLiked=false;//0 iif not liked, 1 otherwise;
 
     public SongData(String filename, Date date) throws IOException, UnsupportedTagException, InvalidDataException {
 //        super(filename);
@@ -115,11 +115,11 @@ public class SongData implements Serializable {
         this.musicLength = musicLength;
     }
 
-    public int getIsLiked() {
+    public boolean getIsLiked() {
         return isLiked;
     }
 
-    public void setIsLiked(int isLiked) {
+    public void setIsLiked(boolean isLiked) {
         this.isLiked = isLiked;
     }
 }

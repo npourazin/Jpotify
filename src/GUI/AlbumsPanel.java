@@ -54,13 +54,8 @@ public class AlbumsPanel extends JPanel {
             this.add(albumButton.get(i), gbc);
             albumButton.get(i).setVisible(true);
             albumButton.get(i).setName(albums.get(i));
-            gbc.gridx++;
-            if (gbc.gridx == 3) {
-                gbc.gridx = 0;
-                gbc.gridy++;
-            }
-            this.repaint();
-            this.revalidate();
+
+
             Scanner sc = null;
             try {
                 sc = new Scanner(new FileReader(new File("src/" + albums.get(i) + ".txt")));
@@ -89,10 +84,18 @@ public class AlbumsPanel extends JPanel {
             albumButton.get(i).add(a, BorderLayout.SOUTH);
 
 
+            gbc.gridx++;
+            if (gbc.gridx == 3) {
+                gbc.gridx = 0;
+                gbc.gridy++;
+            }
+            this.repaint();
+            this.revalidate();
+
         }
     }
 
-    //sort albim by time
+    //sort album by time
     public void sortAlbums() {
         ArrayList<Date> temp=new ArrayList<>();
         for (int i = 0; i <albums.size() ; i++) {
