@@ -11,10 +11,7 @@ import javazoom.jl.player.advanced.PlaybackListener;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.io.ByteArrayInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.Serializable;
+import java.io.*;
 import java.time.Instant;
 import java.util.Date;
 
@@ -37,6 +34,8 @@ public class Music implements Serializable {
         } catch (IOException | UnsupportedTagException | InvalidDataException e) {
             e.printStackTrace();
         }
+
+
     }
 
     public Music(SongData songData) {
@@ -55,69 +54,36 @@ public class Music implements Serializable {
 
         if (mp3File.hasId3v1Tag()) {
 
-            //Handle empty field
-            if (mp3File.getId3v1Tag().getTitle()==null) {
-                songData.setSongName(getNameForMe(mp3File.getFilename()));
-                if(getNameForMe(mp3File.getFilename())==null || getNameForMe(mp3File.getFilename()).equals(""))
-                      songData.setSongName("Unknown");
-            } else
-                songData.setSongName(mp3File.getId3v1Tag().getTitle());
+            //reading last 128 bytes
+            Last128BytesDataReading();
 
-
-
-            if (mp3File.getId3v1Tag().getAlbum()==null)
-                songData.setAlbum("Unknown");
-            else if(mp3File.getId3v1Tag().getAlbum().equals(""))
-                songData.setAlbum("Unknown");
-            else
-                songData.setAlbum(mp3File.getId3v1Tag().getAlbum());
-
-
-
-            if (mp3File.getId3v1Tag().getArtist()==null)
-                songData.setArtist("Unknown");
-            else if(mp3File.getId3v1Tag().getArtist().equals(""))
-                songData.setArtist("Unknown");
-            else
-                songData.setArtist(mp3File.getId3v1Tag().getArtist());
-
-            songData.setGenre(0);
-            songData.setGenre(mp3File.getId3v1Tag().getGenre());
-
-            try {
-                Image img = ImageIO.read(getClass().getResource("defaultSongIcon.png"));
-                songData.setIcon(new ImageIcon(img));
-
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-
-            //TODO: getGenre() does not provide a .equals method , handle it
+            //Using np3agic library
+//            LibraryDataReading();
 
         }
+
         if (mp3File.hasId3v2Tag()) {
 
             //Handle empty field
-            if (mp3File.getId3v2Tag().getTitle()==null){
+            if (mp3File.getId3v2Tag().getTitle() == null) {
                 songData.setSongName(getNameForMe(mp3File.getFilename()));
-                if(getNameForMe(mp3File.getFilename())==null || getNameForMe(mp3File.getFilename()).equals(""))
+                if (getNameForMe(mp3File.getFilename()) == null || getNameForMe(mp3File.getFilename()).equals(""))
                     songData.setSongName("Unknown");
-            }else
+            } else
                 songData.setSongName(mp3File.getId3v2Tag().getTitle());
 
 
-            if (mp3File.getId3v2Tag().getAlbum()==null)
+            if (mp3File.getId3v2Tag().getAlbum() == null)
                 songData.setAlbum("Unknown");
-            else if(mp3File.getId3v2Tag().getAlbum().equals(""))
+            else if (mp3File.getId3v2Tag().getAlbum().equals(""))
                 songData.setAlbum("Unknown");
             else
                 songData.setAlbum(mp3File.getId3v2Tag().getAlbum());
 
 
-
-            if (mp3File.getId3v2Tag().getArtist()==null)
+            if (mp3File.getId3v2Tag().getArtist() == null)
                 songData.setArtist("Unknown");
-            else if(mp3File.getId3v2Tag().getArtist().equals(""))
+            else if (mp3File.getId3v2Tag().getArtist().equals(""))
                 songData.setArtist("Unknown");
             else
                 songData.setArtist(mp3File.getId3v2Tag().getArtist());
@@ -132,18 +98,18 @@ public class Music implements Serializable {
 
             byte[] imageBytes = mp3File.getId3v2Tag().getAlbumImage();
             try {
-                int localFlag=0;
+                int localFlag = 0;
                 if (imageBytes != null) {
                     Image img = ImageIO.read(new ByteArrayInputStream(imageBytes));
-                    if (img!=null){
-                        localFlag=1;
+                    if (img != null) {
+                        localFlag = 1;
                         Icon icon = new ImageIcon(img);
                         songData.setIcon(icon);
                     }
 
                 }
                 //handle empty icon
-                if(localFlag==0){
+                if (localFlag == 0) {
                     try {
                         Image img = ImageIO.read(getClass().getResource("defaultSongIcon.png"));
                         songData.setIcon(new ImageIcon(img));
@@ -159,23 +125,104 @@ public class Music implements Serializable {
 
         }
     }
-    private static String getNameForMe(String string){
-        for (int i = string.length()-1; i>=0 ; i--) {
+
+    public void LibraryDataReading() {
+        if (mp3File.getId3v1Tag().getTitle() == null) {
+            songData.setSongName(getNameForMe(mp3File.getFilename()));
+            if (getNameForMe(mp3File.getFilename()) == null || getNameForMe(mp3File.getFilename()).equals(""))
+                songData.setSongName("Unknown");
+        } else
+            songData.setSongName(mp3File.getId3v1Tag().getTitle());
+
+        if (mp3File.getId3v1Tag().getAlbum() == null)
+            songData.setAlbum("Unknown");
+        else if (mp3File.getId3v1Tag().getAlbum().equals(""))
+            songData.setAlbum("Unknown");
+        else
+            songData.setAlbum(mp3File.getId3v1Tag().getAlbum());
+
+
+        if (mp3File.getId3v1Tag().getArtist() == null)
+            songData.setArtist("Unknown");
+        else if (mp3File.getId3v1Tag().getArtist().equals(""))
+            songData.setArtist("Unknown");
+        else
+            songData.setArtist(mp3File.getId3v1Tag().getArtist());
+
+        songData.setGenre(0);
+        songData.setGenre(mp3File.getId3v1Tag().getGenre());
+
+        try {
+            Image img = ImageIO.read(getClass().getResource("defaultSongIcon.png"));
+            songData.setIcon(new ImageIcon(img));
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
+    public void Last128BytesDataReading() {
+        File song = new File(this.absolutePath);
+        FileInputStream file = null;
+        try {
+            file = new FileInputStream(song);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        int size = (int) song.length();
+        try {
+            file.skip(size - 128);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        byte[] last128 = new byte[128];
+        try {
+            file.read(last128);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String id3 = new String(last128);
+        String tag = id3.substring(0, 3);
+        if (tag.equals("TAG")) {
+            if (id3.substring(3, 32) == null || id3.substring(3, 32) == "")
+                songData.setSongName("Unknown");
+            else
+                songData.setSongName(id3.substring(3, 32));
+            if (id3.substring(33, 62) == null || id3.substring(33, 62) == "")
+                songData.setArtist("Unknown");
+            else
+                songData.setArtist(id3.substring(33, 62));
+            if (id3.substring(63, 91) == null || id3.substring(63, 91) == "")
+                songData.setAlbum("Unknown");
+            else
+                songData.setAlbum(id3.substring(63, 91));
+        } else
+            System.out.println(" does not contain ID3 information.");
+        try {
+            file.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private static String getNameForMe(String string) {
+        for (int i = string.length() - 1; i >= 0; i--) {
 
 
             String os = System.getProperty("os.name").toLowerCase();
-            if (os.contains("win")){
+            if (os.contains("win")) {
                 //Operating system is based on Windows
-                if (string.charAt(i)=='\\'){
-                    return string.substring(i+1);
+                if (string.charAt(i) == '\\') {
+                    return string.substring(i + 1);
                 }
-            }
-            else if (os.contains("nix") || os.contains("aix") || os.contains("nux") || os.contains("osx")){
+            } else if (os.contains("nix") || os.contains("aix") || os.contains("nux") || os.contains("osx")) {
                 //Operating system is based on Linux/Unix/*AIX
                 //Operating system is Apple OSX based
 
-                if(string.charAt(i)=='/'){
-                    return string.substring(i+1);
+                if (string.charAt(i) == '/') {
+                    return string.substring(i + 1);
                 }
 
             }

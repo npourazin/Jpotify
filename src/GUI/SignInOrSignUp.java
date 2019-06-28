@@ -11,6 +11,9 @@ public class SignInOrSignUp extends JFrame {
     private static JPanel panelSignUp;
 
     public SignInOrSignUp(){
+
+        Image icon = Toolkit.getDefaultToolkit().getImage("src/GUI/Jpotify.jpg");
+        this.setIconImage(icon);
         this.setTitle("Sign in or sign up please!!");
         this.setVisible(true);
         this.setSize(500, 100);

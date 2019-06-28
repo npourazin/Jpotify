@@ -21,6 +21,7 @@ public class MusicSliderBar extends JPanel {
     private JButton lyricsButton;
     private static JTextArea showTime;
     private static JLabel songIconLable;
+    private static JTextArea songInfoBox;
 
 
     //    private Thread jSliderThread;
@@ -39,26 +40,31 @@ public class MusicSliderBar extends JPanel {
         currentSongLable.setFont(new Font("Verdana", 9, 13));
         currentSongLable.setBackground(Color.cyan);
         currSongPanel.add(currentSongLable, BorderLayout.NORTH);
-
-        //creating song icon
-//        JPanel bottomPanel = new JPanel();
-        songIconLable = new JLabel();
-        Dimension d = new Dimension(250, 150);
-        songIconLable.setVisible(true);
-        songIconLable.setPreferredSize(d);
-
-        currSongPanel.add(songIconLable,BorderLayout.SOUTH);
         currSongPanel.setVisible(true);
         currSongPanel.setBackground(Color.cyan);
-
         this.add(currSongPanel, BorderLayout.WEST);
+        currSongPanel.setVisible(true);
+
 
         JPanel rightPanel = new JPanel();
         rightPanel.setVisible(true);
         this.add(rightPanel, BorderLayout.CENTER);
 
-//        this.add(currSongPanel);
-        currSongPanel.setVisible(true);
+
+        //creating song icon
+        songIconLable = new JLabel();
+        Dimension d = new Dimension(120, 110);
+        songIconLable.setVisible(true);
+        songIconLable.setPreferredSize(d);
+        songInfoBox =new JTextArea();
+        songInfoBox.setVisible(true);
+        songInfoBox.setBackground(Color.cyan);
+        songIconLable.setPreferredSize(new Dimension(100,100));
+        songInfoBox.setFont(new Font("M",1,10));
+        currSongPanel.add(songIconLable,BorderLayout.WEST);
+        currSongPanel.add(songInfoBox,BorderLayout.EAST);
+
+
 
 
         rightPanel.setLayout(new GridLayout(2, 1));
@@ -169,7 +175,7 @@ public class MusicSliderBar extends JPanel {
         volumeSlider.addChangeListener(new VolumeChangeListener());
         volumeSlider.setPaintLabels(true);
         volumeSlider.setPaintTrack(true);
-        volumeSlider.setMajorTickSpacing(100);
+        volumeSlider.setMajorTickSpacing(50);
         volumeSlider.setBackground(Color.cyan);
         topPanel.add(volumeSlider);
 
@@ -194,6 +200,7 @@ public class MusicSliderBar extends JPanel {
 
         jSlider.setPaintTrack(true);
 
+        //creating bottom panel
         JPanel bottomPanel = new JPanel();
         bottomPanel.setBackground(Color.cyan);
         bottomPanel.setLayout(new BorderLayout());
@@ -207,13 +214,6 @@ public class MusicSliderBar extends JPanel {
         showTime.setFont(showTime.getFont().deriveFont(16f)); // will only change size to 16pt
         showTime.setBackground(Color.cyan);
         showTime.setVisible(true);
-
-
-        //Creating image icon
-        //TO DO -->  get song cover image
-
-
-//        JLabel currentSongLable = new JLabel(song.getArtist(), song.getIcon(), JLabel.CENTER);
 
 
         //Thread for Sliding
@@ -251,6 +251,12 @@ public class MusicSliderBar extends JPanel {
 //        volumeSlider.addMouseListener(new MouseListenerForSliders());
 
 
+    }
+
+
+
+    public static JTextArea getSongInfoBox() {
+        return songInfoBox;
     }
 
     public static void setPlayButton(JButton playButton) {

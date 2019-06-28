@@ -2,6 +2,7 @@ package GUI;
 
 import Controllers.JpotifyWindowActionListener;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 
@@ -17,7 +18,8 @@ public class JpotifyGUI extends JFrame {
 
     public JpotifyGUI() {
         super();
-
+        Image icon = Toolkit.getDefaultToolkit().getImage("src/GUI/Jpotify.jpg");
+        this.setIconImage(icon);
         this.addWindowListener(new JpotifyWindowActionListener());
 
         try {
@@ -45,7 +47,7 @@ public class JpotifyGUI extends JFrame {
 
         FriendsActivityArea friendsActivityArea = new FriendsActivityArea();
         friendsActivityArea.setVisible(true);
-        this.add(friendsActivityArea, BorderLayout.EAST);
+        this.add(friendsActivityArea.getjScrollPane(), BorderLayout.EAST);
 
 
 
