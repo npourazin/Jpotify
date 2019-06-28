@@ -12,6 +12,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/**
+ * The center panel of the main frame
+ * @author Mahvash
+ */
 public class HomePanel extends JPanel {
     private static boolean visible = true;
     private static JScrollPane jScrollPane;

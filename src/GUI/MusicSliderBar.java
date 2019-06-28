@@ -8,6 +8,14 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+
+/**
+ * The bottom panel of the main frame that the music can
+ * be controlled from. It contains buttons and sliders for that.
+ * This panel also shows the current song playing's datas
+ * @author Mahvash
+ */
+
 public class MusicSliderBar extends JPanel {
     private static SliderThread jSliderThread;
     private static JSlider jSlider;
@@ -190,11 +198,8 @@ public class MusicSliderBar extends JPanel {
         //Creating jSlider
         jSlider = new JSlider(0, (int) MUSIC_LENGHT, 0);
         jSlider.setVisible(true);
-//        jSlider.setMinorTickSpacing(1);
-//        jSlider.setMajorTickSpacing(10);
         jSlider.setPaintTicks(true);
         jSlider.setPaintLabels(true);
-//        jSlider.setValueIsAdjusting(true);
         jSlider.addChangeListener(new ScrollSliderChanger());
         jSlider.setBackground(Color.cyan);
 

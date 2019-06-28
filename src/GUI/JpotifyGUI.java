@@ -6,6 +6,9 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The main frame.
+ */
 public class JpotifyGUI extends JFrame {
     private static HomePanel homePanel;
     private static SongsPanel songsPanel;

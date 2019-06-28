@@ -9,7 +9,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
-
+/**
+ * This class contains a lsitener for a list that plays
+ * the song item clicked on the list
+ * @author Mahvash
+ */
 public class SelectPlayFromSearchMenu implements javax.swing.event.ListSelectionListener {
     private static String songName;
 
