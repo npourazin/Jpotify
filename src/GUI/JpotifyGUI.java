@@ -45,7 +45,7 @@ public class JpotifyGUI extends JFrame {
 
         FriendsActivityArea friendsActivityArea = new FriendsActivityArea();
         friendsActivityArea.setVisible(true);
-        this.add(friendsActivityArea, BorderLayout.EAST);
+        this.add(friendsActivityArea.getjScrollPane(), BorderLayout.EAST);
 
 
 
