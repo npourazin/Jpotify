@@ -1,5 +1,6 @@
 package GUI;
 
+import Controllers.ClickButtonRefreshFrinedActivity;
 import Controllers.ClickListenerForFriendPlaylist;
 
 import javax.swing.*;
@@ -7,10 +8,17 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * This class is the right panel of the main "JpotifyGUI" frame.
+ * It shows the data received via network.
+ * @author Mahvash
+ */
 public class FriendsActivityArea extends JPanel {
     private JScrollPane jScrollPane;
     private static boolean askedForLastListened = true;
-
+    private static ArrayList<String> clientName;
+    private static ArrayList<String> lastSong;
+    private static ArrayList<String> lastTimeListened;
     public FriendsActivityArea() {
         super();
         jScrollPane = new JScrollPane(this);
@@ -30,6 +38,7 @@ public class FriendsActivityArea extends JPanel {
         refresh.setVisible(true);
         refresh.setPreferredSize(new Dimension(150,20));
         refresh.setFont(new Font("Verdana", 9, 10));
+        refresh.addActionListener(new ClickButtonRefreshFrinedActivity());
         refresh.setBackground(Color.cyan);
         this.add(refresh);
 //        this.add(new JSeparator());
@@ -66,6 +75,21 @@ public class FriendsActivityArea extends JPanel {
 //            this.add(new JSeparator());
         }
     }
+
+
+
+    public static ArrayList<String> getClientName() {
+        return clientName;
+    }
+
+    public static ArrayList<String> getLastSong() {
+        return lastSong;
+    }
+
+    public static ArrayList<String> getLastTimeListened() {
+        return lastTimeListened;
+    }
+
 
     public static boolean isAskedForLastListened() {
         return askedForLastListened;
