@@ -46,7 +46,12 @@ public class FriendsActivityArea extends JPanel {
             friendName.setVerticalTextPosition(0);
             friend.add(friendName);
 
-            JButton friendLastSong=new JButton("Waves"+"                      "+"21:01");
+            JButton friendLastSong=new JButton();
+            friendLastSong.setLayout(new GridLayout(1,2));
+            JLabel songName=new JLabel("waves");
+            JLabel timeListened=new JLabel("21:02");
+            friendLastSong.add(songName);
+            friendLastSong.add(timeListened);
             friendLastSong.setFont(new Font("Verdana", 9, 8));
             friendLastSong.setHorizontalTextPosition(0);
             friendLastSong.setVerticalTextPosition(0);

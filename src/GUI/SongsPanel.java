@@ -1,6 +1,7 @@
 package GUI;
 
 import Controllers.*;
+import Logic.Main;
 import Logic.PlayerManager;
 import Logic.SongData;
 
@@ -15,7 +16,6 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class SongsPanel extends JPanel {
-    //    private ArrayList<SongData> songs;
     private static ArrayList<JButton> songButton;
     private JScrollPane jScrollPane;
     private static String selectedSong = null;
@@ -36,9 +36,6 @@ public class SongsPanel extends JPanel {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 0;
-//
-//        this.songs = new ArrayList<>();
-//        this.songs = songs;
         System.out.println(songs.size());
         songButton = new ArrayList<>();
         this.setVisible(true);
@@ -65,13 +62,17 @@ public class SongsPanel extends JPanel {
                 songButton.get(i).add(a, BorderLayout.NORTH);
 
             }
+
             int finalI = i;
 
+            //creating a like button for every song
             JButton likeButton = new JButton();
             likeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     for (int k = 0; k < PlayerManager.getSongDataArrayList().size(); k++) {
                         if (PlayerManager.getSongDataArrayList().get(k).getAbsolutePath().equals(songs.get(finalI).getAbsolutePath())) {
+
+
                             //remove from favourite
                             if (songs.get(finalI).getIsLiked()) {
                                 PlayerManager.getSongDataArrayList().get(k).setIsLiked(false);
@@ -79,13 +80,15 @@ public class SongsPanel extends JPanel {
 
                                 //change button to disliked
                                 try {
-                                    Image img = ImageIO.read(getClass().getResource("Dislike.png"));
+                                    Image img = ImageIO.read(getClass().getResource("Dislike1.png"));
                                     likeButton.setIcon((Icon) new ImageIcon(img.getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
                                     likeButton.setPreferredSize(new Dimension(30, 30));
                                 } catch (Exception ex) {
                                     ex.printStackTrace();
                                 }
                             }
+
+
                             //add to favorite
                             else {
                                 PlayerManager.getSongDataArrayList().get(k).setIsLiked(true);
@@ -93,7 +96,7 @@ public class SongsPanel extends JPanel {
 
                                 //change button to liked
                                 try {
-                                    Image img = ImageIO.read(getClass().getResource("Like.png"));
+                                    Image img = ImageIO.read(getClass().getResource("Like1.png"));
                                     likeButton.setIcon((Icon) new ImageIcon(img.getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
                                     likeButton.setPreferredSize(new Dimension(30, 30));
                                 } catch (Exception ex) {
@@ -104,19 +107,14 @@ public class SongsPanel extends JPanel {
                         }
 
                     }
+//                    SwingUtilities.updateComponentTreeUI(Main.getJpotifyGUI());
                 }
             });
-//            likeButton.addMouseMotionListener(new MouseAdapter() {
-//                @Override
-//                public void mouseClicked(MouseEvent e) {
-//                    super.mouseClicked(e);
-//                    System.out.println("SSS");
-//                }
-//            });
+
 
             if (songs.get(i).getIsLiked()) {
                 try {
-                    Image img = ImageIO.read(getClass().getResource("Like.png"));
+                    Image img = ImageIO.read(getClass().getResource("Like1.png"));
                     likeButton.setIcon((Icon) new ImageIcon(img.getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
                     likeButton.setPreferredSize(new Dimension(30, 30));
                 } catch (Exception ex) {
@@ -124,7 +122,7 @@ public class SongsPanel extends JPanel {
                 }
             } else {
                 try {
-                    Image img = ImageIO.read(getClass().getResource("Dislike.png"));
+                    Image img = ImageIO.read(getClass().getResource("Dislike1.png"));
                     likeButton.setIcon((Icon) new ImageIcon(img.getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
                     likeButton.setPreferredSize(new Dimension(30, 30));
                 } catch (Exception ex) {
@@ -144,15 +142,6 @@ public class SongsPanel extends JPanel {
                 gbc.gridy++;
             }
             JPopupMenu popupMenu = new JPopupMenu();
-
-//            JMenuItem addFavourite = new JMenuItem("Like");
-//            addFavourite.addActionListener(new MenuClickedAddFavourite());
-//            popupMenu.add(addFavourite);
-//
-//            JMenuItem removeFavourite = new JMenuItem("Dislike");
-//            removeFavourite.addActionListener(new MenuClickedRemoveFavourite());
-//            popupMenu.add(removeFavourite);
-
             popupMenu.add(new JPopupMenu.Separator());
 
             JMenuItem addSharedPlaylist = new JMenuItem("Add to Shared Playlist");

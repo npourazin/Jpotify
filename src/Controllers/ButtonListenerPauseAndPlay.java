@@ -42,7 +42,7 @@ public class ButtonListenerPauseAndPlay implements ActionListener {
                     ex.printStackTrace();
                 }
             }
-            //The fucking method
+
             setSongToPlay();
 
         } else {
@@ -85,7 +85,8 @@ public class ButtonListenerPauseAndPlay implements ActionListener {
             //song cover icon
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()));
             MusicSliderBar.getSongIconLable().setIcon(new ImageIcon(((ImageIcon) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getIcon()).getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
-            MusicSliderBar.getSongIconLable().setText(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
+//            MusicSliderBar.getSongIconLable().setText(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
+            MusicSliderBar.getSongInfoBox().setText("\n\nSong:"+Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName()+"\nAlbum:"+Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAlbum()+"\nArtist:"+Main.getCurrentQueue().get(Main.getSongQueueIndex()).getArtist());
             System.out.println(sliderThread.getState());
             sliderThread.setCurrentTime(0);
             sliderThread.setFlag(1);

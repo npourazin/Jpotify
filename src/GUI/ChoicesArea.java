@@ -19,7 +19,7 @@ public class ChoicesArea extends JPanel {
 
     public ChoicesArea() {
         this.setLayout(new GridLayout(10, 1));
-
+        this.setPreferredSize(new Dimension(190,10000));
 //        jScrollPane = new JScrollPane();
 //        this.add(jScrollPane, BorderLayout.WEST);
 //         jScrollPane = new JScrollPane(this,   ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
@@ -99,8 +99,9 @@ public class ChoicesArea extends JPanel {
         list.setVisible(true);
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.setLayoutOrientation(JList.VERTICAL);
-        list.setVisibleRowCount(-1);
+        list.setVisibleRowCount(2);
         list.addListSelectionListener(new SelectedPlaylistListener());
+        list.setBackground(Color.cyan);
 //        list.addListSelectionListener(new ListSelectionListener());
         try {
             String playlistName;
