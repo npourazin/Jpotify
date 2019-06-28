@@ -41,6 +41,7 @@ public class Client_ReceivesFiles {
 
     public static void main(String[] args) throws IOException {
         Client_ReceivesFiles client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
+
         receiveFile(client_receivesFiles);
 
     }
@@ -51,11 +52,14 @@ public class Client_ReceivesFiles {
         FileOutputStream fos = null;
         BufferedOutputStream bos = null;
         Socket sock = null;
+
         try {
             sock = client_receivesFiles.getSocket();
             System.out.println("Connected!");
+            ///TODO get lastlistened status from my server to update Friends activity UI
 
             // receive file
+            System.out.println();
             byte [] mybytearray  = new byte [FILE_SIZE];
             InputStream is = sock.getInputStream();
             fos = new FileOutputStream(FILE_TO_RECEIVED);

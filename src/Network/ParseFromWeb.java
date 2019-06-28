@@ -14,17 +14,15 @@ import java.util.regex.Pattern;
 
 public class ParseFromWeb {
     public static String parser(String s2) throws IOException {
-        String s1="";
+        String s1 = "";
 //        String s2= "stronger+kelly+clarkson";
-        String s3="";
+        String s3 = "";
 //        String s4 ="";
 //        String s5 ="";
 
 
-
-
         String os = System.getProperty("os.name").toLowerCase();
-        if (os.contains("win")){
+        if (os.contains("win")) {
             //Operating system is based on Windows
             s1 = "https://www.google.com/search?client=firefox-b-d&channel=trow&q=";
             s3 = "+lyrics&ie=utf-8&oe=utf-8";
@@ -33,19 +31,16 @@ public class ParseFromWeb {
 //            s4 = "&oq=";
 //            s5 ="+lyrics";
 //            s=s1+s2+s5+s4+s2+s5+s3;
-        }
-        else if (os.contains("osx")){
+        } else if (os.contains("osx")) {
             //Operating system is Apple OSX based
             //TODO add code to support mac os;
-        }
-        else if (os.contains("nix") || os.contains("aix") || os.contains("nux")){
+        } else if (os.contains("nix") || os.contains("aix") || os.contains("nux")) {
             //Operating system is based on Linux/Unix/*AIX
             s1 = "https://www.google.com/search?client=ubuntu&channel=fs&q=";
             s3 = "+lyrics&ie=utf-8&oe=utf-8";
         }
 
         String s = s1 + s2 + s3;
-
 
 
         Document doc = Jsoup.connect(s).get();
@@ -59,16 +54,17 @@ public class ParseFromWeb {
         for (Element headline : newsHeadlines) {
             log("%s\n\t%s", headline.attr("title"), headline.absUrl("href"));
         }
-        if(text.contains("Search Results Knowledge result")&& text.contains("Source:")) {
-//            if (!text.substring(text.indexOf("Search Results Knowledge result") + 32, text.indexOf("Source:")).trim().equals(""))
-                return text.substring(text.indexOf("Search Results Knowledge result") + 32, text.indexOf("Source:"));
-        }
-        else if(text.contains("Search Results Web results")&& text.contains("Source:")) {
-//                if (!text.substring(text.indexOf("Search Results Web result") + 32, text.indexOf("Source:")).trim().equals(""))
-                    return text.substring(text.indexOf("Search Results Web result") + 26, text.indexOf("Source:"));
+        if (text.contains("Search Results Knowledge result") && text.contains("Source:")) {
+            if (text.substring(text.indexOf("Search Results Knowledge result") + 32, text.indexOf("Source:")).trim().length()>5)
+            return text.substring(text.indexOf("Search Results Knowledge result") + 32, text.indexOf("Source:"));
+        } else if (text.contains("Search Results Web results") && text.contains("Source:")) {
+            if (text.substring(text.indexOf("Search Results Web result") + 26, text.indexOf("Source:")).trim().length()>5)
+            return text.substring(text.indexOf("Search Results Web result") + 26, text.indexOf("Source:"));
         }
 //            return text;
-            return "Unfortunately couldn't find any results :( ";
+        System.out.println("Failed!");
+
+        return "Unfortunately couldn't find any results :( ";
 
     }
 
@@ -92,8 +88,18 @@ public class ParseFromWeb {
 
     public static String makeURL(String absolutePath) {
         Music music = new Music(absolutePath);
-        String s2 = takeSpacesInmiddle(music.getSongData().getSongName().trim() + "+" + music.getSongData().getArtist().trim());
-        return s2;
+        String tmp1, tmp2;
+        String s2;
+        if (music.getSongData().getSongName().endsWith(".mp3")) {
+            s2 = takeSpacesInmiddle(music.getSongData().getSongName().trim().substring(0, music.getSongData().getSongName().trim().length() - 4));
+            if (music.getSongData().getArtist().equals("Unknown")) return s2;
+            else return s2 + "+" + takeSpacesInmiddle(music.getSongData().getArtist().trim());
+        }
+
+        s2 = takeSpacesInmiddle(music.getSongData().getSongName().trim());
+        if (music.getSongData().getArtist().equals("Unknown")) return s2;
+        else return s2 + "+" + takeSpacesInmiddle(music.getSongData().getArtist().trim());
+
     }
 
     private static String takeSpacesInmiddle(String s) {

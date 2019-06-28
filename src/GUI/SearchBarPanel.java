@@ -55,9 +55,11 @@ public class SearchBarPanel extends JPanel {
         tmp2.add(showResults);
 
         this.add(tmp1);
+        tmp1.setBackground(Color.cyan);
         this.add(tmp2);
-
-
+        tmp2.setBackground(Color.cyan);
+        this.setBackground(Color.cyan);
+        this.repaint();
 
     }
 

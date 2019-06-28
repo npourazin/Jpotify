@@ -49,6 +49,7 @@ public class Server_SendsFiles implements Runnable{
 
     public static String processRequest() {
         if (PlayerManager.getsP() != null) {
+            //now
             return PlayerManager.getsP().getFileName();
         } else {
             try {
@@ -70,6 +71,8 @@ public class Server_SendsFiles implements Runnable{
 
         private Socket client;
         private int clientId;
+        private boolean lastListenedIsWantedFlag=true;
+
 
         public Handler(Socket client) {
             this.client = client;
@@ -81,11 +84,25 @@ public class Server_SendsFiles implements Runnable{
             BufferedInputStream bis = null;
             OutputStream os = null;
 
+            try {
+                BufferedReader inp = new BufferedReader(new InputStreamReader(client.getInputStream()));
+                PrintWriter out = new PrintWriter(new OutputStreamWriter(client.getOutputStream()), true);
+                //every command can start with client's name
+                //ask the client what their name is
+                //get their name
+                //set name to the client handler
+                //get the protocol statement
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
             //TODO: client tells u what they want and u serve it
             // change friendsActivityArea.isAskedForLastListened()
             // the client request also needs a buffered stream reading
 
-            if( FriendsActivityArea.isAskedForLastListened() ) {
+//            if( FriendsActivityArea.isAskedForLastListened() ) {
+            if( lastListenedIsWantedFlag) {
                 String lastListenedSongPath="";
                 try {
                    lastListenedSongPath = processRequest();
@@ -126,6 +143,14 @@ public class Server_SendsFiles implements Runnable{
 
             }
 
+        }
+
+        public boolean isLastListenedIsWantedFlag() {
+            return lastListenedIsWantedFlag;
+        }
+
+        public void setLastListenedIsWantedFlag(boolean lastListenedIsWantedFlag) {
+            this.lastListenedIsWantedFlag = lastListenedIsWantedFlag;
         }
 
         public int getClientId() {
