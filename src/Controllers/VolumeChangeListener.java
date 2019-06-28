@@ -34,7 +34,7 @@ public class VolumeChangeListener implements ChangeListener {
                 }
             }
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Erro\n" + ex);
+            JOptionPane.showMessageDialog(null, "Error\n" + ex);
         }
     }
 

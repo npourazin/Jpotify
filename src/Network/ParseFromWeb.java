@@ -59,13 +59,17 @@ public class ParseFromWeb {
         for (Element headline : newsHeadlines) {
             log("%s\n\t%s", headline.attr("title"), headline.absUrl("href"));
         }
-        if(text.contains("Search Results Knowledge result")&& text.contains("Source:"))
-            return text.substring(text.indexOf("Search Results Knowledge result")+32, text.indexOf("Source:"));
-        else if(text.contains("Search Results Web results")&& text.contains("Source:"))
-            return text.substring(text.indexOf("Search Results Knowledge result")+26, text.indexOf("Source:"));
-        else
+        if(text.contains("Search Results Knowledge result")&& text.contains("Source:")) {
+//            if (!text.substring(text.indexOf("Search Results Knowledge result") + 32, text.indexOf("Source:")).trim().equals(""))
+                return text.substring(text.indexOf("Search Results Knowledge result") + 32, text.indexOf("Source:"));
+        }
+        else if(text.contains("Search Results Web results")&& text.contains("Source:")) {
+//                if (!text.substring(text.indexOf("Search Results Web result") + 32, text.indexOf("Source:")).trim().equals(""))
+                    return text.substring(text.indexOf("Search Results Web result") + 26, text.indexOf("Source:"));
+        }
 //            return text;
             return "Unfortunately couldn't find any results :( ";
+
     }
 
 
