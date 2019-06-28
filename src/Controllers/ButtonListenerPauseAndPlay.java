@@ -9,6 +9,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ *This class manages play and pause actions
+ * @author mahvash
+ */
 public class ButtonListenerPauseAndPlay implements ActionListener {
     private static SongPlayer sP;
     private static boolean ifFirstTimePlaying = true;
@@ -16,6 +20,11 @@ public class ButtonListenerPauseAndPlay implements ActionListener {
     private static boolean buttonPlaying = false;
     private static boolean endOfSong = false;
     private static SliderThread sliderThread;
+
+    /**
+     * This is the action listener for the pause/play button . It changes the button icon and does the pause/play actions.
+     * @param e action event
+     */
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -61,6 +70,10 @@ public class ButtonListenerPauseAndPlay implements ActionListener {
         }
     }
 
+    /**
+     * this method checks the status of a song and sets it to be played as needed
+     */
+
     public static void setSongToPlay() {
         if(MusicSliderBar.getPlayButton().getText().equals(" Play")) {
             MusicSliderBar.getPlayButton().setText(" Pause");
@@ -83,11 +96,9 @@ public class ButtonListenerPauseAndPlay implements ActionListener {
 
         if (ifNewSong && !ifFirstTimePlaying) {
 
-//            System.out.println(PlayerManager.getsP().getPlayerStatus());
             //song cover icon
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()));
             MusicSliderBar.getSongIconLable().setIcon(new ImageIcon(((ImageIcon) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getIcon()).getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
-//            MusicSliderBar.getSongIconLable().setText(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
             MusicSliderBar.getSongInfoBox().setText("\n\nSong:"+Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName()+"\nAlbum:"+Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAlbum()+"\nArtist:"+Main.getCurrentQueue().get(Main.getSongQueueIndex()).getArtist());
             System.out.println(sliderThread.getState());
             sliderThread.setCurrentTime(0);
@@ -99,14 +110,6 @@ public class ButtonListenerPauseAndPlay implements ActionListener {
             MusicSliderBar.getJSlider().setValue(0);
             MusicSliderBar.setMusicLength(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
             MusicSliderBar.getJSlider().setMaximum((int) Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength());
-
-            //WHAT THE ACTUAL FUUUUUCK!!!!!!  WHY CANT YOU SET WHAT YOU ARE SHOWING MEEEE!!?????
-            //TODO: fix this shit
-
-            System.out.println((int) MusicSliderBar.getMusicLenght());
-//                MusicSliderBar.getJSlider().setMajorTickSpacing((int) MusicSliderBar.getMusicLenght());
-//                MusicSliderBar.getJSlider().setMinorTickSpacing((int) MusicSliderBar.getMusicLenght());
-
             MusicSliderBar.getJSlider().setMajorTickSpacing(1000);
             ifNewSong = false;
             endOfSong = false;

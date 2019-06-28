@@ -22,15 +22,16 @@ public class FriendsActivityArea extends JPanel {
         jScrollPane.setVisible(true);
 
         //if kooft<4 koodt=4 else kooft
-        this.setLayout(new GridLayout(4,1));
+        this.setLayout(new GridLayout(6,1));
 
 
 
-        JLabel label = new JLabel(" Friends Activity ");
-        label.setVisible(true);
-        label.setFont(new Font("Verdana", 9, 17));
-        label.setBackground(Color.cyan);
-        this.add(label);
+        JButton refresh = new JButton(" Friends Activity ");
+        refresh.setVisible(true);
+        refresh.setPreferredSize(new Dimension(150,20));
+        refresh.setFont(new Font("Verdana", 9, 10));
+        refresh.setBackground(Color.cyan);
+        this.add(refresh);
 //        this.add(new JSeparator());
 
         for (int i = 0; i <2; i++) {
