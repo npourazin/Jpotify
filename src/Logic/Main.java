@@ -3,6 +3,8 @@ package Logic;
 import Controllers.VolumeChangeListener;
 import GUI.*;
 import Logic.PlayerManager;
+import Network.Client_ReceivesFiles;
+import Network.Server_SendsFiles;
 
 import javax.swing.*;
 import java.io.*;
@@ -20,6 +22,8 @@ public class Main {
     private static int songQueueIndex = 0;
     private static String myName = "admin";
     private static int holyFlag=0;
+    private static  Server_SendsFiles server_sendsFiles;
+    private static Client_ReceivesFiles client_receivesFiles;
 
     public static void main(String[] args) {
 
@@ -44,6 +48,15 @@ public class Main {
         jpotifyGUI = new JpotifyGUI();
 
         //TODO: write the changes in time and whatever to the file before closing
+
+
+        try {
+            server_sendsFiles = new Server_SendsFiles(8080);
+            server_sendsFiles.run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
@@ -103,6 +116,7 @@ public class Main {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
 
     }
 
