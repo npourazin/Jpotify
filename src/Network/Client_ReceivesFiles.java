@@ -41,6 +41,7 @@ public class Client_ReceivesFiles {
 
     public static void main(String[] args) throws IOException {
         Client_ReceivesFiles client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
+
         receiveFile(client_receivesFiles);
 
     }
@@ -55,7 +56,7 @@ public class Client_ReceivesFiles {
         try {
             sock = client_receivesFiles.getSocket();
             System.out.println("Connected!");
-            ///TODO get lastlistened status from my server to update Friends activiy UI
+            ///TODO get lastlistened status from my server to update Friends activity UI
 
             // receive file
             System.out.println();

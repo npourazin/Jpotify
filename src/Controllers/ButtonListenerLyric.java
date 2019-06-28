@@ -21,15 +21,18 @@ public class ButtonListenerLyric implements ActionListener {
         }
 
         String newLyric = "";
-        int counter=60;
-        for (int i = 0; i < lyrics.length();) {
-            if(counter>lyrics.length()) break;
-            while (lyrics.charAt(counter)!=' ') {
-                counter--;
+        if(lyrics.length()<60) newLyric = lyrics;
+        else {
+            int counter = 60;
+            for (int i = 0; i < lyrics.length(); ) {
+                if (counter > lyrics.length()) break;
+                while (lyrics.charAt(counter) != ' ') {
+                    counter--;
+                }
+                newLyric = newLyric + "\n" + lyrics.substring(i, counter);
+                i = counter;
+                counter = i + 60;
             }
-            newLyric = newLyric+ "\n"+ lyrics.substring(i, counter);
-            i=counter;
-            counter= i+60;
         }
 
         //TODO: fix the slider
