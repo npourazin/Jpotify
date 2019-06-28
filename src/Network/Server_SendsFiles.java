@@ -53,7 +53,7 @@ public class Server_SendsFiles implements Runnable {
 
     public static String processRequest() {
 //        PlayerManager.getsP() != null;
-        if (Main.getCurrentQueue().get(Main.getSongQueueIndex()) != null) {
+        if (PlayerManager.getsP() != null) {
             //now
             return PlayerManager.getsP().getFileName();
         } else {
@@ -170,10 +170,13 @@ public class Server_SendsFiles implements Runnable {
                             if (protocolCommand.contains("--lastListened")) {
                                 System.out.println("--lastListened");
                                 System.out.println("still alive");
-                                if (Main.getCurrentQueue().get(Main.getSongQueueIndex())!=null) {
+//                                System.out.println(PlayerManager.getsP().getFileName());
+//                                if (Main.getCurrentQueue().get(Main.getSongQueueIndex())!=null) {
+//                                if (PlayerManager.getsP().getPlayerStatus().equals("PLAYING")) {
+                                if (PlayerManager.getsP()!= null) {
                                     System.out.println("in here1");
                                     out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
-//                                    System.out.println("now");
+                                     out.println("now");
                                     System.out.println("sent");
 
                                 } else {
@@ -327,11 +330,10 @@ public class Server_SendsFiles implements Runnable {
 
 
     public static void main(String[] args) {
-        try {
-            Server_SendsFiles server_sendsFiles = new Server_SendsFiles(8080);
-            server_sendsFiles.run();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+            Main.server_sendsFiles.run();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }
