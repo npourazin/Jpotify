@@ -18,7 +18,6 @@ public class ClickListenerForFriendPlaylist implements ActionListener {
             Main.getClient_receivesFiles().readMoreThanOneFiles();
 
             //get the array list of songs in current queue
-            Main.prepareObjIn();
 
 
         } catch (IOException ex) {
