@@ -34,6 +34,8 @@ public class JpotifyWindowActionListener implements WindowListener {
 
         Main.prepareObjOut();
         SavedSongData.writeToFile(PlayerManager.getSongDataArrayList());
+        PlayerManager.getsP().close();
+
     }
 
     @Override

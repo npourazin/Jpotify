@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Logic/MyEqualizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javazoom/jl/player/advanced/AdvancedPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javazoom/jl/player/advanced/AdvancedPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,12 +34,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="300" column="18" selection-start-line="300" selection-start-column="18" selection-end-line="300" selection-end-column="18" />
+            <state relative-caret-position="-14">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#receiveFile#0;class#Client_ReceivesFiles#0" />
-                <element signature="method#readAFile#0;class#Client_ReceivesFiles#0" />
                 <element signature="method#deleteDirectoryRecursionJava6#0;class#Client_ReceivesFiles#0" />
                 <element signature="method#prepareReceivedFilesDestination#0;class#Client_ReceivesFiles#0" />
                 <element signature="method#readMoreThanOneFiles#0;class#Client_ReceivesFiles#0" />
@@ -53,6 +48,8 @@
                 <element signature="e#9856#10506#0" />
                 <element signature="e#3477#3478#0" expanded="true" />
                 <element signature="e#3502#3503#0" expanded="true" />
+                <element signature="e#10747#10748#0" expanded="true" />
+                <element signature="e#10790#10791#0" expanded="true" />
                 <element signature="e#3535#3536#0" expanded="true" />
                 <element signature="e#3563#3564#0" expanded="true" />
               </folding>
@@ -61,10 +58,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Network/UserPassVerification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="231">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/src/javazoom/jl/decoder/Equalizer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="60" column="75" lean-forward="true" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
+              <caret line="60" column="75" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
               <folding>
                 <element signature="e#2167#2168#0" expanded="true" />
                 <element signature="e#2191#2192#0" expanded="true" />
@@ -98,14 +104,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="429" column="4" selection-start-line="429" selection-start-column="4" selection-end-line="429" selection-end-column="4" />
+            <state relative-caret-position="690">
+              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;method#processRequest#0;class#Server_SendsFiles#0" />
                 <element signature="method#processRequest#0;class#Server_SendsFiles#0" />
                 <element signature="e#2475#2476#0" expanded="true" />
                 <element signature="e#2519#2520#0" expanded="true" />
@@ -128,18 +133,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/JpotifyGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -156,22 +149,9 @@
         <entry file="file://$PROJECT_DIR$/src/Logic/MyEqualizer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javazoom/jl/player/advanced/AdvancedPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="153" column="45" lean-forward="true" selection-start-line="153" selection-start-column="45" selection-end-line="153" selection-end-column="45" />
-              <folding>
-                <element signature="e#6159#6160#0" expanded="true" />
-                <element signature="e#6180#6181#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -264,14 +244,14 @@
         <option value="$PROJECT_DIR$/src/Network/ParseFromWeb.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ButtonListenerLyric.java" />
         <option value="$PROJECT_DIR$/src/NonUsefulMahvashTrashCan/Trash.java" />
-        <option value="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" />
         <option value="$PROJECT_DIR$/src/GUI/JpotifyGUI.java" />
         <option value="$PROJECT_DIR$/src/Logic/PlayerManager.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" />
         <option value="$PROJECT_DIR$/src/Logic/Main.java" />
         <option value="$PROJECT_DIR$/src/javazoom/jl/player/advanced/AdvancedPlayer.java" />
         <option value="$PROJECT_DIR$/src/Logic/MyEqualizer.java" />
         <option value="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" />
+        <option value="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" />
       </list>
     </option>
   </component>
@@ -309,43 +289,7 @@
               <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
               <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mp3agic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="javazoom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="javazoom" type="462c0819:PsiDirectoryNode" />
-              <item name="jl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="javazoom" type="462c0819:PsiDirectoryNode" />
-              <item name="jl" type="462c0819:PsiDirectoryNode" />
-              <item name="player" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="javazoom" type="462c0819:PsiDirectoryNode" />
-              <item name="jl" type="462c0819:PsiDirectoryNode" />
-              <item name="player" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Logic" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -484,21 +428,7 @@
       <workItem from="1561478365109" duration="10160000" />
       <workItem from="1561524643509" duration="40338000" />
       <workItem from="1561598902820" duration="40949000" />
-      <workItem from="1561693875542" duration="50325000" />
-    </task>
-    <task id="LOCAL-00055" summary="Bug fixed in Music class.">
-      <created>1561482876336</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1561482876342</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Sort Randomly Comparator added.">
-      <created>1561512950088</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1561512950088</updated>
+      <workItem from="1561693875542" duration="52047000" />
     </task>
     <task id="LOCAL-00057" summary="Exception handled.&#10;(wasn't flushing data properly.)">
       <created>1561514872270</created>
@@ -829,11 +759,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561752500220</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Server_SendsFiles documentation added.">
+      <created>1561774059123</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1561774059123</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Client_ReceivesFiles documentation added.">
+      <created>1561774834456</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1561774834456</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321037000" />
+    <option name="totallyTimeSpent" value="322759000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -846,7 +790,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="694" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -854,7 +797,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Learn" order="4" weight="0.32954547" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2931818" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2931818" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5159091" side_tool="true" weight="0.32566372" />
@@ -864,7 +807,7 @@
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32920355" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32920355" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4840909" weight="0.32566372" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4840909" visible="true" weight="0.32566372" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -895,8 +838,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Shows lyrics but not properly." />
-    <MESSAGE value="Shows proper error message when the song couldn't be found." />
     <MESSAGE value="Parser was made more system independent." />
     <MESSAGE value="Checking in progress." />
     <MESSAGE value="Can show better graphics!&#10;songs that didnt have pics and names fixed." />
@@ -920,7 +861,9 @@
     <MESSAGE value="JpotigyGUI JFrame is no longer EXIT_ON_CLOSE.&#10;more methods added to client." />
     <MESSAGE value="just in case." />
     <MESSAGE value="conflicts resolved." />
-    <option name="LAST_COMMIT_MESSAGE" value="conflicts resolved." />
+    <MESSAGE value="Server_SendsFiles documentation added." />
+    <MESSAGE value="Client_ReceivesFiles documentation added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Client_ReceivesFiles documentation added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -939,7 +882,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java</url>
-          <line>264</line>
+          <line>249</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
@@ -956,7 +899,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java" />
     <entry file="file://$PROJECT_DIR$/src/GUI/DialogBoxList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1243,43 +1185,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="300" column="18" selection-start-line="300" selection-start-column="18" selection-end-line="300" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#receiveFile#0;class#Client_ReceivesFiles#0" />
-            <element signature="method#readAFile#0;class#Client_ReceivesFiles#0" />
-            <element signature="method#deleteDirectoryRecursionJava6#0;class#Client_ReceivesFiles#0" />
-            <element signature="method#prepareReceivedFilesDestination#0;class#Client_ReceivesFiles#0" />
-            <element signature="method#readMoreThanOneFiles#0;class#Client_ReceivesFiles#0" />
-            <element signature="e#7039#7106#0" />
-            <element signature="e#8436#8949#0" />
-            <element signature="e#9134#9831#0" />
-            <element signature="e#9856#10506#0" />
-            <element signature="e#3477#3478#0" expanded="true" />
-            <element signature="e#3502#3503#0" expanded="true" />
-            <element signature="e#3535#3536#0" expanded="true" />
-            <element signature="e#3563#3564#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javazoom/jl/decoder/Equalizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="60" column="75" lean-forward="true" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
+          <caret line="60" column="75" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
           <folding>
             <element signature="e#2167#2168#0" expanded="true" />
             <element signature="e#2191#2192#0" expanded="true" />
@@ -1323,7 +1232,7 @@
     <entry file="file://$PROJECT_DIR$/src/Logic/MyEqualizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1332,7 +1241,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/JpotifyGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
+        <state relative-caret-position="540">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1342,11 +1251,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="429" column="4" selection-start-line="429" selection-start-column="4" selection-end-line="429" selection-end-column="4" />
+        <state relative-caret-position="690">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#processRequest#0;class#Server_SendsFiles#0" />
             <element signature="method#processRequest#0;class#Server_SendsFiles#0" />
             <element signature="e#2475#2476#0" expanded="true" />
             <element signature="e#2519#2520#0" expanded="true" />
@@ -1363,6 +1271,47 @@
             <element signature="e#14019#14020#0" expanded="true" />
             <element signature="e#14071#14072#0" expanded="true" />
             <element signature="method#dateToString#0;class#Handler#0;class#Server_SendsFiles#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Network/UserPassVerification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#receiveFile#0;class#Client_ReceivesFiles#0" />
+            <element signature="method#deleteDirectoryRecursionJava6#0;class#Client_ReceivesFiles#0" />
+            <element signature="method#prepareReceivedFilesDestination#0;class#Client_ReceivesFiles#0" />
+            <element signature="method#readMoreThanOneFiles#0;class#Client_ReceivesFiles#0" />
+            <element signature="e#7039#7106#0" />
+            <element signature="e#8436#8949#0" />
+            <element signature="e#9134#9831#0" />
+            <element signature="e#9856#10506#0" />
+            <element signature="e#3477#3478#0" expanded="true" />
+            <element signature="e#3502#3503#0" expanded="true" />
+            <element signature="e#10747#10748#0" expanded="true" />
+            <element signature="e#10790#10791#0" expanded="true" />
+            <element signature="e#3535#3536#0" expanded="true" />
+            <element signature="e#3563#3564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
