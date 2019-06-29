@@ -15,6 +15,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Serializable;
 
+/**
+ * This class contains the methods that control playing a song
+ * @author Mahvash
+ */
 public class SongPlayer implements Serializable {
     private Status playerStatus;
     private String fileName;
@@ -34,6 +38,12 @@ public class SongPlayer implements Serializable {
         NOTSTARTED, PLAYING, PAUSED, FINISHED;
     }
 
+    /**
+     * This is the constructor of the class that constructs a sing player
+     * using the songs path
+     * @param fileName the path of the song
+     * @throws JavaLayerException
+     */
     public SongPlayer(String fileName) throws JavaLayerException {
         playerStatus = Status.NOTSTARTED;
         this.fileName = fileName;
@@ -48,6 +58,10 @@ public class SongPlayer implements Serializable {
         }
     }
 
+    /**
+     * This method manages calling other methods of the class
+     * to play the song based on it's status
+     */
     public void playSong() {
         synchronized (playerLock) {
             switch (playerStatus) {
@@ -73,6 +87,10 @@ public class SongPlayer implements Serializable {
         }
     }
 
+    /**
+     * Changes the status of the song player to Paused
+     * @return
+     */
     public boolean pauseSong() {
         synchronized (playerLock) {
             if (playerStatus == Status.PLAYING) {
@@ -82,6 +100,10 @@ public class SongPlayer implements Serializable {
         }
     }
 
+    /**
+     * Changes the status of the song player to Playing
+     * @return
+     */
     public boolean resumeSong() {
         synchronized (playerLock) {
             if (playerStatus == Status.PAUSED) {
@@ -92,6 +114,10 @@ public class SongPlayer implements Serializable {
         }
     }
 
+    /**
+     * Changes the status of the song player to Stoped
+     * @return
+     */
     public void stopSong() {
         synchronized (playerLock) {
             playerStatus = Status.FINISHED;
@@ -99,6 +125,10 @@ public class SongPlayer implements Serializable {
         }
     }
 
+    /**
+     * This method plays the song frame by frame until the status of the player
+     * changes
+     */
     private void playInternal() {
         while (playerStatus != Status.FINISHED) {
             try {

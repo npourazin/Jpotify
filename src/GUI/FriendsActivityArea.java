@@ -2,6 +2,7 @@ package GUI;
 
 import Controllers.ClickButtonRefreshFrinedActivity;
 import Controllers.ClickListenerForFriendPlaylist;
+import Controllers.ReceivedFriendInfo;
 import Logic.Main;
 
 import javax.swing.*;
@@ -17,16 +18,11 @@ import java.util.ArrayList;
 public class FriendsActivityArea extends JPanel {
     private JScrollPane jScrollPane;
     private static boolean askedForLastListened = true;
-    private static ArrayList<String> friendName;
-    private static ArrayList<String> lastSong;
-    private static ArrayList<String> lastTimeListened;
     private static ArrayList<Integer> ID;
     public FriendsActivityArea() {
         super();
 
-        friendName =new ArrayList<>();
-        lastSong=new ArrayList<>();
-        lastTimeListened=new ArrayList<>();
+
         ID=new ArrayList<>();
 
 
@@ -52,13 +48,13 @@ public class FriendsActivityArea extends JPanel {
         this.add(refresh);
 
         //this.add(new JSeparator());
-        for (int i = 0; i <friendName.size(); i++) {
+        for (int i = 0; i < 1; i++) {
 
             JPanel friend=new JPanel();
             friend.setVisible(true);
             friend.setLayout(new GridLayout(4,1));
             this.add(friend);
-            JLabel name=new JLabel(friendName.get(i));
+            JLabel name=new JLabel("");
             name.setFont(new Font("Verdana", 9, 10));
             name.setHorizontalTextPosition(0);
             name.setVerticalTextPosition(0);
@@ -66,8 +62,8 @@ public class FriendsActivityArea extends JPanel {
 
             JButton friendLastSong=new JButton();
             friendLastSong.setLayout(new GridLayout(1,2));
-            JLabel songName=new JLabel(lastSong.get(i));
-            JLabel timeListened=new JLabel(lastTimeListened.get(i));
+            JLabel songName=new JLabel("");
+            JLabel timeListened=new JLabel("");
             friendLastSong.add(songName);
             friendLastSong.add(timeListened);
             friendLastSong.setFont(new Font("Verdana", 9, 8));
@@ -77,7 +73,7 @@ public class FriendsActivityArea extends JPanel {
 
 
             JButton getPlaylist=new JButton("Play Their Playlist !");
-            getPlaylist.setName(Main.getIP().get(i));
+            getPlaylist.setName(Main.getIPList().get(i));
             getPlaylist.setBackground(Color.pink);
             getPlaylist.addActionListener(new ClickListenerForFriendPlaylist());
             friend.add(getPlaylist);
@@ -91,31 +87,6 @@ public class FriendsActivityArea extends JPanel {
 
     public static ArrayList<Integer> getID() {
         return ID;
-    }
-
-
-    public static void setFriendName(ArrayList<String> friendName) {
-        FriendsActivityArea.friendName = friendName;
-    }
-
-    public static void setLastSong(ArrayList<String> lastSong) {
-        FriendsActivityArea.lastSong = lastSong;
-    }
-
-    public static void setLastTimeListened(ArrayList<String> lastTimeListened) {
-        FriendsActivityArea.lastTimeListened = lastTimeListened;
-    }
-
-    public static ArrayList<String> getFriendName() {
-        return friendName;
-    }
-
-    public static ArrayList<String> getLastSong() {
-        return lastSong;
-    }
-
-    public static ArrayList<String> getLastTimeListened() {
-        return lastTimeListened;
     }
 
 
