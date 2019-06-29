@@ -76,6 +76,7 @@ public class FriendsActivityArea extends JPanel {
             getPlaylist.setName(Main.getIPList().get(i));
             getPlaylist.setBackground(Color.pink);
             getPlaylist.addActionListener(new ClickListenerForFriendPlaylist());
+            //TODO set name to socket ip!
             friend.add(getPlaylist);
 //            this.add(new JSeparator());
         }

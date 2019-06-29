@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class ReceivedFriendInfo {
     private static String friendName;
 
+    private static String IP;
+
     public static void setFriendName(String friendName) {
         ReceivedFriendInfo.friendName = friendName;
     }
@@ -34,16 +36,19 @@ public class ReceivedFriendInfo {
     private static String lastTimeListened;
 
 
-    public ReceivedFriendInfo(String name,String lastSong,String lastTimeListened){
+    public ReceivedFriendInfo(String name,String lastSong,String lastTimeListened, String IP){
         this.friendName =name;
        this.lastSong=lastSong;
+       this.IP=IP;
        this.lastTimeListened=lastTimeListened;
     }
 
 
+    public static String getIP() {
+        return IP;
+    }
 
-
-
-
-
+    public static void setIP(String IP) {
+        ReceivedFriendInfo.IP = IP;
+    }
 }
