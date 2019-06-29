@@ -34,14 +34,15 @@ public class JpotifyWindowActionListener implements WindowListener {
 
         Main.prepareObjOut();
         SavedSongData.writeToFile(PlayerManager.getSongDataArrayList());
-        PlayerManager.getsP().close();
+        if(PlayerManager.getsP()!=null)
+             PlayerManager.getsP().close();
 
     }
 
     @Override
     public void windowClosed(WindowEvent windowEvent) {
-        //TODO WIFE
-        PlayerManager.getsP().close();
+        if(PlayerManager.getsP()!=null)
+            PlayerManager.getsP().close();
         Main.setJpotifyGUIWindowClosed(true);
     }
 

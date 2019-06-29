@@ -282,9 +282,9 @@ public class Client_ReceivesFiles {
         return name;
     }
 
-//    public int getID() {
-//        return ID;
-//    }
+    public int getID() {
+        return ID;
+    }
 
     public static Client_ReceivesFiles getClient_receivesFiles() {
         return client_receivesFiles;
@@ -294,10 +294,6 @@ public class Client_ReceivesFiles {
         this.ID = ID;
     }
 }
-
-
-
-
 
 
 
