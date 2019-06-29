@@ -1,9 +1,6 @@
 package GUI;
 
-import Controllers.ClickButtonRefreshFrinedActivity;
-import Controllers.ClickListenerForFriendPlaylist;
-import Controllers.ReceivedFriendInfo;
-import Logic.Main;
+import Controllers.*;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -18,13 +15,9 @@ import java.util.ArrayList;
 public class FriendsActivityArea extends JPanel {
     private JScrollPane jScrollPane;
     private static boolean askedForLastListened = true;
-    private static ArrayList<Integer> ID;
     public FriendsActivityArea() {
         super();
-
-
-        ID=new ArrayList<>();
-
+        ClickButtonRefreshFrinedActivity.setReceivedFriendInfos(new ArrayList< ReceivedFriendInfo>());
 
         jScrollPane = new JScrollPane(this);
         jScrollPane.setViewportView(this);
@@ -34,9 +27,9 @@ public class FriendsActivityArea extends JPanel {
         jScrollPane.updateUI();
         jScrollPane.setVisible(true);
 
-        //if kooft<4 koodt=4 else kooft
-        this.setLayout(new GridLayout(5,1));
-
+        int rows=ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().size();
+        if(rows<5) rows=5;
+        this.setLayout(new GridLayout(rows,1));
 
 
         JButton refresh = new JButton(" Friends Activity ");
@@ -48,47 +41,52 @@ public class FriendsActivityArea extends JPanel {
         this.add(refresh);
 
         //this.add(new JSeparator());
-        for (int i = 0; i < 0; i++) {
+        for (int i = 0; i < ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().size(); i++) {
 
             JPanel friend=new JPanel();
             friend.setVisible(true);
             friend.setLayout(new GridLayout(4,1));
             this.add(friend);
-            JLabel name=new JLabel("");
+            JLabel name=new JLabel(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getFriendName());
             name.setFont(new Font("Verdana", 9, 10));
             name.setHorizontalTextPosition(0);
             name.setVerticalTextPosition(0);
             friend.add(name);
 
+            JButton getPlaylist=new JButton("Get Their Playlist !");
+            getPlaylist.setName(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getIP());
+            getPlaylist.setBackground(Color.pink);
+            getPlaylist.addActionListener(new ClickListenerForGettingFriendPlaylist());
+            friend.add(getPlaylist);
+
+
             JButton friendLastSong=new JButton();
             friendLastSong.setLayout(new GridLayout(1,2));
-            JLabel songName=new JLabel("");
-            JLabel timeListened=new JLabel("");
+            JLabel songName=new JLabel(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getLastSong());
+            JLabel timeListened=new JLabel(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getLastTimeListened());
             friendLastSong.add(songName);
             friendLastSong.add(timeListened);
+            friendLastSong.addActionListener(new ClickListenerForPlayingTheLastSongFriendPlaylist());
+            friendLastSong.setName(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getIP());
             friendLastSong.setFont(new Font("Verdana", 9, 8));
             friendLastSong.setHorizontalTextPosition(0);
             friendLastSong.setVerticalTextPosition(0);
             friend.add(friendLastSong);
 
+            JButton playPlaylist=new JButton("Play Their Playlist");
+            getPlaylist.setName(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getIP());
+            playPlaylist.setBackground(Color.pink);
+            playPlaylist.addActionListener(new ClickListenerForPlayingFriendPlaylist());
+            friend.add(playPlaylist);
 
-            JButton getPlaylist=new JButton("Play Their Playlist !");
-            getPlaylist.setName(Main.getIPList().get(i));
-            getPlaylist.setBackground(Color.pink);
-            getPlaylist.addActionListener(new ClickListenerForFriendPlaylist());
-            //TODO set name to socket ip!
-            friend.add(getPlaylist);
+
+
 //            this.add(new JSeparator());
         }
     }
 
-    public static void setID(ArrayList<Integer> ID) {
-        FriendsActivityArea.ID = ID;
-    }
 
-    public static ArrayList<Integer> getID() {
-        return ID;
-    }
+
 
 
     public static boolean isAskedForLastListened() {

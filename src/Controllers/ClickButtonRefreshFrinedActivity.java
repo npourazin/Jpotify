@@ -12,6 +12,14 @@ import java.util.ArrayList;
 
 public class ClickButtonRefreshFrinedActivity implements ActionListener {
 
+    public static void setReceivedFriendInfos(ArrayList<ReceivedFriendInfo> receivedFriendInfos) {
+        ClickButtonRefreshFrinedActivity.receivedFriendInfos = receivedFriendInfos;
+    }
+
+    public static ArrayList<ReceivedFriendInfo> getReceivedFriendInfos() {
+        return receivedFriendInfos;
+    }
+
     private static ArrayList<ReceivedFriendInfo> receivedFriendInfos;
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -24,9 +32,7 @@ public class ClickButtonRefreshFrinedActivity implements ActionListener {
             connect(Main.getIPList().get(i));
         }
 
-        int rows=receivedFriendInfos.size();
-        if(rows<5) rows=5;
-        Main.getJpotifyGUI().getFriendsActivityArea().setLayout(new GridLayout(rows,1));
+
 
     }
 

@@ -213,8 +213,6 @@ public class SongPlayer implements Serializable {
     }
 
     public void setVolume() throws InvalidDataException, IOException, UnsupportedTagException {
-//        (player.getGainControl()).setLevel((float)GUI.getVolumeSlider().getValue() / 150.0f);
-        //set volume
 
         SourceDataLine source =null;
         Mp3File mp3File = new Mp3File(this.getFileName());
