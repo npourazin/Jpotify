@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/Music.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +33,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="429">
               <caret line="39" column="68" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
             </state>
           </provider>
@@ -302,14 +300,7 @@
       <workItem from="1561662330178" duration="8272000" />
       <workItem from="1561705542805" duration="42124000" />
       <workItem from="1561777571187" duration="43188000" />
-      <workItem from="1561824702555" duration="4247000" />
-    </task>
-    <task id="LOCAL-00080" summary="Lyric dialog box modified.">
-      <created>1561637659862</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1561637659862</updated>
+      <workItem from="1561824702555" duration="4503000" />
     </task>
     <task id="LOCAL-00081" summary="Songs and Albums panels modified">
       <created>1561641499385</created>
@@ -647,11 +638,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561825826013</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Terminating issues solved.">
+      <created>1561829246569</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1561829246569</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372528000" />
+    <option name="totallyTimeSpent" value="372784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,7 +662,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -712,7 +709,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Playlist rename bug fixed" />
     <MESSAGE value="SharedPlaylist modified." />
     <MESSAGE value="FriendActivity panel modified" />
     <MESSAGE value="Liking songs updated" />
@@ -737,7 +733,8 @@
     <MESSAGE value="Phase2" />
     <MESSAGE value="Overall editing performed" />
     <MESSAGE value="Merged" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged" />
+    <MESSAGE value="Terminating issues solved." />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminating issues solved." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Controllers/SignInOrSignUpWindowActionListener.java">
@@ -1114,7 +1111,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="429">
           <caret line="39" column="68" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
         </state>
       </provider>
