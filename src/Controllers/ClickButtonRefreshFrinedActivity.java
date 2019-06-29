@@ -8,22 +8,23 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ClickButtonRefreshFrinedActivity implements ActionListener {
+
+    private static ArrayList<ReceivedFriendInfo> receivedFriendInfos;
     @Override
     public void actionPerformed(ActionEvent e) {
 
         //empty everything
-        FriendsActivityArea.setFriendName(null);
-        FriendsActivityArea.setLastSong(null);
-        FriendsActivityArea.setLastTimeListened(null);
+       receivedFriendInfos=new ArrayList<>();
 
 
-        for (int i = 0; i < Main.getIP().size(); i++) {
-            connect(Main.getIP().get(i));
+        for (int i = 0; i < Main.getIPList().size(); i++) {
+            connect(Main.getIPList().get(i));
         }
 
-        int rows=FriendsActivityArea.getFriendName().size();
+        int rows=receivedFriendInfos.size();
         if(rows<5) rows=5;
         Main.getJpotifyGUI().getFriendsActivityArea().setLayout(new GridLayout(rows,1));
 
@@ -33,10 +34,7 @@ public class ClickButtonRefreshFrinedActivity implements ActionListener {
         try {
             Main.setClient_receivesFiles( new Client_ReceivesFiles(IP, 8080));
             if(Main.getClient_receivesFiles()==null) return;
-            FriendsActivityArea.getFriendName().add(Main.getClient_receivesFiles().getYourName());
-            FriendsActivityArea.getLastSong().add(Main.getClient_receivesFiles().getLastListenedTitle());
-            FriendsActivityArea.getLastTimeListened().add(Main.getClient_receivesFiles().getLastListenedTime());
-            FriendsActivityArea.getID().add(Main.getClient_receivesFiles().getID());
+            ClickButtonRefreshFrinedActivity.receivedFriendInfos.add(new ReceivedFriendInfo(Main.getClient_receivesFiles().getYourName(),Main.getClient_receivesFiles().getLastListenedTitle(),Main.getClient_receivesFiles().getLastListenedTime()));
         } catch (IOException e) {
             e.printStackTrace();
         }

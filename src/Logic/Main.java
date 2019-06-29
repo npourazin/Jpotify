@@ -2,19 +2,11 @@ package Logic;
 
 import Controllers.VolumeChangeListener;
 import GUI.*;
-import Logic.PlayerManager;
 import Network.Client_ReceivesFiles;
 import Network.Server_SendsFiles;
-import javazoom.jl.decoder.Bitstream;
-import javazoom.jl.decoder.Decoder;
-import javazoom.jl.decoder.Equalizer;
 
-import javax.print.DocFlavor;
-import javax.swing.*;
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -33,7 +25,7 @@ public class Main {
     }
 
     private static Client_ReceivesFiles client_receivesFiles;
-    private static ArrayList<String> IP;
+    private static ArrayList<String> IPList;
 
     private static boolean jpotifyGUIWindowClosed; //1 if closed, 0 otherwise.
 
@@ -62,7 +54,7 @@ public class Main {
         //TODO: write the changes in time and whatever to the file before closing
 
 
-        IP=new ArrayList<>();
+        IPList =new ArrayList<>();
         try {
             server_sendsFiles = new Server_SendsFiles(8080);
             server_sendsFiles.run();
@@ -139,8 +131,8 @@ public class Main {
         return client_receivesFiles;
     }
 
-    public static ArrayList<String> getIP(){
-        return IP;
+    public static ArrayList<String> getIPList(){
+        return IPList;
     }
     public static void setCurrentQueue(ArrayList<SongData> arr) {
         currentQueue = arr;
