@@ -48,7 +48,7 @@ public class FriendsActivityArea extends JPanel {
         this.add(refresh);
 
         //this.add(new JSeparator());
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 0; i++) {
 
             JPanel friend=new JPanel();
             friend.setVisible(true);

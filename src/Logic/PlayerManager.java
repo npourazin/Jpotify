@@ -12,10 +12,11 @@ public class PlayerManager {
 
     public PlayerManager(){
 
-            songDataArrayList = new ArrayList<>();
-            Main.prepareObjIn();
-            SavedSongData.readFromFile(Main.getObjIn());
-            songDataArrayList.sort(new SortByTime());
+        songDataArrayList = new ArrayList<>();
+
+        Main.prepareObjIn();
+        SavedSongData.readFromFile(Main.getObjIn());
+        songDataArrayList.sort(new SortByTime());
 
     }
     public static void playerManager() {
@@ -35,15 +36,15 @@ public class PlayerManager {
             for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
 
                 if (PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath())){
-                PlayerManager.getSongDataArrayList().get(i).setLastTimeListened(Date.from(Instant.now()));
-                System.out.println("Last time listened modified");
-            }
+                    PlayerManager.getSongDataArrayList().get(i).setLastTimeListened(Date.from(Instant.now()));
+                    System.out.println("Last time listened modified");
+                }
 
             }
 
         } catch (JavaLayerException e) {
             e.printStackTrace();
-        }  
+        }
     }
 
     public static SongPlayer getsP() {
@@ -57,10 +58,6 @@ public class PlayerManager {
 
     public static void setSongDataArrayList(ArrayList<SongData> songDataArrayList) {
         PlayerManager.songDataArrayList = songDataArrayList;
-    }
-
-    public static void setsP(SongPlayer sP) {
-        PlayerManager.sP = sP;
     }
 }
 

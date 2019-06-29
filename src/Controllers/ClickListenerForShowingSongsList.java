@@ -17,11 +17,6 @@ public class ClickListenerForShowingSongsList implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
 
-        //set all songs as the current playlist
-        Main.creatCurrentQueueByTime("AddedSongAdresses");
-        Main.setSongQueueIndex(0);
-        PlayerManager.playerManager();
-
 
         //cleaning everything
         Main.getJpotifyGUI().getHomePanel().setVisible(true);
@@ -31,15 +26,21 @@ public class ClickListenerForShowingSongsList implements ActionListener {
         Main.getJpotifyGUI().getContentPane().repaint();
 
 
-        //making new panel show up
-        SongsPanel songsPanel = new SongsPanel(Main.getCurrentQueue());
-        Main.getJpotifyGUI().setSongsPanel(songsPanel);
-        Main.getJpotifyGUI().getHomePanel().removeAll();
-        Main.getJpotifyGUI().getHomePanel().add(Main.getJpotifyGUI().getSongsPanel(),BorderLayout.CENTER);
-        Main.getJpotifyGUI().revalidate();
+        //set all songs as the current playlist
+        if(Main.creatCurrentQueueByTime("AddedSongAdresses")) {
+            Main.setSongQueueIndex(0);
+            PlayerManager.playerManager();
 
 
+            //making new panel show up
+            SongsPanel songsPanel = new SongsPanel(Main.getCurrentQueue());
+            Main.getJpotifyGUI().setSongsPanel(songsPanel);
+            Main.getJpotifyGUI().getHomePanel().removeAll();
+            Main.getJpotifyGUI().getHomePanel().add(Main.getJpotifyGUI().getSongsPanel(), BorderLayout.CENTER);
+            Main.getJpotifyGUI().revalidate();
 
+
+        }
     }
 
 }

@@ -70,14 +70,15 @@ public class ScrollSliderChanger implements ChangeListener {
                 sP.playInMiddle((int) (frames * passedPercentage));
             else flag = false;
 
-            if(fps==Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength()){
-                int newIndex=Main.getSongQueueIndex()+1;
-                if(newIndex<0 || newIndex>=Main.getCurrentQueue().size()) newIndex=0;
-                System.out.println(newIndex);
-                Main.setSongQueueIndex(newIndex);
-                PlayerManager.playerManager();
-                ButtonListenerPauseAndPlay.setIfNewSong();
-            }
+                if (fps == Main.getCurrentQueue().get(Main.getSongQueueIndex()).getMusicLength()) {
+                    int newIndex = Main.getSongQueueIndex() + 1;
+                    if (newIndex < 0 || newIndex >= Main.getCurrentQueue().size()) newIndex = 0;
+                    System.out.println(newIndex);
+                    Main.setSongQueueIndex(newIndex);
+                    PlayerManager.playerManager();
+                    ButtonListenerPauseAndPlay.setIfNewSong();
+                }
+
 
         }
 

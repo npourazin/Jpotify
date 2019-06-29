@@ -149,7 +149,6 @@ public class SongsPanel extends JPanel {
                 gbc.gridy++;
             }
             JPopupMenu popupMenu = new JPopupMenu();
-            popupMenu.add(new JPopupMenu.Separator());
 
             JMenuItem addSharedPlaylist = new JMenuItem("Add to Shared Playlist");
             addSharedPlaylist.addActionListener(new MenuClickedAddSharedPlaylist());
