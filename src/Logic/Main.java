@@ -17,8 +17,8 @@ public class Main {
     private static ArrayList<SongData> currentQueue;
     private static int songQueueIndex = 0;
     private static String myName = "admin";
-    private static int holyFlag=0;
-    private static  Server_SendsFiles server_sendsFiles;
+    private static int holyFlag = 0;
+    private static Server_SendsFiles server_sendsFiles;
 
     public static void setClient_receivesFiles(Client_ReceivesFiles client_receivesFiles) {
         Main.client_receivesFiles = client_receivesFiles;
@@ -31,11 +31,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        currentQueue=null;
+        currentQueue = null;
         System.out.println("hello");
 
         SignInOrSignUp signInOrSignUp = new SignInOrSignUp();
-        while (holyFlag!=1) {
+        while (holyFlag != 1) {
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
@@ -54,7 +54,7 @@ public class Main {
         //TODO: write the changes in time and whatever to the file before closing
 
 
-        IPList =new ArrayList<>();
+        IPList = new ArrayList<>();
         try {
             server_sendsFiles = new Server_SendsFiles(8080);
             server_sendsFiles.run();
@@ -63,77 +63,85 @@ public class Main {
         }
 
 
-
-
     }
 
-    public static void creatCurrentQueueByTime(String fileName) {
+    public static boolean creatCurrentQueueByTime(String fileName) {
+
+
+        Scanner sc = null;
+        try {
+            sc = new Scanner(new FileReader(new File("src/" + fileName + ".txt")));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        }
+        if(!sc.hasNext()) return false;
 
         PlayerManager.getSongDataArrayList().sort(new SortByTime());
-        //TODO: sort the main array list
-        currentQueue=null;
-        currentQueue=new ArrayList<SongData>();
-        try {
-            Scanner sc = new Scanner(new FileReader(new File("src/"+fileName+".txt")));
-            //this way we get the current play list in the order that it is stored in the .bin file
-            //first we get all the elements from text file
-            ArrayList<String> songPaths=new ArrayList<>();
-            while (sc.hasNext()){
-                songPaths.add(sc.nextLine());
-            }
-
-            for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
-//                System.out.println(PlayerManager.getSongDataArrayList().get(i).getSongName()+"    "+PlayerManager.getSongDataArrayList().get(i).getLastTimeListened());
-                for (int j = 0; j <songPaths.size() ; j++) {
-                    if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(songPaths.get(j))){
-                        currentQueue.add(PlayerManager.getSongDataArrayList().get(i));
-                    }
-                }
-            }
-
-            System.out.println("sub:"+currentQueue.size());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        currentQueue = null;
+        currentQueue = new ArrayList<SongData>();
+        //this way we get the current play list in the order that it is stored in the .bin file
+        //first we get all the elements from text file
+        ArrayList<String> songPaths = new ArrayList<>();
+        while (sc.hasNext()) {
+            songPaths.add(sc.nextLine());
         }
 
+        for (int i = 0; i < PlayerManager.getSongDataArrayList().size(); i++) {
+//                System.out.println(PlayerManager.getSongDataArrayList().get(i).getSongName()+"    "+PlayerManager.getSongDataArrayList().get(i).getLastTimeListened());
+            for (int j = 0; j < songPaths.size(); j++) {
+                if (PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(songPaths.get(j))) {
+                    currentQueue.add(PlayerManager.getSongDataArrayList().get(i));
+                }
+            }
+        }
+
+        System.out.println("sub:" + currentQueue.size());
+
+        return true;
     }
 
 
-    public static void creatCurrentQueueByAdd(String fileName) {
-        currentQueue=null;
-        currentQueue=new ArrayList<SongData>();
+    public static boolean creatCurrentQueueByAdd(String fileName) {
+
+        Scanner sc = null;
         try {
-            Scanner sc = new Scanner(new FileReader(new File("src/"+fileName+".txt")));
-            //this way we get the current play list in the order that it is stored in the .bin file
-            //first we get all the elements from text file
-            ArrayList<String> songPaths=new ArrayList<>();
-            while (sc.hasNext()){
-                songPaths.add(sc.nextLine());
-            }
-
-                for (int j = 0; j <songPaths.size() ; j++) {
-                    for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {
-                    if(PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(songPaths.get(j))){
-                        currentQueue.add(PlayerManager.getSongDataArrayList().get(i));
-                    }
-                }
-            }
-
-            System.out.println("sub:"+currentQueue.size());
+            sc = new Scanner(new FileReader(new File("src/" + fileName + ".txt")));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            return false;
+        }
+        if(!sc.hasNext()) return false;
+
+        currentQueue = null;
+        currentQueue = new ArrayList<SongData>();
+        //this way we get the current play list in the order that it is stored in the .bin file
+        //first we get all the elements from text file
+        ArrayList<String> songPaths = new ArrayList<>();
+        while (sc.hasNext()) {
+            songPaths.add(sc.nextLine());
         }
 
+        for (int j = 0; j < songPaths.size(); j++) {
+            for (int i = 0; i < PlayerManager.getSongDataArrayList().size(); i++) {
+                if (PlayerManager.getSongDataArrayList().get(i).getAbsolutePath().equals(songPaths.get(j))) {
+                    currentQueue.add(PlayerManager.getSongDataArrayList().get(i));
+                }
+            }
+        }
 
+        System.out.println("sub:" + currentQueue.size());
+        return true;
     }
 
     public static Client_ReceivesFiles getClient_receivesFiles() {
         return client_receivesFiles;
     }
 
-    public static ArrayList<String> getIPList(){
+    public static ArrayList<String> getIPList() {
         return IPList;
     }
+
     public static void setCurrentQueue(ArrayList<SongData> arr) {
         currentQueue = arr;
     }
