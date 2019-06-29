@@ -17,7 +17,7 @@ public class FriendsActivityArea extends JPanel {
     private static JButton refresh;
     public FriendsActivityArea() {
         super();
-        ClickButtonRefreshFrinedActivity.setReceivedFriendInfos(new ArrayList< ReceivedFriendInfo>());
+        ClickButtonRefreshFriendActivity.setReceivedFriendInfos(new ArrayList< ReceivedFriendInfo>());
 
         jScrollPane = new JScrollPane(this);
         jScrollPane.setViewportView(this);
@@ -27,7 +27,7 @@ public class FriendsActivityArea extends JPanel {
         jScrollPane.updateUI();
         jScrollPane.setVisible(true);
 
-        int rows=ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().size();
+        int rows= ClickButtonRefreshFriendActivity.getReceivedFriendInfos().size();
         if(rows<5) rows=5;
         this.setLayout(new GridLayout(rows,1));
 
@@ -36,7 +36,7 @@ public class FriendsActivityArea extends JPanel {
         refresh.setVisible(true);
         refresh.setPreferredSize(new Dimension(190,20));
         refresh.setFont(new Font("Verdana", 9, 10));
-        refresh.addActionListener(new ClickButtonRefreshFrinedActivity());
+        refresh.addActionListener(new ClickButtonRefreshFriendActivity());
         refresh.setBackground(Color.cyan);
         this.add(refresh);
 

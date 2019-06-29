@@ -13,7 +13,7 @@ import java.util.Scanner;
  * it with an existing one in the text file "PlaylistNames.txt"
  * @author Mahvash
  */
-public class DialogListenerRaname implements ActionListener {
+public class DialogListenerRename implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String oldName=SelectedPlaylistListener.getPlaylistName();

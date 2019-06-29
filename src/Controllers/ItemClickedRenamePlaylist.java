@@ -9,7 +9,7 @@ public class ItemClickedRenamePlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        DialogBoxChooseName newDialog=new DialogBoxChooseName("Rename",new DialogListenerRaname());
+        DialogBoxChooseName newDialog=new DialogBoxChooseName("Rename",new DialogListenerRename());
 
     }
 }
