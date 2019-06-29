@@ -181,6 +181,7 @@ public class Music implements Serializable {
         String id3 = new String(last128);
         String tag = id3.substring(0, 3);
         if (tag.equals("TAG")) {
+
             if (id3.substring(3, 32) == null || id3.substring(3, 32) == "")
                 songData.setSongName("Unknown");
             else
