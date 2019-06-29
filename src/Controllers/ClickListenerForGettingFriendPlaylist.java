@@ -24,7 +24,8 @@ public class ClickListenerForGettingFriendPlaylist implements ActionListener {
         String ip = jB.getName();
 
 //        int index=Integer.valueOf(jB.getName());
-        ClickButtonRefreshFrinedActivity.connect(jB.getName());
+        ClickButtonRefreshFrinedActivity.connect(ip);
+
         try {
             Main.getClient_receivesFiles().readMoreThanOneFiles();
         } catch (IOException ex) {
@@ -46,6 +47,8 @@ public class ClickListenerForGettingFriendPlaylist implements ActionListener {
         Main.setSongQueueIndex(0);
         PlayerManager.playerManager();
 
+        //play the queue
+        ButtonListenerPauseAndPlay.setSongToPlay();
     }
 
 

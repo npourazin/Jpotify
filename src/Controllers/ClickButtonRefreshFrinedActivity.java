@@ -32,8 +32,6 @@ public class ClickButtonRefreshFrinedActivity implements ActionListener {
             connect(Main.getIPList().get(i));
         }
 
-
-
     }
 
     public static void connect (String IP) {
