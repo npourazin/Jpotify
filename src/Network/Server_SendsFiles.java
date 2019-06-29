@@ -108,7 +108,7 @@ public class Server_SendsFiles implements Runnable {
                 System.out.println("heh that thing is called " + clientName);
 
                 while (true) {
-
+                    if(client.isClosed()) break;
                     protocolCommand = inp.readLine();
                     if (protocolCommand.contains("quit")) {
                         System.out.println(clientId + clientName + " went off!!!");
@@ -276,13 +276,13 @@ public class Server_SendsFiles implements Runnable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-                if (client != null) {
-                    try {
-                        client.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
+//                if (client != null) {
+//                    try {
+//                        client.close();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
 
             }
         }

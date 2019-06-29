@@ -41,6 +41,7 @@ public class Client_ReceivesFiles {
      */
     public static void receiveFile() throws IOException {
         client_receivesFiles=Main.getClient_receivesFiles();
+
         File dir = new File("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/");
         List<File> files = Arrays.asList(dir.listFiles());
         int id = files.size() + 1;
@@ -51,28 +52,66 @@ public class Client_ReceivesFiles {
 
         InputStream is = socket.getInputStream();
         File test = new File(FILE_TO_RECEIVED);
-        test.createNewFile();
-        int byteread=0;
+//        test.createNewFile();
+//        int byteread=0;
 
         FileOutputStream fos = new FileOutputStream(test);
         BufferedOutputStream out = new BufferedOutputStream(fos);
 
         byte[] buffer = new byte[FILE_SIZE];
-
-//        while ((byteread = is.read(buffer, 0, buffer.length)) != -1) {
-//            out.write(buffer, 0, byteread);
-//        }
-        System.out.println("hhhhhhhhhhhhhhhhhhh1");
-
         int count=0;
-        while ((count = is.read(buffer)) > 0) {
+        while ((count = is.read(buffer)) >= 0) {
             out.write(buffer, 0, count);
         }
         out.flush();
-        System.out.println("hhhhhhhhhhhhhhhhhhh2");
-//        socket.close();
         fos.close();
         is.close();
+
+
+    }
+    public static void receiveFile2() throws IOException {
+
+        int bytesRead;
+        int current = 0;
+        FileOutputStream fos = null;
+        BufferedOutputStream bos = null;
+        Socket sock = null;
+
+        client_receivesFiles=Main.getClient_receivesFiles();
+        File dir = new File("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/");
+        List<File> files = Arrays.asList(dir.listFiles());
+        int id = files.size() + 1;
+        String FILE_TO_RECEIVED = "src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/" + id + ".mp3";
+
+
+        try {
+            sock = Main.getClient_receivesFiles().getSocket();
+            System.out.println("Connecting...");
+
+            // receive file
+            byte [] mybytearray  = new byte [FILE_SIZE];
+            InputStream is = sock.getInputStream();
+            fos = new FileOutputStream(FILE_TO_RECEIVED);
+            bos = new BufferedOutputStream(fos);
+            bytesRead = is.read(mybytearray,0,mybytearray.length);
+            current = bytesRead;
+
+            do {
+                bytesRead =
+                        is.read(mybytearray, current, (mybytearray.length-current));
+                if(bytesRead >= 0) current += bytesRead;
+            } while(bytesRead > -1);
+
+            bos.write(mybytearray, 0 , current);
+            bos.flush();
+            System.out.println("File " + FILE_TO_RECEIVED
+                    + " downloaded (" + current + " bytes read)");
+        }
+        finally {
+            if (fos != null) fos.close();
+            if (bos != null) bos.close();
+            if (sock != null) sock.close();
+        }
 
     }
 
