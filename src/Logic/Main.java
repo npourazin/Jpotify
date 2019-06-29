@@ -60,7 +60,6 @@ public class Main {
         //TODO: write the changes in time and whatever to the file before closing
 
 
-        IPList = new ArrayList<>();
         try {
             server_sendsFiles = new Server_SendsFiles(8080);
             server_sendsFiles.run();

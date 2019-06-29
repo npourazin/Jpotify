@@ -32,7 +32,7 @@ public class Client_ReceivesFiles {
     public final static int FILE_SIZE = 6022386; // file size temporary hard coded
     // should bigger than the file to be downloaded
 
-    private static Client_ReceivesFiles client_receivesFiles;
+    private static Client_ReceivesFiles client_receivesFiles=Main.getClient_receivesFiles();
 
 //    static {
 //        try {
@@ -48,7 +48,7 @@ public class Client_ReceivesFiles {
      * writes a single file that eas received into that directory.
      */
     public static void receiveFile() {
-
+        client_receivesFiles=Main.getClient_receivesFiles();
         File dir = new File("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/");
         List<File> files = Arrays.asList(dir.listFiles());
         int id = files.size() + 1;
@@ -105,6 +105,8 @@ public class Client_ReceivesFiles {
      * @throws IOException
      */
     public static void readAFile() throws IOException {
+        client_receivesFiles=Main.getClient_receivesFiles();
+
         prepareReceivedFilesDestination("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/");
 
         BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
@@ -127,6 +129,8 @@ public class Client_ReceivesFiles {
      * @throws IOException
      */
     public static void deleteDirectoryRecursionJava6(File file) throws IOException {
+        client_receivesFiles=Main.getClient_receivesFiles();
+
         if (file.isDirectory()) {
             File[] entries = file.listFiles();
             if (entries != null) {
@@ -146,6 +150,7 @@ public class Client_ReceivesFiles {
      * @throws IOException
      */
     public static void prepareReceivedFilesDestination(String path) throws IOException {
+        client_receivesFiles=Main.getClient_receivesFiles();
 
         File file = new File(path);
         if (!file.exists()) {
@@ -172,6 +177,8 @@ public class Client_ReceivesFiles {
      */
     public static void readMoreThanOneFiles() throws IOException {
 //        Client_ReceivesFiles client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
+        client_receivesFiles=Main.getClient_receivesFiles();
+
         prepareReceivedFilesDestination("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/");
 
         BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
@@ -229,6 +236,8 @@ public class Client_ReceivesFiles {
 //    }
 
     public static String getLastListenedTitle() throws IOException {
+        client_receivesFiles=Main.getClient_receivesFiles();
+
         BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
         PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
 
@@ -247,6 +256,8 @@ public class Client_ReceivesFiles {
     }
 
     public static String getLastListenedTime() throws IOException {
+        client_receivesFiles=Main.getClient_receivesFiles();
+
         BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
         PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
 
@@ -265,6 +276,8 @@ public class Client_ReceivesFiles {
     }
 
     public static String getYourName() throws IOException {
+//        if (client_receivesFiles==null) System.out.println("maraz");
+        client_receivesFiles=Main.getClient_receivesFiles();
         BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
         PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
 
@@ -283,14 +296,18 @@ public class Client_ReceivesFiles {
     }
 
     public int getID() {
+        client_receivesFiles=Main.getClient_receivesFiles();
         return ID;
     }
 
     public static Client_ReceivesFiles getClient_receivesFiles() {
+        client_receivesFiles=Main.getClient_receivesFiles();
         return client_receivesFiles;
     }
 
     public void setID(int ID) {
+
+        client_receivesFiles=Main.getClient_receivesFiles();
         this.ID = ID;
     }
 }

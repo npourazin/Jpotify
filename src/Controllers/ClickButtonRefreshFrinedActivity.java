@@ -38,7 +38,14 @@ public class ClickButtonRefreshFrinedActivity implements ActionListener {
         try {
             Main.setClient_receivesFiles( new Client_ReceivesFiles(IP, 8080));
             if(Main.getClient_receivesFiles()==null) return;
-            ClickButtonRefreshFrinedActivity.receivedFriendInfos.add(new ReceivedFriendInfo(Client_ReceivesFiles.getYourName(),Main.getClient_receivesFiles().getLastListenedTitle(),Main.getClient_receivesFiles().getLastListenedTime(), IP));
+           String name = Main.getClient_receivesFiles().getYourName();
+            Main.setClient_receivesFiles( new Client_ReceivesFiles(IP, 8080));
+            if(Main.getClient_receivesFiles()==null) return;
+            String title = Main.getClient_receivesFiles().getLastListenedTitle();
+            Main.setClient_receivesFiles( new Client_ReceivesFiles(IP, 8080));
+            if(Main.getClient_receivesFiles()==null) return;
+            String time = Main.getClient_receivesFiles().getLastListenedTime();
+            ClickButtonRefreshFrinedActivity.receivedFriendInfos.add(new ReceivedFriendInfo(name,title,time, IP));
         } catch (IOException e) {
             e.printStackTrace();
         }
