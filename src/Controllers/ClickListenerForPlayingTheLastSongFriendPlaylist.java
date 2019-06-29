@@ -40,6 +40,8 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
             tempArr.add(music.getSongData());
         }
 
+        Main.setCurrentQueue(tempArr);
+        Main.setSongQueueIndex(0);
         PlayerManager.playerManager();
         //play the queue
         ButtonListenerPauseAndPlay.setSongToPlay();

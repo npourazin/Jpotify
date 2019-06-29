@@ -145,7 +145,7 @@ public class Client_ReceivesFiles {
      * @param path the targeted directory's path
      * @throws IOException
      */
-    private static void prepareReceivedFilesDestination(String path) throws IOException {
+    public static void prepareReceivedFilesDestination(String path) throws IOException {
 
         File file = new File(path);
         if (!file.exists()) {
