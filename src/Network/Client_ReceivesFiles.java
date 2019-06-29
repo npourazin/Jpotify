@@ -56,6 +56,7 @@ public class Client_ReceivesFiles {
 
 //        byte[] buffer = new byte[FILE_SIZE];
         Socket socket = Main.getClient_receivesFiles().getSocket();
+
         InputStream is = socket.getInputStream();
         File test = new File(FILE_TO_RECEIVED);
         test.createNewFile();
@@ -77,7 +78,7 @@ public class Client_ReceivesFiles {
         }
         out.flush();
         System.out.println("hhhhhhhhhhhhhhhhhhh2");
-        socket.close();
+//        socket.close();
         fos.close();
         is.close();
 
@@ -117,7 +118,7 @@ public class Client_ReceivesFiles {
         receiveFile();
 
         out.println("quit");
-        client_receivesFiles.getSocket().close();
+//        client_receivesFiles.getSocket().close();
     }
 
     /**
@@ -193,7 +194,7 @@ public class Client_ReceivesFiles {
 
 
         out.println("quit");
-        client_receivesFiles.getSocket().close();
+//        client_receivesFiles.getSocket().close();
     }
 
 //    public static void getLastListenedData() throws IOException {
@@ -247,7 +248,7 @@ public class Client_ReceivesFiles {
         String songName = inp.readLine();
 
         out.println("quit");
-        client_receivesFiles.getSocket().close();
+//        client_receivesFiles.getSocket().close();
 
         return songName;
     }
@@ -267,7 +268,7 @@ public class Client_ReceivesFiles {
         String lastTime = inp.readLine();
 
         out.println("quit");
-        client_receivesFiles.getSocket().close();
+//        client_receivesFiles.getSocket().close();
 
         return lastTime+" ago";
     }
@@ -286,8 +287,9 @@ public class Client_ReceivesFiles {
 
         String name = inp.readLine();
 
+
         out.println("quit");
-        client_receivesFiles.getSocket().close();
+//        client_receivesFiles.getSocket().close();
 
         return name;
     }
