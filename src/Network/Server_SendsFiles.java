@@ -55,7 +55,6 @@ public class Server_SendsFiles implements Runnable {
     /**
      * @return If GUI window is not closed, it returns the absolute path of the the song currently being played.
      * otherwise, It returns the absolute path of last song that was listened before closing the window.
-     *
      */
     private static String processRequest() {
 //        PlayerManager.getsP() != null;
@@ -121,8 +120,9 @@ public class Server_SendsFiles implements Runnable {
                         if (protocolCommand.contains("file")) {
                             if (protocolCommand.contains("--LastListened")) {
                                 String lastListenedSongPath = "";
+                                lastListenedSongPath = processRequest();
                                 try {
-                                    lastListenedSongPath = processRequest();
+                                    System.out.println("processed request:" + lastListenedSongPath);
                                     if (lastListenedSongPath.equals("") || lastListenedSongPath == null) {
                                         client.close();
                                         numberOfClients--;
@@ -135,8 +135,7 @@ public class Server_SendsFiles implements Runnable {
                                     e.printStackTrace();
                                 }
                                 sendFile(fis, bis, os, lastListenedSongPath);
-                            }
-                            else if (protocolCommand.contains("--SharedPlaylist")) {
+                            } else if (protocolCommand.contains("--SharedPlaylist")) {
                                 if (!new File("src/SharedPlaylist.txt").exists()) {
                                     try {
                                         client.close();
@@ -146,12 +145,12 @@ public class Server_SendsFiles implements Runnable {
                                     numberOfClients--;
                                     return;
                                 }
-                                int count=0;
+                                int count = 0;
                                 try {
                                     Scanner sc = new Scanner(new FileReader("src/SharedPlaylist.txt"));
                                     while (sc.hasNext()) {
                                         sc.nextLine();
-                                        count ++;
+                                        count++;
                                     }
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
@@ -165,8 +164,7 @@ public class Server_SendsFiles implements Runnable {
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
                                 }
-                            }
-                            else {
+                            } else {
                                 out.println("Invalid command");
                                 out.println("See 'get --help'.");
                             }
@@ -180,7 +178,6 @@ public class Server_SendsFiles implements Runnable {
                                     if (!Main.isJpotifyGUIWindowClosed()) {
 //                                        System.out.println("in here1");
                                         out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getSongName());
-                                        out.println("now");
 //                                        System.out.println("sent");
 
                                     } else {
@@ -194,16 +191,22 @@ public class Server_SendsFiles implements Runnable {
                                         }
                                     }
 
-                                }
-                                else if (protocolCommand.contains("time")) {
-                                    Date dateListened = new Date(new File("src/LastSongListened.txt").lastModified());
+                                } else if (protocolCommand.contains("time")) {
+                                    if (!Main.isJpotifyGUIWindowClosed()) {
 
-                                    //mahvash was here
-                                    String diff =dateToString(dateListened);
-                                    out.println(diff);
+                                        out.println("now");
+                                    }else{
+                                        Date dateListened = new Date(new File("src/LastSongListened.txt").lastModified());
+
+                                        //mahvash was here
+                                        String diff = dateToString(dateListened);
+                                        out.println(diff);
+                                    }
+
                                 }
 
-                            } else if (protocolCommand.contains("--sharedPlaylist")) {
+                            }
+                            else if (protocolCommand.contains("--sharedPlaylist")) {
                                 if (!new File("src/SharedPlaylist.txt").exists()) {
                                     try {
                                         client.close();
@@ -243,16 +246,13 @@ public class Server_SendsFiles implements Runnable {
                                 out.println("some switches: --myID, --myName, --LastListened, --sharedPlaylist, --help");
 
                             }
-                            else if(protocolCommand.contains("--myName")){
+                            else if (protocolCommand.contains("--myName")) {
                                 out.println(clientName);
-                            }
-                            else if(protocolCommand.contains("--yourName")){
+                            } else if (protocolCommand.contains("--yourName")) {
                                 out.println(Main.getMyName());
-                            }
-                            else if(protocolCommand.contains("--myID")){
+                            } else if (protocolCommand.contains("--myID")) {
                                 out.println(clientId);
-                            }
-                            else {
+                            } else {
                                 out.println("Invalid command");
                                 out.println("See 'get --help'.");
                             }
@@ -294,11 +294,11 @@ public class Server_SendsFiles implements Runnable {
 
         /**
          * this methos takes a single file with the absolute path of "path"(fourth param) and sends it to the client
-         * @param fis A file input stream that is constructed with String path(third param)
-         * @param bis A buffered input stream that is constructed with fis(first param)
-         * @param os An output stream connected to the client.
-         * @param path Absolute path to the file that is being sent.
          *
+         * @param fis  A file input stream that is constructed with String path(third param)
+         * @param bis  A buffered input stream that is constructed with fis(first param)
+         * @param os   An output stream connected to the client.
+         * @param path Absolute path to the file that is being sent.
          */
         private void sendFile(FileInputStream fis, BufferedInputStream bis, OutputStream os, String path) {
 

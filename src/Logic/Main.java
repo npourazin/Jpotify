@@ -50,6 +50,7 @@ public class Main {
         //set volume to middle
         VolumeChangeListener.setVolume(50);
         new PlayerManager();
+        System.out.println(PlayerManager.getSongDataArrayList().size());
         PlayerManager.playerManager();
 
         jpotifyGUI = new JpotifyGUI();

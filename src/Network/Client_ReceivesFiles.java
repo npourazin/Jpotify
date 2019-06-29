@@ -30,7 +30,7 @@ public class Client_ReceivesFiles {
 
     public static String SERVER = "127.0.0.1";  // localhost
     public final static int FILE_SIZE = 6022386; // file size temporary hard coded
-    // should bigger than the file to be downloaded
+    // should bigger than the file to be downloaded 6022386
 
     private static Client_ReceivesFiles client_receivesFiles=Main.getClient_receivesFiles();
 
@@ -47,57 +47,53 @@ public class Client_ReceivesFiles {
      * makes a directory in RECEIVED folder named as the client's id.
      * writes a single file that eas received into that directory.
      */
-    public static void receiveFile() {
+    public static void receiveFile() throws IOException {
         client_receivesFiles=Main.getClient_receivesFiles();
         File dir = new File("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/");
         List<File> files = Arrays.asList(dir.listFiles());
         int id = files.size() + 1;
         String FILE_TO_RECEIVED = "src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/" + id + ".mp3";
 
+//        byte[] buffer = new byte[FILE_SIZE];
+        Socket socket = Main.getClient_receivesFiles().getSocket();
+        InputStream is = socket.getInputStream();
+        File test = new File(FILE_TO_RECEIVED);
+        test.createNewFile();
+        int byteread=0;
 
-        int bytesRead;
-        int current = 0;
-        FileOutputStream fos = null;
-        BufferedOutputStream bos = null;
-        Socket sock = null;
+        FileOutputStream fos = new FileOutputStream(test);
+        BufferedOutputStream out = new BufferedOutputStream(fos);
 
-        try {
-            sock = client_receivesFiles.getSocket();
-            System.out.println("Connected!");
-            ///TODO get lastlistened status from my server to update Friends activity UI
+        byte[] buffer = new byte[FILE_SIZE];
 
-            // receive file
-            System.out.println();
-            byte[] mybytearray = new byte[FILE_SIZE];
-            InputStream is = sock.getInputStream();
-            fos = new FileOutputStream(FILE_TO_RECEIVED);
-            bos = new BufferedOutputStream(fos);
-            bytesRead = is.read(mybytearray, 0, mybytearray.length);
-            current = bytesRead;
-
-            do {
-                bytesRead =
-                        is.read(mybytearray, current, (mybytearray.length - current));
-                if (bytesRead >= 0) current += bytesRead;
-            } while (bytesRead > -1);
-
-            bos.write(mybytearray, 0, current);
-            bos.flush();
-            System.out.println("File " + FILE_TO_RECEIVED
-                    + " downloaded (" + current + " bytes read)");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (fos != null) fos.close();
-                if (bos != null) bos.close();
-                if (sock != null) sock.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//        while ((byteread = is.read(buffer, 0, buffer.length)) != -1) {
+//            out.write(buffer, 0, byteread);
+//        }
+        int count=0;
+        while ((count = is.read(buffer)) > 0) {
+            out.write(buffer, 0, count);
         }
+
+        out.flush();
+        System.out.println("hhhhhhhhhhhhhhhhhhh");
+        socket.close();
+        fos.close();
+        is.close();
+
+//
+//            System.out.println("File " + FILE_TO_RECEIVED
+//                    + " downloaded (" + current + " bytes read)");
+
+//        finally {
+//            try {
+//                if (fos != null) fos.close();
+//                if (bos != null) bos.close();
+//                if(is!=null) is.close();
+//                if (sock != null) sock.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
     }
 
     /**
@@ -116,7 +112,7 @@ public class Client_ReceivesFiles {
         out.println("get --myID");
         client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
 
-        out.println("get --lastListened");
+        out.println("get file --lastListened");
         receiveFile();
 
         out.println("quit");
@@ -188,7 +184,7 @@ public class Client_ReceivesFiles {
         out.println("get --myID");
         client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
 
-        out.println("get --sharedPlaylist");
+        out.println("get file --sharedPlaylist");
         int numberOfFilesRecieved = inp.read();
         for (int i = 0; i < numberOfFilesRecieved; i++) {
             receiveFile();
@@ -313,7 +309,73 @@ public class Client_ReceivesFiles {
 }
 
 
+/*
 
+
+
+
+int bytesRead=0;
+        int current = 0;
+        FileOutputStream fos = null;
+        BufferedOutputStream bos = null;
+        Socket sock = null;
+        InputStream is=null;
+
+        try {
+            client_receivesFiles=Main.getClient_receivesFiles();
+
+            sock = client_receivesFiles.getSocket();
+            System.out.println("Connected!");
+            ///TODO get lastlistened status from my server to update Friends activity UI
+
+            // receive file
+            System.out.println();
+            byte[] mybytearray = new byte[FILE_SIZE];
+            is = sock.getInputStream();
+
+            fos = new FileOutputStream(new File(FILE_TO_RECEIVED));
+            System.err.println("hahahaha0");
+
+            bos = new BufferedOutputStream(fos);
+            System.err.println("hahahaha1");
+
+//            int count;
+//            while((count=is.read(mybytearray)) >0){
+//                fos.write(mybytearray);
+//            }
+//            System.out.println("hjd;fojidpos");
+//            fos.flush();
+//            fos.close();
+
+
+//            bytesRead = is.read(mybytearray, 0, mybytearray.length);
+
+            System.err.println("hahahaha2");
+
+//            current = bytesRead;
+//            do {
+//                bytesRead = is.read(mybytearray, current, (mybytearray.length - current));
+//                if (bytesRead >= 0) current += bytesRead;
+//            } while (bytesRead > -1);
+
+//            byte[] mybytearray = new byte[16384];
+//
+            while ((bytesRead = is.read(mybytearray, 0, mybytearray.length)) != -1) {
+                bos.write(mybytearray, 0, bytesRead);
+            }
+
+            bos.flush();
+
+//            fos.write(mybytearray, 0, current);
+            System.err.println("hahahaha3");
+
+//            fos.flush();
+
+
+
+
+
+ */
 
 
 
