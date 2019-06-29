@@ -145,8 +145,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+            <state relative-caret-position="93">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -437,7 +437,7 @@
       <workItem from="1561598902820" duration="40949000" />
       <workItem from="1561693875542" duration="55320000" />
       <workItem from="1561783192866" duration="6762000" />
-      <workItem from="1561791386440" duration="29114000" />
+      <workItem from="1561791386440" duration="29946000" />
     </task>
     <task id="LOCAL-00073" summary="Receives files (semi-bugful!)">
       <created>1561582126926</created>
@@ -786,7 +786,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361908000" />
+    <option name="totallyTimeSpent" value="362740000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -848,7 +848,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bugs fixed." />
     <MESSAGE value="Bugs fixed.&#10;some pics also attached in images folder." />
     <MESSAGE value="Client_ReceivesFiles completed.&#10;not tested yet." />
     <MESSAGE value="TODO added." />
@@ -873,7 +872,8 @@
     <MESSAGE value="ashghaaaal" />
     <MESSAGE value="final version before submission." />
     <MESSAGE value="bug fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixed." />
+    <MESSAGE value="Minor changes in client, server and JpotifyWindowActionListener" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes in client, server and JpotifyWindowActionListener" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1310,8 +1310,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+        <state relative-caret-position="93">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

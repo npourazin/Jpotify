@@ -9,6 +9,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.*;
 
+
 public class JpotifyWindowActionListener implements WindowListener {
     @Override
     public void windowOpened(WindowEvent windowEvent) {
