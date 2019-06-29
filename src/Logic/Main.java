@@ -1,7 +1,5 @@
 package Logic;
 
-import Controllers.ClickButtonRefreshFrinedActivity;
-import Controllers.ReceivedFriendInfo;
 import Controllers.VolumeChangeListener;
 import GUI.*;
 import Network.Client_ReceivesFiles;
@@ -19,7 +17,7 @@ public class Main {
     private static ArrayList<SongData> currentQueue;
     private static int songQueueIndex = 0;
     private static String myName = "admin";
-    private static int holyFlag = 0;
+    private static int flag = 0;
     private static Server_SendsFiles server_sendsFiles;
     private static Client_ReceivesFiles client_receivesFiles;
     private static ArrayList<String> IPList;
@@ -40,7 +38,7 @@ public class Main {
         System.out.println("hello");
 
         SignInOrSignUp signInOrSignUp = new SignInOrSignUp();
-        while (holyFlag != 1) {
+        while (flag != 1) {
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
@@ -231,8 +229,8 @@ public class Main {
         Main.myName = myName;
     }
 
-    public static void setHolyFlag(int holyFlag) {
-        Main.holyFlag = holyFlag;
+    public static void setFlag(int flag) {
+        Main.flag = flag;
     }
 
     public static boolean isJpotifyGUIWindowClosed() {

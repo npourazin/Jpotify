@@ -37,6 +37,8 @@ public class ClickListenerForGettingFriendPlaylist implements ActionListener {
             ex.printStackTrace();
         }
 
+        Main.getJpotifyGUI().revalidate();
+
 
         //get the array list of songs in current queue
         File dir = new File("src/RECEIVED/"+ip+"/");
