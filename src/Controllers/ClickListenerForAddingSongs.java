@@ -13,6 +13,11 @@ import java.util.Scanner;
 import static Logic.SavedSongData.*;
 
 
+/**
+ * adds song that is chosen by file chooser to an array list in Main class if they meet certain requirements,
+ * such as being an mp3 file and etc.
+ * @author niki
+ */
 public class ClickListenerForAddingSongs implements ActionListener {
     private String absolutePath;
     private File file;

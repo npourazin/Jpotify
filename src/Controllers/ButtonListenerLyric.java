@@ -10,7 +10,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
-
+/**
+ * shows lyrics for the song which is currently being played.
+ * @author niki
+ */
 public class ButtonListenerLyric implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {

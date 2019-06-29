@@ -6,6 +6,10 @@ import Logic.PlayerManager;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * click listener for previous button
+ * @author mahvash
+ */
 public class ButtonListenerPrevious implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
