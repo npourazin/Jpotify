@@ -23,8 +23,8 @@ public class ClickListenerForGettingFriendPlaylist implements ActionListener {
         JButton jB=(JButton)e.getSource();
         String ip = jB.getName();
 
-        int index=Integer.valueOf(jB.getName());
-        ClickButtonRefreshFrinedActivity.connect(Main.getIPList().get(index));
+//        int index=Integer.valueOf(jB.getName());
+        ClickButtonRefreshFrinedActivity.connect(jB.getName());
         try {
             Main.getClient_receivesFiles().readMoreThanOneFiles();
         } catch (IOException ex) {
