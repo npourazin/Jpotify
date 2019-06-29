@@ -29,8 +29,10 @@ public class PlayerManager {
 
             System.out.println(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
             sP = new SongPlayer(Main.getCurrentQueue().get(Main.getSongQueueIndex()).getAbsolutePath());
-//            sP.setVolume();
             ButtonListenerPauseAndPlay.setIfNewSong();
+
+            //comment if you don't want to play immediatly
+//            ButtonListenerPauseAndPlay.setSongToPlay();
 
             //Change last time listened
             for (int i = 0; i <PlayerManager.getSongDataArrayList().size() ; i++) {

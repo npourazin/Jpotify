@@ -1,5 +1,7 @@
 package Logic;
 
+import Controllers.ClickButtonRefreshFrinedActivity;
+import Controllers.ReceivedFriendInfo;
 import Controllers.VolumeChangeListener;
 import GUI.*;
 import Network.Client_ReceivesFiles;
@@ -30,6 +32,7 @@ public class Main {
     private static boolean jpotifyGUIWindowClosed; //1 if closed, 0 otherwise.
 
     public static void main(String[] args) {
+
 
         currentQueue = null;
         System.out.println("hello");
