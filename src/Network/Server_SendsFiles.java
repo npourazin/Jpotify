@@ -334,7 +334,7 @@ public class Server_SendsFiles implements Runnable {
                     if (bis != null) bis.close();
                     if (os != null) os.close();
                     if(fis!=null) fis.close();
-                    if (client != null) client.close();
+//                    if (client != null) client.close();
 
                 } catch (IOException e) {
                     e.printStackTrace();
