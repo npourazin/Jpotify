@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/ClickButtonRefreshFrinedActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ClickButtonRefreshFrinedActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java" afterDir="false" />
-    </list>
+    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-105">
-              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+              <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -54,8 +49,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForPlayingTheLastSongFriendPlaylist.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="315">
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Logic/PlayerManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -70,15 +74,6 @@
                 <element signature="e#10094#10095#0" expanded="true" />
                 <element signature="e#10119#10120#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/DialogListenerRaname.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="79" column="61" selection-start-line="79" selection-start-column="61" selection-end-line="79" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -418,14 +413,7 @@
       <workItem from="1561598902820" duration="40949000" />
       <workItem from="1561693875542" duration="55320000" />
       <workItem from="1561783192866" duration="6762000" />
-      <workItem from="1561791386440" duration="3052000" />
-    </task>
-    <task id="LOCAL-00062" summary="Bug fixed.">
-      <created>1561532722645</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1561532722645</updated>
+      <workItem from="1561791386440" duration="3335000" />
     </task>
     <task id="LOCAL-00063" summary="Bug fixed.&#10;Slider showTime fixed.">
       <created>1561534418297</created>
@@ -763,11 +751,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561795692203</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="just in case.">
+      <created>1561797548231</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1561797548231</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335846000" />
+    <option name="totallyTimeSpent" value="336129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -780,7 +775,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="694" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -1096,17 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/PlayerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="30" />
-          <folding>
-            <element signature="e#2005#2006#0" expanded="true" />
-            <element signature="e#2042#2043#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -1274,14 +1257,21 @@
     <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-105">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/PlayerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForPlayingTheLastSongFriendPlaylist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="315">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
         </state>
       </provider>
     </entry>
