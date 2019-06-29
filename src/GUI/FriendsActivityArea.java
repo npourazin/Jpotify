@@ -73,11 +73,11 @@ public class FriendsActivityArea extends JPanel {
             friendLastSong.setVerticalTextPosition(0);
             friend.add(friendLastSong);
 
-            JButton playPlaylist=new JButton("Play Their Playlist");
-            getPlaylist.setName(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getIP());
-            playPlaylist.setBackground(Color.pink);
-            playPlaylist.addActionListener(new ClickListenerForPlayingFriendPlaylist());
-            friend.add(playPlaylist);
+//            JButton playPlaylist=new JButton("Play Their Playlist");
+//            getPlaylist.setName(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getIP());
+//            playPlaylist.setBackground(Color.pink);
+//            playPlaylist.addActionListener(new ClickListenerForPlayingFriendPlaylist());
+//            friend.add(playPlaylist);
 
 
 

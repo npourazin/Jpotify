@@ -21,11 +21,6 @@ public class Main {
     private static String myName = "admin";
     private static int holyFlag = 0;
     private static Server_SendsFiles server_sendsFiles;
-
-    public static void setClient_receivesFiles(Client_ReceivesFiles client_receivesFiles) {
-        Main.client_receivesFiles = client_receivesFiles;
-    }
-
     private static Client_ReceivesFiles client_receivesFiles;
     private static ArrayList<String> IPList;
 
@@ -33,6 +28,14 @@ public class Main {
 
     public static void main(String[] args) {
 
+        IPList=new ArrayList<>();
+        IPList.add("127.0.0.1");
+
+        try {
+            Client_ReceivesFiles.prepareReceivedFilesDestination("src/RECEIVED/");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         currentQueue = null;
         System.out.println("hello");
@@ -135,6 +138,10 @@ public class Main {
 
         System.out.println("sub:" + currentQueue.size());
         return true;
+    }
+
+    public static void setClient_receivesFiles(Client_ReceivesFiles client_receivesFiles) {
+        Main.client_receivesFiles = client_receivesFiles;
     }
 
     public static Client_ReceivesFiles getClient_receivesFiles() {
