@@ -1,9 +1,11 @@
 package Controllers;
 
+import GUI.MusicSliderBar;
 import Logic.Main;
 import Logic.Music;
 import Logic.PlayerManager;
 import Logic.SongData;
+import Network.Client_ReceivesFiles;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -21,7 +23,13 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
         String ip = jB.getName();
 
 
-        ClickButtonRefreshFrinedActivity.connect(ip);
+//        ClickButtonRefreshFrinedActivity.connect(ip);
+
+        try {
+            Main.setClient_receivesFiles( new Client_ReceivesFiles(ip, 8080));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
         try {
             Main.getClient_receivesFiles().readAFile();
@@ -29,7 +37,7 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
             ex.printStackTrace();
         }
 
-
+        Main.getJpotifyGUI().revalidate();
 
         File dir = new File("src/RECEIVED/"+ip+"/");
         List<File> files = Arrays.asList(dir.listFiles());
@@ -40,6 +48,7 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
             tempArr.add(music.getSongData());
         }
 
+        System.out.println("+++++++++++++++++++"+tempArr.size());
         Main.setCurrentQueue(tempArr);
         Main.setSongQueueIndex(0);
         PlayerManager.playerManager();

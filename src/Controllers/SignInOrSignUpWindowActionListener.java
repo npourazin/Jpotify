@@ -13,13 +13,13 @@ public class SignInOrSignUpWindowActionListener implements WindowListener {
 
     @Override
     public void windowClosing(WindowEvent windowEvent) {
-        Main.setHolyFlag(1);
+        Main.setFlag(1);
 
     }
 
     @Override
     public void windowClosed(WindowEvent windowEvent) {
-        Main.setHolyFlag(1);
+        Main.setFlag(1);
     }
 
     @Override
