@@ -39,6 +39,9 @@ public class ClickButtonRefreshFrinedActivity implements ActionListener {
             Main.setClient_receivesFiles( new Client_ReceivesFiles(IP, 8080));
             if(Main.getClient_receivesFiles()==null) return;
             ClickButtonRefreshFrinedActivity.receivedFriendInfos.add(new ReceivedFriendInfo(Main.getClient_receivesFiles().getYourName(),Main.getClient_receivesFiles().getLastListenedTitle(),Main.getClient_receivesFiles().getLastListenedTime(), IP));
+
+            Main.getJpotifyGUI().revalidate();
+            Main.getJpotifyGUI().getFriendsActivityArea().revalidate();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -28,8 +28,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        IPList=new ArrayList<>();
-        IPList.add("127.0.0.1");
 
         try {
             Client_ReceivesFiles.prepareReceivedFilesDestination("src/RECEIVED/");
@@ -61,6 +59,8 @@ public class Main {
 
 
         IPList = new ArrayList<>();
+        IPList.add("127.0.0.1");
+
         try {
             server_sendsFiles = new Server_SendsFiles(8080);
             server_sendsFiles.run();
