@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" afterDir="false" />
-    </list>
+    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,20 +31,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="326" column="27" lean-forward="true" selection-start-line="326" selection-start-column="27" selection-end-line="326" selection-end-column="27" />
+            <state relative-caret-position="480">
+              <caret line="334" column="16" lean-forward="true" selection-start-line="334" selection-start-column="16" selection-end-line="334" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#deleteDirectoryRecursionJava6#0;class#Client_ReceivesFiles#0" />
-                <element signature="method#prepareReceivedFilesDestination#0;class#Client_ReceivesFiles#0" />
-                <element signature="e#7039#7106#0" />
-                <element signature="e#8436#8949#0" />
-                <element signature="e#9134#9831#0" />
-                <element signature="e#9856#10506#0" />
-                <element signature="e#10747#10748#0" expanded="true" />
-                <element signature="e#10790#10791#0" expanded="true" />
-                <element signature="e#3535#3536#0" expanded="true" />
-                <element signature="e#3563#3564#0" expanded="true" />
+                <element signature="e#4100#4689#0" />
+                <element signature="e#4695#5586#0" />
               </folding>
             </state>
           </provider>
@@ -56,7 +45,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Network/UserPassVerification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="735">
               <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
             </state>
           </provider>
@@ -65,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
+            <state relative-caret-position="375">
               <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/SliderThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="165">
               <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
             </state>
           </provider>
@@ -86,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="1035">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
             </state>
           </provider>
         </entry>
@@ -95,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javazoom/jl/decoder/Equalizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="660">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
               <folding>
                 <element signature="e#2167#2168#0" expanded="true" />
                 <element signature="e#2191#2192#0" expanded="true" />
@@ -108,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/PlayerManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
+            <state relative-caret-position="810">
               <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="30" />
               <folding>
                 <element signature="e#2005#2006#0" expanded="true" />
@@ -121,25 +110,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
+            <state relative-caret-position="615">
               <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#processRequest#0;class#Server_SendsFiles#0" />
-                <element signature="e#2475#2476#0" expanded="true" />
-                <element signature="e#2519#2520#0" expanded="true" />
                 <element signature="method#run#0;class#Handler#0;class#Server_SendsFiles#0" />
-                <element signature="e#12405#12406#0" expanded="true" />
-                <element signature="e#12460#12461#0" expanded="true" />
-                <element signature="e#12661#12662#0" expanded="true" />
-                <element signature="e#12700#12701#0" expanded="true" />
-                <element signature="e#12749#12750#0" expanded="true" />
-                <element signature="e#12797#12798#0" expanded="true" />
                 <element signature="method#sendFile#0;class#Handler#0;class#Server_SendsFiles#0" />
-                <element signature="e#13922#13923#0" expanded="true" />
-                <element signature="e#13963#13964#0" expanded="true" />
-                <element signature="e#14019#14020#0" expanded="true" />
-                <element signature="e#14071#14072#0" expanded="true" />
                 <element signature="method#dateToString#0;class#Handler#0;class#Server_SendsFiles#0" />
               </folding>
             </state>
@@ -149,12 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
+            <state relative-caret-position="720">
               <caret line="63" selection-start-line="63" selection-end-line="63" />
-              <folding>
-                <element signature="e#6366#6367#0" expanded="true" />
-                <element signature="e#6413#6414#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -162,7 +135,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/MyEqualizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="180">
               <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -280,6 +253,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,8 +289,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -448,6 +421,7 @@
       <workItem from="1561524643509" duration="40338000" />
       <workItem from="1561598902820" duration="40949000" />
       <workItem from="1561693875542" duration="55320000" />
+      <workItem from="1561783192866" duration="347000" />
     </task>
     <task id="LOCAL-00058" summary="Bug fixed.&#10;Couldn't add more than one song before.&#10;ps. I dont even know why it was fixed but well.&#10;changes in writeToFile method in SavedSongData class.">
       <created>1561516693735</created>
@@ -796,7 +770,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326032000" />
+    <option name="totallyTimeSpent" value="326379000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -817,7 +791,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Learn" order="4" weight="0.32954547" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2931818" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2977273" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5159091" side_tool="true" weight="0.32566372" />
@@ -832,7 +806,6 @@
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32920355" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32954547" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Database" order="2" weight="0.32954547" />
@@ -842,6 +815,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32954547" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1171,9 +1145,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LastSongListened.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LastSongListened.txt" />
     <entry file="file://$PROJECT_DIR$/src/Logic/Music.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-409">
@@ -1191,17 +1163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/PlayerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="30" />
-          <folding>
-            <element signature="e#2005#2006#0" expanded="true" />
-            <element signature="e#2042#2043#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javazoom/jl/player/advanced/AdvancedPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1209,16 +1170,6 @@
           <folding>
             <element signature="e#6159#6160#0" expanded="true" />
             <element signature="e#6180#6181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/MyEqualizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1233,42 +1184,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
+    <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+        <state relative-caret-position="480">
+          <caret line="334" column="16" lean-forward="true" selection-start-line="334" selection-start-column="16" selection-end-line="334" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#processRequest#0;class#Server_SendsFiles#0" />
-            <element signature="e#2475#2476#0" expanded="true" />
-            <element signature="e#2519#2520#0" expanded="true" />
-            <element signature="method#run#0;class#Handler#0;class#Server_SendsFiles#0" />
-            <element signature="e#12405#12406#0" expanded="true" />
-            <element signature="e#12460#12461#0" expanded="true" />
-            <element signature="e#12661#12662#0" expanded="true" />
-            <element signature="e#12700#12701#0" expanded="true" />
-            <element signature="e#12749#12750#0" expanded="true" />
-            <element signature="e#12797#12798#0" expanded="true" />
-            <element signature="method#sendFile#0;class#Handler#0;class#Server_SendsFiles#0" />
-            <element signature="e#13922#13923#0" expanded="true" />
-            <element signature="e#13963#13964#0" expanded="true" />
-            <element signature="e#14019#14020#0" expanded="true" />
-            <element signature="e#14071#14072#0" expanded="true" />
-            <element signature="method#dateToString#0;class#Handler#0;class#Server_SendsFiles#0" />
+            <element signature="e#4100#4689#0" />
+            <element signature="e#4695#5586#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Network/UserPassVerification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="735">
           <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="375">
           <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1278,33 +1215,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/SliderThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="165">
           <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="e#6366#6367#0" expanded="true" />
-            <element signature="e#6413#6414#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1035">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javazoom/jl/decoder/Equalizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="660">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="e#2167#2168#0" expanded="true" />
             <element signature="e#2191#2192#0" expanded="true" />
@@ -1312,22 +1238,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
+    <entry file="file://$PROJECT_DIR$/src/Logic/PlayerManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="326" column="27" lean-forward="true" selection-start-line="326" selection-start-column="27" selection-end-line="326" selection-end-column="27" />
+        <state relative-caret-position="810">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="30" />
+          <folding>
+            <element signature="e#2005#2006#0" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#deleteDirectoryRecursionJava6#0;class#Client_ReceivesFiles#0" />
-            <element signature="method#prepareReceivedFilesDestination#0;class#Client_ReceivesFiles#0" />
-            <element signature="e#7039#7106#0" />
-            <element signature="e#8436#8949#0" />
-            <element signature="e#9134#9831#0" />
-            <element signature="e#9856#10506#0" />
-            <element signature="e#10747#10748#0" expanded="true" />
-            <element signature="e#10790#10791#0" expanded="true" />
-            <element signature="e#3535#3536#0" expanded="true" />
-            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="method#processRequest#0;class#Server_SendsFiles#0" />
+            <element signature="method#run#0;class#Handler#0;class#Server_SendsFiles#0" />
+            <element signature="method#sendFile#0;class#Handler#0;class#Server_SendsFiles#0" />
+            <element signature="method#dateToString#0;class#Handler#0;class#Server_SendsFiles#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/MyEqualizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
