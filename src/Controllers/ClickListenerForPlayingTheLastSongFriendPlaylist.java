@@ -21,6 +21,7 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
         String ip = jB.getName();
 
 
+        ClickButtonRefreshFrinedActivity.connect(ip);
 
         try {
             Main.getClient_receivesFiles().readAFile();
@@ -28,16 +29,8 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
             ex.printStackTrace();
         }
 
-        String songName=null;
-        for (int i = 0; i <ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().size() ; i++) {
-            if(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getIP().equals(ip)){
-                songName=ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getLastSong();
-                break;
-            }
-        }
 
 
-        int queueIndex=0;
         File dir = new File("src/RECEIVED/"+ip+"/");
         List<File> files = Arrays.asList(dir.listFiles());
         Main.setCurrentQueue(null);//WHY?
@@ -47,9 +40,7 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
             tempArr.add(music.getSongData());
         }
 
-        QueueIndexController.setIndex(queueIndex);
         PlayerManager.playerManager();
-        ButtonListenerPauseAndPlay.setSongToPlay();
         //play the queue
         ButtonListenerPauseAndPlay.setSongToPlay();
     }
