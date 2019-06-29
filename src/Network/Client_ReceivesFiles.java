@@ -49,10 +49,10 @@ public class Client_ReceivesFiles {
      */
     public static void receiveFile() {
 
-        File dir = new File("src/RECEIVED" + client_receivesFiles.getID() + "/");
+        File dir = new File("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/");
         List<File> files = Arrays.asList(dir.listFiles());
         int id = files.size() + 1;
-        String FILE_TO_RECEIVED = "src/RECEIVED/" + client_receivesFiles.getID() + "/" + id + ".mp3";
+        String FILE_TO_RECEIVED = "src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/" + id + ".mp3";
 
 
         int bytesRead;
@@ -105,7 +105,7 @@ public class Client_ReceivesFiles {
      * @throws IOException
      */
     public static void readAFile() throws IOException {
-        prepareReceivedFilesDestination("src/RECEIVED/" + client_receivesFiles.getID() + "/");
+        prepareReceivedFilesDestination("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/");
 
         BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
         PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
@@ -172,7 +172,7 @@ public class Client_ReceivesFiles {
      */
     public static void readMoreThanOneFiles() throws IOException {
 //        Client_ReceivesFiles client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
-        prepareReceivedFilesDestination("src/RECEIVED/" + client_receivesFiles.getID() + "/");
+        prepareReceivedFilesDestination("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/");
 
         BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
         PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
@@ -282,9 +282,9 @@ public class Client_ReceivesFiles {
         return name;
     }
 
-    public int getID() {
-        return ID;
-    }
+//    public int getID() {
+//        return ID;
+//    }
 
     public static Client_ReceivesFiles getClient_receivesFiles() {
         return client_receivesFiles;
