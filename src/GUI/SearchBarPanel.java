@@ -28,15 +28,10 @@ public class SearchBarPanel extends JPanel {
         searched.setEditable(true);
         searched.setVisible(true);
         searched.setBackground(Color.white);
-//        searched.setSize(200, 30);
 
-//        this.setBorder(new EmptyBorder(2, 5, 2, 5));
         searched.setBorder(new EmptyBorder(10, 3,10,3));
         tmp1.add(searched);
         Dimension d = new Dimension(150, 40);
-//        tmp1.setPreferredSize(d);
-//        searched.setSize(d);
-
 
 
         JPanel tmp2 = new JPanel();

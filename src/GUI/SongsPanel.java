@@ -14,11 +14,13 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+
 /**
  * This class is the panel that shows the songs on the selected
  * playlist. It contains buttons for each song and each button owns
  * a lable and an icon for the song's data and another button for liking
  * the song
+ *
  * @author Mahvash
  */
 
@@ -140,9 +142,6 @@ public class SongsPanel extends JPanel {
             likeButton.setVisible(true);
             songButton.get(i).add(likeButton, BorderLayout.NORTH);
 
-//            songButton.get(i).setBorder(new EmptyBorder(10, 10, 10, 10));
-//            songButton.get(i).setForeground(null);
-//            songButton.get(i).setBackground(null);
             gbc.gridx++;
             if (gbc.gridx == 4) {
                 gbc.gridx = 0;
@@ -175,8 +174,6 @@ public class SongsPanel extends JPanel {
 
         }
 
-
-        //TODO: give each button a listener to play the song
 
     }
 

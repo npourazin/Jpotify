@@ -121,8 +121,6 @@ public class ButtonListenerPauseAndPlay implements ActionListener {
             }
             sP.resumeSong();
         }
-
-        //niki:
         sliderThread.setFlag(1);
         if (sP == null) {
             System.out.println("NULL");

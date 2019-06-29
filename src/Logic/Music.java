@@ -92,10 +92,6 @@ public class Music implements Serializable {
             songData.setGenre(mp3File.getId3v2Tag().getGenre());
 
 
-            //TODO: getGenre() does not provide a .equals method , handle it
-
-//         if(mp3File.getId3v2Tag().getGenre())
-
             byte[] imageBytes = mp3File.getId3v2Tag().getAlbumImage();
             try {
                 int localFlag = 0;
@@ -203,6 +199,15 @@ public class Music implements Serializable {
             file.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+
+        try {
+            Image img = ImageIO.read(getClass().getResource("defaultSongIcon.png"));
+            songData.setIcon(new ImageIcon(img));
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
     }

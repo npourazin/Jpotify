@@ -222,7 +222,6 @@ public class MusicSliderBar extends JPanel {
 
 
         //Thread for Sliding
-        //TODO: make a separate class for the thread and have "current" as its local variable so it can be also stopped.
         jSliderThread = new SliderThread();
 
         //creating a listener class for it in this case creates undesired lag.
@@ -249,11 +248,6 @@ public class MusicSliderBar extends JPanel {
                 volumeSlider.setValue(result);
             }
         });
-
-
-        // had a bug  and was deprecated
-//        jSlider.addMouseListener(new MouseListenerForSliders());
-//        volumeSlider.addMouseListener(new MouseListenerForSliders());
 
 
     }

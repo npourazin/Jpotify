@@ -13,7 +13,6 @@ public class PlayerManager {
     public PlayerManager(){
 
         songDataArrayList = new ArrayList<>();
-
         Main.prepareObjIn();
         SavedSongData.readFromFile(Main.getObjIn());
         songDataArrayList.sort(new SortByTime());
@@ -66,7 +65,6 @@ public class PlayerManager {
 
 class SortByTime implements Comparator<SongData> {
 
-    //TODO: can you make it sort decending dear NIKI???
     @Override
     public int compare(SongData songData, SongData t1) {
         if (songData.getLastTimeListened() != t1.getLastTimeListened()) {

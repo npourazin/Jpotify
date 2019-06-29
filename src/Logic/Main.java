@@ -27,6 +27,7 @@ public class Main {
     public static void main(String[] args) {
 
 
+        System.out.println(Integer.MAX_VALUE);
 
         try {
             Client_ReceivesFiles.prepareReceivedFilesDestination("src/RECEIVED/");
@@ -53,10 +54,6 @@ public class Main {
         PlayerManager.playerManager();
 
         jpotifyGUI = new JpotifyGUI();
-
-        //TODO: write the changes in time and whatever to the file before closing
-
-
         IPList = new ArrayList<>();
         IPList.add("127.0.0.1");
 
@@ -215,7 +212,7 @@ public class Main {
             }
 
         } catch (IOException e) {
-            //Todo figure out this damned exception
+            //Todo figure out this exception
             e.printStackTrace();
         }
 

@@ -13,14 +13,6 @@ import java.util.ArrayList;
 
 public class ClickButtonRefreshFrinedActivity implements ActionListener {
 
-    public static void setReceivedFriendInfos(ArrayList<ReceivedFriendInfo> receivedFriendInfos) {
-        ClickButtonRefreshFrinedActivity.receivedFriendInfos = receivedFriendInfos;
-    }
-
-    public static ArrayList<ReceivedFriendInfo> getReceivedFriendInfos() {
-        return receivedFriendInfos;
-    }
-
     private static ArrayList<ReceivedFriendInfo> receivedFriendInfos;
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -33,8 +25,8 @@ public class ClickButtonRefreshFrinedActivity implements ActionListener {
         for (int i = 0; i < Main.getIPList().size(); i++) {
 
             connect(Main.getIPList().get(i));
-            System.out.println("************************"+receivedFriendInfos.size());
 
+            Dimension d=new Dimension(190,20);
             JPanel friend=new JPanel();
             friend.setBackground(Color.pink);
             friend.setVisible(true);
@@ -44,6 +36,7 @@ public class ClickButtonRefreshFrinedActivity implements ActionListener {
             name.setFont(new Font("Verdana", 9, 10));
             name.setHorizontalTextPosition(0);
             name.setVerticalTextPosition(0);
+            name.setPreferredSize(d);
             friend.add(name);
 
             JButton getPlaylist=new JButton("Get Their Playlist !");
@@ -51,12 +44,13 @@ public class ClickButtonRefreshFrinedActivity implements ActionListener {
             getPlaylist.setBackground(Color.pink);
             getPlaylist.addActionListener(new ClickListenerForGettingFriendPlaylist());
             friend.add(getPlaylist);
+            getPlaylist.setPreferredSize(d);
 
 
             JButton friendLastSong=new JButton();
             friendLastSong.setLayout(new GridLayout(1,2));
             JLabel songName=new JLabel(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getLastSong());
-            JLabel timeListened=new JLabel(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getLastTimeListened());
+            JLabel timeListened=new JLabel("     "+ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getLastTimeListened());
             friendLastSong.add(songName);
             friendLastSong.add(timeListened);
             friendLastSong.addActionListener(new ClickListenerForPlayingTheLastSongFriendPlaylist());
@@ -64,6 +58,7 @@ public class ClickButtonRefreshFrinedActivity implements ActionListener {
             friendLastSong.setFont(new Font("Verdana", 9, 8));
             friendLastSong.setHorizontalTextPosition(0);
             friendLastSong.setVerticalTextPosition(0);
+            friendLastSong.setPreferredSize(d);
             friend.add(friendLastSong);
 
             Main.getJpotifyGUI().revalidate();
@@ -88,6 +83,13 @@ public class ClickButtonRefreshFrinedActivity implements ActionListener {
             e.printStackTrace();
         }
 
+    }
+    public static void setReceivedFriendInfos(ArrayList<ReceivedFriendInfo> receivedFriendInfos) {
+        ClickButtonRefreshFrinedActivity.receivedFriendInfos = receivedFriendInfos;
+    }
+
+    public static ArrayList<ReceivedFriendInfo> getReceivedFriendInfos() {
+        return receivedFriendInfos;
     }
 
 }

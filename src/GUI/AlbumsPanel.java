@@ -6,6 +6,7 @@ import Logic.PlayerManager;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
@@ -25,10 +26,18 @@ public class AlbumsPanel extends JPanel {
 
     public AlbumsPanel() {
         super();
-        this.setLayout(new FlowLayout());
+
+        jScrollPane = new JScrollPane(this);
+        jScrollPane.setViewportView(this);
+        jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane.setViewportBorder(new LineBorder(Color.pink));
+        jScrollPane.updateUI();
+        jScrollPane.setVisible(true);
         this.setVisible(true);
         albumButton = new ArrayList<>();
         albums = new ArrayList<>();
+        this.setLayout(new GridBagLayout());
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -44,7 +53,7 @@ public class AlbumsPanel extends JPanel {
             e.printStackTrace();
         }
 
-        //sort albim by time
+        //sort album by time
         sortAlbums();;
 
 
@@ -89,7 +98,7 @@ public class AlbumsPanel extends JPanel {
 
 
             gbc.gridx++;
-            if (gbc.gridx == 3) {
+            if (gbc.gridx == 4) {
                 gbc.gridx = 0;
                 gbc.gridy++;
             }

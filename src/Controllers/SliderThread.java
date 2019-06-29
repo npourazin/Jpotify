@@ -50,8 +50,6 @@ public class SliderThread extends Thread {
         if (flag == 1) {
             //it is being played
             currentTime++;
-//            if(currentTime==MusicSliderBar.getMusicLenght())
-//                currentTime--;
         }
     }
 

@@ -23,8 +23,6 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
         String ip = jB.getName();
 
 
-//        ClickButtonRefreshFrinedActivity.connect(ip);
-
         try {
             Main.setClient_receivesFiles( new Client_ReceivesFiles(ip, 8080));
         } catch (IOException ex) {

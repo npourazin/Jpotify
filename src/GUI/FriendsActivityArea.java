@@ -15,7 +15,6 @@ import java.util.ArrayList;
 public class FriendsActivityArea extends JPanel {
     private JScrollPane jScrollPane;
     private static JButton refresh;
-    private static boolean askedForLastListened = true;
     public FriendsActivityArea() {
         super();
         ClickButtonRefreshFrinedActivity.setReceivedFriendInfos(new ArrayList< ReceivedFriendInfo>());
@@ -35,7 +34,7 @@ public class FriendsActivityArea extends JPanel {
 
         refresh = new JButton(" Friends Activity ");
         refresh.setVisible(true);
-        refresh.setPreferredSize(new Dimension(150,20));
+        refresh.setPreferredSize(new Dimension(190,20));
         refresh.setFont(new Font("Verdana", 9, 10));
         refresh.addActionListener(new ClickButtonRefreshFrinedActivity());
         refresh.setBackground(Color.cyan);
@@ -45,23 +44,10 @@ public class FriendsActivityArea extends JPanel {
 
     }
 
-    public static void setRefresh(JButton refresh) {
-        FriendsActivityArea.refresh = refresh;
-    }
-
     public static JButton getRefresh() {
         return refresh;
     }
 
-
-
-    public static boolean isAskedForLastListened() {
-        return askedForLastListened;
-    }
-
-    public static void setAskedForLastListened(boolean askedForLastListened) {
-        FriendsActivityArea.askedForLastListened = askedForLastListened;
-    }
 
     @Override
     public void paint(Graphics g) {

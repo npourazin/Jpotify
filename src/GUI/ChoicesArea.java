@@ -22,7 +22,6 @@ import java.util.Scanner;
 public class ChoicesArea extends JPanel {
     private JScrollPane jScrollPane;
     private static DefaultListModel model;
-    //TODO: make not static:
 
     public ChoicesArea() {
         this.setLayout(new GridLayout(10, 1));
@@ -66,9 +65,7 @@ public class ChoicesArea extends JPanel {
         this.add(favouritePlaylistButton);
         favouritePlaylistButton.addActionListener(new ClickListenerForShowingFavouritePlaylist());
 
-        //<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
-        // title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-        // title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
 
         JButton sharedPlaylistButton = new JButton("Shared Playlist");
         sharedPlaylistButton.setVisible(true);
@@ -141,11 +138,9 @@ public class ChoicesArea extends JPanel {
         removePlaylist.addActionListener(new ItemClickedRemovePlaylist());
         popupMenu.add(removePlaylist);
 
-//        list.addMouseListener(new RightClickListener());
         list.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-//                super.mouseClicked(e);
                 if (SwingUtilities.isRightMouseButton(e)    // if right mouse button clicked
                         && !list.isSelectionEmpty()            // and list selection is not empty
                         && list.locationToIndex(e.getPoint()) // and clicked point is
@@ -164,25 +159,6 @@ public class ChoicesArea extends JPanel {
         jScrollPane.updateUI();
         jScrollPane.setVisible(true);
 
-//TODO this was here
-
-//        JLabel currentSongLable = new JLabel("  Current Song:");
-//        currentSongLable.setVisible(true);
-//        currentSongLable.setFont(new Font("Verdana", 9, 13));
-//        currentSongLable.setBackground(Color.cyan);
-//        this.add(currentSongLable, BorderLayout.NORTH);
-//
-//        //creating song icon
-////        JPanel bottomPanel = new JPanel();
-//        songIconLable = new JLabel();
-//        Dimension d = new Dimension(200, 800);
-//        songIconLable.setVisible(true);
-//        songIconLable.setPreferredSize(d);
-//        this.add(songIconLable,BorderLayout.SOUTH);
-  //Todo up to here
-
-//        bottomPanel.add(songIconLable);
-//        this.add(bottomPanel,SpringLayout.SOUTH);
     }
     public static DefaultListModel getModel(){
         return model;

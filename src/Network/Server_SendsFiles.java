@@ -424,7 +424,7 @@ public class Server_SendsFiles implements Runnable {
                     return "" + res + " s";
                 }
             }
-            return "";
+            return "Now";
         }
     }
 

@@ -51,7 +51,7 @@ public class ScrollSliderChanger implements ChangeListener {
             frames = file.getFrameCount();
             System.out.println("Go to time:" + fps + " of the song");
 
-            //NOW we LITERALY need to go to that time of the song
+            //Now  we need to go to that time of the song
             MusicSliderBar.getjSliderThread().setCurrentTime(fps);
             if (next == 0) {
                 next = fps;

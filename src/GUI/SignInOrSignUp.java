@@ -45,7 +45,6 @@ public class SignInOrSignUp extends JFrame {
         adminTest.addActionListener(new ClickListenerForAccountManager());
         panel1.add(adminTest);
 
-//        panelSignUp.addddddddd;
     }
 
     public static void setPanel1(JPanel panel1) {

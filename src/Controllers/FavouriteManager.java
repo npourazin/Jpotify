@@ -49,8 +49,6 @@ public class FavouriteManager {
                 }
                 count++;
             }
-            //if the selected song was not on the list do nothing
-//            if (index == -1) return;
 
             PrintWriter pw = new PrintWriter(new FileWriter(new File("src/Favourite.txt"), false), true);
             for (int i = 0; i < count-1; i++) {

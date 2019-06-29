@@ -17,12 +17,10 @@ public class ButtonListenerShufflePlay implements ActionListener {
         JButton jB = (JButton) (e.getSource());
         if(jB.getText().equals("Off")){
             shuffleOn=true;
-//            Main.shufflePlayQueue();
             jB.setText("On");
         }
         else if(jB.getText().equals("On")){
             shuffleOn=false;
-//            Main.shufflePlayQueue();
             jB.setText("Off");
         }
 
