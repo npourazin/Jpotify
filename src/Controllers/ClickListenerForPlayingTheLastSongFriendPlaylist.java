@@ -21,6 +21,7 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
         String ip = jB.getName();
 
 
+
         try {
             Main.getClient_receivesFiles().readAFile();
         } catch (IOException ex) {
