@@ -1,5 +1,6 @@
 package Controllers;
 
+import GUI.MusicSliderBar;
 import Logic.Main;
 import Logic.PlayerManager;
 import Logic.SavedSongData;
@@ -32,11 +33,19 @@ public class JpotifyWindowActionListener implements WindowListener {
             e.printStackTrace();
         }
 
+        if(PlayerManager.getsP()!=null){
+            System.out.println("Closing the song");
+            PlayerManager.getsP().pauseSong();
+            PlayerManager.getsP().stopSong();
+            MusicSliderBar.getjSliderThread().setCurrentTime(1000000);
+            return;
+        }
+
         Main.prepareObjOut();
         SavedSongData.writeToFile(PlayerManager.getSongDataArrayList());
 
-        if(PlayerManager.getsP()!=null)
-             PlayerManager.getsP().close();
+
+
 
     }
 
