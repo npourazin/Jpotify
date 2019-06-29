@@ -242,5 +242,7 @@ public class AdvancedPlayer
 		close();
 	}
 
-
+	public Decoder getDecoder() {
+		return decoder;
+	}
 }

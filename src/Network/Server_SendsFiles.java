@@ -52,7 +52,12 @@ public class Server_SendsFiles implements Runnable {
     }
 
 
-    public static String processRequest() {
+    /**
+     * @return If GUI window is not closed, it returns the absolute path of the the song currently being played.
+     * otherwise, It returns the absolute path of last song that was listened before closing the window.
+     *
+     */
+    private static String processRequest() {
 //        PlayerManager.getsP() != null;
         if (!Main.isJpotifyGUIWindowClosed()) {
             //now
@@ -67,11 +72,6 @@ public class Server_SendsFiles implements Runnable {
         }
     }
 
-    public static Package makePackageForData(String request) {
-        Package pac = new Package(request);
-        //TODO what is the package that is sent??
-        return pac;
-    }
 
     private static class Handler implements Runnable {
 
@@ -85,6 +85,10 @@ public class Server_SendsFiles implements Runnable {
             this.client = client;
         }
 
+        /**
+         * this method is overridden. in this method server takes requests from the client and decides what course
+         * of action to take depending on the requests.
+         */
         @Override
         public void run() {
             FileInputStream fis = null;
@@ -288,6 +292,14 @@ public class Server_SendsFiles implements Runnable {
             this.clientId = clientId;
         }
 
+        /**
+         * this methos takes a single file with the absolute path of "path"(fourth param) and sends it to the client
+         * @param fis A file input stream that is constructed with String path(third param)
+         * @param bis A buffered input stream that is constructed with fis(first param)
+         * @param os An output stream connected to the client.
+         * @param path Absolute path to the file that is being sent.
+         *
+         */
         private void sendFile(FileInputStream fis, BufferedInputStream bis, OutputStream os, String path) {
 
             try {
@@ -328,7 +340,10 @@ public class Server_SendsFiles implements Runnable {
         }
 
 
-        //mahvash
+        /**
+         * @param d a Date that moust be compared to now.
+         * @return the fomatted String indicating the time difference between Date d and now
+         */
         public static String dateToString(Date d) {
 
             String date[] = d.toString().split(" ", 0);
@@ -413,12 +428,4 @@ public class Server_SendsFiles implements Runnable {
         }
     }
 
-
-    public static void main(String[] args) {
-//        try {
-//            Main.server_sendsFiles.run();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-    }
 }

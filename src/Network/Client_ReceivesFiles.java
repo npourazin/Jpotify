@@ -12,9 +12,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Client_ReceivesFiles {
-    //todo fill this
-
-
     private Socket socket;
     private int ID;
 
@@ -22,63 +19,34 @@ public class Client_ReceivesFiles {
         this.socket = new Socket(ip, port);
     }
 
+    public static void setClient_receivesFiles(Client_ReceivesFiles client_receivesFiles) {
+        Client_ReceivesFiles.client_receivesFiles = client_receivesFiles;
+    }
+
     public Socket getSocket() {
         return socket;
     }
 
-//    public void fetchData() {
-//
-//    }
 
-    //    public final static int SOCKET_PORT = 8080;
-    public final static String SERVER = "127.0.0.1";  // localhost
-
-//    private static File dir = new File("src/RECEIVED");
-//    private static List<File> files = Arrays.asList(dir.listFiles());
-//    private static int id = files.size() + 1;
-
-    //TODO create different folders for different clients in RECEIVED;
-    // you may change this, I give a
-    // different name because i don't want to
-    // overwrite the one used by server...
-
+    public static String SERVER = "127.0.0.1";  // localhost
     public final static int FILE_SIZE = 6022386; // file size temporary hard coded
     // should bigger than the file to be downloaded
 
     private static Client_ReceivesFiles client_receivesFiles;
 
-    static {
-        try {
-            client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    static {
+//        try {
+//            client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 
-    public static void main(String[] args) throws IOException {
-
-//        Client_ReceivesFiles client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
-
-        BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
-        PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
-
-//        out.println("start " + Main.getMyName());
-//        out.println("get --myID");
-//        client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
-
-        //return the number of files i shall get?
-        //just check what i wrote?
-        //use how it was called?
-
-        getLastListenedTime();
-
-//
-//        out.println("quit");
-//        client_receivesFiles.getSocket().close();
-
-    }
-
+    /**
+     * makes a directory in RECEIVED folder named as the client's id.
+     * writes a single file that eas received into that directory.
+     */
     public static void receiveFile() {
 
         File dir = new File("src/RECEIVED" + client_receivesFiles.getID() + "/");
@@ -132,9 +100,12 @@ public class Client_ReceivesFiles {
         }
     }
 
+    /**
+     * asks the server to send it a sigle file and receives it.
+     * @throws IOException
+     */
     public static void readAFile() throws IOException {
-//        Client_ReceivesFiles client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
-        prepareReceivedFilesDestination();
+        prepareReceivedFilesDestination("src/RECEIVED/" + client_receivesFiles.getID() + "/");
 
         BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
         PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
@@ -150,6 +121,11 @@ public class Client_ReceivesFiles {
         client_receivesFiles.getSocket().close();
     }
 
+    /**
+     * dletes a directory and its contents recusivly.
+     * @param file the targeted directory
+     * @throws IOException
+     */
     public static void deleteDirectoryRecursionJava6(File file) throws IOException {
         if (file.isDirectory()) {
             File[] entries = file.listFiles();
@@ -164,9 +140,14 @@ public class Client_ReceivesFiles {
         }
     }
 
-    private static void prepareReceivedFilesDestination() throws IOException {
+    /**
+     * if the targeted directory exists, it empties it's contents and otherwise it is created.
+     * @param path the targeted directory's path
+     * @throws IOException
+     */
+    private static void prepareReceivedFilesDestination(String path) throws IOException {
 
-        File file = new File("src/RECEIVED/" + client_receivesFiles.getID() + "/");
+        File file = new File(path);
         if (!file.exists()) {
             if (file.mkdir()) {
                 System.out.println("Directory is created!");
@@ -185,9 +166,13 @@ public class Client_ReceivesFiles {
         }
     }
 
+    /**
+     * used to receive several file from the server and save them all.
+     * @throws IOException
+     */
     public static void readMoreThanOneFiles() throws IOException {
 //        Client_ReceivesFiles client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
-        prepareReceivedFilesDestination();
+        prepareReceivedFilesDestination("src/RECEIVED/" + client_receivesFiles.getID() + "/");
 
         BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
         PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
@@ -301,10 +286,32 @@ public class Client_ReceivesFiles {
         return ID;
     }
 
+    public static Client_ReceivesFiles getClient_receivesFiles() {
+        return client_receivesFiles;
+    }
+
     public void setID(int ID) {
         this.ID = ID;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
    public static void main (String [] args ) throws IOException {
@@ -343,3 +350,40 @@ public class Client_ReceivesFiles {
         }
     }
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//    public static void main(String[] args) throws IOException {
+//
+////        Client_ReceivesFiles client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
+//
+//        BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
+//        PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
+//
+////        out.println("start " + Main.getMyName());
+////        out.println("get --myID");
+////        client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
+//
+//        //return the number of files i shall get?
+//        //just check what i wrote?
+//        //use how it was called?
+//
+//        getLastListenedTime();
+//
+////
+////        out.println("quit");
+////        client_receivesFiles.getSocket().close();
+//
+//    }
