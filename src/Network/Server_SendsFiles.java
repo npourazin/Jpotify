@@ -154,6 +154,7 @@ public class Server_SendsFiles implements Runnable {
                                         sc.nextLine();
                                         count++;
                                     }
+//                                    count++;
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
                                 }
@@ -313,13 +314,12 @@ public class Server_SendsFiles implements Runnable {
         private void sendFile(FileInputStream fis, BufferedInputStream bis, OutputStream os, String path) {
 
             try {
-//                System.err.println("dammmmmmmmmmmmmmmmmn");
                 File myFile = new File(path);
                 byte[] mybytearray = new byte[(int) myFile.length()];
 
                 fis = new FileInputStream(myFile);
                 bis = new BufferedInputStream(fis);
-//                System.err.println("gggggggggooooooooooooodddddddddddddddddddddddddddddddd");
+
                 bis.read(mybytearray, 0, mybytearray.length);
                 os = client.getOutputStream();
 
