@@ -59,7 +59,7 @@ public class Server_SendsFiles implements Runnable {
     private static String processRequest() {
 //        PlayerManager.getsP() != null;
         if (!Main.isJpotifyGUIWindowClosed()) {
-            //now
+            System.out.println("shut it -------------------------------------------------------------------");
             return PlayerManager.getsP().getFileName();
         } else {
             try {
@@ -93,7 +93,6 @@ public class Server_SendsFiles implements Runnable {
             FileInputStream fis = null;
             BufferedInputStream bis = null;
             OutputStream os = null;
-
             try {
                 BufferedReader inp = new BufferedReader(new InputStreamReader(client.getInputStream()));
                 PrintWriter out = new PrintWriter(new OutputStreamWriter(client.getOutputStream()), true);
@@ -109,6 +108,7 @@ public class Server_SendsFiles implements Runnable {
                 System.out.println("heh that thing is called " + clientName);
 
                 while (true) {
+
                     protocolCommand = inp.readLine();
                     if (protocolCommand.contains("quit")) {
                         System.out.println(clientId + clientName + " went off!!!");
@@ -118,12 +118,13 @@ public class Server_SendsFiles implements Runnable {
                     if (protocolCommand.contains("get")) {
                         System.out.println("got");
                         if (protocolCommand.contains("file")) {
-                            if (protocolCommand.contains("--LastListened")) {
+                            if (protocolCommand.contains("--lastListened")) {
                                 String lastListenedSongPath = "";
                                 lastListenedSongPath = processRequest();
                                 try {
                                     System.out.println("processed request:" + lastListenedSongPath);
                                     if (lastListenedSongPath.equals("") || lastListenedSongPath == null) {
+                                        System.err.println("request o dard");
                                         client.close();
                                         numberOfClients--;
                                         return;
@@ -135,7 +136,8 @@ public class Server_SendsFiles implements Runnable {
                                     e.printStackTrace();
                                 }
                                 sendFile(fis, bis, os, lastListenedSongPath);
-                            } else if (protocolCommand.contains("--SharedPlaylist")) {
+                            }
+                            else if (protocolCommand.contains("--sharedPlaylist")) {
                                 if (!new File("src/SharedPlaylist.txt").exists()) {
                                     try {
                                         client.close();
@@ -266,6 +268,13 @@ public class Server_SendsFiles implements Runnable {
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
+                try {
+                if (fis!=null) fis.close();
+                if (bis!=null) bis.close();
+                if (os!=null) os.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
                 if (client != null) {
                     try {
                         client.close();
@@ -273,6 +282,7 @@ public class Server_SendsFiles implements Runnable {
                         e.printStackTrace();
                     }
                 }
+
             }
         }
 
@@ -303,18 +313,19 @@ public class Server_SendsFiles implements Runnable {
         private void sendFile(FileInputStream fis, BufferedInputStream bis, OutputStream os, String path) {
 
             try {
+//                System.err.println("dammmmmmmmmmmmmmmmmn");
                 File myFile = new File(path);
                 byte[] mybytearray = new byte[(int) myFile.length()];
 
                 fis = new FileInputStream(myFile);
                 bis = new BufferedInputStream(fis);
+//                System.err.println("gggggggggooooooooooooodddddddddddddddddddddddddddddddd");
                 bis.read(mybytearray, 0, mybytearray.length);
                 os = client.getOutputStream();
 
-                System.out.println("Sending " + path + "(" + mybytearray.length + " bytes)");
+                System.err.println("Sending " + path + "(" + mybytearray.length + " bytes)");
                 os.write(mybytearray, 0, mybytearray.length);
                 os.flush();
-
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -323,6 +334,7 @@ public class Server_SendsFiles implements Runnable {
                     numberOfClients--;
                     if (bis != null) bis.close();
                     if (os != null) os.close();
+                    if(fis!=null) fis.close();
                     if (client != null) client.close();
 
                 } catch (IOException e) {

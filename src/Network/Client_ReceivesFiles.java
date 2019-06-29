@@ -69,13 +69,14 @@ public class Client_ReceivesFiles {
 //        while ((byteread = is.read(buffer, 0, buffer.length)) != -1) {
 //            out.write(buffer, 0, byteread);
 //        }
+        System.out.println("hhhhhhhhhhhhhhhhhhh1");
+
         int count=0;
         while ((count = is.read(buffer)) > 0) {
             out.write(buffer, 0, count);
         }
-
         out.flush();
-        System.out.println("hhhhhhhhhhhhhhhhhhh");
+        System.out.println("hhhhhhhhhhhhhhhhhhh2");
         socket.close();
         fos.close();
         is.close();
