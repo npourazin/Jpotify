@@ -2,6 +2,7 @@ package GUI;
 
 import Controllers.ClickButtonRefreshFrinedActivity;
 import Controllers.ClickListenerForFriendPlaylist;
+import Logic.Main;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -16,11 +17,19 @@ import java.util.ArrayList;
 public class FriendsActivityArea extends JPanel {
     private JScrollPane jScrollPane;
     private static boolean askedForLastListened = true;
-    private static ArrayList<String> clientName;
+    private static ArrayList<String> friendName;
     private static ArrayList<String> lastSong;
     private static ArrayList<String> lastTimeListened;
+    private static ArrayList<Integer> ID;
     public FriendsActivityArea() {
         super();
+
+        friendName =new ArrayList<>();
+        lastSong=new ArrayList<>();
+        lastTimeListened=new ArrayList<>();
+        ID=new ArrayList<>();
+
+
         jScrollPane = new JScrollPane(this);
         jScrollPane.setViewportView(this);
         jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
@@ -30,7 +39,7 @@ public class FriendsActivityArea extends JPanel {
         jScrollPane.setVisible(true);
 
         //if kooft<4 koodt=4 else kooft
-        this.setLayout(new GridLayout(6,1));
+        this.setLayout(new GridLayout(5,1));
 
 
 
@@ -41,25 +50,24 @@ public class FriendsActivityArea extends JPanel {
         refresh.addActionListener(new ClickButtonRefreshFrinedActivity());
         refresh.setBackground(Color.cyan);
         this.add(refresh);
-//        this.add(new JSeparator());
 
-        for (int i = 0; i <2; i++) {
+        //this.add(new JSeparator());
+        for (int i = 0; i <friendName.size(); i++) {
 
             JPanel friend=new JPanel();
             friend.setVisible(true);
             friend.setLayout(new GridLayout(4,1));
-//            friend.setBackground(Color.cyan);
             this.add(friend);
-            JLabel friendName=new JLabel("Mahvash");
-            friendName.setFont(new Font("Verdana", 9, 10));
-            friendName.setHorizontalTextPosition(0);
-            friendName.setVerticalTextPosition(0);
-            friend.add(friendName);
+            JLabel name=new JLabel(friendName.get(i));
+            name.setFont(new Font("Verdana", 9, 10));
+            name.setHorizontalTextPosition(0);
+            name.setVerticalTextPosition(0);
+            friend.add(name);
 
             JButton friendLastSong=new JButton();
             friendLastSong.setLayout(new GridLayout(1,2));
-            JLabel songName=new JLabel("waves");
-            JLabel timeListened=new JLabel("21:02");
+            JLabel songName=new JLabel(lastSong.get(i));
+            JLabel timeListened=new JLabel(lastTimeListened.get(i));
             friendLastSong.add(songName);
             friendLastSong.add(timeListened);
             friendLastSong.setFont(new Font("Verdana", 9, 8));
@@ -69,6 +77,7 @@ public class FriendsActivityArea extends JPanel {
 
 
             JButton getPlaylist=new JButton("Play Their Playlist !");
+            getPlaylist.setName(Main.getIP().get(i));
             getPlaylist.setBackground(Color.pink);
             getPlaylist.addActionListener(new ClickListenerForFriendPlaylist());
             friend.add(getPlaylist);
@@ -76,10 +85,29 @@ public class FriendsActivityArea extends JPanel {
         }
     }
 
+    public static void setID(ArrayList<Integer> ID) {
+        FriendsActivityArea.ID = ID;
+    }
+
+    public static ArrayList<Integer> getID() {
+        return ID;
+    }
 
 
-    public static ArrayList<String> getClientName() {
-        return clientName;
+    public static void setFriendName(ArrayList<String> friendName) {
+        FriendsActivityArea.friendName = friendName;
+    }
+
+    public static void setLastSong(ArrayList<String> lastSong) {
+        FriendsActivityArea.lastSong = lastSong;
+    }
+
+    public static void setLastTimeListened(ArrayList<String> lastTimeListened) {
+        FriendsActivityArea.lastTimeListened = lastTimeListened;
+    }
+
+    public static ArrayList<String> getFriendName() {
+        return friendName;
     }
 
     public static ArrayList<String> getLastSong() {

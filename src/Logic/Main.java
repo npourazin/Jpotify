@@ -28,10 +28,13 @@ public class Main {
     private static int holyFlag=0;
     private static  Server_SendsFiles server_sendsFiles;
 
-
+    public static void setClient_receivesFiles(Client_ReceivesFiles client_receivesFiles) {
+        Main.client_receivesFiles = client_receivesFiles;
+    }
 
     private static Client_ReceivesFiles client_receivesFiles;
     private static ArrayList<String> IP;
+
     private static boolean jpotifyGUIWindowClosed; //1 if closed, 0 otherwise.
 
     public static void main(String[] args) {

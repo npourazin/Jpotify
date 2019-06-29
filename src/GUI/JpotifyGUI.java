@@ -18,6 +18,16 @@ public class JpotifyGUI extends JFrame {
     private static SearchBarPanel searcBarPanel;
     private static ChoicesArea choicesArea;
 
+    public static FriendsActivityArea getFriendsActivityArea() {
+        return friendsActivityArea;
+    }
+
+    public static void setFriendsActivityArea(FriendsActivityArea friendsActivityArea) {
+        JpotifyGUI.friendsActivityArea = friendsActivityArea;
+    }
+
+    private static FriendsActivityArea friendsActivityArea;
+
 
     public JpotifyGUI() {
         super();
