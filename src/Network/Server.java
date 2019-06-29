@@ -101,11 +101,6 @@ public class Server implements Runnable {
                     oos.writeObject(makePackageForData(requestedAbsolutePath));//hello
                 }
 
-//                try {
-//
-//                }catch (IOException e){
-//
-//                }
 
 
                 client.close();

@@ -39,7 +39,6 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
             ex.printStackTrace();
         }
 
-        Main.getJpotifyGUI().revalidate();
 
         File dir = new File("src/RECEIVED/"+ip+"/");
         List<File> files = Arrays.asList(dir.listFiles());
@@ -50,7 +49,7 @@ public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionL
             tempArr.add(music.getSongData());
         }
 
-        System.out.println("+++++++++++++++++++"+tempArr.size());
+        System.out.println(tempArr.get(0).getSongName());
         Main.setCurrentQueue(tempArr);
         Main.setSongQueueIndex(0);
         PlayerManager.playerManager();

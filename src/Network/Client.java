@@ -38,16 +38,6 @@ class Client{
                 if(s.equals("quit")) break;
                 Package received = (Package) ois.readObject();
 
-                //TODO:
-                // pass the read package's SongPlayer and since u also need it's data use its music
-                // also display the package servers name somewhere!!
-                //
-
-//                while (true) {
-                    //TODO: read the manual!!
-//                    String fromServer = inp.readLine();
-//                    System.out.println(fromServer);
-//                }
             }
         }catch (IOException e){
             System.out.println(e);

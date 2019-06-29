@@ -15,10 +15,7 @@ import java.util.regex.Pattern;
 public class ParseFromWeb {
     public static String parser(String s2) throws IOException {
         String s1 = "";
-//        String s2= "stronger+kelly+clarkson";
         String s3 = "";
-//        String s4 ="";
-//        String s5 ="";
 
 
         String os = System.getProperty("os.name").toLowerCase();
@@ -26,11 +23,6 @@ public class ParseFromWeb {
             //Operating system is based on Windows
             s1 = "https://www.google.com/search?client=firefox-b-d&channel=trow&q=";
             s3 = "+lyrics&ie=utf-8&oe=utf-8";
-//            s1 = "https://www.google.com/search?q=";
-//            s3 = "&aqs=chrome..69i57j0l5.5217j0j7&sourceid=chrome&ie=UTF-8";
-//            s4 = "&oq=";
-//            s5 ="+lyrics";
-//            s=s1+s2+s5+s4+s2+s5+s3;
         } else if (os.contains("osx")) {
             //Operating system is Apple OSX based
             //TODO add code to support mac os;
@@ -74,13 +66,6 @@ public class ParseFromWeb {
                     + "[\\p{Alnum}.,%_=?&#\\-+()\\[\\]\\*$~@!:/{};']*)",
             Pattern.CASE_INSENSITIVE | Pattern.MULTILINE | Pattern.DOTALL);
     Matcher matcher = urlPattern.matcher("foo bar http://example.com baz");
-//    while(matcher.find())
-//
-//    {
-//        int matchStart = matcher.start(1);
-//        int matchEnd = matcher.end();
-//        // now you have the offsets of a URL match
-//    }
 
     private static void log(String msg, String... vals) {
         System.out.println(String.format(msg, vals));
@@ -116,7 +101,6 @@ public class ParseFromWeb {
 
     public static void main(String[] args) {
         try {
-//            parser("stronger+kelly+clarkson");
             System.out.println(parser(makeURL("/home/niki/Desktop/Kelly Clarkson_Stronger.mp3")));
 
         } catch (IOException e) {

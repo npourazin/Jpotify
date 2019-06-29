@@ -41,7 +41,6 @@ public class ClickListenerForGettingFriendPlaylist implements ActionListener {
             ex.printStackTrace();
         }
 
-        Main.getJpotifyGUI().revalidate();
 
 
         //get the array list of songs in current queue
@@ -54,8 +53,7 @@ public class ClickListenerForGettingFriendPlaylist implements ActionListener {
             tempArr.add(music.getSongData());
         }
 
-        System.out.println("+++++++++++++++++++++++"+tempArr.size());
-        if(tempArr==null || tempArr.size()==0) return;
+        System.out.println(tempArr.get(0).getSongName());
 
         Main.setCurrentQueue(tempArr);
         Main.setSongQueueIndex(0);

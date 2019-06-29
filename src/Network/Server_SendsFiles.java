@@ -200,7 +200,6 @@ public class Server_SendsFiles implements Runnable {
                                         out.println("now");
                                     }else{
                                         Date dateListened = new Date(new File("src/LastSongListened.txt").lastModified());
-
                                         //mahvash was here
                                         String diff = dateToString(dateListened);
                                         out.println(diff);
@@ -360,7 +359,7 @@ public class Server_SendsFiles implements Runnable {
 
             String date[] = d.toString().split(" ", 0);
             String now[] = Date.from(Instant.now()).toString().split(" ", 0);
-            String dateTime[] = date[3].split(":");
+            String dateTime[] = date[3].split(":",0);
             String nowTime[] = now[3].split(":");
             Integer dateValue[] = new Integer[5];
             Integer nowValue[] = new Integer[5];
@@ -433,7 +432,7 @@ public class Server_SendsFiles implements Runnable {
                 //second
                 else {
                     res = intNowTime[2] - intDateTime[2];
-                    return "" + res + " s";
+                    return ""+ res + " s";
                 }
             }
             return "Now";
