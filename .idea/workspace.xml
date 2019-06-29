@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
+    <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="Minor changes.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/ClickButtonRefreshFrinedActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ClickButtonRefreshFrinedActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/FriendsActivityArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/FriendsActivityArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/JpotifyGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/JpotifyGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +35,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/ClickButtonRefreshFrinedActivity.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/FriendsActivityArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="47" column="107" selection-start-line="47" selection-start-column="107" selection-end-line="47" selection-end-column="107" />
+            <state relative-caret-position="-228">
+              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+              <folding>
+                <element signature="e#1598#1599#0" expanded="true" />
+                <element signature="e#1651#1652#0" expanded="true" />
+                <element signature="e#1693#1694#0" expanded="true" />
+                <element signature="e#1723#1724#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/PlaySpecificSongOnClick.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="183" column="103" selection-start-line="183" selection-start-column="103" selection-end-line="183" selection-end-column="103" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,72 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForPlayingTheLastSongFriendPlaylist.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForPlayingFriendPlaylist.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logic/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logic/PlayerManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="240" column="103" selection-start-line="240" selection-start-column="103" selection-end-line="240" selection-end-column="103" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1165#3264#0" />
-                <element signature="e#3270#4101#0" />
-                <element signature="e#4107#4696#0" />
-                <element signature="e#4702#5593#0" />
-                <element signature="e#5599#6665#0" />
-                <element signature="e#8739#9417#0" />
-                <element signature="e#9423#10069#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logic/FastFourierTransform.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="545">
+              <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,22 +86,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/ClickButtonRefreshFrinedActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            <state relative-caret-position="222">
+              <caret line="35" column="59" selection-start-line="35" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#620#621#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/FriendsActivityArea.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -151,17 +112,6 @@
     <findStrings>
       <find>playerstatus</find>
       <find>Song</find>
-      <find>rightpanel.add</find>
-      <find>server</find>
-      <find>numberOfClients</find>
-      <find>javax.swing.event.ListSelectionListener</find>
-      <find>UNKNOWN</find>
-      <find>pink</find>
-      <find>getsp</find>
-      <find>eq</find>
-      <find>inet</find>
-      <find>RECEIVED</find>
-      <find>ClickListenerForFriendPlaylist</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,71 +126,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Network/Package.java" />
-        <option value="$PROJECT_DIR$/src/NonUsefulMahvashTrashCan/FileComparator.java" />
-        <option value="$PROJECT_DIR$/src/Network/FileComparator.java" />
-        <option value="$PROJECT_DIR$/src/Network/Server.java" />
-        <option value="$PROJECT_DIR$/src/Network/Client.java" />
-        <option value="$PROJECT_DIR$/src/Network/UserPassVerification.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ButtonListenerLyric.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ButtonListenerPauseAndPlay.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ButtonListenerRepeat.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForAddingSongs.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingAlbums.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingHome.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/DialogListenerAddButton.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/DialogListenerRaname.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/FavouriteManager.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ItemClickedRemovePlaylist.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/MenuClickedAddSharedPlaylist.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/MenuClickedRemoveSharedPlaylist.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/PlaySpecificSongOnClick.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/QueueIndexController.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/SelectedPlaylistListener.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/SelectPlayFromSearchMenu.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/SelectSongToRemoveFromPlaylist.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/SelectSongToAddToPlaylistListener.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ShowSpecificAlbumOnClick.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/VolumeChangeListener.java" />
+        <option value="$PROJECT_DIR$/src/GUI/AlbumsPanel.java" />
+        <option value="$PROJECT_DIR$/src/GUI/DialogBoxList.java" />
+        <option value="$PROJECT_DIR$/src/GUI/DialogBoxChooseName.java" />
+        <option value="$PROJECT_DIR$/src/GUI/HomePanel.java" />
+        <option value="$PROJECT_DIR$/src/GUI/PlaylistPanel.java" />
+        <option value="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" />
+        <option value="$PROJECT_DIR$/src/GUI/ChoicesArea.java" />
+        <option value="$PROJECT_DIR$/src/Logic/SavedSongData.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ReceivedFriendInfo.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSongsList.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingFavouritePlaylist.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ItemClickedShowPlaylist.java" />
+        <option value="$PROJECT_DIR$/src/GUI/SongsPanel.java" />
         <option value="$PROJECT_DIR$/src/Logic/BinaryReader.java" />
         <option value="$PROJECT_DIR$/src/Controllers/SliderThread.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/PauseAndPlayClickButton.java" />
-        <option value="$PROJECT_DIR$/src/Logic/SongData.java" />
-        <option value="$PROJECT_DIR$/src/GUI/friendsActivityArea.java" />
-        <option value="$PROJECT_DIR$/src/GUI/PlaylistPanel.java" />
-        <option value="$PROJECT_DIR$/src/Network/Client_SendsFiles.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/QueueIndexController.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/addButtonDialogListener.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSearchResults.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/ShufflePlayButtonListener.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/RepeatButtonListener.java" />
-        <option value="$PROJECT_DIR$/src/GUI/SearcBarPanel.java" />
-        <option value="$PROJECT_DIR$/src/Logic/SavedSongData.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForAddingSongs2.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingLyrics.java" />
-        <option value="$PROJECT_DIR$/src/Network/ParseFromweb.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/MouseListenerForSliders.java" />
-        <option value="$PROJECT_DIR$/src/GUI/MusicSliderBar.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/VolumeChangeListener.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForSearchButton.java" />
-        <option value="$PROJECT_DIR$/src/GUI/SongsPanel.java" />
-        <option value="$PROJECT_DIR$/src/GUI/ChoicesArea.java" />
-        <option value="$PROJECT_DIR$/src/Logic/Music.java" />
-        <option value="$PROJECT_DIR$/src/GUI/SearchBarPanel.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/ButtonListenerLyric.java" />
-        <option value="$PROJECT_DIR$/src/NonUsefulMahvashTrashCan/Trash.java" />
-        <option value="$PROJECT_DIR$/src/GUI/JpotifyGUI.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSharedPlaylist.java" />
+        <option value="$PROJECT_DIR$/src/Logic/SongPlayer.java" />
         <option value="$PROJECT_DIR$/src/Logic/PlayerManager.java" />
-        <option value="$PROJECT_DIR$/src/javazoom/jl/player/advanced/AdvancedPlayer.java" />
-        <option value="$PROJECT_DIR$/src/Logic/MyEqualizer.java" />
-        <option value="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" />
-        <option value="$PROJECT_DIR$/src/javazoom/jl/decoder/Equalizer.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" />
-        <option value="$PROJECT_DIR$/src/Network/ParseFromWeb.java" />
-        <option value="$PROJECT_DIR$/src/Logic/SpectrumAnalysis.java" />
-        <option value="$PROJECT_DIR$/src/Logic/FastFourierTransform.java" />
-        <option value="$PROJECT_DIR$/src/Logic/Friend.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/ReceivedFriendInfo.java" />
-        <option value="$PROJECT_DIR$/src/GUI/FriendsActivityArea.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForFriendPlaylist.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForPlayingFriendPlaylist.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ButtonListenerNext.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForPlayingTheLastSongFriendPlaylist.java" />
         <option value="$PROJECT_DIR$/src/Logic/Main.java" />
         <option value="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" />
+        <option value="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" />
+        <option value="$PROJECT_DIR$/src/GUI/JpotifyGUI.java" />
+        <option value="$PROJECT_DIR$/src/GUI/FriendsActivityArea.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ClickButtonRefreshFrinedActivity.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java" />
       </list>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="47" />
-    <option name="width" value="1346" />
-    <option name="height" value="660" />
+    <option name="x" value="950" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -249,33 +192,60 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="ClickListenerForSignInOrSignUp.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Logic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Jpotify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jpotify" type="462c0819:PsiDirectoryNode" />
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Logic" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayerManager.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="JpotifyFinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JpotifyFinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Network" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -283,15 +253,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Lib/jsoup-1.12.1.jar!/" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NonUseful" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -300,10 +269,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="Controllers" />
       <recent name="Logic" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Logic" />
       <recent name="$PROJECT_DIR$/src/Controllers" />
     </key>
   </component>
@@ -320,32 +289,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="BinaryReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Logic.BinaryReader" />
-      <module name="Jpotify" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Logic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Client_ReceivesFiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Network.Client_ReceivesFiles" />
-      <module name="Jpotify" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Network.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Logic.Main" />
       <module name="Jpotify" />
@@ -359,21 +302,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server_SendsFiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Network.Server_SendsFiles" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Jpotify" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Network.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Trash" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="NonUsefulMahvashTrashCan.Trash" />
+    <configuration name="Song" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Logic.Song" />
       <module name="Jpotify" />
       <extension name="coverage">
         <pattern>
@@ -388,10 +328,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Client_ReceivesFiles" />
-        <item itemvalue="Application.Server_SendsFiles" />
-        <item itemvalue="Application.Trash" />
-        <item itemvalue="Application.BinaryReader" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Song" />
       </list>
     </recent_temporary>
   </component>
@@ -410,363 +348,365 @@
       <workItem from="1561048678349" duration="1708000" />
       <workItem from="1561120380518" duration="9240000" />
       <workItem from="1561289316879" duration="12734000" />
-      <workItem from="1561354514070" duration="26218000" />
-      <workItem from="1561433647907" duration="23424000" />
-      <workItem from="1561478365109" duration="10160000" />
-      <workItem from="1561524643509" duration="40338000" />
-      <workItem from="1561598902820" duration="40949000" />
-      <workItem from="1561693875542" duration="55320000" />
-      <workItem from="1561783192866" duration="6762000" />
-      <workItem from="1561791386440" duration="5865000" />
+      <workItem from="1561354514070" duration="7227000" />
+      <workItem from="1561364044799" duration="35485000" />
+      <workItem from="1561449098660" duration="34689000" />
+      <workItem from="1561524682588" duration="30979000" />
+      <workItem from="1561587815289" duration="10655000" />
+      <workItem from="1561624552288" duration="20142000" />
+      <workItem from="1561651668883" duration="5897000" />
+      <workItem from="1561662330178" duration="8272000" />
+      <workItem from="1561705542805" duration="42124000" />
+      <workItem from="1561777571187" duration="26686000" />
     </task>
-    <task id="LOCAL-00065" summary="Changes in saving the last song listened.&#10;WARNING: is gonna have conflict ugh.">
-      <created>1561537176846</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1561537176846</updated>
-    </task>
-    <task id="LOCAL-00066" summary="just in case;">
-      <created>1561539425962</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1561539425962</updated>
-    </task>
-    <task id="LOCAL-00067" summary="SliderBar shows the current song.">
-      <created>1561541129407</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1561541129408</updated>
-    </task>
-    <task id="LOCAL-00068" summary="bug found.&#10;when some songs are added and the application is closed and reopened, we are ultimately screwed.">
-      <created>1561551469229</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1561551469229</updated>
-    </task>
-    <task id="LOCAL-00069" summary="SongsPanel layout modified.">
-      <created>1561558605234</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1561558605234</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Playlist panel also had its appearance fixed.">
-      <created>1561573343814</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1561573343814</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Server class with file sending ability added.">
-      <created>1561577518697</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1561577518697</updated>
-    </task>
-    <task id="LOCAL-00072" summary="conflicts resolved.&#10;files receiver client class added but is still empty.">
-      <created>1561579804605</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1561579804605</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Receives files (semi-bugful!)">
-      <created>1561582126926</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1561582126926</updated>
-    </task>
-    <task id="LOCAL-00074" summary="SearchBar class created.">
-      <created>1561602146224</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1561602146225</updated>
-    </task>
-    <task id="LOCAL-00075" summary="SearchBar graphics made.&#10;TODO: complete listeners and connect them.">
-      <created>1561605676655</created>
+    <task id="LOCAL-00075" summary="Replay button listener modified.&#10;Shuffle play updated">
+      <created>1561626996221</created>
       <option name="number" value="00075" />
       <option name="presentableId" value="LOCAL-00075" />
       <option name="project" value="LOCAL" />
-      <updated>1561605676655</updated>
+      <updated>1561626996222</updated>
     </task>
-    <task id="LOCAL-00076" summary="Visual improvement!!&#10;icons for shuffle and repeat buttons added.">
-      <created>1561615239225</created>
+    <task id="LOCAL-00076" summary="Sort by time modified">
+      <created>1561627520715</created>
       <option name="number" value="00076" />
       <option name="presentableId" value="LOCAL-00076" />
       <option name="project" value="LOCAL" />
-      <updated>1561615239225</updated>
+      <updated>1561627520715</updated>
     </task>
-    <task id="LOCAL-00077" summary="Photos attached.">
-      <created>1561622172184</created>
+    <task id="LOCAL-00077" summary="Shuffle play updated">
+      <created>1561627695598</created>
       <option name="number" value="00077" />
       <option name="presentableId" value="LOCAL-00077" />
       <option name="project" value="LOCAL" />
-      <updated>1561622172184</updated>
+      <updated>1561627695598</updated>
     </task>
-    <task id="LOCAL-00078" summary="Can read Lyrics from web;">
-      <created>1561628103492</created>
+    <task id="LOCAL-00078" summary="Removing songs from favourite playlist modified.">
+      <created>1561629261067</created>
       <option name="number" value="00078" />
       <option name="presentableId" value="LOCAL-00078" />
       <option name="project" value="LOCAL" />
-      <updated>1561628103492</updated>
+      <updated>1561629261067</updated>
     </task>
-    <task id="LOCAL-00079" summary="Shows lyrics but not properly.">
-      <created>1561629642094</created>
+    <task id="LOCAL-00079" summary="AlbumsPanel updated">
+      <created>1561630239821</created>
       <option name="number" value="00079" />
       <option name="presentableId" value="LOCAL-00079" />
       <option name="project" value="LOCAL" />
-      <updated>1561629642094</updated>
+      <updated>1561630239821</updated>
     </task>
-    <task id="LOCAL-00080" summary="Shows proper error message when the song couldn't be found.">
-      <created>1561630762846</created>
+    <task id="LOCAL-00080" summary="Lyric dialog box modified.">
+      <created>1561637659862</created>
       <option name="number" value="00080" />
       <option name="presentableId" value="LOCAL-00080" />
       <option name="project" value="LOCAL" />
-      <updated>1561630762847</updated>
+      <updated>1561637659862</updated>
     </task>
-    <task id="LOCAL-00081" summary="Parser was made more system independent.">
-      <created>1561631435646</created>
+    <task id="LOCAL-00081" summary="Songs and Albums panels modified">
+      <created>1561641499385</created>
       <option name="number" value="00081" />
       <option name="presentableId" value="LOCAL-00081" />
       <option name="project" value="LOCAL" />
-      <updated>1561631435646</updated>
+      <updated>1561641499385</updated>
     </task>
-    <task id="LOCAL-00082" summary="Checking in progress.">
-      <created>1561631850136</created>
+    <task id="LOCAL-00082" summary="Songs infos modified">
+      <created>1561641588050</created>
       <option name="number" value="00082" />
       <option name="presentableId" value="LOCAL-00082" />
       <option name="project" value="LOCAL" />
-      <updated>1561631850136</updated>
+      <updated>1561641588050</updated>
     </task>
-    <task id="LOCAL-00083" summary="Checking in progress.">
-      <created>1561632564266</created>
+    <task id="LOCAL-00083" summary="Songs infos modified">
+      <created>1561641720109</created>
       <option name="number" value="00083" />
       <option name="presentableId" value="LOCAL-00083" />
       <option name="project" value="LOCAL" />
-      <updated>1561632564266</updated>
+      <updated>1561641720109</updated>
     </task>
-    <task id="LOCAL-00084" summary="Can show better graphics!&#10;songs that didnt have pics and names fixed.">
-      <created>1561643034981</created>
+    <task id="LOCAL-00084" summary="Sorting albums by time.">
+      <created>1561645347315</created>
       <option name="number" value="00084" />
       <option name="presentableId" value="LOCAL-00084" />
       <option name="project" value="LOCAL" />
-      <updated>1561643034981</updated>
+      <updated>1561645347315</updated>
     </task>
-    <task id="LOCAL-00085" summary="bug fixed.">
-      <created>1561648263541</created>
+    <task id="LOCAL-00085" summary="Handling empty info for a song.">
+      <created>1561645734707</created>
       <option name="number" value="00085" />
       <option name="presentableId" value="LOCAL-00085" />
       <option name="project" value="LOCAL" />
-      <updated>1561648263541</updated>
+      <updated>1561645734707</updated>
     </task>
-    <task id="LOCAL-00086" summary="just in case">
-      <created>1561656637814</created>
+    <task id="LOCAL-00086" summary="Minor changes.">
+      <created>1561653935236</created>
       <option name="number" value="00086" />
       <option name="presentableId" value="LOCAL-00086" />
       <option name="project" value="LOCAL" />
-      <updated>1561656637814</updated>
+      <updated>1561653935237</updated>
     </task>
-    <task id="LOCAL-00087" summary="pic attached.">
-      <created>1561657907048</created>
+    <task id="LOCAL-00087" summary="Search feature modified.">
+      <created>1561656034412</created>
       <option name="number" value="00087" />
       <option name="presentableId" value="LOCAL-00087" />
       <option name="project" value="LOCAL" />
-      <updated>1561657907048</updated>
+      <updated>1561656034412</updated>
     </task>
-    <task id="LOCAL-00088" summary="Bug in song names fixed.">
-      <created>1561658838565</created>
+    <task id="LOCAL-00088" summary="Rename playlist feature added.">
+      <created>1561657535303</created>
       <option name="number" value="00088" />
       <option name="presentableId" value="LOCAL-00088" />
       <option name="project" value="LOCAL" />
-      <updated>1561658838565</updated>
+      <updated>1561657535303</updated>
     </task>
-    <task id="LOCAL-00089" summary="Lyrics can be scrolled.">
-      <created>1561672150040</created>
+    <task id="LOCAL-00089" summary="Volume Slider GUI added.">
+      <created>1561665671479</created>
       <option name="number" value="00089" />
       <option name="presentableId" value="LOCAL-00089" />
       <option name="project" value="LOCAL" />
-      <updated>1561672150040</updated>
+      <updated>1561665671480</updated>
     </task>
-    <task id="LOCAL-00090" summary="Conflicts resolved.">
-      <created>1561672890381</created>
+    <task id="LOCAL-00090" summary="Volume slider listener added">
+      <created>1561668468505</created>
       <option name="number" value="00090" />
       <option name="presentableId" value="LOCAL-00090" />
       <option name="project" value="LOCAL" />
-      <updated>1561672890382</updated>
+      <updated>1561668468505</updated>
     </task>
-    <task id="LOCAL-00091" summary="naming problems fixed.&#10;some class names weren't camel case.">
-      <created>1561695005121</created>
+    <task id="LOCAL-00091" summary="Major name editing.">
+      <created>1561669420054</created>
       <option name="number" value="00091" />
       <option name="presentableId" value="LOCAL-00091" />
       <option name="project" value="LOCAL" />
-      <updated>1561695005122</updated>
+      <updated>1561669420054</updated>
     </task>
-    <task id="LOCAL-00092" summary="Bugs fixed.&#10;some pics also attached in images folder.">
-      <created>1561702898209</created>
+    <task id="LOCAL-00092" summary="Minor changes">
+      <created>1561706065030</created>
       <option name="number" value="00092" />
       <option name="presentableId" value="LOCAL-00092" />
       <option name="project" value="LOCAL" />
-      <updated>1561702898209</updated>
+      <updated>1561706065032</updated>
     </task>
-    <task id="LOCAL-00093" summary="Client_ReceivesFiles completed.&#10;not tested yet.">
-      <created>1561706230072</created>
+    <task id="LOCAL-00093" summary="Library added">
+      <created>1561706477591</created>
       <option name="number" value="00093" />
       <option name="presentableId" value="LOCAL-00093" />
       <option name="project" value="LOCAL" />
-      <updated>1561706230072</updated>
+      <updated>1561706477591</updated>
     </task>
-    <task id="LOCAL-00094" summary="TODO added.">
-      <created>1561707429532</created>
+    <task id="LOCAL-00094" summary="Playlist rename bug fixed">
+      <created>1561707679515</created>
       <option name="number" value="00094" />
       <option name="presentableId" value="LOCAL-00094" />
       <option name="project" value="LOCAL" />
-      <updated>1561707429532</updated>
+      <updated>1561707679515</updated>
     </task>
-    <task id="LOCAL-00095" summary="Bug fixed.">
-      <created>1561718359521</created>
+    <task id="LOCAL-00095" summary="SharedPlaylist modified.">
+      <created>1561709170598</created>
       <option name="number" value="00095" />
       <option name="presentableId" value="LOCAL-00095" />
       <option name="project" value="LOCAL" />
-      <updated>1561718359522</updated>
+      <updated>1561709170598</updated>
     </task>
-    <task id="LOCAL-00096" summary="file attached.">
-      <created>1561718493612</created>
+    <task id="LOCAL-00096" summary="FriendActivity panel modified">
+      <created>1561718746486</created>
       <option name="number" value="00096" />
       <option name="presentableId" value="LOCAL-00096" />
       <option name="project" value="LOCAL" />
-      <updated>1561718493612</updated>
+      <updated>1561718746486</updated>
     </task>
-    <task id="LOCAL-00097" summary="Server_sendsFiles completed but not tested.">
-      <created>1561723217975</created>
+    <task id="LOCAL-00097" summary="Liking songs updated">
+      <created>1561725970350</created>
       <option name="number" value="00097" />
       <option name="presentableId" value="LOCAL-00097" />
       <option name="project" value="LOCAL" />
-      <updated>1561723217975</updated>
+      <updated>1561725970350</updated>
     </task>
-    <task id="LOCAL-00098" summary="Client_receivesFiles progressed.">
-      <created>1561726383116</created>
+    <task id="LOCAL-00098" summary="Reading last 128 bytes for ID3V1 tags.">
+      <created>1561729825947</created>
       <option name="number" value="00098" />
       <option name="presentableId" value="LOCAL-00098" />
       <option name="project" value="LOCAL" />
-      <updated>1561726383116</updated>
+      <updated>1561729825947</updated>
     </task>
-    <task id="LOCAL-00099" summary="BugFulServerAndClientFinishedUgh();">
-      <created>1561740088311</created>
+    <task id="LOCAL-00099" summary="Music class modified.">
+      <created>1561730134680</created>
       <option name="number" value="00099" />
       <option name="presentableId" value="LOCAL-00099" />
       <option name="project" value="LOCAL" />
-      <updated>1561740088311</updated>
+      <updated>1561730134681</updated>
     </task>
-    <task id="LOCAL-00100" summary="Server and client completed.">
-      <created>1561745296564</created>
+    <task id="LOCAL-00100" summary="Graphical improvements.">
+      <created>1561735183855</created>
       <option name="number" value="00100" />
       <option name="presentableId" value="LOCAL-00100" />
       <option name="project" value="LOCAL" />
-      <updated>1561745296565</updated>
+      <updated>1561735183855</updated>
     </task>
-    <task id="LOCAL-00101" summary="JpotigyGUI JFrame is no longer EXIT_ON_CLOSE.&#10;more methods added to client.">
-      <created>1561751682447</created>
+    <task id="LOCAL-00101" summary="Main Jpotify frame icon changed.">
+      <created>1561735777315</created>
       <option name="number" value="00101" />
       <option name="presentableId" value="LOCAL-00101" />
       <option name="project" value="LOCAL" />
-      <updated>1561751682448</updated>
+      <updated>1561735777316</updated>
     </task>
-    <task id="LOCAL-00102" summary="just in case.">
-      <created>1561751759170</created>
+    <task id="LOCAL-00102" summary="Jpotify image icon attached.">
+      <created>1561736012923</created>
       <option name="number" value="00102" />
       <option name="presentableId" value="LOCAL-00102" />
       <option name="project" value="LOCAL" />
-      <updated>1561751759171</updated>
+      <updated>1561736012923</updated>
     </task>
-    <task id="LOCAL-00103" summary="conflicts resolved.">
-      <created>1561752500220</created>
+    <task id="LOCAL-00103" summary="Like image icon attached.">
+      <created>1561745410475</created>
       <option name="number" value="00103" />
       <option name="presentableId" value="LOCAL-00103" />
       <option name="project" value="LOCAL" />
-      <updated>1561752500220</updated>
+      <updated>1561745410475</updated>
     </task>
-    <task id="LOCAL-00104" summary="Server_SendsFiles documentation added.">
-      <created>1561774059123</created>
+    <task id="LOCAL-00104" summary="Like image icon attached.">
+      <created>1561745694956</created>
       <option name="number" value="00104" />
       <option name="presentableId" value="LOCAL-00104" />
       <option name="project" value="LOCAL" />
-      <updated>1561774059123</updated>
+      <updated>1561745694956</updated>
     </task>
-    <task id="LOCAL-00105" summary="Client_ReceivesFiles documentation added.">
-      <created>1561774834456</created>
+    <task id="LOCAL-00105" summary="Minor changes">
+      <created>1561745759151</created>
       <option name="number" value="00105" />
       <option name="presentableId" value="LOCAL-00105" />
       <option name="project" value="LOCAL" />
-      <updated>1561774834456</updated>
+      <updated>1561745759151</updated>
     </task>
-    <task id="LOCAL-00106" summary="Bug fixed.&#10;when the window is closed now the song pauses.">
-      <created>1561776830780</created>
+    <task id="LOCAL-00106" summary="Date to string converter method added">
+      <created>1561750601009</created>
       <option name="number" value="00106" />
       <option name="presentableId" value="LOCAL-00106" />
       <option name="project" value="LOCAL" />
-      <updated>1561776830780</updated>
+      <updated>1561750601009</updated>
     </task>
-    <task id="LOCAL-00107" summary="just in case.">
-      <created>1561783576559</created>
+    <task id="LOCAL-00107" summary="Documentation added">
+      <created>1561752617082</created>
       <option name="number" value="00107" />
       <option name="presentableId" value="LOCAL-00107" />
       <option name="project" value="LOCAL" />
-      <updated>1561783576560</updated>
+      <updated>1561752617082</updated>
     </task>
-    <task id="LOCAL-00108" summary="bug fixed.&#10;FastFourierTransform class was stolen.">
-      <created>1561789396387</created>
+    <task id="LOCAL-00108" summary="Stopping the song fixed.">
+      <created>1561752991039</created>
       <option name="number" value="00108" />
       <option name="presentableId" value="LOCAL-00108" />
       <option name="project" value="LOCAL" />
-      <updated>1561789396388</updated>
+      <updated>1561752991039</updated>
     </task>
-    <task id="LOCAL-00109" summary="minor changes.&#10;field IP added to friend info class.">
-      <created>1561790644459</created>
+    <task id="LOCAL-00109" summary="Documentation added.">
+      <created>1561760760616</created>
       <option name="number" value="00109" />
       <option name="presentableId" value="LOCAL-00109" />
       <option name="project" value="LOCAL" />
-      <updated>1561790644459</updated>
+      <updated>1561760760616</updated>
     </task>
-    <task id="LOCAL-00110" summary="just in case.">
-      <created>1561795692202</created>
+    <task id="LOCAL-00110" summary="FriendsActivityArea modified">
+      <created>1561760785034</created>
       <option name="number" value="00110" />
       <option name="presentableId" value="LOCAL-00110" />
       <option name="project" value="LOCAL" />
-      <updated>1561795692203</updated>
+      <updated>1561760785035</updated>
     </task>
-    <task id="LOCAL-00111" summary="just in case.">
-      <created>1561797548231</created>
+    <task id="LOCAL-00111" summary="FriendsActivity listener modified">
+      <created>1561783075021</created>
       <option name="number" value="00111" />
       <option name="presentableId" value="LOCAL-00111" />
       <option name="project" value="LOCAL" />
-      <updated>1561797548231</updated>
+      <updated>1561783075021</updated>
     </task>
-    <task id="LOCAL-00112" summary="just in case.">
-      <created>1561797835231</created>
+    <task id="LOCAL-00112" summary="FriendsActivity listener modified">
+      <created>1561783213274</created>
       <option name="number" value="00112" />
       <option name="presentableId" value="LOCAL-00112" />
       <option name="project" value="LOCAL" />
-      <updated>1561797835231</updated>
+      <updated>1561783213274</updated>
     </task>
-    <task id="LOCAL-00113" summary="just in case.">
-      <created>1561798695047</created>
+    <task id="LOCAL-00113" summary="Friend listeners modified">
+      <created>1561785995087</created>
       <option name="number" value="00113" />
       <option name="presentableId" value="LOCAL-00113" />
       <option name="project" value="LOCAL" />
-      <updated>1561798695047</updated>
+      <updated>1561785995087</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Friend listeners modified">
+      <created>1561786034830</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1561786034830</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Slider problems solved">
+      <created>1561790052143</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1561790052143</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Listeners for friends panel modified/created.">
+      <created>1561795004721</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1561795004721</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Minor changes.">
+      <created>1561795699341</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1561795699341</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Minor changes.">
+      <created>1561797488492</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1561797488492</updated>
+    </task>
+    <task id="LOCAL-00119" summary="Minor changes.">
+      <created>1561797501416</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1561797501416</updated>
+    </task>
+    <task id="LOCAL-00120" summary="Minor changes.">
+      <created>1561797798271</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1561797798271</updated>
+    </task>
+    <task id="LOCAL-00121" summary="Minor changes.">
+      <created>1561797882359</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1561797882359</updated>
+    </task>
+    <task id="LOCAL-00122" summary="Minor changes.">
+      <created>1561798618759</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1561798618759</updated>
+    </task>
+    <task id="LOCAL-00123" summary="Minor changes.">
+      <created>1561799140945</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1561799140945</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="338659000" />
+    <option name="totallyTimeSpent" value="351779000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -778,7 +718,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1366" height="694" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -787,31 +727,30 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Learn" order="4" weight="0.32954547" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.30227274" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.25033557" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5159091" side_tool="true" weight="0.32566372" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.3557047" side_tool="true" weight="0.25212464" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
-      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.4909091" weight="0.32389382" />
+      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.4590604" weight="0.3045326" />
       <window_info anchor="bottom" id="Version Control" order="4" sideWeight="0.49015152" weight="0.32920355" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32920355" />
+      <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.49932885" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32920355" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4840909" visible="true" weight="0.32566372" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="7" sideWeight="0.4966443" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.6442953" visible="true" weight="0.3045326" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.4986577" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.32920355" />
+      <window_info anchor="bottom" id="TODO" order="12" sideWeight="0.4986577" weight="0.23796034" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Database" order="2" weight="0.32954547" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" weight="0.32954547" />
+      <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32954547" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -828,450 +767,479 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bug fixed." />
-    <MESSAGE value="just in case" />
-    <MESSAGE value="pic attached." />
-    <MESSAGE value="Bug in song names fixed." />
-    <MESSAGE value="Lyrics can be scrolled." />
-    <MESSAGE value="Conflicts resolved." />
-    <MESSAGE value="naming problems fixed.&#10;some class names weren't camel case." />
-    <MESSAGE value="Bugs fixed." />
-    <MESSAGE value="Bugs fixed.&#10;some pics also attached in images folder." />
-    <MESSAGE value="Client_ReceivesFiles completed.&#10;not tested yet." />
-    <MESSAGE value="TODO added." />
-    <MESSAGE value="Bug fixed." />
-    <MESSAGE value="file attached." />
-    <MESSAGE value="Server_sendsFiles completed but not tested." />
-    <MESSAGE value="Client_receivesFiles progressed." />
-    <MESSAGE value="BugFulServerAndClientFinishedUgh();" />
-    <MESSAGE value="Server and client completed." />
-    <MESSAGE value="JpotigyGUI JFrame is no longer EXIT_ON_CLOSE.&#10;more methods added to client." />
-    <MESSAGE value="conflicts resolved." />
-    <MESSAGE value="Server_SendsFiles documentation added." />
-    <MESSAGE value="Client_ReceivesFiles documentation added." />
-    <MESSAGE value="Bug fixed.&#10;when the window is closed now the song pauses." />
-    <MESSAGE value="bug fixed.&#10;FastFourierTransform class was stolen." />
-    <MESSAGE value="minor changes.&#10;field IP added to friend info class." />
-    <MESSAGE value="just in case." />
-    <option name="LAST_COMMIT_MESSAGE" value="just in case." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Network/ParseFromWeb.java</url>
-          <line>72</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Jpotify$Client_ReceivesFiles.ic" NAME="Client_ReceivesFiles Coverage Results" MODIFIED="1561712794638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Network.*</FILTER>
-    </SUITE>
+    <MESSAGE value="Volume Slider GUI added." />
+    <MESSAGE value="Volume slider listener added" />
+    <MESSAGE value="Major name editing." />
+    <MESSAGE value="Library added" />
+    <MESSAGE value="Playlist rename bug fixed" />
+    <MESSAGE value="SharedPlaylist modified." />
+    <MESSAGE value="FriendActivity panel modified" />
+    <MESSAGE value="Liking songs updated" />
+    <MESSAGE value="Reading last 128 bytes for ID3V1 tags." />
+    <MESSAGE value="Music class modified." />
+    <MESSAGE value="Graphical improvements." />
+    <MESSAGE value="Main Jpotify frame icon changed." />
+    <MESSAGE value="Jpotify image icon attached." />
+    <MESSAGE value="Like image icon attached." />
+    <MESSAGE value="Minor changes" />
+    <MESSAGE value="Date to string converter method added" />
+    <MESSAGE value="Documentation added" />
+    <MESSAGE value="Stopping the song fixed." />
+    <MESSAGE value="Documentation added." />
+    <MESSAGE value="FriendsActivityArea modified" />
+    <MESSAGE value="FriendsActivity listener modified" />
+    <MESSAGE value="Friend listeners modified" />
+    <MESSAGE value="Slider problems solved" />
+    <MESSAGE value="Listeners for friends panel modified/created." />
+    <MESSAGE value="Minor changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controllers/MouseListenerForSliders.java">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/QueueIndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        <state relative-caret-position="209">
+          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/SelectedPlaylistListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/SelectPlayFromSearchMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/SelectSongToRemoveFromPlaylist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/SelectSongToAddToPlaylistListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="e#1833#1834#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/songCover.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/defaultSongIcon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForSearchButton.java">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ShowSpecificAlbumOnClick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="114">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/SignInOrSignUpWindowActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/SongsPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/ChoicesArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="82" column="70" selection-start-line="82" selection-start-column="70" selection-end-line="82" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForNewPlaylist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/DialogListenerAddButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/BinaryReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/VolumeChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/PlaylistPanel.java" />
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ButtonListenerPauseAndPlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="85" column="85" lean-forward="true" selection-start-line="85" selection-start-column="85" selection-end-line="85" selection-end-column="85" />
+        <state relative-caret-position="202">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/AlbumsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="105" column="49" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="28" selection-end-column="104" />
+        <state relative-caret-position="416">
+          <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3894#3895#0" expanded="true" />
+            <element signature="e#3928#3929#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1065">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/GUI/defaultSongIcon.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NonUsefulMahvashTrashCan/Trash.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/HomePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="95">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
-            <element signature="method#deleteDirectoryRecursionJava6#0;class#Trash#0" />
-            <element signature="method#main#0;class#Trash#0" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1049#1050#0" expanded="true" />
+            <element signature="e#1093#1094#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/SearchBarPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ButtonListenerLyric.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/PlaylistPanel.java" />
     <entry file="file://$PROJECT_DIR$/src/GUI/MusicSliderBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="156" column="54" selection-start-line="156" selection-start-column="54" selection-end-line="156" selection-end-column="54" />
+        <state relative-caret-position="-3693">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#8236#8696#0" expanded="true" />
+            <element signature="e#8695#8696#0" expanded="true" />
+            <element signature="e#8739#9224#0" expanded="true" />
+            <element signature="e#9223#9224#0" expanded="true" />
+            <element signature="e#9152#9153#0" expanded="true" />
+            <element signature="e#9186#9187#0" expanded="true" />
+            <element signature="e#9246#9247#0" expanded="true" />
+            <element signature="e#9300#9301#0" expanded="true" />
+            <element signature="e#9343#9344#0" expanded="true" />
+            <element signature="e#9376#9377#0" expanded="true" />
+            <element signature="e#9420#9421#0" expanded="true" />
+            <element signature="e#9451#9452#0" expanded="true" />
+            <element signature="e#9505#9506#0" expanded="true" />
+            <element signature="e#9540#9541#0" expanded="true" />
+            <element signature="e#9582#9583#0" expanded="true" />
+            <element signature="e#9612#9613#0" expanded="true" />
+            <element signature="e#9655#9656#0" expanded="true" />
+            <element signature="e#9689#9690#0" expanded="true" />
+            <element signature="e#9742#9743#0" expanded="true" />
+            <element signature="e#9778#9779#0" expanded="true" />
+            <element signature="e#9920#9921#0" expanded="true" />
+            <element signature="e#9956#9957#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LastSongListened.txt" />
-    <entry file="file://$PROJECT_DIR$/src/Logic/Music.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/DialogBoxChooseName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-409">
-          <caret line="98" column="46" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
+        <state relative-caret-position="323">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
+            <element signature="e#1163#1164#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javazoom/jl/player/advanced/AdvancedPlayer.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/FileChooser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="153" column="45" lean-forward="true" selection-start-line="153" selection-start-column="45" selection-end-line="153" selection-end-column="45" />
-          <folding>
-            <element signature="e#6159#6160#0" expanded="true" />
-            <element signature="e#6180#6181#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="76">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/JpotifyGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/DialogBoxList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/UserPassVerification.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/ChoicesArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+        <state relative-caret-position="133">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/SliderThread.java">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForSearchButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        <state relative-caret-position="76">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingHome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javazoom/jl/decoder/Equalizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#2167#2168#0" expanded="true" />
-            <element signature="e#2191#2192#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#processRequest#0;class#Server_SendsFiles#0" />
-            <element signature="method#run#0;class#Handler#0;class#Server_SendsFiles#0" />
-            <element signature="method#sendFile#0;class#Handler#0;class#Server_SendsFiles#0" />
-            <element signature="method#dateToString#0;class#Handler#0;class#Server_SendsFiles#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/MyEqualizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/SelectSongToAddToPlaylistListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/SelectSongToRemoveFromPlaylist.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/SelectPlayFromSearchMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="29" column="92" lean-forward="true" selection-start-line="29" selection-start-column="92" selection-end-line="29" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/FileComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/SpectrumAnalysis.java" />
-    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.desktop/java/awt/Component.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Friend.java" />
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ReceivedFriendInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding>
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="95">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/DialogListenerRaname.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="79" column="61" selection-start-line="79" selection-start-column="61" selection-end-line="79" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/SelectedPlaylistListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/ParseFromWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3322#3323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/FastFourierTransform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="95">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/FriendsActivityArea.java">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ItemClickedRenamePlaylist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForFriendPlaylist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="76">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state relative-caret-position="146">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Network/FileComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/SongData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/SavedSongData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingAlbums.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSearchResults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/BinaryReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/SliderThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ScrollSliderChanger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3156#3157#0" expanded="true" />
+            <element signature="e#3183#3184#0" expanded="true" />
+            <element signature="e#3233#3234#0" expanded="true" />
+            <element signature="e#3272#3273#0" expanded="true" />
+            <element signature="e#3309#3310#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ItemClickedShowPlaylist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSongsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingFavouritePlaylist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/SongPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1656">
+          <caret line="214" column="11" selection-start-line="214" selection-start-column="11" selection-end-line="214" selection-end-column="11" />
+          <folding>
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/PlayerManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="418">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ReceivedFriendInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ButtonListenerNext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Network/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1916">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/SongsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2003">
+          <caret line="151" selection-start-line="151" selection-end-line="151" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForPlayingTheLastSongFriendPlaylist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        <state relative-caret-position="649">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForPlayingFriendPlaylist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="240" column="103" selection-start-line="240" selection-start-column="103" selection-end-line="240" selection-end-column="103" />
+        <state relative-caret-position="269">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1165#3264#0" />
-            <element signature="e#3270#4101#0" />
-            <element signature="e#4107#4696#0" />
-            <element signature="e#4702#5593#0" />
-            <element signature="e#5599#6665#0" />
-            <element signature="e#8739#9417#0" />
-            <element signature="e#9423#10069#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="146">
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForPlayingFriendPlaylist.java">
+    <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        <state relative-caret-position="146">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/JpotifyGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        <state relative-caret-position="342">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForShowingSharedPlaylist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="38" column="42" selection-start-line="38" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ButtonListenerPauseAndPlay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ClickButtonRefreshFrinedActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="47" column="107" selection-start-line="47" selection-start-column="107" selection-end-line="47" selection-end-column="107" />
+        <state relative-caret-position="222">
+          <caret line="35" column="59" selection-start-line="35" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/PlaySpecificSongOnClick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/FriendsActivityArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+          <folding>
+            <element signature="e#1598#1599#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1723#1724#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="183" column="103" selection-start-line="183" selection-start-column="103" selection-end-line="183" selection-end-column="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1337,7 +1305,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jl1.0.1</last-edited>
+          <last-edited>jsoup-1.12.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

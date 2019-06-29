@@ -14,6 +14,7 @@ import java.util.ArrayList;
  */
 public class FriendsActivityArea extends JPanel {
     private JScrollPane jScrollPane;
+    private static JButton refresh;
     private static boolean askedForLastListened = true;
     public FriendsActivityArea() {
         super();
@@ -32,7 +33,7 @@ public class FriendsActivityArea extends JPanel {
         this.setLayout(new GridLayout(rows,1));
 
 
-        JButton refresh = new JButton(" Friends Activity ");
+        refresh = new JButton(" Friends Activity ");
         refresh.setVisible(true);
         refresh.setPreferredSize(new Dimension(150,20));
         refresh.setFont(new Font("Verdana", 9, 10));
@@ -40,52 +41,17 @@ public class FriendsActivityArea extends JPanel {
         refresh.setBackground(Color.cyan);
         this.add(refresh);
 
-        //this.add(new JSeparator());
-        for (int i = 0; i < ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().size(); i++) {
-
-            JPanel friend=new JPanel();
-            friend.setVisible(true);
-            friend.setLayout(new GridLayout(4,1));
-            this.add(friend);
-            JLabel name=new JLabel(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getFriendName());
-            name.setFont(new Font("Verdana", 9, 10));
-            name.setHorizontalTextPosition(0);
-            name.setVerticalTextPosition(0);
-            friend.add(name);
-
-            JButton getPlaylist=new JButton("Get Their Playlist !");
-            getPlaylist.setName(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getIP());
-            getPlaylist.setBackground(Color.pink);
-            getPlaylist.addActionListener(new ClickListenerForGettingFriendPlaylist());
-            friend.add(getPlaylist);
 
 
-            JButton friendLastSong=new JButton();
-            friendLastSong.setLayout(new GridLayout(1,2));
-            JLabel songName=new JLabel(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getLastSong());
-            JLabel timeListened=new JLabel(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getLastTimeListened());
-            friendLastSong.add(songName);
-            friendLastSong.add(timeListened);
-            friendLastSong.addActionListener(new ClickListenerForPlayingTheLastSongFriendPlaylist());
-            friendLastSong.setName(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getIP());
-            friendLastSong.setFont(new Font("Verdana", 9, 8));
-            friendLastSong.setHorizontalTextPosition(0);
-            friendLastSong.setVerticalTextPosition(0);
-            friend.add(friendLastSong);
-
-//            JButton playPlaylist=new JButton("Play Their Playlist");
-//            getPlaylist.setName(ClickButtonRefreshFrinedActivity.getReceivedFriendInfos().get(i).getIP());
-//            playPlaylist.setBackground(Color.pink);
-//            playPlaylist.addActionListener(new ClickListenerForPlayingFriendPlaylist());
-//            friend.add(playPlaylist);
-
-
-
-//            this.add(new JSeparator());
-        }
     }
 
+    public static void setRefresh(JButton refresh) {
+        FriendsActivityArea.refresh = refresh;
+    }
 
+    public static JButton getRefresh() {
+        return refresh;
+    }
 
 
 

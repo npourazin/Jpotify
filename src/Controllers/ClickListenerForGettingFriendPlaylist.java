@@ -2,6 +2,7 @@ package Controllers;
 
 import Logic.Main;
 import Logic.SavedSongData;
+import Network.Client_ReceivesFiles;
 import Network.FileComparator;
 import Logic.*;
 
@@ -23,8 +24,12 @@ public class ClickListenerForGettingFriendPlaylist implements ActionListener {
         JButton jB=(JButton)e.getSource();
         String ip = jB.getName();
 
-//        int index=Integer.valueOf(jB.getName());
-        ClickButtonRefreshFrinedActivity.connect(ip);
+//        ClickButtonRefreshFrinedActivity.connect(ip);
+        try {
+            Main.setClient_receivesFiles( new Client_ReceivesFiles(ip, 8080));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
         try {
             Main.getClient_receivesFiles().readMoreThanOneFiles();
@@ -42,6 +47,9 @@ public class ClickListenerForGettingFriendPlaylist implements ActionListener {
             Music music=new Music(file.getAbsolutePath());
             tempArr.add(music.getSongData());
         }
+
+        System.out.println("+++++++++++++++++++++++"+tempArr.size());
+        if(tempArr==null || tempArr.size()==0) return;
 
         Main.setCurrentQueue(tempArr);
         Main.setSongQueueIndex(0);
