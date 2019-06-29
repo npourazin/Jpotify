@@ -11,6 +11,10 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * This class contains a listener for a button that tries to connect to the
+ * client , and it refreshes the Friend Activity Area by each click
+ */
 public class ClickButtonRefreshFrinedActivity implements ActionListener {
 
     private static ArrayList<ReceivedFriendInfo> receivedFriendInfos;

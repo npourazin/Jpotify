@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * This is the main class of the project
+ */
 public class Main {
     private static JpotifyGUI jpotifyGUI;
     private static ObjectOutputStream objOut;
@@ -22,12 +25,10 @@ public class Main {
     private static Client_ReceivesFiles client_receivesFiles;
     private static ArrayList<String> IPList;
 
-    private static boolean jpotifyGUIWindowClosed; //1 if closed, 0 otherwise.
+    private static boolean jpotifyGUIWindowClosed; //true if closed, false otherwise.
 
     public static void main(String[] args) {
 
-
-        System.out.println(Integer.MAX_VALUE);
 
         try {
             Client_ReceivesFiles.prepareReceivedFilesDestination("src/RECEIVED/");
@@ -68,9 +69,13 @@ public class Main {
 
     }
 
+    /**
+     * This method creats a sub Arraylist of the main Arraylist which is sorted based on the
+     * last time listened.
+     * @param fileName the text file's name from which we read the song's paths of the sun Arraylist
+     * @return
+     */
     public static boolean creatCurrentQueueByTime(String fileName) {
-
-
         Scanner sc = null;
         try {
             sc = new Scanner(new FileReader(new File("src/" + fileName + ".txt")));
@@ -104,7 +109,12 @@ public class Main {
         return true;
     }
 
-
+    /**
+     * This method creats a sub Arraylist of the main Arraylist which is sorted based on the
+     * order they were added in the text file
+     * @param fileName the text file's name from which we read the song's paths of the sun Arraylist
+     * @return
+     */
     public static boolean creatCurrentQueueByAdd(String fileName) {
 
         Scanner sc = null;

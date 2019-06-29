@@ -34,14 +34,6 @@ public class Client_ReceivesFiles {
 
     private static Client_ReceivesFiles client_receivesFiles=Main.getClient_receivesFiles();
 
-//    static {
-//        try {
-//            client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
 
     /**
      * makes a directory in RECEIVED folder named as the client's id.
@@ -80,20 +72,6 @@ public class Client_ReceivesFiles {
         fos.close();
         is.close();
 
-//
-//            System.out.println("File " + FILE_TO_RECEIVED
-//                    + " downloaded (" + current + " bytes read)");
-
-//        finally {
-//            try {
-//                if (fos != null) fos.close();
-//                if (bos != null) bos.close();
-//                if(is!=null) is.close();
-//                if (sock != null) sock.close();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
     }
 
     /**
@@ -195,41 +173,6 @@ public class Client_ReceivesFiles {
         client_receivesFiles.getSocket().close();
     }
 
-//    public static void getLastListenedData() throws IOException {
-//
-//        BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
-//        PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
-//
-//        out.println("start " + Main.getMyName());
-//        out.println("get --myID");
-//        client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
-//
-//        out.println("get --lastListened");
-//
-//        String songName = inp.readLine();
-//        System.out.println(songName);
-//        String lastDate = inp.readLine();
-//        System.out.println(lastDate);
-//
-//        //TODO WIFE
-//        //TODO mahvaaaaaaaaaaaaaaaaaaaaaaaaaash take theseeeeeeeeeeeeeeeeee
-//        // the two strings above are the pieces of data that must be shown besides the server's button
-//
-//        out.println("get --yourName");
-//        String name = inp.readLine();
-//        System.out.println(name);
-//
-//        //TODO WIFE
-//        // also the name string above is the server's name
-//        // make a button with these for the friends panel
-//
-//        //TODO WIFE
-//        // this method must be called each time you refresh FriendActivity section.
-//
-//        out.println("quit");
-//        client_receivesFiles.getSocket().close();
-//
-//    }
 
     public static String getLastListenedTitle() throws IOException {
         client_receivesFiles=Main.getClient_receivesFiles();
@@ -309,156 +252,3 @@ public class Client_ReceivesFiles {
 }
 
 
-/*
-
-
-
-
-int bytesRead=0;
-        int current = 0;
-        FileOutputStream fos = null;
-        BufferedOutputStream bos = null;
-        Socket sock = null;
-        InputStream is=null;
-
-        try {
-            client_receivesFiles=Main.getClient_receivesFiles();
-
-            sock = client_receivesFiles.getSocket();
-            System.out.println("Connected!");
-            ///TODO get lastlistened status from my server to update Friends activity UI
-
-            // receive file
-            System.out.println();
-            byte[] mybytearray = new byte[FILE_SIZE];
-            is = sock.getInputStream();
-
-            fos = new FileOutputStream(new File(FILE_TO_RECEIVED));
-            System.err.println("hahahaha0");
-
-            bos = new BufferedOutputStream(fos);
-            System.err.println("hahahaha1");
-
-//            int count;
-//            while((count=is.read(mybytearray)) >0){
-//                fos.write(mybytearray);
-//            }
-//            System.out.println("hjd;fojidpos");
-//            fos.flush();
-//            fos.close();
-
-
-//            bytesRead = is.read(mybytearray, 0, mybytearray.length);
-
-            System.err.println("hahahaha2");
-
-//            current = bytesRead;
-//            do {
-//                bytesRead = is.read(mybytearray, current, (mybytearray.length - current));
-//                if (bytesRead >= 0) current += bytesRead;
-//            } while (bytesRead > -1);
-
-//            byte[] mybytearray = new byte[16384];
-//
-            while ((bytesRead = is.read(mybytearray, 0, mybytearray.length)) != -1) {
-                bos.write(mybytearray, 0, bytesRead);
-            }
-
-            bos.flush();
-
-//            fos.write(mybytearray, 0, current);
-            System.err.println("hahahaha3");
-
-//            fos.flush();
-
-
-
-
-
- */
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-   public static void main (String [] args ) throws IOException {
-        int bytesRead;
-        int current = 0;
-        FileOutputStream fos = null;
-        BufferedOutputStream bos = null;
-        Socket sock = null;
-        try {
-            sock = new Socket(SERVER, SOCKET_PORT);
-            System.out.println("Connecting...");
-
-            // receive file
-            byte [] mybytearray  = new byte [FILE_SIZE];
-            InputStream is = sock.getInputStream();
-            fos = new FileOutputStream(FILE_TO_RECEIVED);
-            bos = new BufferedOutputStream(fos);
-            bytesRead = is.read(mybytearray,0,mybytearray.length);
-            current = bytesRead;
-
-            do {
-                bytesRead =
-                        is.read(mybytearray, current, (mybytearray.length-current));
-                if(bytesRead >= 0) current += bytesRead;
-            } while(bytesRead > -1);
-
-            bos.write(mybytearray, 0 , current);
-            bos.flush();
-            System.out.println("File " + FILE_TO_RECEIVED
-                    + " downloaded (" + current + " bytes read)");
-        }
-        finally {
-            if (fos != null) fos.close();
-            if (bos != null) bos.close();
-            if (sock != null) sock.close();
-        }
-    }
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//    public static void main(String[] args) throws IOException {
-//
-////        Client_ReceivesFiles client_receivesFiles = new Client_ReceivesFiles(SERVER, 8080);
-//
-//        BufferedReader inp = new BufferedReader(new InputStreamReader(client_receivesFiles.getSocket().getInputStream()));
-//        PrintWriter out = new PrintWriter(new OutputStreamWriter(client_receivesFiles.getSocket().getOutputStream()), true);
-//
-////        out.println("start " + Main.getMyName());
-////        out.println("get --myID");
-////        client_receivesFiles.setID(Integer.parseInt(inp.readLine()));
-//
-//        //return the number of files i shall get?
-//        //just check what i wrote?
-//        //use how it was called?
-//
-//        getLastListenedTime();
-//
-////
-////        out.println("quit");
-////        client_receivesFiles.getSocket().close();
-//
-//    }

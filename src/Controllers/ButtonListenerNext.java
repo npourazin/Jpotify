@@ -6,9 +6,7 @@ import Logic.PlayerManager;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * @author Mahvash
- */
+
 public class ButtonListenerNext implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

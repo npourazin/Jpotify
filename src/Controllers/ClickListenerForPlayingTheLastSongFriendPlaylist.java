@@ -16,6 +16,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ *This class contains a button action listener that reads the file in the
+ * directory that is created by client and plays the song in that directory
+ */
 public class ClickListenerForPlayingTheLastSongFriendPlaylist implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

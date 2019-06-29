@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 
 /**
  * click listener which closes tthe sign in or sign up frame
- * @author niki
  */
 public class ClickListenerForAccountManager implements ActionListener {
     @Override

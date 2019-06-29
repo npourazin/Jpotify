@@ -19,7 +19,8 @@ import java.util.*;
 
 
 /**
- *
+ *This class contains a button action listener that reads the files in the
+ * directory that is created by client and plays the songs in that directory
  */
 public class ClickListenerForGettingFriendPlaylist implements ActionListener {
 

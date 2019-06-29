@@ -12,7 +12,7 @@ import java.io.IOException;
 
 /**
  * shows lyrics for the song which is currently being played.
- * @author niki
+ * @ niki
  */
 public class ButtonListenerLyric implements ActionListener {
     @Override

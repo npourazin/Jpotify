@@ -17,6 +17,7 @@ import java.io.Serializable;
 
 /**
  * This class contains the methods that control playing a song
+ *
  * @author Mahvash
  */
 public class SongPlayer implements Serializable {
@@ -41,13 +42,14 @@ public class SongPlayer implements Serializable {
     /**
      * This is the constructor of the class that constructs a sing player
      * using the songs path
+     *
      * @param fileName the path of the song
      * @throws JavaLayerException
      */
     public SongPlayer(String fileName) throws JavaLayerException {
         playerStatus = Status.NOTSTARTED;
         this.fileName = fileName;
-        FileInputStream file ;
+        FileInputStream file;
         try {
             file = new FileInputStream(this.fileName);
             player = new AdvancedPlayer(file);
@@ -89,6 +91,7 @@ public class SongPlayer implements Serializable {
 
     /**
      * Changes the status of the song player to Paused
+     *
      * @return
      */
     public boolean pauseSong() {
@@ -102,6 +105,7 @@ public class SongPlayer implements Serializable {
 
     /**
      * Changes the status of the song player to Playing
+     *
      * @return
      */
     public boolean resumeSong() {
@@ -116,6 +120,7 @@ public class SongPlayer implements Serializable {
 
     /**
      * Changes the status of the song player to Stoped
+     *
      * @return
      */
     public void stopSong() {
@@ -155,6 +160,9 @@ public class SongPlayer implements Serializable {
         close();
     }
 
+    /**
+     * This method closes the current song player
+     */
     public void close() {
         synchronized (playerLock) {
             playerStatus = Status.FINISHED;
@@ -166,13 +174,21 @@ public class SongPlayer implements Serializable {
         }
     }
 
+    /**
+     * It checks if the player has started working or not and
+     * return true if it has and false if it has not
+     *
+     * @return
+     */
     public boolean ifPlayerNotstarted() {
         if (playerStatus == Status.NOTSTARTED)
             return true;
         return false;
     }
 
-    //play the song from a specific frame.
+    /**
+     * This method plays the song from a specific frame.
+     */
     public void playInMiddle(int start) {
 
         //because we need to jump to the first frame , so we recreate the the file.
@@ -202,27 +218,12 @@ public class SongPlayer implements Serializable {
         resumeSong();
     }
 
-
-
-    public String getPlayerStatus(){
+    public String getPlayerStatus() {
         return playerStatus.toString();
     }
 
     public String getFileName() {
         return fileName;
-    }
-
-    public void setVolume() throws InvalidDataException, IOException, UnsupportedTagException {
-
-        SourceDataLine source =null;
-        Mp3File mp3File = new Mp3File(this.getFileName());
-        source = (SourceDataLine) mp3File;
-        FloatControl volControl = (FloatControl) source.getControl(FloatControl.Type.MASTER_GAIN);
-        if (volControl != null) {
-            //0.73F -> random!!!!!!!
-            float newGain = Math.min(Math.max(0.73F, volControl.getMinimum()), volControl.getMaximum());
-            volControl.setValue(newGain);
-        }
     }
 
 }
