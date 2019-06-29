@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c4178ba7-4c67-4d01-8f37-c4e377ed6bd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,21 +47,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            <state relative-caret-position="243">
+              <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+            <state relative-caret-position="144">
+              <caret line="73" column="20" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4260#4911#0" />
                 <element signature="e#4917#5868#0" />
+                <element signature="e#5874#7002#0" />
                 <element signature="e#8112#8847#0" />
                 <element signature="e#8853#9593#0" />
                 <element signature="e#9599#10377#0" />
@@ -74,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="313" column="21" selection-start-line="313" selection-start-column="21" selection-end-line="313" selection-end-column="21" />
+            <state relative-caret-position="444">
+              <caret line="325" column="54" selection-start-line="325" selection-start-column="54" selection-end-line="325" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2534#2535#0" expanded="true" />
@@ -84,11 +87,11 @@
                 <element signature="e#6996#9011#1" />
                 <element signature="e#9104#10678#1" />
                 <element signature="e#10752#11352#1" />
-                <element signature="e#13331#13332#0" expanded="true" />
-                <element signature="e#13571#13572#0" expanded="true" />
-                <element signature="e#13668#13669#0" expanded="true" />
-                <element signature="e#15349#15350#0" expanded="true" />
-                <element signature="e#15457#15458#0" expanded="true" />
+                <element signature="e#13393#13394#0" expanded="true" />
+                <element signature="e#13633#13634#0" expanded="true" />
+                <element signature="e#13730#13731#0" expanded="true" />
+                <element signature="e#15411#15412#0" expanded="true" />
+                <element signature="e#15519#15520#0" expanded="true" />
                 <element signature="method#dateToString#0;class#Handler#0;class#Server_SendsFiles#0" />
               </folding>
             </state>
@@ -113,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="243">
+              <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,6 +172,7 @@
       <find>ClickListenerForFriendPlaylist</find>
       <find>Main.prepare</find>
       <find>getClient_receivesFiles</find>
+      <find>.close()</find>
       <find>quit</find>
     </findStrings>
   </component>
@@ -233,8 +237,8 @@
         <option value="$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java" />
         <option value="$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java" />
         <option value="$PROJECT_DIR$/src/Logic/Main.java" />
-        <option value="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" />
         <option value="$PROJECT_DIR$/src/Network/Server_SendsFiles.java" />
+        <option value="$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java" />
       </list>
     </option>
   </component>
@@ -425,14 +429,7 @@
       <workItem from="1561598902820" duration="40949000" />
       <workItem from="1561693875542" duration="55320000" />
       <workItem from="1561783192866" duration="6762000" />
-      <workItem from="1561791386440" duration="24209000" />
-    </task>
-    <task id="LOCAL-00071" summary="Server class with file sending ability added.">
-      <created>1561577518697</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1561577518697</updated>
+      <workItem from="1561791386440" duration="26260000" />
     </task>
     <task id="LOCAL-00072" summary="conflicts resolved.&#10;files receiver client class added but is still empty.">
       <created>1561579804605</created>
@@ -770,11 +767,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561821982855</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="final version before submission.">
+      <created>1561822466354</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1561822466354</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="357003000" />
+    <option name="totallyTimeSpent" value="359054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -795,7 +799,7 @@
       <window_info id="Favorites" order="3" sideWeight="0.5013123" side_tool="true" weight="0.30227274" />
       <window_info id="Learn" order="4" weight="0.32954547" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49868765" visible="true" weight="0.30227274" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49868765" visible="true" weight="0.30227274" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5159091" side_tool="true" weight="0.32566372" />
@@ -805,7 +809,7 @@
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32920355" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32920355" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4840909" visible="true" weight="0.32566372" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4840909" visible="true" weight="0.32566372" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -836,7 +840,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Conflicts resolved." />
     <MESSAGE value="naming problems fixed.&#10;some class names weren't camel case." />
     <MESSAGE value="Bugs fixed." />
     <MESSAGE value="Bugs fixed.&#10;some pics also attached in images folder." />
@@ -861,7 +864,8 @@
     <MESSAGE value="oh lord guide the lost sheep to salivation..." />
     <MESSAGE value="oh god..." />
     <MESSAGE value="ashghaaaal" />
-    <option name="LAST_COMMIT_MESSAGE" value="ashghaaaal" />
+    <MESSAGE value="final version before submission." />
+    <option name="LAST_COMMIT_MESSAGE" value="final version before submission." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1220,16 +1224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1260,15 +1254,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ClickListenerForGettingFriendPlaylist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="243">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Network/Server_SendsFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="313" column="21" selection-start-line="313" selection-start-column="21" selection-end-line="313" selection-end-column="21" />
+        <state relative-caret-position="444">
+          <caret line="325" column="54" selection-start-line="325" selection-start-column="54" selection-end-line="325" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2534#2535#0" expanded="true" />
@@ -1277,11 +1271,11 @@
             <element signature="e#6996#9011#1" />
             <element signature="e#9104#10678#1" />
             <element signature="e#10752#11352#1" />
-            <element signature="e#13331#13332#0" expanded="true" />
-            <element signature="e#13571#13572#0" expanded="true" />
-            <element signature="e#13668#13669#0" expanded="true" />
-            <element signature="e#15349#15350#0" expanded="true" />
-            <element signature="e#15457#15458#0" expanded="true" />
+            <element signature="e#13393#13394#0" expanded="true" />
+            <element signature="e#13633#13634#0" expanded="true" />
+            <element signature="e#13730#13731#0" expanded="true" />
+            <element signature="e#15411#15412#0" expanded="true" />
+            <element signature="e#15519#15520#0" expanded="true" />
             <element signature="method#dateToString#0;class#Handler#0;class#Server_SendsFiles#0" />
           </folding>
         </state>
@@ -1289,18 +1283,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Network/Client_ReceivesFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+        <state relative-caret-position="144">
+          <caret line="73" column="20" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4260#4911#0" />
             <element signature="e#4917#5868#0" />
+            <element signature="e#5874#7002#0" />
             <element signature="e#8112#8847#0" />
             <element signature="e#8853#9593#0" />
             <element signature="e#9599#10377#0" />
             <element signature="e#10383#10489#0" />
             <element signature="e#10495#10661#0" />
             <element signature="e#10667#10784#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/JpotifyWindowActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
