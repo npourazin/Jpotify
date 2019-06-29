@@ -4,7 +4,12 @@ import javax.swing.event.ListSelectionEvent;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * This class contains a listener for a list that removes
+ * the selected song item from the related playlist it was called on
+ * by removing it from the playlist's text file
+ * @author Mahvash
+ */
 public class SelectSongToRemoveFromPlaylist implements javax.swing.event.ListSelectionListener {
     private String songDirectory;
 

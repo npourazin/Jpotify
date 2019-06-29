@@ -5,8 +5,16 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-
+/**
+ * This class controls the volume
+ * @author Mahvash
+ */
 public class VolumeChangeListener implements ChangeListener {
+    /**
+     * This is a listener for the volume slider on the music slider panel
+     * It sets the volume based on the sliders value
+     * @param e
+     */
     @Override
     public void stateChanged(ChangeEvent e) {
         JSlider volumeSlider = (JSlider) e.getSource();
@@ -16,7 +24,10 @@ public class VolumeChangeListener implements ChangeListener {
 
     }
 
-    //sets the volume
+    /**
+     * This method gets a number between 0 to 100 and sets the volume based on that
+     * @param value the value that volume is set to
+     */
     public static void setVolume(float value) {
 
         try {

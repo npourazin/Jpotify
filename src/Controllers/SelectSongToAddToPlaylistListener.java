@@ -7,6 +7,12 @@ import javax.swing.event.ListSelectionEvent;
 import java.io.*;
 import java.util.Scanner;
 
+/**
+ * This class contains a listener for a list that adds
+ * the selected song item to the related playlist it was called on
+ * by adding it to the playlist's text file
+ * @author Mahvash
+ */
 public class SelectSongToAddToPlaylistListener implements javax.swing.event.ListSelectionListener {
     private static String songDirectory;
     @Override

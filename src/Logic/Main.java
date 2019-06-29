@@ -9,6 +9,7 @@ import javazoom.jl.decoder.Bitstream;
 import javazoom.jl.decoder.Decoder;
 import javazoom.jl.decoder.Equalizer;
 
+import javax.print.DocFlavor;
 import javax.swing.*;
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -26,7 +27,14 @@ public class Main {
     private static String myName = "admin";
     private static int holyFlag=0;
     private static  Server_SendsFiles server_sendsFiles;
+
+    public static void setClient_receivesFiles(Client_ReceivesFiles client_receivesFiles) {
+        Main.client_receivesFiles = client_receivesFiles;
+    }
+
     private static Client_ReceivesFiles client_receivesFiles;
+    private static ArrayList<String> IP;
+
     private static boolean jpotifyGUIWindowClosed; //1 if closed, 0 otherwise.
 
     public static void main(String[] args) {
@@ -54,6 +62,7 @@ public class Main {
         //TODO: write the changes in time and whatever to the file before closing
 
 
+        IP=new ArrayList<>();
         try {
             server_sendsFiles = new Server_SendsFiles(8080);
             server_sendsFiles.run();
@@ -126,7 +135,13 @@ public class Main {
 
     }
 
+    public static Client_ReceivesFiles getClient_receivesFiles() {
+        return client_receivesFiles;
+    }
 
+    public static ArrayList<String> getIP(){
+        return IP;
+    }
     public static void setCurrentQueue(ArrayList<SongData> arr) {
         currentQueue = arr;
     }

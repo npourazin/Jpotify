@@ -11,6 +11,13 @@ import java.awt.event.MouseEvent;
 import java.io.*;
 import java.util.Scanner;
 
+/**
+ * This class is the left panel of the main "JpotifyGUI" frame.
+ * It contains buttons and a list for showing and managing playlists
+ * as well as adding songs
+ *
+ * @author Mahvash
+ */
 
 public class ChoicesArea extends JPanel {
     private JScrollPane jScrollPane;
@@ -20,15 +27,9 @@ public class ChoicesArea extends JPanel {
     public ChoicesArea() {
         this.setLayout(new GridLayout(10, 1));
         this.setPreferredSize(new Dimension(190,10000));
-//        jScrollPane = new JScrollPane();
-//        this.add(jScrollPane, BorderLayout.WEST);
-//         jScrollPane = new JScrollPane(this,   ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-
 
         JButton saveButton = new JButton("Add Song");
         saveButton.setFont(saveButton.getFont().deriveFont(12f)); // will only change size to 14pt
-//        saveButton.rep
-
         saveButton.setVisible(true);
         this.add(saveButton);
         saveButton.addActionListener(new ClickListenerForAddingSongs());

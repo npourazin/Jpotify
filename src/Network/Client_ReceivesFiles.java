@@ -15,7 +15,7 @@ public class Client_ReceivesFiles {
     private Socket socket;
     private int ID;
 
-    Client_ReceivesFiles(String ip, int port) throws IOException {
+    public Client_ReceivesFiles(String ip, int port) throws IOException {
         this.socket = new Socket(ip, port);
     }
 

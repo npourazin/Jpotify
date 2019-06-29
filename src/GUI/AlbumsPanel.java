@@ -13,6 +13,10 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.Scanner;
 
+/**
+ * This class is a panel that shows the albums .
+ * @author Mahvash
+ */
 public class AlbumsPanel extends JPanel {
 
     private ArrayList<JButton> albumButton;
@@ -95,7 +99,11 @@ public class AlbumsPanel extends JPanel {
         }
     }
 
-    //sort album by time
+    /**
+     * This method sorts the albums based on the time of the latest played
+     * song of each of them
+     */
+
     public void sortAlbums() {
         ArrayList<Date> temp=new ArrayList<>();
         for (int i = 0; i <albums.size() ; i++) {

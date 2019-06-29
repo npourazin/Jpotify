@@ -14,6 +14,13 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+/**
+ * This class is the panel that shows the songs on the selected
+ * playlist. It contains buttons for each song and each button owns
+ * a lable and an icon for the song's data and another button for liking
+ * the song
+ * @author Mahvash
+ */
 
 public class SongsPanel extends JPanel {
     private static ArrayList<JButton> songButton;

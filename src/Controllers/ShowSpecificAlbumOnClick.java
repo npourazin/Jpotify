@@ -9,6 +9,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * This class contains a listener for the buttons on the albums panel
+ * that shows the songs is each album on click
+ * @author Mahvash
+ */
 public class ShowSpecificAlbumOnClick implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

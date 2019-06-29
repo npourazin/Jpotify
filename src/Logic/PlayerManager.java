@@ -13,7 +13,6 @@ public class PlayerManager {
     public PlayerManager(){
 
             songDataArrayList = new ArrayList<>();
-
             Main.prepareObjIn();
             SavedSongData.readFromFile(Main.getObjIn());
             songDataArrayList.sort(new SortByTime());

@@ -6,6 +6,9 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The main frame.
+ */
 public class JpotifyGUI extends JFrame {
     private static HomePanel homePanel;
     private static SongsPanel songsPanel;
@@ -14,6 +17,16 @@ public class JpotifyGUI extends JFrame {
     private static AlbumsPanel albumsPanel;
     private static SearchBarPanel searcBarPanel;
     private static ChoicesArea choicesArea;
+
+    public static FriendsActivityArea getFriendsActivityArea() {
+        return friendsActivityArea;
+    }
+
+    public static void setFriendsActivityArea(FriendsActivityArea friendsActivityArea) {
+        JpotifyGUI.friendsActivityArea = friendsActivityArea;
+    }
+
+    private static FriendsActivityArea friendsActivityArea;
 
 
     public JpotifyGUI() {
