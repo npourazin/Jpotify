@@ -42,9 +42,10 @@ public class Client_ReceivesFiles {
     public static void receiveFile() throws IOException {
         client_receivesFiles=Main.getClient_receivesFiles();
 
-        File dir = new File("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/");
+        File dir = new File("src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress());
         List<File> files = Arrays.asList(dir.listFiles());
         int id = files.size() + 1;
+        System.out.println("iddddddddddddddddddddddd:  "+id);
         String FILE_TO_RECEIVED = "src/RECEIVED" + client_receivesFiles.getSocket().getInetAddress() + "/" + id + ".mp3";
 
 //        byte[] buffer = new byte[FILE_SIZE];
