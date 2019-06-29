@@ -31,6 +31,7 @@ public class ClickListenerForGettingFriendPlaylist implements ActionListener {
             ex.printStackTrace();
         }
 
+
         //get the array list of songs in current queue
         File dir = new File("src/RECEIVED/"+ip+"/");
         List<File> files = Arrays.asList(dir.listFiles());
