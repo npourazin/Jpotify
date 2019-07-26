@@ -8,3 +8,4 @@ Some of the features:
 
 -account managment system
 
+-sharing songs with friends using TCP connection
