@@ -6,4 +6,5 @@ Some of the features:
 
 -ability to search lyrics online
 
--accoount managment system
+-account managment system
+
